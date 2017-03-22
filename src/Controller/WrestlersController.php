@@ -63,11 +63,11 @@ class WrestlersController extends AppController
         }
         $genders = $this->Wrestlers->Genders->find('list', ['limit' => 200]);
         $heights = $this->Wrestlers->Heights->find('list', ['limit' => 200]);
-        $weightClasses = $this->Wrestlers->WeightClasses->find('list', ['limit' => 200]);
+        $weightClasses = $this->Wrestlers->WeightClasses->find('list', ['limit' => 200, 'order' => ['weight_class' => 'DESC']]);
         $reactions = $this->Wrestlers->Reactions->find('list', ['limit' => 200]);
-        $games = $this->Wrestlers->Games->find('list', ['limit' => 200]);
-        $abilities = $this->Wrestlers->Abilities->find('list', ['limit' => 200]);
-        $skills = $this->Wrestlers->Skills->find('list', ['limit' => 200]);
+        $games = $this->Wrestlers->Games->find('list', ['limit' => 200, 'order' => ['release_year' => 'DESC']]);
+        $abilities = $this->Wrestlers->Abilities->find('list', ['limit' => 200, 'order' => ['ability_name' => 'ASC']]);
+        $skills = $this->Wrestlers->Skills->find('list', ['limit' => 200, 'order' => ['skill_levels' => 'ASC']]);
         $this->set(compact('wrestler', 'genders', 'heights', 'weightClasses', 'reactions', 'games', 'abilities', 'skills'));
         $this->set('_serialize', ['wrestler']);
     }
