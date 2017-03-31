@@ -34,7 +34,7 @@ class AttributesController extends AppController
     public function view($id = null)
     {
         $attribute = $this->Attributes->get($id, [
-            'contain' => ['AttributesPoints']
+            'contain' => ['Games', 'AttributesPoints']
         ]);
 
         $this->set('attribute', $attribute);
@@ -58,7 +58,8 @@ class AttributesController extends AppController
             }
             $this->Flash->error(__('The attribute could not be saved. Please, try again.'));
         }
-        $this->set(compact('attribute'));
+        $games = $this->Attributes->Games->find('list', ['limit' => 200]);
+        $this->set(compact('attribute', 'games'));
         $this->set('_serialize', ['attribute']);
     }
 
@@ -72,7 +73,7 @@ class AttributesController extends AppController
     public function edit($id = null)
     {
         $attribute = $this->Attributes->get($id, [
-            'contain' => []
+            'contain' => ['Games']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $attribute = $this->Attributes->patchEntity($attribute, $this->request->getData());
@@ -83,7 +84,8 @@ class AttributesController extends AppController
             }
             $this->Flash->error(__('The attribute could not be saved. Please, try again.'));
         }
-        $this->set(compact('attribute'));
+        $games = $this->Attributes->Games->find('list', ['limit' => 200]);
+        $this->set(compact('attribute', 'games'));
         $this->set('_serialize', ['attribute']);
     }
 

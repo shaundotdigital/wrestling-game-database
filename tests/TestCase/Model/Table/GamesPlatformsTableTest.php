@@ -33,9 +33,16 @@ class GamesPlatformsTableTest extends TestCase
         'app.reactions',
         'app.attributes_points',
         'app.attributes',
+        'app.attributes_games',
+        'app.wrestlers_hp',
+        'app.wrestlers_personalty',
+        'app.personalities',
         'app.abilities',
+        'app.ability_levels',
+        'app.abilities_games',
         'app.wrestlers_abilities',
         'app.skills',
+        'app.skill_levels',
         'app.wrestlers_skills',
         'app.platforms'
     ];

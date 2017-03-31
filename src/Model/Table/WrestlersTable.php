@@ -15,6 +15,8 @@ use Cake\Validation\Validator;
  * @property \Cake\ORM\Association\BelongsTo $Reactions
  * @property \Cake\ORM\Association\BelongsTo $Games
  * @property \Cake\ORM\Association\HasMany $AttributesPoints
+ * @property \Cake\ORM\Association\HasMany $WrestlersHp
+ * @property \Cake\ORM\Association\HasMany $WrestlersPersonalty
  * @property \Cake\ORM\Association\BelongsToMany $Abilities
  * @property \Cake\ORM\Association\BelongsToMany $Skills
  *
@@ -66,6 +68,12 @@ class WrestlersTable extends Table
         $this->hasMany('AttributesPoints', [
             'foreignKey' => 'wrestler_id'
         ]);
+        $this->hasMany('WrestlersHp', [
+            'foreignKey' => 'wrestler_id'
+        ]);
+        $this->hasMany('WrestlersPersonalty', [
+            'foreignKey' => 'wrestler_id'
+        ]);
         $this->belongsToMany('Abilities', [
             'foreignKey' => 'wrestler_id',
             'targetForeignKey' => 'ability_id',
@@ -86,9 +94,6 @@ class WrestlersTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-
-      $validator->add('overall', 'validValue', ['rule' => ['range', 0, 150]]); // adds acceptable range
-
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');

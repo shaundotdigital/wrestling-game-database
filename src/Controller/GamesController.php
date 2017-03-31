@@ -34,7 +34,7 @@ class GamesController extends AppController
     public function view($id = null)
     {
         $game = $this->Games->get($id, [
-            'contain' => ['Platforms', 'Wrestlers']
+            'contain' => ['Abilities', 'Attributes', 'Platforms', 'Wrestlers']
         ]);
 
         $this->set('game', $game);
@@ -58,8 +58,10 @@ class GamesController extends AppController
             }
             $this->Flash->error(__('The game could not be saved. Please, try again.'));
         }
+        $abilities = $this->Games->Abilities->find('list', ['limit' => 200]);
+        $attributes = $this->Games->Attributes->find('list', ['limit' => 200]);
         $platforms = $this->Games->Platforms->find('list', ['limit' => 200]);
-        $this->set(compact('game', 'platforms'));
+        $this->set(compact('game', 'abilities', 'attributes', 'platforms'));
         $this->set('_serialize', ['game']);
     }
 
@@ -73,7 +75,7 @@ class GamesController extends AppController
     public function edit($id = null)
     {
         $game = $this->Games->get($id, [
-            'contain' => ['Platforms']
+            'contain' => ['Abilities', 'Attributes', 'Platforms']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $game = $this->Games->patchEntity($game, $this->request->getData());
@@ -84,8 +86,10 @@ class GamesController extends AppController
             }
             $this->Flash->error(__('The game could not be saved. Please, try again.'));
         }
+        $abilities = $this->Games->Abilities->find('list', ['limit' => 200]);
+        $attributes = $this->Games->Attributes->find('list', ['limit' => 200]);
         $platforms = $this->Games->Platforms->find('list', ['limit' => 200]);
-        $this->set(compact('game', 'platforms'));
+        $this->set(compact('game', 'abilities', 'attributes', 'platforms'));
         $this->set('_serialize', ['game']);
     }
 

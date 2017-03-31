@@ -17,19 +17,26 @@ class AbilitiesControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.abilities',
+        'app.ability_levels',
+        'app.games',
         'app.wrestlers',
         'app.genders',
         'app.heights',
         'app.weight_classes',
         'app.reactions',
-        'app.games',
-        'app.platforms',
-        'app.games_platforms',
         'app.attributes_points',
         'app.attributes',
+        'app.attributes_games',
+        'app.wrestlers_hp',
+        'app.wrestlers_personalty',
+        'app.personalities',
         'app.wrestlers_abilities',
         'app.skills',
-        'app.wrestlers_skills'
+        'app.skill_levels',
+        'app.wrestlers_skills',
+        'app.abilities_games',
+        'app.platforms',
+        'app.games_platforms'
     ];
 
     /**

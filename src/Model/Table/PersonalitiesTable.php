@@ -51,6 +51,10 @@ class PersonalitiesTable extends Table
             ->requirePresence('name', 'create')
             ->notEmpty('name');
 
+        $validator
+            ->requirePresence('negative_name', 'create')
+            ->notEmpty('negative_name');
+
         return $validator;
     }
 }

@@ -18,6 +18,9 @@ class AbilitiesController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['AbilityLevels']
+        ];
         $abilities = $this->paginate($this->Abilities);
 
         $this->set(compact('abilities'));
@@ -34,7 +37,7 @@ class AbilitiesController extends AppController
     public function view($id = null)
     {
         $ability = $this->Abilities->get($id, [
-            'contain' => ['Wrestlers']
+            'contain' => ['AbilityLevels', 'Games', 'Wrestlers']
         ]);
 
         $this->set('ability', $ability);
@@ -58,8 +61,10 @@ class AbilitiesController extends AppController
             }
             $this->Flash->error(__('The ability could not be saved. Please, try again.'));
         }
+        $abilityLevels = $this->Abilities->AbilityLevels->find('list', ['limit' => 200]);
+        $games = $this->Abilities->Games->find('list', ['limit' => 200]);
         $wrestlers = $this->Abilities->Wrestlers->find('list', ['limit' => 200]);
-        $this->set(compact('ability', 'wrestlers'));
+        $this->set(compact('ability', 'abilityLevels', 'games', 'wrestlers'));
         $this->set('_serialize', ['ability']);
     }
 
@@ -73,7 +78,7 @@ class AbilitiesController extends AppController
     public function edit($id = null)
     {
         $ability = $this->Abilities->get($id, [
-            'contain' => ['Wrestlers']
+            'contain' => ['Games', 'Wrestlers']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $ability = $this->Abilities->patchEntity($ability, $this->request->getData());
@@ -84,8 +89,10 @@ class AbilitiesController extends AppController
             }
             $this->Flash->error(__('The ability could not be saved. Please, try again.'));
         }
+        $abilityLevels = $this->Abilities->AbilityLevels->find('list', ['limit' => 200]);
+        $games = $this->Abilities->Games->find('list', ['limit' => 200]);
         $wrestlers = $this->Abilities->Wrestlers->find('list', ['limit' => 200]);
-        $this->set(compact('ability', 'wrestlers'));
+        $this->set(compact('ability', 'abilityLevels', 'games', 'wrestlers'));
         $this->set('_serialize', ['ability']);
     }
 

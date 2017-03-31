@@ -10,6 +10,8 @@
         <li><?= $this->Form->postLink(__('Delete Skill'), ['action' => 'delete', $skill->id], ['confirm' => __('Are you sure you want to delete # {0}?', $skill->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Skills'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Skill'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Skill Levels'), ['controller' => 'SkillLevels', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Skill Level'), ['controller' => 'SkillLevels', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Wrestlers'), ['controller' => 'Wrestlers', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Wrestler'), ['controller' => 'Wrestlers', 'action' => 'add']) ?> </li>
     </ul>
@@ -22,12 +24,12 @@
             <td><?= h($skill->skill_name) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($skill->id) ?></td>
+            <th scope="row"><?= __('Skill Level') ?></th>
+            <td><?= $skill->has('skill_level') ? $this->Html->link($skill->skill_level->skill_levels, ['controller' => 'SkillLevels', 'action' => 'view', $skill->skill_level->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Skill Levels') ?></th>
-            <td><?= $this->Number->format($skill->skill_levels) ?></td>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($skill->id) ?></td>
         </tr>
     </table>
     <div class="related">

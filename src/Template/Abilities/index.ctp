@@ -7,6 +7,10 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Ability'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Ability Levels'), ['controller' => 'AbilityLevels', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Ability Level'), ['controller' => 'AbilityLevels', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Games'), ['controller' => 'Games', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Game'), ['controller' => 'Games', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Wrestlers'), ['controller' => 'Wrestlers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Wrestler'), ['controller' => 'Wrestlers', 'action' => 'add']) ?></li>
     </ul>
@@ -18,7 +22,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('ability_name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('ability_level') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('ability_levels_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -27,7 +31,7 @@
             <tr>
                 <td><?= $this->Number->format($ability->id) ?></td>
                 <td><?= h($ability->ability_name) ?></td>
-                <td><?= $this->Number->format($ability->ability_level) ?></td>
+                <td><?= $ability->has('ability_level') ? $this->Html->link($ability->ability_level->level, ['controller' => 'AbilityLevels', 'action' => 'view', $ability->ability_level->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $ability->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $ability->id]) ?>

@@ -16,6 +16,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('negative_name') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
             <tr>
                 <td><?= $this->Number->format($personality->id) ?></td>
                 <td><?= h($personality->name) ?></td>
+                <td><?= h($personality->negative_name) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $personality->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $personality->id]) ?>

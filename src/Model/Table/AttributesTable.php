@@ -10,6 +10,7 @@ use Cake\Validation\Validator;
  * Attributes Model
  *
  * @property \Cake\ORM\Association\HasMany $AttributesPoints
+ * @property \Cake\ORM\Association\BelongsToMany $Games
  *
  * @method \App\Model\Entity\Attribute get($primaryKey, $options = [])
  * @method \App\Model\Entity\Attribute newEntity($data = null, array $options = [])
@@ -33,11 +34,16 @@ class AttributesTable extends Table
         parent::initialize($config);
 
         $this->setTable('attributes');
-        $this->setDisplayField('id');
+        $this->setDisplayField('attribute_name');
         $this->setPrimaryKey('id');
 
         $this->hasMany('AttributesPoints', [
             'foreignKey' => 'attribute_id'
+        ]);
+        $this->belongsToMany('Games', [
+            'foreignKey' => 'attribute_id',
+            'targetForeignKey' => 'game_id',
+            'joinTable' => 'attributes_games'
         ]);
     }
 

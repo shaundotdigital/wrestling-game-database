@@ -18,6 +18,9 @@ class SkillsController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['SkillLevels']
+        ];
         $skills = $this->paginate($this->Skills);
 
         $this->set(compact('skills'));
@@ -34,7 +37,7 @@ class SkillsController extends AppController
     public function view($id = null)
     {
         $skill = $this->Skills->get($id, [
-            'contain' => ['Wrestlers']
+            'contain' => ['SkillLevels', 'Wrestlers']
         ]);
 
         $this->set('skill', $skill);
@@ -58,8 +61,9 @@ class SkillsController extends AppController
             }
             $this->Flash->error(__('The skill could not be saved. Please, try again.'));
         }
+        $skillLevels = $this->Skills->SkillLevels->find('list', ['limit' => 200]);
         $wrestlers = $this->Skills->Wrestlers->find('list', ['limit' => 200]);
-        $this->set(compact('skill', 'wrestlers'));
+        $this->set(compact('skill', 'skillLevels', 'wrestlers'));
         $this->set('_serialize', ['skill']);
     }
 
@@ -84,8 +88,9 @@ class SkillsController extends AppController
             }
             $this->Flash->error(__('The skill could not be saved. Please, try again.'));
         }
+        $skillLevels = $this->Skills->SkillLevels->find('list', ['limit' => 200]);
         $wrestlers = $this->Skills->Wrestlers->find('list', ['limit' => 200]);
-        $this->set(compact('skill', 'wrestlers'));
+        $this->set(compact('skill', 'skillLevels', 'wrestlers'));
         $this->set('_serialize', ['skill']);
     }
 

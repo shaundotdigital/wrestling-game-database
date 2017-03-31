@@ -30,7 +30,7 @@
             <tr>
                 <td><?= $this->Number->format($attributesPoint->id) ?></td>
                 <td><?= $attributesPoint->has('wrestler') ? $this->Html->link($attributesPoint->wrestler->wrestler_name, ['controller' => 'Wrestlers', 'action' => 'view', $attributesPoint->wrestler->id]) : '' ?></td>
-                <td><?= $attributesPoint->has('attribute') ? $this->Html->link($attributesPoint->attribute->id, ['controller' => 'Attributes', 'action' => 'view', $attributesPoint->attribute->id]) : '' ?></td>
+                <td><?= $attributesPoint->has('attribute') ? $this->Html->link($attributesPoint->attribute->attribute_name, ['controller' => 'Attributes', 'action' => 'view', $attributesPoint->attribute->id]) : '' ?></td>
                 <td><?= $this->Number->format($attributesPoint->value) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $attributesPoint->id]) ?>

@@ -9,6 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Skills Model
  *
+ * @property \Cake\ORM\Association\BelongsTo $SkillLevels
  * @property \Cake\ORM\Association\BelongsToMany $Wrestlers
  *
  * @method \App\Model\Entity\Skill get($primaryKey, $options = [])
@@ -36,6 +37,10 @@ class SkillsTable extends Table
         $this->setDisplayField('skill_name');
         $this->setPrimaryKey('id');
 
+        $this->belongsTo('SkillLevels', [
+            'foreignKey' => 'skill_levels_id',
+            'joinType' => 'INNER'
+        ]);
         $this->belongsToMany('Wrestlers', [
             'foreignKey' => 'skill_id',
             'targetForeignKey' => 'wrestler_id',
@@ -59,11 +64,20 @@ class SkillsTable extends Table
             ->requirePresence('skill_name', 'create')
             ->notEmpty('skill_name');
 
-        $validator
-            ->integer('skill_levels')
-            ->requirePresence('skill_levels', 'create')
-            ->notEmpty('skill_levels');
-
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->existsIn(['skill_levels_id'], 'SkillLevels'));
+
+        return $rules;
     }
 }

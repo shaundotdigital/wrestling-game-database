@@ -25,18 +25,25 @@ class SkillsTableTest extends TestCase
      */
     public $fixtures = [
         'app.skills',
+        'app.skill_levels',
         'app.wrestlers',
         'app.genders',
         'app.heights',
         'app.weight_classes',
         'app.reactions',
         'app.games',
+        'app.abilities',
+        'app.ability_levels',
+        'app.abilities_games',
+        'app.wrestlers_abilities',
+        'app.attributes',
+        'app.attributes_points',
+        'app.attributes_games',
         'app.platforms',
         'app.games_platforms',
-        'app.attributes_points',
-        'app.attributes',
-        'app.abilities',
-        'app.wrestlers_abilities',
+        'app.wrestlers_hp',
+        'app.wrestlers_personalty',
+        'app.personalities',
         'app.wrestlers_skills'
     ];
 
@@ -80,6 +87,16 @@ class SkillsTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     */
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Abilities Model
  *
+ * @property \Cake\ORM\Association\BelongsTo $AbilityLevels
+ * @property \Cake\ORM\Association\BelongsToMany $Games
  * @property \Cake\ORM\Association\BelongsToMany $Wrestlers
  *
  * @method \App\Model\Entity\Ability get($primaryKey, $options = [])
@@ -36,6 +38,15 @@ class AbilitiesTable extends Table
         $this->setDisplayField('ability_name');
         $this->setPrimaryKey('id');
 
+        $this->belongsTo('AbilityLevels', [
+            'foreignKey' => 'ability_levels_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsToMany('Games', [
+            'foreignKey' => 'ability_id',
+            'targetForeignKey' => 'game_id',
+            'joinTable' => 'abilities_games'
+        ]);
         $this->belongsToMany('Wrestlers', [
             'foreignKey' => 'ability_id',
             'targetForeignKey' => 'wrestler_id',
@@ -59,11 +70,20 @@ class AbilitiesTable extends Table
             ->requirePresence('ability_name', 'create')
             ->notEmpty('ability_name');
 
-        $validator
-            ->integer('ability_level')
-            ->requirePresence('ability_level', 'create')
-            ->notEmpty('ability_level');
-
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->existsIn(['ability_levels_id'], 'AbilityLevels'));
+
+        return $rules;
     }
 }

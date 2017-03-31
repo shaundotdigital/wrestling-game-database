@@ -23,13 +23,20 @@ class WrestlersSkillsControllerTest extends IntegrationTestCase
         'app.weight_classes',
         'app.reactions',
         'app.games',
+        'app.abilities',
+        'app.ability_levels',
+        'app.abilities_games',
+        'app.wrestlers_abilities',
+        'app.attributes',
+        'app.attributes_points',
+        'app.attributes_games',
         'app.platforms',
         'app.games_platforms',
-        'app.attributes_points',
-        'app.attributes',
-        'app.abilities',
-        'app.wrestlers_abilities',
-        'app.skills'
+        'app.wrestlers_hp',
+        'app.wrestlers_personalty',
+        'app.personalities',
+        'app.skills',
+        'app.skill_levels'
     ];
 
     /**

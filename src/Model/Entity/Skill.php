@@ -8,8 +8,9 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $skill_name
- * @property int $skill_levels
+ * @property int $skill_levels_id
  *
+ * @property \App\Model\Entity\SkillLevel $skill_level
  * @property \App\Model\Entity\Wrestler[] $wrestlers
  */
 class Skill extends Entity

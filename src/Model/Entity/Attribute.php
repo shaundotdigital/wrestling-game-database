@@ -10,6 +10,7 @@ use Cake\ORM\Entity;
  * @property string $attribute_name
  *
  * @property \App\Model\Entity\AttributesPoint[] $attributes_points
+ * @property \App\Model\Entity\Game[] $games
  */
 class Attribute extends Entity
 {

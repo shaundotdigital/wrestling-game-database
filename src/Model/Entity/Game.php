@@ -11,6 +11,8 @@ use Cake\ORM\Entity;
  * @property string $release_year
  *
  * @property \App\Model\Entity\Wrestler[] $wrestlers
+ * @property \App\Model\Entity\Ability[] $abilities
+ * @property \App\Model\Entity\Attribute[] $attributes
  * @property \App\Model\Entity\Platform[] $platforms
  */
 class Game extends Entity

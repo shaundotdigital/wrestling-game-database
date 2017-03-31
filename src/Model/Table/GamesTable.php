@@ -10,6 +10,8 @@ use Cake\Validation\Validator;
  * Games Model
  *
  * @property \Cake\ORM\Association\HasMany $Wrestlers
+ * @property \Cake\ORM\Association\BelongsToMany $Abilities
+ * @property \Cake\ORM\Association\BelongsToMany $Attributes
  * @property \Cake\ORM\Association\BelongsToMany $Platforms
  *
  * @method \App\Model\Entity\Game get($primaryKey, $options = [])
@@ -39,6 +41,16 @@ class GamesTable extends Table
 
         $this->hasMany('Wrestlers', [
             'foreignKey' => 'game_id'
+        ]);
+        $this->belongsToMany('Abilities', [
+            'foreignKey' => 'game_id',
+            'targetForeignKey' => 'ability_id',
+            'joinTable' => 'abilities_games'
+        ]);
+        $this->belongsToMany('Attributes', [
+            'foreignKey' => 'game_id',
+            'targetForeignKey' => 'attribute_id',
+            'joinTable' => 'attributes_games'
         ]);
         $this->belongsToMany('Platforms', [
             'foreignKey' => 'game_id',

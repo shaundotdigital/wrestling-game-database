@@ -8,8 +8,10 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $ability_name
- * @property int $ability_level
+ * @property int $ability_levels_id
  *
+ * @property \App\Model\Entity\AbilityLevel $ability_level
+ * @property \App\Model\Entity\Game[] $games
  * @property \App\Model\Entity\Wrestler[] $wrestlers
  */
 class Ability extends Entity

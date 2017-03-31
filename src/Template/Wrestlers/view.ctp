@@ -22,6 +22,10 @@
         <li><?= $this->Html->link(__('New Game'), ['controller' => 'Games', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Attributes Points'), ['controller' => 'AttributesPoints', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Attributes Point'), ['controller' => 'AttributesPoints', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Wrestlers Hp'), ['controller' => 'WrestlersHp', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Wrestlers Hp'), ['controller' => 'WrestlersHp', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Wrestlers Personalty'), ['controller' => 'WrestlersPersonalty', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Wrestlers Personalty'), ['controller' => 'WrestlersPersonalty', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Abilities'), ['controller' => 'Abilities', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Ability'), ['controller' => 'Abilities', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Skills'), ['controller' => 'Skills', 'action' => 'index']) ?> </li>
@@ -92,20 +96,80 @@
         <?php endif; ?>
     </div>
     <div class="related">
+        <h4><?= __('Related Wrestlers Hp') ?></h4>
+        <?php if (!empty($wrestler->wrestlers_hp)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Wrestler Id') ?></th>
+                <th scope="col"><?= __('Head') ?></th>
+                <th scope="col"><?= __('Body') ?></th>
+                <th scope="col"><?= __('Arms') ?></th>
+                <th scope="col"><?= __('Legs') ?></th>
+                <th scope="col"><?= __('Total Hp') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($wrestler->wrestlers_hp as $wrestlersHp): ?>
+            <tr>
+                <td><?= h($wrestlersHp->id) ?></td>
+                <td><?= h($wrestlersHp->wrestler_id) ?></td>
+                <td><?= h($wrestlersHp->head) ?></td>
+                <td><?= h($wrestlersHp->body) ?></td>
+                <td><?= h($wrestlersHp->arms) ?></td>
+                <td><?= h($wrestlersHp->legs) ?></td>
+                <td><?= h($wrestlersHp->total_hp) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'WrestlersHp', 'action' => 'view', $wrestlersHp->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'WrestlersHp', 'action' => 'edit', $wrestlersHp->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'WrestlersHp', 'action' => 'delete', $wrestlersHp->id], ['confirm' => __('Are you sure you want to delete # {0}?', $wrestlersHp->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Wrestlers Personalty') ?></h4>
+        <?php if (!empty($wrestler->wrestlers_personalty)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Wrestler Id') ?></th>
+                <th scope="col"><?= __('Personalities Id') ?></th>
+                <th scope="col"><?= __('Value') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($wrestler->wrestlers_personalty as $wrestlersPersonalty): ?>
+            <tr>
+                <td><?= h($wrestlersPersonalty->id) ?></td>
+                <td><?= h($wrestlersPersonalty->wrestler_id) ?></td>
+                <td><?= h($wrestlersPersonalty->personalities_id) ?></td>
+                <td><?= h($wrestlersPersonalty->value) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'WrestlersPersonalty', 'action' => 'view', $wrestlersPersonalty->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'WrestlersPersonalty', 'action' => 'edit', $wrestlersPersonalty->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'WrestlersPersonalty', 'action' => 'delete', $wrestlersPersonalty->id], ['confirm' => __('Are you sure you want to delete # {0}?', $wrestlersPersonalty->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
         <h4><?= __('Related Abilities') ?></h4>
         <?php if (!empty($wrestler->abilities)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Ability Name') ?></th>
-                <th scope="col"><?= __('Ability Level') ?></th>
+                <th scope="col"><?= __('Ability Levels Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($wrestler->abilities as $abilities): ?>
             <tr>
                 <td><?= h($abilities->id) ?></td>
                 <td><?= h($abilities->ability_name) ?></td>
-                <td><?= h($abilities->ability_level) ?></td>
+                <td><?= h($abilities->ability_levels_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Abilities', 'action' => 'view', $abilities->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Abilities', 'action' => 'edit', $abilities->id]) ?>
@@ -123,14 +187,14 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Skill Name') ?></th>
-                <th scope="col"><?= __('Skill Levels') ?></th>
+                <th scope="col"><?= __('Skill Levels Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($wrestler->skills as $skills): ?>
             <tr>
                 <td><?= h($skills->id) ?></td>
                 <td><?= h($skills->skill_name) ?></td>
-                <td><?= h($skills->skill_levels) ?></td>
+                <td><?= h($skills->skill_levels_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Skills', 'action' => 'view', $skills->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Skills', 'action' => 'edit', $skills->id]) ?>

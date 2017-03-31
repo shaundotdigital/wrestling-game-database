@@ -21,6 +21,7 @@
         <legend><?= __('Edit Personality') ?></legend>
         <?php
             echo $this->Form->control('name');
+            echo $this->Form->control('negative_name');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

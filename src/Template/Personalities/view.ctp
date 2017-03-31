@@ -20,6 +20,10 @@
             <td><?= h($personality->name) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Negative Name') ?></th>
+            <td><?= h($personality->negative_name) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($personality->id) ?></td>
         </tr>

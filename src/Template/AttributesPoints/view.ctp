@@ -25,7 +25,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Attribute') ?></th>
-            <td><?= $attributesPoint->has('attribute') ? $this->Html->link($attributesPoint->attribute->id, ['controller' => 'Attributes', 'action' => 'view', $attributesPoint->attribute->id]) : '' ?></td>
+            <td><?= $attributesPoint->has('attribute') ? $this->Html->link($attributesPoint->attribute->attribute_name, ['controller' => 'Attributes', 'action' => 'view', $attributesPoint->attribute->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

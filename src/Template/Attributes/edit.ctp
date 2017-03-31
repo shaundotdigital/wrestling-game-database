@@ -15,6 +15,8 @@
         <li><?= $this->Html->link(__('List Attributes'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Attributes Points'), ['controller' => 'AttributesPoints', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Attributes Point'), ['controller' => 'AttributesPoints', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Games'), ['controller' => 'Games', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Game'), ['controller' => 'Games', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="attributes form large-9 medium-8 columns content">
@@ -23,6 +25,7 @@
         <legend><?= __('Edit Attribute') ?></legend>
         <?php
             echo $this->Form->control('attribute_name');
+            echo $this->Form->control('games._ids', ['options' => $games]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

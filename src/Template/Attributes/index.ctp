@@ -9,6 +9,8 @@
         <li><?= $this->Html->link(__('New Attribute'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Attributes Points'), ['controller' => 'AttributesPoints', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Attributes Point'), ['controller' => 'AttributesPoints', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Games'), ['controller' => 'Games', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Game'), ['controller' => 'Games', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="attributes index large-9 medium-8 columns content">
