@@ -24,6 +24,24 @@ class GamesController extends AppController
         $this->set('_serialize', ['games']);
     }
 
+
+    public function demo() {
+      $games = $this->paginate($this->Games);
+      $this->set(compact('games'));
+    }
+
+    public function test() {
+      if($this->request->is('ajax')) {
+        $game_id = $this->request->getData('id');
+        $this->viewBuilder()->layout('ajax');
+
+        $platform = $this->Games->Platforms->get($game_id);
+
+        $this->set(compact('platform'));
+      }
+    }
+
+
     /**
      * View method
      *

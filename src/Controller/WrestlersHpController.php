@@ -54,6 +54,7 @@ class WrestlersHpController extends AppController
         $wrestlersHp = $this->WrestlersHp->newEntity();
         if ($this->request->is('post')) {
             $wrestlersHp = $this->WrestlersHp->patchEntity($wrestlersHp, $this->request->getData());
+
             if ($this->WrestlersHp->save($wrestlersHp)) {
                 $this->Flash->success(__('The wrestlers hp has been saved.'));
 

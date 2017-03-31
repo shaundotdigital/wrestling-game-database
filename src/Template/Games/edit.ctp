@@ -30,6 +30,8 @@
         <?php
             echo $this->Form->control('game_name');
             echo $this->Form->control('release_year');
+            echo $this->Form->control('abilities._ids', ['options' => $abilities]);
+            echo $this->Form->control('attributes._ids', ['options' => $attributes]);
             echo $this->Form->control('platforms._ids', ['options' => $platforms]);
         ?>
     </fieldset>

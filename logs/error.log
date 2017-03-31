@@ -520,3 +520,214 @@ Stack Trace:
 #33 {main}
 
 
+2017-03-31 14:51:30 Error: [Cake\Controller\Exception\MissingActionException] Action GamesController::tests() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'GamesController',
+  'action' => 'tests',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /games/tests
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\GamesController))
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-03-31 14:53:09 Error: [ParseError] syntax error, unexpected 'console' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+Request URL: /games/demo
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/Users/shaunske...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Core/App.php(152): class_exists('App\\Controller\\...')
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Core/App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Gam...', 'App')
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(68): Cake\Core\App::className('Games', 'Controller', 'Controller')
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#18 {main}
+
+
+2017-03-31 14:53:14 Error: [ParseError] syntax error, unexpected '}'
+Request URL: /games/demo
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/Users/shaunske...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Core/App.php(152): class_exists('App\\Controller\\...')
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Core/App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Gam...', 'App')
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(68): Cake\Core\App::className('Games', 'Controller', 'Controller')
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#18 {main}
+
+
+2017-03-31 14:54:29 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /games/demo
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/src/Controller/GamesController.php(29): Cake\Controller\Controller->paginate(false)
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\GamesController->demo()
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\GamesController))
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-03-31 14:54:35 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /games/demo
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/src/Controller/GamesController.php(29): Cake\Controller\Controller->paginate(false)
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\GamesController->demo()
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\GamesController))
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-03-31 14:54:57 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /games/demo
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/src/Controller/GamesController.php(29): Cake\Controller\Controller->paginate(false)
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\GamesController->demo()
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\GamesController))
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-03-31 14:59:14 Error: [ParseError] syntax error, unexpected '$new_hp' (T_VARIABLE)
+Request URL: /wrestlers-hp/add
+Referer URL: http://localhost:8888/wgdb/wrestlers/view/1
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/Users/shaunske...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Core/App.php(152): class_exists('App\\Controller\\...')
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Core/App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Wre...', 'App')
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(68): Cake\Core\App::className('WrestlersHp', 'Controller', 'Controller')
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#18 {main}
+
+
+2017-03-31 14:59:41 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /wrestlers-hp/add
+Referer URL: http://localhost:8888/wgdb/wrestlers/view/1
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/Users/shaunske...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Core/App.php(152): class_exists('App\\Controller\\...')
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Core/App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Wre...', 'App')
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(68): Cake\Core\App::className('WrestlersHp', 'Controller', 'Controller')
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#18 {main}
+
+
+2017-03-31 15:03:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Demo could not be found.
+Exception Attributes: array (
+  'class' => 'Demo',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /demo
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
