@@ -731,3 +731,75 @@ Stack Trace:
 #13 {main}
 
 
+2017-03-31 15:11:52 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /games/demo
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): PDOStatement->execute(NULL)
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Statement/BufferedStatement.php(76): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Statement/SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Connection.php(304): Cake\Database\Statement\SqliteStatement->execute()
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1916): Cake\Database\Query->execute()
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1810): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1723): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Connection.php(654): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/debug_kit/src/ToolbarService.php(200): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/debug_kit/src/Routing/Filter/DebugBarFilter.php(139): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Event/EventManager.php(414): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#17 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#18 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(98): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#19 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2017-03-31 15:11:54 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /games/demo
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): PDOStatement->execute(NULL)
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Statement/BufferedStatement.php(76): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Statement/SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Connection.php(304): Cake\Database\Statement\SqliteStatement->execute()
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1916): Cake\Database\Query->execute()
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1810): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1723): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Database/Connection.php(654): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/ORM/Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/debug_kit/src/ToolbarService.php(200): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/debug_kit/src/Routing/Filter/DebugBarFilter.php(139): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Event/EventManager.php(414): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#17 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#18 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(98): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#19 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
