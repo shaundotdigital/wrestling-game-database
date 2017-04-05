@@ -27,7 +27,6 @@
             echo $this->Form->control('body');
             echo $this->Form->control('arms');
             echo $this->Form->control('legs');
-            echo $this->Form->control('total_hp');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

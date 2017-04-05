@@ -55,6 +55,8 @@ class WrestlersHpController extends AppController
         if ($this->request->is('post')) {
             $wrestlersHp = $this->WrestlersHp->patchEntity($wrestlersHp, $this->request->getData());
 
+            $wrestlersHp->total_hp = $this->calculateHP($wrestlersHp);
+
             if ($this->WrestlersHp->save($wrestlersHp)) {
                 $this->Flash->success(__('The wrestlers hp has been saved.'));
 
@@ -65,6 +67,10 @@ class WrestlersHpController extends AppController
         $wrestlers = $this->WrestlersHp->Wrestlers->find('list', ['limit' => 200]);
         $this->set(compact('wrestlersHp', 'wrestlers'));
         $this->set('_serialize', ['wrestlersHp']);
+    }
+
+    private function calculateHP($wrestlersHp) {
+      return $wrestlersHp->head + $wrestlersHp->body + $wrestlersHp->arms + $wrestlersHp->legs;
     }
 
     /**
@@ -81,6 +87,9 @@ class WrestlersHpController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $wrestlersHp = $this->WrestlersHp->patchEntity($wrestlersHp, $this->request->getData());
+
+            $wrestlersHp->total_hp = $this->calculateHP($wrestlersHp);
+
             if ($this->WrestlersHp->save($wrestlersHp)) {
                 $this->Flash->success(__('The wrestlers hp has been saved.'));
 
