@@ -8,7 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $ability_name
- * @property int $ability_levels_id
+ * @property int $ability_level_id
  *
  * @property \App\Model\Entity\AbilityLevel $ability_level
  * @property \App\Model\Entity\Game[] $games
@@ -30,4 +30,10 @@ class Ability extends Entity
         '*' => true,
         'id' => false
     ];
+
+    protected function _getAbilityNamedLevel() {
+      return $this->ability_name . ' - Level ' . $this->ability_level_id;
+    }
+
+
 }

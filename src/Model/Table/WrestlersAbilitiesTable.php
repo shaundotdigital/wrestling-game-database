@@ -34,7 +34,7 @@ class WrestlersAbilitiesTable extends Table
         parent::initialize($config);
 
         $this->setTable('wrestlers_abilities');
-        $this->setDisplayField('id');
+        $this->setDisplayField('ability_name');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Wrestlers', [

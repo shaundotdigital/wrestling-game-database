@@ -35,11 +35,11 @@ class AbilitiesTable extends Table
         parent::initialize($config);
 
         $this->setTable('abilities');
-        $this->setDisplayField('ability_name');
+        $this->setDisplayField('abilityNamedLevel');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('AbilityLevels', [
-            'foreignKey' => 'ability_levels_id',
+            'foreignKey' => 'ability_level_id',
             'joinType' => 'INNER'
         ]);
         $this->belongsToMany('Games', [
@@ -82,7 +82,7 @@ class AbilitiesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['ability_levels_id'], 'AbilityLevels'));
+        $rules->add($rules->existsIn(['ability_level_id'], 'AbilityLevels'));
 
         return $rules;
     }

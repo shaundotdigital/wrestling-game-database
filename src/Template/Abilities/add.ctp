@@ -21,7 +21,7 @@
         <legend><?= __('Add Ability') ?></legend>
         <?php
             echo $this->Form->control('ability_name');
-            echo $this->Form->control('ability_levels_id', ['options' => $abilityLevels]);
+            echo $this->Form->control('ability_level_id', ['options' => $abilityLevels]);
             echo $this->Form->control('games._ids', ['options' => $games]);
             echo $this->Form->control('wrestlers._ids', ['options' => $wrestlers]);
         ?>

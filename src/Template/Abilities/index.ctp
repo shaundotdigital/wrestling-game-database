@@ -22,7 +22,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('ability_name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('ability_levels_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('ability_level_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>

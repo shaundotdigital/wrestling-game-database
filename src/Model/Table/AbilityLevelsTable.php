@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 /**
  * AbilityLevels Model
  *
+ * @property \Cake\ORM\Association\HasMany $Abilities
+ *
  * @method \App\Model\Entity\AbilityLevel get($primaryKey, $options = [])
  * @method \App\Model\Entity\AbilityLevel newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\AbilityLevel[] newEntities(array $data, array $options = [])
@@ -33,6 +35,10 @@ class AbilityLevelsTable extends Table
         $this->setTable('ability_levels');
         $this->setDisplayField('level');
         $this->setPrimaryKey('id');
+
+        $this->hasMany('Abilities', [
+            'foreignKey' => 'ability_level_id'
+        ]);
     }
 
     /**
