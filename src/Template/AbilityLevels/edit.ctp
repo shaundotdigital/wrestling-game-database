@@ -13,6 +13,8 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Ability Levels'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Abilities'), ['controller' => 'Abilities', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Ability'), ['controller' => 'Abilities', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="abilityLevels form large-9 medium-8 columns content">

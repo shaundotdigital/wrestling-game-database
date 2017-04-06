@@ -34,7 +34,7 @@ class AbilityLevelsController extends AppController
     public function view($id = null)
     {
         $abilityLevel = $this->AbilityLevels->get($id, [
-            'contain' => []
+            'contain' => ['Abilities']
         ]);
 
         $this->set('abilityLevel', $abilityLevel);

@@ -8,6 +8,8 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $level
+ *
+ * @property \App\Model\Entity\Ability[] $abilities
  */
 class AbilityLevel extends Entity
 {
