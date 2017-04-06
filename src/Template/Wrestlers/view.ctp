@@ -162,14 +162,14 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Ability Name') ?></th>
-                <th scope="col"><?= __('Ability Levels Id') ?></th>
+                <th scope="col"><?= __('Ability Level Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($wrestler->abilities as $abilities): ?>
             <tr>
                 <td><?= h($abilities->id) ?></td>
                 <td><?= h($abilities->ability_name) ?></td>
-                <td><?= h($abilities->ability_levels_id) ?></td>
+                <td><?= h($abilities->ability_level_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Abilities', 'action' => 'view', $abilities->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Abilities', 'action' => 'edit', $abilities->id]) ?>

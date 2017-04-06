@@ -48,7 +48,7 @@
             echo $this->Form->control('reaction_id', ['options' => $reactions]);
             echo $this->Form->control('game_id', ['options' => $games]);
             echo $this->Form->control('abilities._ids', ['options' => $abilities]);
-            echo $this->Form->control('skills._ids', ['options' => $skills]);
+            echo $this->Form->input('skills._ids' ,array('multiple' => 'checkbox',));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
