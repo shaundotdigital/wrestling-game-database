@@ -104,6 +104,34 @@ class WrestlersController extends AppController
         $this->set('_serialize', ['wrestler']);
     }
 
+
+
+    public function newedit($id = null)
+    {
+       $wrestler = $this->Wrestlers->get($id, [
+           'contain' => ['Abilities', 'Skills']
+       ]);
+       if ($this->request->is(['patch', 'post', 'put'])) {
+           $wrestler = $this->Wrestlers->patchEntity($wrestler, $this->request->getData());
+           if ($this->Wrestlers->save($wrestler)) {
+               $this->Flash->success(__('The wrestler has been saved.'));
+
+               return $this->redirect(['action' => 'index']);
+           }
+           $this->Flash->error(__('The wrestler could not be saved. Please, try again.'));
+       }
+       $genders = $this->Wrestlers->Genders->find('list', ['limit' => 200]);
+       $heights = $this->Wrestlers->Heights->find('list', ['limit' => 200]);
+       $weightClasses = $this->Wrestlers->WeightClasses->find('list', ['limit' => 200]);
+       $reactions = $this->Wrestlers->Reactions->find('list', ['limit' => 200]);
+       $games = $this->Wrestlers->Games->find('list', ['limit' => 200]);
+       $abilities = $this->Wrestlers->Abilities->find('list', ['limit' => 200]);
+       $skills = $this->Wrestlers->Skills->find('list', ['limit' => 200]);
+       $this->set(compact('wrestler', 'genders', 'heights', 'weightClasses', 'reactions', 'games', 'abilities', 'skills'));
+       $this->set('_serialize', ['wrestler']);
+    }
+
+
     /**
      * Delete method
      *
