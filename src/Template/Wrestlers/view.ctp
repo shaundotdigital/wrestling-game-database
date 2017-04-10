@@ -97,6 +97,7 @@
     </div>
     <div class="related">
         <h4><?= __('Related Wrestlers Hp') ?></h4>
+        <?= var_dump($wrestler->wrestlers_hp) ?>
         <?php if (!empty($wrestler->wrestlers_hp)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>

@@ -31,6 +31,7 @@ use Cake\Validation\Validator;
 class WrestlersTable extends Table
 {
 
+
     /**
      * Initialize method
      *
@@ -68,7 +69,7 @@ class WrestlersTable extends Table
         $this->hasMany('AttributesPoints', [
             'foreignKey' => 'wrestler_id'
         ]);
-        $this->hasMany('WrestlersHp', [
+        $this->hasOne('WrestlersHp', [
             'foreignKey' => 'wrestler_id'
         ]);
         $this->hasMany('WrestlersPersonalty', [

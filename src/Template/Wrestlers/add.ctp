@@ -43,6 +43,12 @@
             echo $this->Form->control('game_id', ['options' => $games]);
             echo $this->Form->control('abilities._ids', ['options' => $abilities]);
             echo $this->Form->input('skills._ids' ,array('multiple' => 'checkbox',));
+
+            echo $this->Form->hidden('wrestler_id', ['value' => $wrestler->id]);
+            echo $this->Form->control('head', ['value' => $hp->head]);
+            echo $this->Form->control('body', ['value' => $hp->body]);
+            echo $this->Form->control('arms', ['value' => $hp->arms]);
+            echo $this->Form->control('legs', ['value' => $hp->legs]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

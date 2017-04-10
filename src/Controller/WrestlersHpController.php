@@ -80,27 +80,27 @@ class WrestlersHpController extends AppController
      * @return \Cake\Network\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
-    {
-        $wrestlersHp = $this->WrestlersHp->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $wrestlersHp = $this->WrestlersHp->patchEntity($wrestlersHp, $this->request->getData());
-
-            $wrestlersHp->total_hp = $this->calculateHP($wrestlersHp);
-
-            if ($this->WrestlersHp->save($wrestlersHp)) {
-                $this->Flash->success(__('The wrestlers hp has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The wrestlers hp could not be saved. Please, try again.'));
-        }
-        $wrestlers = $this->WrestlersHp->Wrestlers->find('list', ['limit' => 200]);
-        $this->set(compact('wrestlersHp', 'wrestlers'));
-        $this->set('_serialize', ['wrestlersHp']);
-    }
+    // public function edit($id = null)
+    // {
+    //     $wrestlersHp = $this->WrestlersHp->get($id, [
+    //         'contain' => []
+    //     ]);
+    //     if ($this->request->is(['patch', 'post', 'put'])) {
+    //         $wrestlersHp = $this->WrestlersHp->patchEntity($wrestlersHp, $this->request->getData());
+    //
+    //         $wrestlersHp->total_hp = $this->calculateHP($wrestlersHp);
+    //
+    //         if ($this->WrestlersHp->save($wrestlersHp)) {
+    //             $this->Flash->success(__('The wrestlers HP has been saved.'));
+    //
+    //             return $this->redirect(['action' => 'index']);
+    //         }
+    //         $this->Flash->error(__('The wrestlers hp could not be saved. Please, try again.'));
+    //     }
+    //     $wrestlers = $this->WrestlersHp->Wrestlers->find('list', ['limit' => 200]);
+    //     $this->set(compact('wrestlersHp', 'wrestlers'));
+    //     $this->set('_serialize', ['wrestlersHp']);
+    // }
 
     /**
      * Delete method

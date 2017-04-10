@@ -52,8 +52,13 @@ class WrestlersController extends AppController
     public function add()
     {
         $wrestler = $this->Wrestlers->newEntity();
+        $hp = $this->Wrestlers->WrestlersHp->newEntity();
+
         if ($this->request->is('post')) {
             $wrestler = $this->Wrestlers->patchEntity($wrestler, $this->request->getData());
+            $hp = $this->Wrestlers->WrestlersHp->patchEntity($hp, $this->request->getData());
+            $hp->total_hp = $this->calculateHP($hp);
+            $wrestler->wrestlers_hp = $hp;
             if ($this->Wrestlers->save($wrestler)) {
                 $this->Flash->success(__('The wrestler has been saved.'));
 
@@ -68,10 +73,13 @@ class WrestlersController extends AppController
         $games = $this->Wrestlers->Games->find('list', ['limit' => 200]);
         $abilities = $this->Wrestlers->Abilities->find('list', ['limit' => 200]);
         $skills = $this->Wrestlers->Skills->find('list', ['limit' => 200]);
-        $this->set(compact('wrestler', 'genders', 'heights', 'weightClasses', 'reactions', 'games', 'abilities', 'skills'));
+        $this->set(compact('wrestler', 'genders', 'heights', 'weightClasses', 'reactions', 'games', 'abilities', 'skills', 'hp'));
         $this->set('_serialize', ['wrestler']);
     }
 
+    private function calculateHP($wrestlersHp) {
+      return $wrestlersHp->head + $wrestlersHp->body + $wrestlersHp->arms + $wrestlersHp->legs;
+    }
     /**
      * Edit method
      *
@@ -109,10 +117,14 @@ class WrestlersController extends AppController
     public function newedit($id = null)
     {
        $wrestler = $this->Wrestlers->get($id, [
-           'contain' => ['Abilities', 'Skills']
+           'contain' => ['Abilities', 'Skills', 'WrestlersHp']
        ]);
        if ($this->request->is(['patch', 'post', 'put'])) {
            $wrestler = $this->Wrestlers->patchEntity($wrestler, $this->request->getData());
+
+           $wrestler->wrestlers_hp = $this->Wrestlers->WrestlersHp->patchEntity($wrestler->wrestlers_hp, $this->request->getData());
+
+
            if ($this->Wrestlers->save($wrestler)) {
                $this->Flash->success(__('The wrestler has been saved.'));
 
@@ -129,6 +141,27 @@ class WrestlersController extends AppController
        $skills = $this->Wrestlers->Skills->find('list', ['limit' => 200]);
        $this->set(compact('wrestler', 'genders', 'heights', 'weightClasses', 'reactions', 'games', 'abilities', 'skills'));
        $this->set('_serialize', ['wrestler']);
+
+
+
+        // $wrestlersHp = $this->WrestlersHp->get($id, [
+        //     'contain' => []
+        // ]);
+        // if ($this->request->is(['patch', 'post', 'put'])) {
+        //     $wrestlersHp = $this->WrestlersHp->patchEntity($wrestlersHp, $this->request->getData());
+        //
+        //     $wrestlersHp->total_hp = $this->calculateHP($wrestlersHp);
+        //
+        //     if ($this->WrestlersHp->save($wrestlersHp)) {
+        //         $this->Flash->success(__('The wrestlers hp has been saved.'));
+        //
+        //         return $this->redirect(['action' => 'index']);
+        //     }
+        //     $this->Flash->error(__('The wrestlers hp could not be saved. Please, try again.'));
+        // }
+        // $wrestlers = $this->WrestlersHp->Wrestlers->find('list', ['limit' => 200]);
+        // $this->set(compact('wrestlersHp', 'wrestlers'));
+        // $this->set('_serialize', ['wrestlersHp']);
     }
 
 
