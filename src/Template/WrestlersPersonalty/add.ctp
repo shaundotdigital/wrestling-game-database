@@ -19,9 +19,12 @@
         <legend><?= __('Add Wrestlers Personalty') ?></legend>
         <?php
             echo $this->Form->control('wrestler_id', ['options' => $wrestlers]);
-            echo $this->Form->control('personalities_id', ['options' => $personalities]);
-            echo $this->Form->control('value');
-        ?>
+            foreach ($personalities as $personality)
+            {
+              echo $this->Form->select('personalities_id', ['options' => $personality]);
+              echo $this->Form->control('value');
+            }
+          ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
