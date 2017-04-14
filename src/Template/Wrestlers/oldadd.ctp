@@ -6,12 +6,6 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $wrestler->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $wrestler->id)]
-            )
-        ?></li>
         <li><?= $this->Html->link(__('List Wrestlers'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Genders'), ['controller' => 'Genders', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Gender'), ['controller' => 'Genders', 'action' => 'add']) ?></li>
@@ -38,7 +32,7 @@
 <div class="wrestlers form large-9 medium-8 columns content">
     <?= $this->Form->create($wrestler) ?>
     <fieldset>
-        <legend><?= __('Edit Wrestler') ?></legend>
+        <legend><?= __('Add Wrestler') ?></legend>
         <?php
             echo $this->Form->control('wrestler_name');
             echo $this->Form->control('overall');
@@ -49,12 +43,6 @@
             echo $this->Form->control('game_id', ['options' => $games]);
             echo $this->Form->control('abilities._ids', ['options' => $abilities]);
             echo $this->Form->input('skills._ids' ,array('multiple' => 'checkbox',));
-
-            echo $this->Form->hidden('wrestler_id', ['value' => $wrestler->id]);
-            echo $this->Form->control('head', ['value' => $wrestler->wrestlers_hp->head]);
-            echo $this->Form->control('body', ['value' => $wrestler->wrestlers_hp->body]);
-            echo $this->Form->control('arms', ['value' => $wrestler->wrestlers_hp->arms]);
-            echo $this->Form->control('legs', ['value' => $wrestler->wrestlers_hp->legs]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

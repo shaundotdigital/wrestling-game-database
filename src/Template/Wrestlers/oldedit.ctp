@@ -49,26 +49,8 @@
             echo $this->Form->control('game_id', ['options' => $games]);
             echo $this->Form->control('abilities._ids', ['options' => $abilities]);
             echo $this->Form->input('skills._ids' ,array('multiple' => 'checkbox',));
-
-            echo $this->Form->hidden('wrestler_id', ['value' => $wrestler->id]);
-            echo $this->Form->control('head', ['value' => $wrestler->wrestlers_hp->head]);
-            echo $this->Form->control('body', ['value' => $wrestler->wrestlers_hp->body]);
-            echo $this->Form->control('arms', ['value' => $wrestler->wrestlers_hp->arms]);
-            echo $this->Form->control('legs', ['value' => $wrestler->wrestlers_hp->legs]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
-
-        <!-- <?= $this->Form->create($wrestler->wrestlers_hp, ['url' => ['controller' => 'WrestlersHp', 'action' => 'edit']]) ?>
-        <fieldset>
-            <legend><?= __('Edit Wrestlers Hp') ?></legend>
-            <?php
-
-            ?>
-        </fieldset>
-
-
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?> -->
 </div>
