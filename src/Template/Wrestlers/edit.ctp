@@ -49,7 +49,9 @@
             echo $this->Form->control('game_id', ['options' => $games]);
             echo $this->Form->control('abilities._ids', ['options' => $abilities]);
             echo $this->Form->input('skills._ids' ,array('multiple' => 'checkbox',));
-
+        ?>
+        <br><legend><?= __('Edit HP') ?></legend><br>
+        <?php
             echo $this->Form->hidden('wrestler_id', ['value' => $wrestler->id]);
             echo $this->Form->control('head', ['value' => $wrestler->wrestlers_hp->head]);
             echo $this->Form->control('body', ['value' => $wrestler->wrestlers_hp->body]);
