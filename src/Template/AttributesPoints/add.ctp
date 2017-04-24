@@ -19,10 +19,16 @@
         <legend><?= __('Add Attributes Point') ?></legend>
         <?php
             echo $this->Form->control('wrestler_id', ['options' => $wrestlers]);
+            $Count = 0;
             foreach ($attributes as $attribute)
             {
               echo $this->Form->select('attribute_id', ['options' => $attribute]);
               echo $this->Form->control('value');
+
+              $Count++;
+              if ($Count == 2){
+                break; //stop foreach loop after 4th loop
+              }
             }
         ?>
     </fieldset>
