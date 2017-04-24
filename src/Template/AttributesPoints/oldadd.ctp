@@ -19,11 +19,8 @@
         <legend><?= __('Add Attributes Point') ?></legend>
         <?php
             echo $this->Form->control('wrestler_id', ['options' => $wrestlers]);
-            foreach ($attributes as $attribute)
-            {
-              echo $this->Form->select('attribute_id', ['options' => $attribute]);
-              echo $this->Form->control('value');
-            }
+            echo $this->Form->control('attribute_id', ['options' => $attributes]);
+            echo $this->Form->control('value');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
