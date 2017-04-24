@@ -23,7 +23,7 @@
             foreach ($attributes as $attribute)
             {
               echo $this->Form->select('attribute_id', ['options' => $attribute]);
-              echo $this->Form->control('value');
+              echo $this->Form->control('value' ,['label' => false, 'placeholder' => 'Attribute value']);
 
               $Count++;
               if ($Count == 2){
