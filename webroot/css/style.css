@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+a:link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease .2s;
+  color: #282936;
+}
+
+a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease .2s;
+  color: #282936;
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+
+a:hover {
+  cursor: pointer;
+  transition: all ease .2s;
+}
+
+a:active {
+  cursor: pointer;
+  transition: all ease .2s;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .01em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.85em;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em !important;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+
+.top-bar.expanded .title-area {
+    background: #467bfb;
+}
+
+.top-bar.expanded, .top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
+    background: #282936;
+}
+
+.side-nav li.heading {
+    color: #467bfb;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.4375rem 0.875rem;
+}
+
+#actions-sidebar {
+    background: #fafafa;
+}
+
+
+.side-nav li a:not(.button) {
+    color: #323341;
+}
+
+.side-nav li a:not(.button):hover {
+    color: #303141;
+}
+
+
+.content h3 {
+    color: #a2a2a2;
+    padding-bottom: 0.5rem;
+    margin-bottom: 20px;
+}
+
+.content h4 {
+    color: #a2a2a2;
+    padding-bottom: 0.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #a2a2a2;
+}
+
+.content .related h4 {
+    color: #467bfb;
+    padding-bottom: 0.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 0px;
+}
+
+
+legend {
+    color:#467bfb
+}
+
+
+table {
+    background: #fff;
+    margin-bottom: 1.25rem;
+    border: none;
+    table-layout: fixed;
+    width: 100%;
+}
+
+table thead {
+    background: none;
+}
+
+table tr {
+    border-bottom: 1px solid #ebebec;
+}
+
+table thead tr {
+    border-bottom: 1px solid #467bfb;
+}
+
+table tr th {
+    padding: 0.5625rem 0.625rem;
+    font-size: 0.875rem;
+    color: #282936;
+    text-align: left;
+    border-bottom: 2px solid #467bfb;
+}
+
+table tr:nth-of-type(even) {
+    background: none;
+}
+
+fieldset {
+    border: none;
+    padding: 1.25rem;
+    margin: 1.125rem 0;
+}
+
+fieldset legend {
+    border-bottom: 2px solid #467bfb;
+    width: 100%;
+    line-height: 2rem;
+}
+
+
+.vertical-table th {
+    padding: 0.5625rem 0.625rem;
+    font-size: 0.875rem;
+    color: #467bfb;
+    border: none;
+    text-align: left;
+}
