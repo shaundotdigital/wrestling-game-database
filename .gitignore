@@ -1,4 +1,4 @@
 tmp/cache
 tmp/debug_kit.sqlite
-logs
+logs/
 config/app.php
