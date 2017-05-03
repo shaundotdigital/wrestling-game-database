@@ -828,3 +828,163 @@ Stack Trace:
 #13 {main}
 
 
+2017-05-03 09:20:16 Error: [Cake\View\Exception\MissingElementException] Element file "Element/menus/main.ctp" is missing.
+Exception Attributes: array (
+  0 => 'Element/menus/main.ctp',
+)
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/src/Template/Wrestlers/index.ctp(6): Cake\View\View->element('menus/main')
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(1010): include('/Users/shaunske...')
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(971): Cake\View\View->_evaluate('/Users/shaunske...', Array)
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(595): Cake\View\View->_render('/Users/shaunske...')
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\WrestlersController))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#18 {main}
+
+
+2017-05-03 09:23:08 Error: [Cake\View\Exception\MissingElementException] Element file "Element/menus/main.ctp" is missing.
+Exception Attributes: array (
+  0 => 'Element/menus/main.ctp',
+)
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/src/Template/Wrestlers/index.ctp(6): Cake\View\View->element('menus/main')
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(1010): include('/Users/shaunske...')
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(971): Cake\View\View->_evaluate('/Users/shaunske...', Array)
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(595): Cake\View\View->_render('/Users/shaunske...')
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\WrestlersController))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#18 {main}
+
+
+2017-05-03 09:25:39 Error: Fatal Error (1): Class 'AppController' not found in [/Users/shaunskeen/Sites/wgdb/src/Controller/MenusController.php, line 2]
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 104
+[main] - [internal], line ??
+
+
+
+2017-05-03 09:25:39 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(104): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', '/Users/shaunske...', 2)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-03 09:25:40 Error: Fatal Error (1): Class 'AppController' not found in [/Users/shaunskeen/Sites/wgdb/src/Controller/MenusController.php, line 2]
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 104
+[main] - [internal], line ??
+
+
+
+2017-05-03 09:25:40 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(104): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', '/Users/shaunske...', 2)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-03 09:26:00 Error: Fatal Error (1): Class 'AppController' not found in [/Users/shaunskeen/Sites/wgdb/src/Controller/MenusController.php, line 2]
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 104
+[main] - [internal], line ??
+
+
+
+2017-05-03 09:26:00 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(104): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', '/Users/shaunske...', 2)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-03 09:26:33 Error: Fatal Error (1): Class 'AppController' not found in [/Users/shaunskeen/Sites/wgdb/src/Controller/MenusController.php, line 2]
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 104
+[main] - [internal], line ??
+
+
+
+2017-05-03 09:26:33 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(104): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', '/Users/shaunske...', 2)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-03 09:27:47 Error: [ParseError] syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file
+Request URL: /wrestlers
+Referer URL: http://localhost:8888/wgdb/attributes-points/add
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(971): Cake\View\View->_evaluate('/Users/shaunske...', Array)
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(1357): Cake\View\View->_render('/Users/shaunske...', Array)
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(499): Cake\View\View->_renderElement('/Users/shaunske...', Array, Array)
+#3 /Users/shaunskeen/Sites/wgdb/src/Template/Wrestlers/index.ctp(6): Cake\View\View->element('menus/main')
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(1010): include('/Users/shaunske...')
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(971): Cake\View\View->_evaluate('/Users/shaunske...', Array)
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(595): Cake\View\View->_render('/Users/shaunske...')
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\WrestlersController))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#21 {main}
+
+
