@@ -27,6 +27,16 @@ class WrestlersController extends AppController
         $this->set('_serialize', ['wrestlers']);
     }
 
+    public function editAttributes($id = null) {
+      $wrestler = $this->Wrestlers->get($id, [
+          'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints', 'WrestlersHp', 'WrestlersPersonalty']
+      ]);
+
+      $attributes = $this->Wrestlers->AttributesPoints->Attributes->find();
+
+      $this->set(compact('wrestler', 'attributes'));
+    }
+
     /**
      * View method
      *

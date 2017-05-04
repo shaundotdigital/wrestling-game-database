@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Log\Log;
 
 /**
  * AttributesPoints Controller
@@ -52,18 +53,24 @@ class AttributesPointsController extends AppController
     public function add()
     {
         $attributesPoint = $this->AttributesPoints->newEntity();
+        $tempWres = $this->AttributesPoints->Wrestlers->get(1);
         if ($this->request->is('post')) {
-            $attributesPoint = $this->AttributesPoints->patchEntity($attributesPoint, $this->request->getData());
-            if ($this->AttributesPoints->save($attributesPoint)) {
+
+            $entities = $this->AttributesPoints->newEntities($this->request->getData());
+
+            //$attributesPoint = $this->AttributesPoints->patchEntity($attributesPoint, $this->request->getData());
+            Log::write('debug', $entities);
+
+            if ($this->AttributesPoints->saveMany($entities)) {
                 $this->Flash->success(__('The attributes point has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'wrestlers', 'action' => 'editattributes', 1]);
             }
             $this->Flash->error(__('The attributes point could not be saved. Please, try again.'));
         }
         $wrestlers = $this->AttributesPoints->Wrestlers->find('list', ['limit' => 200]);
-        $attributes = $this->AttributesPoints->Attributes->find('list', ['limit' => 200]);
-        $this->set(compact('attributesPoint', 'wrestlers', 'attributes'));
+        $attributes = $this->AttributesPoints->Attributes->find();
+        $this->set(compact('attributesPoint', 'wrestlers', 'attributes', 'tempWres'));
         $this->set('_serialize', ['attributesPoint']);
     }
 

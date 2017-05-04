@@ -18,12 +18,13 @@
     <fieldset>
         <legend><?= __('Add Attributes Point') ?></legend>
         <?php
-            echo $this->Form->control('wrestler_id', ['options' => $wrestlers]);
+            // echo $this->Form->control('wrestler_id', ['options' => $wrestlers]);
             $Count = 0;
             foreach ($attributes as $attribute)
             {
-              echo $this->Form->select('attribute_id', ['options' => $attribute]);
-              echo $this->Form->control('value' ,['label' => false, 'placeholder' => 'Attribute value']);
+              echo $this->Form->hidden($attribute->id.'.wrestler_id', ['value' => $tempWres->id]);
+              echo $this->Form->hidden($attribute->id.'.attribute_id', ['value' => $attribute->id]);
+              echo $this->Form->input($attribute->id.'.value' ,['label' => $attribute->attribute_name, 'placeholder' => 'Attribute value']);
 
               $Count++;
               if ($Count == 2){
