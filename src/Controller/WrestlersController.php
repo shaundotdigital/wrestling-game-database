@@ -29,7 +29,7 @@ class WrestlersController extends AppController
 
     public function editAttributes($id = null) {
       $wrestler = $this->Wrestlers->get($id, [
-          'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints', 'WrestlersHp', 'WrestlersPersonalty']
+          'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonalty']
       ]);
 
       $attributes = $this->Wrestlers->AttributesPoints->Attributes->find();

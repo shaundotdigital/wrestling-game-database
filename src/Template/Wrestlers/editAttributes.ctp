@@ -35,16 +35,15 @@
 
 <div class="attributesPoints form large-9 medium-8 columns content">
   <h3><?= h($wrestler->wrestler_name) ?></h3>
-    <?= $this->Form->create($wrestler->attributesPoint, ['url' => ['controller' => 'AttributesPoints', 'action' => 'add']]) ?>
+    <?= $this->Form->create($wrestler->attributesPoint, ['url' => ['controller' => 'AttributesPoints', 'action' => 'edit']]) ?>
     <fieldset>
-        <legend><?= __('Add Attributes Point') ?></legend>
+        <legend><?= __('Edit Attributes Point') ?></legend>
         <?php
-            // echo $this->Form->control('wrestler_id', ['options' => $wrestlers]);
-            foreach ($attributes as $attribute)
+            foreach ($wrestler->attributes_points as $attribute)
             {
               echo $this->Form->hidden($attribute->id.'.wrestler_id', ['value' => $wrestler->id]);
               echo $this->Form->hidden($attribute->id.'.attribute_id', ['value' => $attribute->id]);
-              echo $this->Form->input($attribute->id.'.value' ,['label' => $attribute->attribute_name, 'placeholder' => 'Attribute value']);
+              echo $this->Form->input($attribute->id.'.value' ,['label' => $attribute->attribute->attribute_name, 'value' => $attribute->value]);
             }
         ?>
     </fieldset>
