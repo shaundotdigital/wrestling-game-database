@@ -70,10 +70,12 @@
     </table>
     <div class="related">
         <h4><?= __('Related Attributes Points') ?></h4>
-        <?php if (!empty($wrestler->attributes_points)): ?>
         <td class="actions">
+          <?php if(empty($wrestler->attributes_points)): ?>
+            <?= $this->Html->link(__('Add'), ['controller' => 'Wrestlers', 'action' => 'editattributes', $wrestler->id]) ?>
+          <?php else: ?>
             <?= $this->Html->link(__('Edit'), ['controller' => 'Wrestlers', 'action' => 'editattributes', $wrestler->id]) ?>
-        </td>
+          </td>
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
