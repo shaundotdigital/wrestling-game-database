@@ -37,7 +37,7 @@ class WrestlersController extends AppController
     public function view($id = null)
     {
         $wrestler = $this->Wrestlers->get($id, [
-            'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints', 'WrestlersHp', 'WrestlersPersonalty.Personalities']
+            'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonalty.Personalities']
         ]);
 
         $this->set('wrestler', $wrestler);

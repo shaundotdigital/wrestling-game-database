@@ -81,7 +81,7 @@
             <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
             <tr>
                 <td><?= h($attributesPoints->id) ?></td>
-                <td><?= h($attributesPoints->attribute_id) ?></td>
+                <td><?= h($attributesPoints->attribute->attribute_name) ?></td>
                 <td><?= h($attributesPoints->value) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'AttributesPoints', 'action' => 'view', $attributesPoints->id]) ?>
@@ -139,7 +139,7 @@
             </tr>
             <?php foreach ($wrestler->wrestlers_personalty as $wrestlersPersonalty): ?>
             <tr>
-                <td><?= h($wrestlersPersonalty->id) ?></td>                
+                <td><?= h($wrestlersPersonalty->id) ?></td>
                 <td><?= h($wrestlersPersonalty->personality->name) ?></td>
                 <td><?= h($wrestlersPersonalty->value) ?></td>
                 <td class="actions">
