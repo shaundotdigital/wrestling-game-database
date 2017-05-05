@@ -71,6 +71,9 @@
     <div class="related">
         <h4><?= __('Related Attributes Points') ?></h4>
         <?php if (!empty($wrestler->attributes_points)): ?>
+        <td class="actions">
+            <?= $this->Html->link(__('Edit'), ['controller' => 'Wrestlers', 'action' => 'editattributes', $wrestler->id]) ?>
+        </td>
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
@@ -87,7 +90,6 @@
                 <td><?= h($attributesPoints->value) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'AttributesPoints', 'action' => 'view', $attributesPoints->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'AttributesPoints', 'action' => 'edit', $attributesPoints->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'AttributesPoints', 'action' => 'delete', $attributesPoints->id], ['confirm' => __('Are you sure you want to delete # {0}?', $attributesPoints->id)]) ?>
                 </td>
             </tr>
