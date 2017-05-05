@@ -74,15 +74,13 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Wrestler Id') ?></th>
-                <th scope="col"><?= __('Attribute Id') ?></th>
+                <th scope="col"><?= __('Attribute Name') ?></th>
                 <th scope="col"><?= __('Value') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
             <tr>
                 <td><?= h($attributesPoints->id) ?></td>
-                <td><?= h($attributesPoints->wrestler_id) ?></td>
                 <td><?= h($attributesPoints->attribute_id) ?></td>
                 <td><?= h($attributesPoints->value) ?></td>
                 <td class="actions">
@@ -135,16 +133,14 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Wrestler Id') ?></th>
-                <th scope="col"><?= __('Personalities Id') ?></th>
+                <th scope="col"><?= __('Personality Name') ?></th>
                 <th scope="col"><?= __('Value') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($wrestler->wrestlers_personalty as $wrestlersPersonalty): ?>
             <tr>
-                <td><?= h($wrestlersPersonalty->id) ?></td>
-                <td><?= h($wrestlersPersonalty->wrestler_id) ?></td>
-                <td><?= h($wrestlersPersonalty->personalities_id) ?></td>
+                <td><?= h($wrestlersPersonalty->id) ?></td>                
+                <td><?= h($wrestlersPersonalty->personality->name) ?></td>
                 <td><?= h($wrestlersPersonalty->value) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'WrestlersPersonalty', 'action' => 'view', $wrestlersPersonalty->id]) ?>
@@ -154,7 +150,7 @@
             </tr>
             <?php endforeach; ?>
         </table>
-        <?php endif; ?>
+      <?php endif; ?>
     </div>
     <div class="related">
         <h4><?= __('Related Abilities') ?></h4>
