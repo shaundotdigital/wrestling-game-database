@@ -55,14 +55,36 @@ h3 {
 }
 
 
-.top-bar.expanded .title-area {
-    background: #467bfb;
-    height: 60px;
+/* Navigation */
+
+.top-bar {
+  background: #282936;
+  height: 60px;
 }
 
-.top-bar.expanded, .top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
-    background: #282936;
+.top-bar .name {
+    font-size: 16px;
+    height: 3.75rem;
+    margin: 0;
 }
+
+.top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name p, .top-bar .name span {
+    font-size: 1.0625rem;
+    line-height: 3.75rem;
+    margin: 0;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background: #333;
+    line-height: 3.75rem;
+    padding: 0 0.9375rem;
+}
+
+
+.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
+    background: #467bfb;
+}
+/* end */
 
 .side-nav li.heading {
     color: #467bfb;
