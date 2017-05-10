@@ -44,6 +44,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <h1><a href=""><?= $this->fetch('title') ?></a></h1>
             </li>
         </ul>
+        <div class="top-bar-navigation">
+          <ul class="left">
+                <li><a target="_blank" href="">Wrestlers</a></li>
+                <li><a target="_blank" href="">Games</a></li>
+            </ul>
+        </div>
         <div class="top-bar-section expanded">
             <ul class="right">
                 <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>

@@ -74,16 +74,33 @@ h3 {
     margin: 0;
 }
 
-.top-bar-section li:not(.has-form) a:not(.button) {
-    background: #333;
+.top-bar-navigation li {
+    display: inline-block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar-navigation ul li>a {
+    color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-size: 1.0625rem;
+    font-weight: normal;
+    padding-left: 0.9375rem;
+    padding: 12px 0 12px 0.9375rem;
+    text-transform: none;
+    width: 100%;
+}
+
+.top-bar-navigation li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button) {
     line-height: 3.75rem;
     padding: 0 0.9375rem;
 }
 
-
 .top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
     background: #467bfb;
 }
+
 /* end */
 
 .side-nav li.heading {
