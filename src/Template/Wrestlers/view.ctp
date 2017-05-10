@@ -72,7 +72,7 @@
         <h4><?= __('Related Attributes Points') ?></h4>
         <td class="actions">
           <?php if(empty($wrestler->attributes_points)): ?>
-            <?= $this->Html->link(__('Add'), ['controller' => 'Wrestlers', 'action' => 'editattributes', $wrestler->id]) ?>
+            <?= $this->Html->link(__('Add'), ['controller' => 'Wrestlers', 'action' => 'addattributes', $wrestler->id]) ?>
           <?php else: ?>
             <?= $this->Html->link(__('Edit'), ['controller' => 'Wrestlers', 'action' => 'editattributes', $wrestler->id]) ?>
           </td>

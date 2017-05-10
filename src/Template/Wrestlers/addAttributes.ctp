@@ -39,7 +39,6 @@
     <fieldset>
         <legend><?= __('Add Attributes Point') ?></legend>
         <?php
-            // echo $this->Form->control('wrestler_id', ['options' => $wrestlers]);
             foreach ($attributes as $attribute)
             {
               echo $this->Form->hidden($attribute->id.'.wrestler_id', ['value' => $wrestler->id]);
