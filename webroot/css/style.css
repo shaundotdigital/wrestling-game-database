@@ -62,18 +62,18 @@ h3 {
   height: 60px;
 }
 
-.top-bar .name {
-    font-size: 16px;
+.top-bar .logo {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+.top-bar .logo img{
+    margin: 0;
     height: 3.75rem;
-    margin: 0;
-}
-
-.top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name p, .top-bar .name span {
-    font-size: 1.0625rem;
+    padding: 10px;
+    width: auto;
     line-height: 3.75rem;
-    margin: 0;
 }
-
 .top-bar-navigation li {
     display: inline-block;
     height: auto;

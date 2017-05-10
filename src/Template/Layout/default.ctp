@@ -39,9 +39,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <nav class="top-bar" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+        <ul class="title-area">
+            <li class="logo">
+                <a href="#" class="logo"><img src="img/sddb/smackdowndb-logo.png"></a>
             </li>
         </ul>
         <div class="top-bar-navigation">
