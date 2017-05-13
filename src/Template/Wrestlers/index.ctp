@@ -21,7 +21,7 @@
             <?php foreach ($wrestlers as $wrestler): ?>
             <tr>
                 <td><?= h($wrestler->wrestler_name) ?></td>
-                <td><span class="label attribute"><?= $this->Number->format($wrestler->overall) ?></span></td>
+                <td><span class="label overall"><?= $this->Number->format($wrestler->overall) ?></span></td>
                 <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
                 <td><?= $wrestler->has('height') ? $this->Html->link($wrestler->height->height, ['controller' => 'Heights', 'action' => 'view', $wrestler->height->id]) : '' ?></td>
                 <td><?= $wrestler->has('weight_class') ? $this->Html->link($wrestler->weight_class->weight_class, ['controller' => 'WeightClasses', 'action' => 'view', $wrestler->weight_class->id]) : '' ?></td>
