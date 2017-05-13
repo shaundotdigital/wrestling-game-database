@@ -3,11 +3,14 @@
   * @var \App\View\AppView $this
   */
 ?>
-<div class="wrestlers index large-12 medium-8 columns content">
+<?= $this->element('menus/main'); ?>
+
+<div class="wrestlers index large-9 medium-8 columns content">
     <h3><?= __('Wrestlers') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('wrestler_name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('overall') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('gender_id') ?></th>
@@ -21,6 +24,7 @@
         <tbody>
             <?php foreach ($wrestlers as $wrestler): ?>
             <tr>
+                <td><?= $this->Number->format($wrestler->id) ?></td>
                 <td><?= h($wrestler->wrestler_name) ?></td>
                 <td><?= $this->Number->format($wrestler->overall) ?></td>
                 <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
@@ -38,6 +42,13 @@
         </tbody>
     </table>
     <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->first('<< ' . __('first')) ?>
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+            <?= $this->Paginator->last(__('last') . ' >>') ?>
+        </ul>
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
 </div>
