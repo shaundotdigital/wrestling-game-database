@@ -4,11 +4,10 @@
   */
 ?>
 <div class="wrestlers index large-12 medium-8 columns content">
-    <h3><?= __('Wrestlers') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('wrestler_name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('overall') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('gender_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('height_id') ?></th>
@@ -22,7 +21,7 @@
             <?php foreach ($wrestlers as $wrestler): ?>
             <tr>
                 <td><?= h($wrestler->wrestler_name) ?></td>
-                <td><?= $this->Number->format($wrestler->overall) ?></td>
+                <td><span class="label attribute"><?= $this->Number->format($wrestler->overall) ?></span></td>
                 <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
                 <td><?= $wrestler->has('height') ? $this->Html->link($wrestler->height->height, ['controller' => 'Heights', 'action' => 'view', $wrestler->height->id]) : '' ?></td>
                 <td><?= $wrestler->has('weight_class') ? $this->Html->link($wrestler->weight_class->weight_class, ['controller' => 'WeightClasses', 'action' => 'view', $wrestler->weight_class->id]) : '' ?></td>
