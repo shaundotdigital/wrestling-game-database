@@ -141,7 +141,8 @@ h3 {
 .content .related h4 {
     color: #467bfb;
     padding-bottom: 0.5rem;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
+    margin-top: 0px;
     margin-bottom: 10px;
     border-bottom: 0px;
 }
@@ -158,6 +159,16 @@ table {
     border: none;
     table-layout: fixed;
     width: 100%;
+}
+
+tr.inlineblock{
+    display: inline-block;
+    width: 33.33333%;
+}
+
+td.attributePoint {
+  float: right;
+  margin-top: -40px;
 }
 
 table thead {
