@@ -8926,60 +8926,6 @@ table td {
   word-break: break-all;
 }
 
-a:link {
-  cursor: pointer;
-  text-decoration: none;
-  transition: all ease .2s;
-  color: #282936;
-}
-
-a:visited {
-  cursor: pointer;
-  text-decoration: none;
-  transition: all ease .2s;
-  color: #282936;
-  text-align: center;
-  padding: 0 20px 0 20px;
-}
-
-a:hover {
-  cursor: pointer;
-  transition: all ease .2s;
-}
-
-a:active {
-  cursor: pointer;
-  transition: all ease .2s;
-}
-
-p {
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: .01em;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.85em;
-  line-height: 1.7;
-  margin: 0 auto;
-}
-
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  margin: 0 auto;
-}
-
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  margin: 0 auto;
-}
-
-h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  margin: 0 auto;
-}
-
 .top-bar.expanded .title-area {
   background: #467bfb;
 }
@@ -9083,6 +9029,60 @@ fieldset legend {
   color: #467bfb;
   border: none;
   text-align: left;
+}
+
+a:link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease .2s;
+  color: #282936;
+}
+
+a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease .2s;
+  color: #282936;
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+
+a:hover {
+  cursor: pointer;
+  transition: all ease .2s;
+}
+
+a:active {
+  cursor: pointer;
+  transition: all ease .2s;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .01em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.85em;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
