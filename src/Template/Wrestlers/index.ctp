@@ -11,6 +11,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                 <th scope="col"><?= $this->Paginator->sort('pac') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('wrestler_name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('overall') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('gender_id') ?></th>
@@ -26,6 +27,7 @@
             <tr>
                 <td><?= $this->Number->format($wrestler->id) ?></td>
                 <td><?= h($wrestler->wrestler_name) ?></td>
+                <td><?= $this->Number->format($wrestler->pac) ?></td>
                 <td><?= $this->Number->format($wrestler->overall) ?></td>
                 <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
                 <td><?= $wrestler->has('height') ? $this->Html->link($wrestler->height->height, ['controller' => 'Heights', 'action' => 'view', $wrestler->height->id]) : '' ?></td>

@@ -96,6 +96,11 @@ class WrestlersTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
+            ->integer('pac')
+            ->requirePresence('pac', 'create')
+            ->notEmpty('pac');
+
+        $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
 

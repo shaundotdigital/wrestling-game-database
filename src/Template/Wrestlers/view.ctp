@@ -59,6 +59,9 @@
             <th scope="row"><?= __('Game') ?></th>
             <td><?= $wrestler->has('game') ? $this->Html->link($wrestler->game->game_name, ['controller' => 'Games', 'action' => 'view', $wrestler->game->id]) : '' ?></td>
         </tr>
+        <th scope="row"><?= __('Pac') ?></th>
+            <td><?= $this->Number->format($wrestler->pac) ?></td>
+        </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($wrestler->id) ?></td>
