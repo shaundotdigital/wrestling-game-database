@@ -26,8 +26,8 @@
             <?php foreach ($wrestlers as $wrestler): ?>
             <tr>
                 <td><?= $this->Number->format($wrestler->id) ?></td>
-                <td><?= h($wrestler->wrestler_name) ?></td>
                 <td><?= $this->Number->format($wrestler->pac) ?></td>
+                <td><?= h($wrestler->wrestler_name) ?></td>
                 <td><?= $this->Number->format($wrestler->overall) ?></td>
                 <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
                 <td><?= $wrestler->has('height') ? $this->Html->link($wrestler->height->height, ['controller' => 'Heights', 'action' => 'view', $wrestler->height->id]) : '' ?></td>
