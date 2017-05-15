@@ -8980,53 +8980,14 @@ h3 {
   margin: 0 auto;
 }
 
-/* Navigation */
-.top-bar {
-  background: #282936;
-  height: 60px;
-}
-
-.top-bar .logo {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-}
-
-.top-bar .logo img {
-  margin: 0;
-  height: 3.75rem;
-  padding: 10px;
-  width: auto;
-  line-height: 3.75rem;
-}
-
-.top-bar-navigation li {
-  display: inline-block;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
-.top-bar-navigation ul li > a {
-  color: #fff;
-  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
-  font-size: 1.0625rem;
-  font-weight: normal;
-  padding-left: 0.9375rem;
-  padding: 12px 0 12px 0.9375rem;
-  text-transform: none;
-  width: 100%;
-}
-
-.top-bar-navigation li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button) {
-  line-height: 3.75rem;
-  padding: 0 0.9375rem;
-}
-
-.top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button) {
+.top-bar.expanded .title-area {
   background: #467bfb;
 }
 
-/* end */
+.top-bar.expanded, .top-bar, .top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button) {
+  background: #282936;
+}
+
 .side-nav li.heading {
   color: #467bfb;
   font-size: 0.875rem;
@@ -9063,8 +9024,7 @@ h3 {
 .content .related h4 {
   color: #467bfb;
   padding-bottom: 0.5rem;
-  /*margin-top: 20px;*/
-  margin-top: 0px;
+  margin-top: 20px;
   margin-bottom: 10px;
   border-bottom: 0px;
 }
@@ -9079,16 +9039,6 @@ table {
   border: none;
   table-layout: fixed;
   width: 100%;
-}
-
-tr.inlineblock {
-  display: inline-block;
-  width: 33.33333%;
-}
-
-td.attributePoint {
-  float: right;
-  margin-top: -40px;
 }
 
 table thead {
@@ -9133,44 +9083,6 @@ fieldset legend {
   color: #467bfb;
   border: none;
   text-align: left;
-}
-
-.label {
-  color: #ffffff;
-  cursor: pointer;
-  font-weight: normal;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 0;
-  border-radius: .2rem;
-}
-
-.overall {
-  background: #467bfb;
-}
-
-.attribute {
-  background: #467bfb;
-}
-
-.excellentAttribute {
-  background: #339900;
-}
-
-.goodAttribute {
-  background: #66cc33;
-}
-
-.averageAttribute {
-  background: #ffcc33;
-}
-
-.lowAttribute {
-  background: #ff9900;
-}
-
-.poorAttribute {
-  background: #ff3333;
 }
 
 /*# sourceMappingURL=styles.css.map */
