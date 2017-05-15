@@ -5,7 +5,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:$regular,500,700");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -8954,9 +8954,9 @@ table td {
 
 .top-bar-navigation ul li > a {
   color: #fff;
-  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 1.0625rem;
-  font-weight: normal;
+  font-weight: 400;
   padding-left: 0.9375rem;
   padding: 12px 0 12px 0.9375rem;
   text-transform: none;
@@ -9088,7 +9088,7 @@ fieldset legend {
 .label {
   color: #ffffff;
   cursor: pointer;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 0;
@@ -9150,7 +9150,7 @@ a:active {
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   letter-spacing: .01em;
   font-weight: 400;
   font-style: normal;
@@ -9160,19 +9160,19 @@ p {
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 100;
   margin: 0 auto;
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0 auto;
 }
 
 h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0 auto;
 }

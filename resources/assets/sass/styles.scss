@@ -1,14 +1,15 @@
 // Imports
+@import "variables";
 @import "base";
 @import "cake";
 @import "myCake";
-@import "variables";
+@import "mobile";
 
 // Bootstrap
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Housekeeping
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:$regular,500,700');
 
 a:link {
   cursor: pointer;
@@ -37,9 +38,9 @@ a:active {
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: $base-font-family;
   letter-spacing: .01em;
-  font-weight: 400;
+  font-weight: $regular;
   font-style: normal;
   font-size: 0.85em;
   line-height: 1.7;
@@ -47,19 +48,19 @@ p {
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: $base-font-family;
   font-weight: 100;
   margin: 0 auto;
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-family: $base-font-family;
+  font-weight: $regular;
   margin: 0 auto;
 }
 
 h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-family: $base-font-family;
+  font-weight: $regular;
   margin: 0 auto;
 }
