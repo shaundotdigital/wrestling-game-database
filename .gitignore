@@ -2,3 +2,4 @@ tmp/cache
 tmp/debug_kit.sqlite
 logs/
 config/app.php
+node_modules/
