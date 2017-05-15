@@ -41,6 +41,7 @@
         <legend><?= __('Edit Wrestler') ?></legend>
         <?php
             echo $this->Form->control('wrestler_name');
+            echo $this->Form->control('pac');
             echo $this->Form->control('overall');
             echo $this->Form->control('gender_id', ['options' => $genders]);
             echo $this->Form->control('height_id', ['options' => $heights]);

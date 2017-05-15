@@ -42,6 +42,7 @@ class WrestlersTable extends Table
     {
         parent::initialize($config);
 
+
         $this->setTable('wrestlers');
         $this->setDisplayField('wrestler_name');
         $this->setPrimaryKey('id');
@@ -95,6 +96,11 @@ class WrestlersTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+      $validator
+          ->integer('pac')
+          ->requirePresence('pac', 'create')
+          ->notEmpty('pac');
+
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
