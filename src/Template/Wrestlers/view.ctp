@@ -36,6 +36,8 @@
       </tr>
   </table>
 
+  <td><?= h($wrestler->image_name) ?></td>
+
 
       <div class="Attributes">
           <table cellpadding="0" cellspacing="0">
