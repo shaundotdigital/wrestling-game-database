@@ -235,22 +235,22 @@ fieldset legend {
   background: #467bfb;
 }
 
-.green {
-  background: green;
+.excellentAttribute {
+  background: #339900;
 }
 
-.lightgreen {
-  background: lightgreen;
+.goodAttribute {
+  background: #66cc33;
 }
 
-.red {
-  background: red;
+.averageAttribute {
+  background: #ffcc33;
 }
 
-.orange {
-  background: orange;
+.lowAttribute {
+  background: #ff9900;
 }
 
-.yellow {
-  background: yellow;
+.poorAttribute {
+  background: #ff3333;
 }
