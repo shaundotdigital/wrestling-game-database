@@ -234,3 +234,23 @@ fieldset legend {
 .attribute {
   background: #467bfb;
 }
+
+.green {
+  background: green;
+}
+
+.lightgreen {
+  background: lightgreen;
+}
+
+.red {
+  background: red;
+}
+
+.orange {
+  background: orange;
+}
+
+.yellow {
+  background: yellow;
+}
