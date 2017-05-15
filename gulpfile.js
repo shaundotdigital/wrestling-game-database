@@ -31,5 +31,5 @@ elixir(mix => {
     	//.sass('default.scss').version('css/default.css')
         //.webpack('default.js').version('js/default.js');
 
-        mix.sass('default.scss');
+        mix.sass('styles.scss');
 });
