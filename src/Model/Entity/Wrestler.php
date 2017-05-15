@@ -44,8 +44,8 @@ class Wrestler extends Entity
     ];
 
 
-    protected function _getimageName() {
-          return $this->_properties['pac'] . '-render.png';
+    protected function _getPacNumber() {
+          return $this->_properties['pac'];
         }
 
 }

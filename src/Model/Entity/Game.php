@@ -31,4 +31,8 @@ class Game extends Entity
         '*' => true,
         'id' => false
     ];
+
+    protected function _getReleaseYear() {
+      return $this->_properties['release_year'];
+    }
 }

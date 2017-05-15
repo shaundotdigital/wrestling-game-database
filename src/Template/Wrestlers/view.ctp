@@ -4,6 +4,12 @@
   */
 ?>
 <h3><?= h($wrestler->wrestler_name) ?></h3>
+
+<?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?>
+
+<!-- <?=h($game->release_year)?> -->
+
+
   <div class="wrestlers view large-8 columns content">
   <table class="vertical-table">
       <tr>
@@ -35,8 +41,6 @@
           <td><?= $this->Number->format($wrestler->overall) ?></td>
       </tr>
   </table>
-
-  <td><?= h($wrestler->image_name) ?></td>
 
 
       <div class="Attributes">
