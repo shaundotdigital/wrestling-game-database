@@ -9123,6 +9123,18 @@ fieldset legend {
   background: #ff3333;
 }
 
+.content-header {
+  background-color: #7db9e8;
+}
+
+.wrestler-header .wrestler-name {
+  color: #fff;
+}
+
+.wrestler-render img {
+  width: 10%;
+}
+
 a:link {
   cursor: pointer;
   text-decoration: none;

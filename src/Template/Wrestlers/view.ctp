@@ -3,9 +3,29 @@
   * @var \App\View\AppView $this
   */
 ?>
-<h3><?= h($wrestler->wrestler_name) ?></h3>
 
-<?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?>
+<div class="content-header <?=($wrestler->game->game_name)?>">
+  <div class="content-header-left <?=($wrestler->wrestler_name)?>">
+    <div class="wrestler-header">
+      <div class="wrestler-info">
+        <div class="wrestler-name"<h3><?= h($wrestler->wrestler_name) ?></h3></div>
+        <div class="wrestler-render">
+          <?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?>
+        </div>
+      </div>
+    </div>
+    <div class="content-header-right <?=($wrestler->game->game_name)?>">
+      <div class="game-info">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 
 <!-- <?=h($game->release_year)?> -->
 
