@@ -87,7 +87,15 @@
         <table cellpadding="0" cellspacing="0">
             <?php foreach ($wrestler->wrestlers_personalty as $wrestlersPersonalty): ?>
             <tr>
-                <td><?= h($wrestlersPersonalty->personality->name) ?></td>
+                <td>
+                  <?
+                    if ($wrestlersPersonalty->value > 0) {
+                      echo h($wrestlersPersonalty->personality->name);
+                    } else {
+                      echo h($wrestlersPersonalty->personality->negative_name);
+                    }
+                  ?>
+                </td>
                 <td><?= h($wrestlersPersonalty->value) ?></td>
             </tr>
             <?php endforeach; ?>
