@@ -3,7 +3,7 @@
   * @var \App\View\AppView $this
   */
 ?>
-    <div class="content-header <?=($wrestler->game->game_name)?>">
+    <!-- <div class="content-header <?=($wrestler->game->game_name)?>">
         <div class="content-header-left <?=($wrestler->wrestler_name)?>">
             <div class="wrestler-header">
                 <div class="wrestler-info">
@@ -24,9 +24,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- <?=h($game->release_year)?> -->
-
+    </div> -->
 
     <div class="wrestlers view large-8 columns content">
         <table class="vertical-table">

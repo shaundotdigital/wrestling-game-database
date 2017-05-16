@@ -16558,7 +16558,6 @@ div.message.hidden {
 .content,
 #actions-sidebar {
   margin-bottom: -99999px;
-  padding-bottom: 99999px;
 }
 
 @media (max-width: 640px) {
@@ -16772,7 +16771,7 @@ fieldset legend {
 }
 
 .container {
-  width: 1340px;
+  width: 1380px;
   margin: 0 auto;
   box-sizing: border-box;
 }
