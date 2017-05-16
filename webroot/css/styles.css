@@ -16550,7 +16550,6 @@ div.message.hidden {
 
 /* Use 'one true layout' methods to get equal height columns */
 .container {
-  overflow: hidden;
   min-height: 92%;
   /* full height almost always */
 }
@@ -16772,8 +16771,8 @@ fieldset legend {
   width: 10%;
 }
 
-.nav-container {
-  max-width: 1340px;
+.container {
+  width: 1340px;
   margin: 0 auto;
   box-sizing: border-box;
 }
