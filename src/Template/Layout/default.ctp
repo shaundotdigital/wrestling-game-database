@@ -37,9 +37,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <nav class="top-bar" data-topbar role="navigation">
+      <div class="container">
         <ul class="title-area">
             <li class="logo">
-                <a href="#" class="logo"><img src="../img/sddb/smackdowndb-logo.png"></a>
+                <a href="#" class="logo"><?= $this->Html->image('sddb/smackdowndb-logo.png')?></a>
             </li>
         </ul>
         <div class="top-bar-navigation">
@@ -48,12 +49,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><a target="_blank" href="">Games</a></li>
             </ul>
         </div>
-        <div class="top-bar-section expanded">
+        <!-- <div class="top-bar-section expanded">
             <ul class="right">
                 <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
             </ul>
-        </div>
+        </div> -->
+      </div>
     </nav>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
