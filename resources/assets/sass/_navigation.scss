@@ -1,30 +1,37 @@
-/* Navigation */
+/* top-bar */
 
 .top-bar {
-  background: #282936;
+  background: darken($colour-default-dark, 10%);
+  height: 35px;
+}
+
+/* Navigation */
+
+.main-bar {
+  background: $colour-smackdowndb;
   height: 60px;
 }
 
-.top-bar .logo {
+.main-bar .logo {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
 }
 
-.top-bar .logo img{
+.main-bar .logo img{
     margin: 0;
     height: 3.75rem;
     padding: 10px;
     width: auto;
     line-height: 3.75rem;
 }
-.top-bar-navigation li {
+.main-bar-navigation li {
     display: inline-block;
     height: auto;
     margin: 0;
     padding: 0;
 }
 
-.top-bar-navigation ul li>a {
+.main-bar-navigation ul li>a {
     color: #fff;
     font-family: $base-font-family;
     font-size: 1.0625rem;
@@ -35,17 +42,22 @@
     width: 100%;
   }
 
-.top-bar.expanded .title-area {
+.main-bar.expanded .title-area {
     background: $colour-smackdowndb;
 }
 
-.top-bar-navigation li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button) {
+.main-bar-navigation li:not(.has-form) a:not(.button), .main-bar-section li:not(.has-form) a:not(.button) {
     line-height: 3.75rem;
     padding: 0 0.9375rem;
 }
 
-.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
+.main-bar-section ul li,.main-bar-section li:not(.has-form) a:not(.button) {
     background: $colour-smackdowndb;
 }
 
-/* end */
+/* sub-bar */
+
+.sub-bar {
+  background-color: darken($colour-smackdowndb, 10%);
+  height: 35px;
+}

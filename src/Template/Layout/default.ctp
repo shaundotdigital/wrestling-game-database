@@ -36,27 +36,22 @@ $cakeDescription = 'SmackDown DB';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar" data-topbar role="navigation">
-      <div class="nav-container">
-        <ul class="title-area">
-            <li class="logo">
-                <a href="#" class="logo"><?= $this->Html->image('sddb/smackdowndb-logo.png')?></a>
-            </li>
+  <div class="top-bar" data-subbar role="top-navigation">
+  </div>
+  <nav class="main-bar" data-topbar role="navigation">
+    <div class="nav-container">
+      <div class="main-bar-navigation">
+        <ul class="left">
+          <li><?= $this->Html->link(__('Wrestlers'), ['action' => '../wrestlers']) ?> </li>
+          <li><?= $this->Html->link(__('Games'), ['controller' => 'Games', 'action' => 'index']) ?> </li>
         </ul>
-        <div class="top-bar-navigation">
-          <ul class="left">
-                <li><a target="_blank" href="">Wrestlers</a></li>
-                <li><a target="_blank" href="">Games</a></li>
-            </ul>
-        </div>
-        <!-- <div class="top-bar-section expanded">
-            <ul class="right">
-                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
-            </ul>
-        </div> -->
       </div>
-    </nav>
+    </div>
+  </nav>
+  <div class="sub-bar" data-subbar role="sub-navigation">
+  </div>
+
+
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
