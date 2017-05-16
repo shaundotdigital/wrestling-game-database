@@ -66,3 +66,22 @@ td.float {
 .attributeValue, .abilityValue, .skillValue  {
   margin-top: -40px;
 }
+
+.panel {
+    padding: 0;
+}
+
+.panel-table {
+    background: #fff;
+    margin-bottom: 0;
+    border: none;
+    table-layout: fixed;
+    width: 100%;
+}
+
+#panel-comment {
+    background-color: $colour-default-dark;
+    border-bottom: 2px solid $colour-smackdowndb !important;
+    padding: 10px;
+    color: #FFF;
+}

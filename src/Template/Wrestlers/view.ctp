@@ -32,8 +32,12 @@
 
     <div class="container">
     <div class="wrestlers view large-8 columns content">
-        <div class="Attributes">
-            <table cellpadding="0" cellspacing="0">
+      <div class="panel panel-default">
+          <div class="panel-heading" id="panel-comment">
+            <?= __('Attributes') ?>
+          </div>
+          <div class="Attributes">
+            <table cellpadding="0" cellspacing="0" class="panel-table">
                 <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
                 <tr class="inlineblock">
                     <td>
@@ -44,11 +48,15 @@
                 <?php endforeach; ?>
             </table>
         </div>
+      </div>
 
         <div class="related">
-            <h4><?= __('Abilities') ?></h4>
+          <div class="panel panel-default">
+            <div class="panel-heading" id="panel-comment">
+              <?= __('Abilities') ?>
+            </div>
             <?php if (!empty($wrestler->abilities)): ?>
-            <table cellpadding="0" cellspacing="0">
+            <table cellpadding="0" cellspacing="0" class="panel-table">
                 <?php foreach ($wrestler->abilities as $abilities): ?>
                 <tr class="inlineblock">
                     <td>
@@ -61,11 +69,15 @@
                 <?php endforeach; ?>
             </table>
             <?php endif; ?>
+          </div>
         </div>
         <div class="related">
-            <h4><?= __('Skills') ?></h4>
+          <div class="panel panel-default">
+            <div class="panel-heading" id="panel-comment">
+              <?= __('Skills') ?>
+            </div>
             <?php if (!empty($wrestler->skills)): ?>
-            <table cellpadding="0" cellspacing="0">
+            <table cellpadding="0" cellspacing="0" class="panel-table">
                 <?php foreach ($wrestler->skills as $skills): ?>
                 <tr class="inlineblock">
                     <td>
@@ -78,9 +90,14 @@
                 <?php endforeach; ?>
             </table>
             <?php endif; ?>
+          </div>
         </div>
     </div>
     <div class="wrestlers view medium-4 columns content">
+      <div class="panel panel-default">
+          <div class="panel-heading" id="panel-comment">
+            <?=($wrestler->wrestler_name)?>
+          </div>
         <table class="vertical-table">
             <tr>
                 <th scope="row">
@@ -123,10 +140,14 @@
                 </td>
             </tr>
         </table>
+      </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" id="panel-comment">
+                <?= __('Personality') ?>
+              </div>
         <div class="related">
-            <h4><?= __('Personality') ?></h4>
             <?php if (!empty($wrestler->wrestlers_personality)): ?>
-            <table cellpadding="0" cellspacing="0">
+            <table cellpadding="0" cellspacing="0" class="panel-table">
                 <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
                 <tr>
                     <td>
@@ -146,5 +167,6 @@
             </table>
             <?php endif; ?>
         </div>
+      </div>
     </div>
   </div>

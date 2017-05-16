@@ -16772,6 +16772,25 @@ td.float {
   margin-top: -40px;
 }
 
+.panel {
+  padding: 0;
+}
+
+.panel-table {
+  background: #fff;
+  margin-bottom: 0;
+  border: none;
+  table-layout: fixed;
+  width: 100%;
+}
+
+#panel-comment {
+  background-color: #494b5b;
+  border-bottom: 2px solid #467bfb !important;
+  padding: 10px;
+  color: #FFF;
+}
+
 .container {
   width: 1380px;
   margin: 0 auto;

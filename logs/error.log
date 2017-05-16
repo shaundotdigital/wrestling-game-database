@@ -1174,3 +1174,72 @@ Stack Trace:
 #16 {main}
 
 
+2017-05-16 20:44:45 Error: [ParseError] syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF)
+Request URL: /wrestlers/view/1
+Referer URL: http://localhost:8888/wgdb/wrestlers
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(971): Cake\View\View->_evaluate('/Users/shaunske...', Array)
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(595): Cake\View\View->_render('/Users/shaunske...')
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\WrestlersController))
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#16 {main}
+
+
+2017-05-16 21:06:13 Error: [ParseError] syntax error, unexpected 'Skills' (T_STRING), expecting ',' or ')'
+Request URL: /wrestlers/view/1
+Referer URL: http://localhost:8888/wgdb/wrestlers
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(971): Cake\View\View->_evaluate('/Users/shaunske...', Array)
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(595): Cake\View\View->_render('/Users/shaunske...')
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\WrestlersController))
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#16 {main}
+
+
+2017-05-16 21:06:24 Error: [ParseError] syntax error, unexpected 'Skills' (T_STRING), expecting ',' or ')'
+Request URL: /wrestlers/view/1
+Referer URL: http://localhost:8888/wgdb/wrestlers
+Stack Trace:
+#0 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(971): Cake\View\View->_evaluate('/Users/shaunske...', Array)
+#1 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/View/View.php(595): Cake\View\View->_render('/Users/shaunske...')
+#2 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#3 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#4 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\WrestlersController))
+#5 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/shaunskeen/Sites/wgdb/vendor/cakephp/cakephp/src/Http/Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /Users/shaunskeen/Sites/wgdb/webroot/index.php(37): Cake\Http\Server->run()
+#16 {main}
+
+
