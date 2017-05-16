@@ -1,0 +1,51 @@
+/* Navigation */
+
+.top-bar {
+  background: #282936;
+  height: 60px;
+}
+
+.top-bar .logo {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+.top-bar .logo img{
+    margin: 0;
+    height: 3.75rem;
+    padding: 10px;
+    width: auto;
+    line-height: 3.75rem;
+}
+.top-bar-navigation li {
+    display: inline-block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar-navigation ul li>a {
+    color: #fff;
+    font-family: $base-font-family;
+    font-size: 1.0625rem;
+    font-weight: $regular;
+    padding-left: 0.9375rem;
+    padding: 12px 0 12px 0.9375rem;
+    text-transform: none;
+    width: 100%;
+  }
+
+.top-bar.expanded .title-area {
+    background: $colour-smackdowndb;
+}
+
+.top-bar-navigation li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button) {
+    line-height: 3.75rem;
+    padding: 0 0.9375rem;
+}
+
+.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
+    background: $colour-smackdowndb;
+}
+
+/* end */
