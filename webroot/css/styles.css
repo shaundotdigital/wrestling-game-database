@@ -9135,6 +9135,11 @@ fieldset legend {
   width: 10%;
 }
 
+.game-logo img {
+  float: right;
+  width: 10%;
+}
+
 a:link {
   cursor: pointer;
   text-decoration: none;

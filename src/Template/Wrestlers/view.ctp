@@ -16,6 +16,9 @@
     </div>
     <div class="content-header-right <?=($wrestler->game->game_name)?>">
       <div class="game-info">
+        <div class="game-logo">
+          <?= $this->Html->image('games/' . $wrestler->game->game_name . '-logo.png')?>
+        </div>
       </div>
     </div>
   </div>
