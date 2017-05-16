@@ -3,7 +3,7 @@
   * @var \App\View\AppView $this
   */
 ?>
-    <!-- <div class="content-header <?=($wrestler->game->game_name)?>">
+    <div class="content-header <?=($wrestler->game->game_name)?>">
         <div class="content-header-left <?=($wrestler->wrestler_name)?>">
             <div class="wrestler-header">
                 <div class="wrestler-info">
@@ -17,14 +17,14 @@
                 </div>
             </div>
         </div>
-        <div class="content-header-right <?=($wrestler->game->game_name)?>">
+        <div class="content-header-right <?=($wrestler->game->game_name)?>" align="right">
             <div class="game-info">
                 <div class="game-logo">
                     <?= $this->Html->image('games/' . $wrestler->game->game_name . '-logo.png')?>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div class="wrestlers view large-8 columns content">
         <table class="vertical-table">

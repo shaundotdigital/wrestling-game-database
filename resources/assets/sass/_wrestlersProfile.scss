@@ -48,10 +48,14 @@
 }
 
 .wrestler-render img {
-    width: 10%;
+    max-height: 10%;
+    overflow: hidden;
+}
+
+.content-header-right {
+display: inline-block;
 }
 
 .game-logo img {
-  float:right;
-  width: 10%;
+    max-width:  25%;
 }
