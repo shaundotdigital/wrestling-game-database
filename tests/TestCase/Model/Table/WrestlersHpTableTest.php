@@ -40,7 +40,7 @@ class WrestlersHpTableTest extends TestCase
         'app.attributes_games',
         'app.platforms',
         'app.games_platforms',
-        'app.wrestlers_personalty',
+        'app.wrestlers_personality',
         'app.personalities',
         'app.skills',
         'app.skill_levels',

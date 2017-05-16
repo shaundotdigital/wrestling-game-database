@@ -7,20 +7,20 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * WrestlersPersonalty Model
+ * WrestlersPersonality Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Wrestlers
  * @property \Cake\ORM\Association\BelongsTo $Personalities
  *
- * @method \App\Model\Entity\WrestlersPersonalty get($primaryKey, $options = [])
- * @method \App\Model\Entity\WrestlersPersonalty newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\WrestlersPersonalty[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\WrestlersPersonalty|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\WrestlersPersonalty patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\WrestlersPersonalty[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\WrestlersPersonalty findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\WrestlersPersonality get($primaryKey, $options = [])
+ * @method \App\Model\Entity\WrestlersPersonality newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\WrestlersPersonality[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\WrestlersPersonality|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\WrestlersPersonality patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\WrestlersPersonality[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\WrestlersPersonality findOrCreate($search, callable $callback = null, $options = [])
  */
-class WrestlersPersonaltyTable extends Table
+class WrestlersPersonalityTable extends Table
 {
 
     /**
@@ -33,7 +33,7 @@ class WrestlersPersonaltyTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('wrestlers_personalty');
+        $this->setTable('wrestlers_personality');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 

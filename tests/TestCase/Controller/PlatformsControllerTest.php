@@ -27,7 +27,7 @@ class PlatformsControllerTest extends IntegrationTestCase
         'app.attributes',
         'app.attributes_games',
         'app.wrestlers_hp',
-        'app.wrestlers_personalty',
+        'app.wrestlers_personality',
         'app.personalities',
         'app.abilities',
         'app.ability_levels',
