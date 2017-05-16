@@ -16771,6 +16771,9 @@ fieldset legend {
 
 td.float {
   float: right;
+}
+
+.attributeValue, .abilityValue, .skillValue {
   margin-top: -40px;
 }
 

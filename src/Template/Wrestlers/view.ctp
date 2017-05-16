@@ -39,7 +39,7 @@
                     <td>
                         <?= h($attributesPoints->attribute->attribute_name) ?>
                     </td>
-                    <td class="float"><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
+                    <td class="float attributeValue"><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
                 </tr>
                 <?php endforeach; ?>
             </table>
@@ -54,7 +54,7 @@
                     <td>
                         <?= h($abilities->ability_name) ?>
                     </td>
-                    <td class="float">
+                    <td class="float abilityValue">
                         <?= h($abilities->ability_level_id) ?>
                     </td>
                 </tr>
@@ -71,7 +71,7 @@
                     <td>
                         <?= h($skills->skill_name) ?>
                     </td>
-                    <td class="float">
+                    <td class="float skillValue">
                         <?= h($skills->skill_levels_id) ?>
                     </td>
                 </tr>
@@ -138,7 +138,7 @@
                     }
                   ?>
                     </td>
-                    <td>
+                    <td class="float personalityValue">
                         <?= h($wrestlersPersonality->value) ?>
                     </td>
                 </tr>
