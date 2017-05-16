@@ -1,58 +1,10 @@
 /* top-bar */
 
-.top-bar {
-  background: darken($colour-default-dark, 10%);
-  height: 35px;
-}
-
-/* Navigation */
-
-.main-bar {
-  background: $colour-smackdowndb;
-  height: 60px;
-}
-
-.main-bar .logo {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-}
-
-.main-bar .logo img{
-    margin: 0;
-    height: 3.75rem;
-    padding: 10px;
-    width: auto;
-    line-height: 3.75rem;
-}
-.main-bar-navigation li {
-    display: inline-block;
-    height: auto;
-    margin: 0;
-    padding: 0;
-}
-
-.main-bar-navigation ul li>a {
-    color: #fff;
-    font-family: $base-font-family;
-    font-size: 1.0625rem;
-    font-weight: $regular;
-    padding-left: 0.9375rem;
-    padding: 12px 0 12px 0.9375rem;
-    text-transform: none;
-    width: 100%;
-  }
-
-.main-bar.expanded .title-area {
-    background: $colour-smackdowndb;
-}
-
-.main-bar-navigation li:not(.has-form) a:not(.button), .main-bar-section li:not(.has-form) a:not(.button) {
-    line-height: 3.75rem;
-    padding: 0 0.9375rem;
-}
-
-.main-bar-section ul li,.main-bar-section li:not(.has-form) a:not(.button) {
-    background: $colour-smackdowndb;
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
 }
 
 /* sub-bar */

@@ -16704,59 +16704,11 @@ fieldset legend {
 }
 
 /* top-bar */
-.top-bar {
-  background: #32343f;
-  height: 35px;
-}
-
-/* Navigation */
-.main-bar {
-  background: #467bfb;
-  height: 60px;
-}
-
-.main-bar .logo {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-}
-
-.main-bar .logo img {
-  margin: 0;
-  height: 3.75rem;
-  padding: 10px;
-  width: auto;
-  line-height: 3.75rem;
-}
-
-.main-bar-navigation li {
-  display: inline-block;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
-.main-bar-navigation ul li > a {
-  color: #fff;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 1.0625rem;
-  font-weight: 400;
-  padding-left: 0.9375rem;
-  padding: 12px 0 12px 0.9375rem;
-  text-transform: none;
-  width: 100%;
-}
-
-.main-bar.expanded .title-area {
-  background: #467bfb;
-}
-
-.main-bar-navigation li:not(.has-form) a:not(.button), .main-bar-section li:not(.has-form) a:not(.button) {
-  line-height: 3.75rem;
-  padding: 0 0.9375rem;
-}
-
-.main-bar-section ul li, .main-bar-section li:not(.has-form) a:not(.button) {
-  background: #467bfb;
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
 }
 
 /* sub-bar */
