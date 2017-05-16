@@ -13,7 +13,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'SmackDown DB';
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,7 +37,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <nav class="top-bar" data-topbar role="navigation">
-      <div class="container">
+      <div class="nav-container">
         <ul class="title-area">
             <li class="logo">
                 <a href="#" class="logo"><?= $this->Html->image('sddb/smackdowndb-logo.png')?></a>
