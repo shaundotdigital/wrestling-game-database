@@ -16652,11 +16652,6 @@ tr.inlineblock {
   width: 33.33333%;
 }
 
-td.attributePoint {
-  float: right;
-  margin-top: -40px;
-}
-
 table thead {
   background: none;
 }
@@ -16772,6 +16767,11 @@ fieldset legend {
 
 .game-logo img {
   max-width: 25%;
+}
+
+td.float {
+  float: right;
+  margin-top: -40px;
 }
 
 .container {

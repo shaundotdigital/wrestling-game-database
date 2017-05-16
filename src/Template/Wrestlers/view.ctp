@@ -10,6 +10,9 @@
                 <div class="wrestler-info">
                     <div class="wrestler-name">
                     <h3><?= h($wrestler->wrestler_name) ?></h3>
+                    <tr><?= __('Overall') ?>
+                      <td><?= $this->Number->format($wrestler->overall) ?></td>
+                    </tr>
                     </div>
                     <div class="wrestler-render">
                         <!-- <?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?> -->
@@ -29,6 +32,55 @@
 
     <div class="container">
     <div class="wrestlers view large-8 columns content">
+        <div class="Attributes">
+            <table cellpadding="0" cellspacing="0">
+                <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
+                <tr class="inlineblock">
+                    <td>
+                        <?= h($attributesPoints->attribute->attribute_name) ?>
+                    </td>
+                    <td class="float"><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+
+        <div class="related">
+            <h4><?= __('Abilities') ?></h4>
+            <?php if (!empty($wrestler->abilities)): ?>
+            <table cellpadding="0" cellspacing="0">
+                <?php foreach ($wrestler->abilities as $abilities): ?>
+                <tr class="inlineblock">
+                    <td>
+                        <?= h($abilities->ability_name) ?>
+                    </td>
+                    <td class="float">
+                        <?= h($abilities->ability_level_id) ?>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+            <?php endif; ?>
+        </div>
+        <div class="related">
+            <h4><?= __('Skills') ?></h4>
+            <?php if (!empty($wrestler->skills)): ?>
+            <table cellpadding="0" cellspacing="0">
+                <?php foreach ($wrestler->skills as $skills): ?>
+                <tr class="inlineblock">
+                    <td>
+                        <?= h($skills->skill_name) ?>
+                    </td>
+                    <td class="float">
+                        <?= h($skills->skill_levels_id) ?>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="wrestlers view medium-4 columns content">
         <table class="vertical-table">
             <tr>
                 <th scope="row">
@@ -64,43 +116,13 @@
             </tr>
             <tr>
                 <th scope="row">
-                    <?= __('Game') ?>
-                </th>
-                <td>
-                    <?= $wrestler->has('game') ? $this->Html->link($wrestler->game->game_name, ['controller' => 'Games', 'action' => 'view', $wrestler->game->id]) : '' ?>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
                     <?= __('Pac') ?>
                 </th>
                 <td>
                     <?= $this->Number->format($wrestler->pac) ?>
                 </td>
             </tr>
-            <tr>
-                <th scope="row">
-                    <?= __('Overall') ?>
-                </th>
-                <td>
-                    <?= $this->Number->format($wrestler->overall) ?>
-                </td>
-            </tr>
         </table>
-        <div class="Attributes">
-            <table cellpadding="0" cellspacing="0">
-                <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
-                <tr class="inlineblock">
-                    <td>
-                        <?= h($attributesPoints->attribute->attribute_name) ?>
-                    </td>
-                    <td class="attributePoint"><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
-        </div>
-    </div>
-    <div class="wrestlers view medium-4 columns content">
         <div class="related">
             <h4><?= __('Personality') ?></h4>
             <?php if (!empty($wrestler->wrestlers_personality)): ?>
@@ -118,40 +140,6 @@
                     </td>
                     <td>
                         <?= h($wrestlersPersonality->value) ?>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
-            <?php endif; ?>
-        </div>
-        <div class="related">
-            <h4><?= __('Abilities') ?></h4>
-            <?php if (!empty($wrestler->abilities)): ?>
-            <table cellpadding="0" cellspacing="0">
-                <?php foreach ($wrestler->abilities as $abilities): ?>
-                <tr>
-                    <td>
-                        <?= h($abilities->ability_name) ?>
-                    </td>
-                    <td>
-                        <?= h($abilities->ability_level_id) ?>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
-            <?php endif; ?>
-        </div>
-        <div class="related">
-            <h4><?= __('Skills') ?></h4>
-            <?php if (!empty($wrestler->skills)): ?>
-            <table cellpadding="0" cellspacing="0">
-                <?php foreach ($wrestler->skills as $skills): ?>
-                <tr>
-                    <td>
-                        <?= h($skills->skill_name) ?>
-                    </td>
-                    <td>
-                        <?= h($skills->skill_levels_id) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

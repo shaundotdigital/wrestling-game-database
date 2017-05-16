@@ -38,7 +38,6 @@
   background: $poorAttribute;
 }
 
-
 .content-header {
   background-color: #7db9e8;
 }
@@ -58,4 +57,9 @@ display: inline-block;
 
 .game-logo img {
     max-width:  25%;
+}
+
+td.float {
+  float: right;
+  margin-top: -40px;
 }
