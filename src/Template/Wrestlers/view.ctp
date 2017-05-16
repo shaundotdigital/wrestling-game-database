@@ -3,9 +3,9 @@
   * @var \App\View\AppView $this
   */
 ?>
-    <div class="content-header <?=($wrestler->game->game_name)?>">
+    <div class="wrestler-header <?=($wrestler->game->game_name)?>">
       <div class="container">
-        <div class="content-header-left <?=($wrestler->wrestler_name)?>">
+        <div class="content wrestler-header-left <?=($wrestler->wrestler_name)?>">
             <div class="wrestler-header">
                 <div class="wrestler-info">
                     <div class="wrestler-name">
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-header-right <?=($wrestler->game->game_name)?>" align="right">
+        <div class="content wrestler-header-right <?=($wrestler->game->game_name)?>" align="right">
             <div class="game-info">
                 <div class="game-logo">
                     <!-- <?= $this->Html->image('games/' . $wrestler->game->game_name . '-logo.png')?> -->
