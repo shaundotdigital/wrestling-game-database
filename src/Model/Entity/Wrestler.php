@@ -22,7 +22,7 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Game $game
  * @property \App\Model\Entity\AttributesPoint[] $attributes_points
  * @property \App\Model\Entity\WrestlersHp[] $wrestlers_hp
- * @property \App\Model\Entity\WrestlersPersonalty[] $wrestlers_personalty
+ * @property \App\Model\Entity\WrestlersPersonality[] $wrestlers_personality
  * @property \App\Model\Entity\Ability[] $abilities
  * @property \App\Model\Entity\Skill[] $skills
  */

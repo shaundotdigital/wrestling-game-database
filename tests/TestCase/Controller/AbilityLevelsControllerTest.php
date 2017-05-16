@@ -28,7 +28,7 @@ class AbilityLevelsControllerTest extends IntegrationTestCase
         'app.attributes',
         'app.attributes_games',
         'app.wrestlers_hp',
-        'app.wrestlers_personalty',
+        'app.wrestlers_personality',
         'app.personalities',
         'app.wrestlers_abilities',
         'app.skills',

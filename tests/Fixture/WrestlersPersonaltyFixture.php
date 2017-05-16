@@ -4,10 +4,10 @@ namespace App\Test\Fixture;
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * WrestlersPersonaltyFixture
+ * WrestlersPersonalityFixture
  *
  */
-class WrestlersPersonaltyFixture extends TestFixture
+class WrestlersPersonalityFixture extends TestFixture
 {
 
     /**
@@ -15,7 +15,7 @@ class WrestlersPersonaltyFixture extends TestFixture
      *
      * @var string
      */
-    public $table = 'wrestlers_personalty';
+    public $table = 'wrestlers_personality';
 
     /**
      * Fields

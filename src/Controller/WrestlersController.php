@@ -29,7 +29,7 @@ class WrestlersController extends AppController
 
     public function addAttributes($id = null) {
       $wrestler = $this->Wrestlers->get($id, [
-          'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonalty']
+          'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonality']
       ]);
 
       $attributes = $this->Wrestlers->AttributesPoints->Attributes->find();
@@ -39,7 +39,7 @@ class WrestlersController extends AppController
 
     public function editAttributes($id = null) {
       $wrestler = $this->Wrestlers->get($id, [
-          'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonalty']
+          'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonality']
       ]);
 
       $attributes = $this->Wrestlers->AttributesPoints->Attributes->find();
@@ -57,7 +57,7 @@ class WrestlersController extends AppController
     public function view($id = null)
     {
         $wrestler = $this->Wrestlers->get($id, [
-            'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonalty.Personalities']
+            'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonality.Personalities']
         ]);
 
         $this->set('wrestler', $wrestler);

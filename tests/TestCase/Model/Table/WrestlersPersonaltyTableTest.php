@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\WrestlersPersonaltyTable;
+use App\Model\Table\WrestlersPersonalityTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\WrestlersPersonaltyTable Test Case
+ * App\Model\Table\WrestlersPersonalityTable Test Case
  */
-class WrestlersPersonaltyTableTest extends TestCase
+class WrestlersPersonalityTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\WrestlersPersonaltyTable
+     * @var \App\Model\Table\WrestlersPersonalityTable
      */
-    public $WrestlersPersonalty;
+    public $WrestlersPersonality;
 
     /**
      * Fixtures
@@ -24,7 +24,7 @@ class WrestlersPersonaltyTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.wrestlers_personalty',
+        'app.wrestlers_personality',
         'app.wrestlers',
         'app.genders',
         'app.heights',
@@ -55,8 +55,8 @@ class WrestlersPersonaltyTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('WrestlersPersonalty') ? [] : ['className' => 'App\Model\Table\WrestlersPersonaltyTable'];
-        $this->WrestlersPersonalty = TableRegistry::get('WrestlersPersonalty', $config);
+        $config = TableRegistry::exists('WrestlersPersonality') ? [] : ['className' => 'App\Model\Table\WrestlersPersonalityTable'];
+        $this->WrestlersPersonality = TableRegistry::get('WrestlersPersonality', $config);
     }
 
     /**
@@ -66,7 +66,7 @@ class WrestlersPersonaltyTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->WrestlersPersonalty);
+        unset($this->WrestlersPersonality);
 
         parent::tearDown();
     }

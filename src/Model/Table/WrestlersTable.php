@@ -16,7 +16,7 @@ use Cake\Validation\Validator;
  * @property \Cake\ORM\Association\BelongsTo $Games
  * @property \Cake\ORM\Association\HasMany $AttributesPoints
  * @property \Cake\ORM\Association\HasMany $WrestlersHp
- * @property \Cake\ORM\Association\HasMany $WrestlersPersonalty
+ * @property \Cake\ORM\Association\HasMany $WrestlersPersonality
  * @property \Cake\ORM\Association\BelongsToMany $Abilities
  * @property \Cake\ORM\Association\BelongsToMany $Skills
  *
@@ -73,7 +73,7 @@ class WrestlersTable extends Table
         $this->hasOne('WrestlersHp', [
             'foreignKey' => 'wrestler_id'
         ]);
-        $this->hasMany('WrestlersPersonalty', [
+        $this->hasMany('WrestlersPersonality', [
             'foreignKey' => 'wrestler_id'
         ]);
         $this->belongsToMany('Abilities', [
@@ -100,6 +100,11 @@ class WrestlersTable extends Table
           ->integer('pac')
           ->requirePresence('pac', 'create')
           ->notEmpty('pac');
+
+        $validator
+            ->integer('pac')
+            ->requirePresence('pac', 'create')
+            ->notEmpty('pac');
 
         $validator
             ->integer('id')

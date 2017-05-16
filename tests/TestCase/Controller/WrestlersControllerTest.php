@@ -32,7 +32,7 @@ class WrestlersControllerTest extends IntegrationTestCase
         'app.platforms',
         'app.games_platforms',
         'app.wrestlers_hp',
-        'app.wrestlers_personalty',
+        'app.wrestlers_personality',
         'app.personalities',
         'app.skills',
         'app.skill_levels',

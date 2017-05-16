@@ -8,21 +8,21 @@
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
                 __('Delete'),
-                ['action' => 'delete', $wrestlersPersonalty->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $wrestlersPersonalty->id)]
+                ['action' => 'delete', $wrestlersPersonality->id],
+                ['confirm' => __('Are you sure you want to delete # {0}?', $wrestlersPersonality->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Wrestlers Personalty'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Wrestlers Personality'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Wrestlers'), ['controller' => 'Wrestlers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Wrestler'), ['controller' => 'Wrestlers', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Personalities'), ['controller' => 'Personalities', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Personality'), ['controller' => 'Personalities', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="wrestlersPersonalty form large-9 medium-8 columns content">
-    <?= $this->Form->create($wrestlersPersonalty) ?>
+<div class="wrestlersPersonality form large-9 medium-8 columns content">
+    <?= $this->Form->create($wrestlersPersonality) ?>
     <fieldset>
-        <legend><?= __('Edit Wrestlers Personalty') ?></legend>
+        <legend><?= __('Edit Wrestlers Personality') ?></legend>
         <?php
             echo $this->Form->control('wrestler_id', ['options' => $wrestlers]);
             echo $this->Form->control('personalities_id', ['options' => $personalities]);
