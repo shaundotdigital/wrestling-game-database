@@ -4,15 +4,15 @@
   */
 ?>
     <div class="content-header <?=($wrestler->game->game_name)?>">
+      <div class="container">
         <div class="content-header-left <?=($wrestler->wrestler_name)?>">
             <div class="wrestler-header">
                 <div class="wrestler-info">
-                    <div class="wrestler-name" <h3>
-                        <?= h($wrestler->wrestler_name) ?>
-                            </h3>
+                    <div class="wrestler-name">
+                    <h3><?= h($wrestler->wrestler_name) ?></h3>
                     </div>
                     <div class="wrestler-render">
-                        <?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?>
+                        <!-- <?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?> -->
                     </div>
                 </div>
             </div>
@@ -20,12 +20,14 @@
         <div class="content-header-right <?=($wrestler->game->game_name)?>" align="right">
             <div class="game-info">
                 <div class="game-logo">
-                    <?= $this->Html->image('games/' . $wrestler->game->game_name . '-logo.png')?>
+                    <!-- <?= $this->Html->image('games/' . $wrestler->game->game_name . '-logo.png')?> -->
                 </div>
             </div>
         </div>
+      </div>
     </div>
 
+    <div class="container">
     <div class="wrestlers view large-8 columns content">
         <table class="vertical-table">
             <tr>
@@ -157,3 +159,4 @@
             <?php endif; ?>
         </div>
     </div>
+  </div>
