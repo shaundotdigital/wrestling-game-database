@@ -11,7 +11,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                 <th scope="col"><?= $this->Paginator->sort('pac') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('pac') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('wrestler_name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('overall') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('gender_id') ?></th>

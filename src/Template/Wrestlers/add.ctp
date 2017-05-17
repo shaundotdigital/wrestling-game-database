@@ -34,8 +34,10 @@
     <fieldset>
         <legend><?= __('Add Wrestler') ?></legend>
         <?php
-            echo $this->Form->control('wrestler_name');
             echo $this->Form->control('pac');
+            echo $this->Form->control('first_name');
+            echo $this->Form->control('nickname');
+            echo $this->Form->control('last_name');
             echo $this->Form->control('overall');
             echo $this->Form->control('gender_id', ['options' => $genders]);
             echo $this->Form->control('height_id', ['options' => $heights]);

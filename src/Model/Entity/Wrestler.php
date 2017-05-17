@@ -7,7 +7,10 @@ use Cake\ORM\Entity;
  * Wrestler Entity
  *
  * @property int $id
- * @property string $wrestler_name
+ * @property int $pac
+ * @property string $first_name
+ * @property string $nickname
+ * @property string $last_name
  * @property int $overall
  * @property int $gender_id
  * @property int $height_id
@@ -42,4 +45,12 @@ class Wrestler extends Entity
         '*' => true,
         'id' => false
     ];
+
+protected function _getWrestlerFirstName() {
+   return $this->_properties['first_name'];
+ }
+
+protected function _getWrestlerName() {
+      return $this->first_name . ' ' . $this->last_name;
+}
 }

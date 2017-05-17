@@ -40,6 +40,10 @@
             <td><?= h($wrestler->wrestler_name) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Nickname') ?></th>
+            <td><?= h($wrestler->nickname) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Gender') ?></th>
             <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
         </tr>
