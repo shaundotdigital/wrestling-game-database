@@ -35,4 +35,8 @@ class Game extends Entity
     protected function _getReleaseYear() {
       return $this->_properties['release_year'];
     }
+
+    protected function _getGameImg() {
+      return str_replace(' ', '', $this->game_name)  . '-' . $this->release_year . '.png';
+    }
 }
