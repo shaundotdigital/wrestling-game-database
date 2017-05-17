@@ -44,7 +44,10 @@
             <?php foreach ($weightClass->wrestlers as $wrestlers): ?>
             <tr>
                 <td><?= h($wrestlers->id) ?></td>
-                <td><?= h($wrestlers->wrestler_name) ?></td>
+                <td><?= h($wrestler->first_name) ?></td>
+<td><?= h($wrestler->nickname) ?></td>
+<td><?= h($wrestler->last_name) ?></td>
+<td><?= h($wrestler->wrestler_name) ?></td>
                 <td><?= h($wrestlers->overall) ?></td>
                 <td><?= h($wrestlers->gender_id) ?></td>
                 <td><?= h($wrestlers->height_id) ?></td>
