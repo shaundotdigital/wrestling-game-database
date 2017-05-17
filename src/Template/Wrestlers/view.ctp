@@ -24,16 +24,16 @@
           <!-- <?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?> -->
         </div>
       </div>
-    <div class="content wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">
-      <div class="game-info">
-        <div class="game-logo">
-          <?= $this->Html->image('games/'.$wrestler->game->game_img)?>
+      <div class="content wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">
+        <div class="game-info">
+          <div class="game-logo">
+            <?= $this->Html->image('games/'.$wrestler->game->game_img)?>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-  </div>
+</div>
 
     <div class="container">
     <div class="wrestlers view large-8 columns content">
