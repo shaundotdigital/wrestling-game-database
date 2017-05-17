@@ -3,33 +3,37 @@
   * @var \App\View\AppView $this
   */
 ?>
-    <div class="wrestler-header <?=($wrestler->game->game_name)?>">
-      <div class="container">
-        <div class="content wrestler-header-left <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
-            <div class="wrestler-header">
-                <div class="wrestler-info">
-                    <div class="wrestler-name">
-                    <h3><?= h($wrestler->wrestler_name) ?></h3>
-                    <tr><?= __('Overall') ?>
-                      <td><?= $this->Number->format($wrestler->overall) ?></td>
-                    </tr>
-                    </div>
-                    <div class="wrestler-render">
-                        <!-- <?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?> -->
-                    </div>
-                </div>
-            </div>
+<div class="wrestler-header <?=($wrestler->game->game_name)?>">
+  <div class="container">
+    <div class="wrestler-header">
+      <div class="content wrestler-header-left <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
+        <div class="wrestler-info">
+          <div class="wrestler-firstname">
+            <h3><?= $wrestler->first_name ?></h3>
+          </div>
+          <div class="wrestler-lastname">
+            <h3><?= $wrestler->last_name ?></h3>
+          </div>
+          <div class="wrestler-overall">
+            <tr><?= __('Overall') ?>
+              <td><?= $this->Number->format($wrestler->overall) ?></td>
+            </tr>
+          </div>
         </div>
-        <div class="content wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">
-
-            <div class="game-info">
-                <div class="game-logo">
-                    <?= $this->Html->image('games/'.$wrestler->game->game_img)?>
-                </div>
-            </div>
+        <div class="wrestler-render">
+          <!-- <?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?> -->
+        </div>
+      </div>
+    <div class="content wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">
+      <div class="game-info">
+        <div class="game-logo">
+          <?= $this->Html->image('games/'.$wrestler->game->game_img)?>
         </div>
       </div>
     </div>
+  </div>
+  </div>
+  </div>
 
     <div class="container">
     <div class="wrestlers view large-8 columns content">
