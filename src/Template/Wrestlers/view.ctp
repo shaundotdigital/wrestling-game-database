@@ -23,7 +23,7 @@
         <div class="content wrestler-header-right <?=($wrestler->game->game_name)?>" align="right">
             <div class="game-info">
                 <div class="game-logo">
-                    <!-- <?= $this->Html->image('games/' . $wrestler->game->game_name . '-logo.png')?> -->
+                    <?= $this->Html->image('games/'.$wrestler->game->game_img)?>
                 </div>
             </div>
         </div>
