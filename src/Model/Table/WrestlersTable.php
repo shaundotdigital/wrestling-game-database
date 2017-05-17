@@ -111,8 +111,16 @@ class WrestlersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('wrestler_name', 'create')
-            ->notEmpty('wrestler_name');
+            ->requirePresence('first_name', 'create')
+            ->allowEmpty('first_name');
+
+        $validator
+            ->requirePresence('nickname', 'create')
+            ->allowEmpty('nickname');
+
+        $validator
+            ->requirePresence('last_name', 'create')
+            ->notEmpty('last_name');
 
         $validator
             ->integer('overall')
