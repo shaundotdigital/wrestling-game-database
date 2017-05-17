@@ -5,7 +5,7 @@
 ?>
     <div class="wrestler-header <?=($wrestler->game->game_name)?>">
       <div class="container">
-        <div class="content wrestler-header-left <?=($wrestler->wrestler_name)?>">
+        <div class="content wrestler-header-left <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
             <div class="wrestler-header">
                 <div class="wrestler-info">
                     <div class="wrestler-name">
@@ -20,7 +20,8 @@
                 </div>
             </div>
         </div>
-        <div class="content wrestler-header-right <?=($wrestler->game->game_name)?>" align="right">
+        <div class="content wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">
+
             <div class="game-info">
                 <div class="game-logo">
                     <?= $this->Html->image('games/'.$wrestler->game->game_img)?>
