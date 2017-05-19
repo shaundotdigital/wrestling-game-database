@@ -80,7 +80,7 @@ $cakeDescription = 'SmackDown DB';?>
 
 
     <?= $this->Flash->render() ?>
-    <div class="container clearfix">
+    <div class="clearfix">
         <?= $this->fetch('content') ?>
     </div>
     <footer>
