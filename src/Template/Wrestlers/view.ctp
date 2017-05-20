@@ -75,6 +75,14 @@
                     <td class="float abilityValue">
                         <?= h($abilities->ability_level_id) ?>
                     </td>
+
+
+
+                    <?= $this->Html->image('assets/abilities/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . strtolower(str_replace(' ', '-',$abilities->ability_name)) . '-' . $abilities->ability_level_id . '.png')?>
+
+
+
+
                 </tr>
                 <?php endforeach; ?>
             </table>
