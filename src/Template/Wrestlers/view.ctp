@@ -17,7 +17,7 @@
         </div>
         <div class="wrestler-lastname">
           <h3><?= $wrestler->last_name ?></h3>
-        </div>        
+        </div>
         <div class="wrestler-nickname">
           <h3><? if ($wrestler->nickname)  {
             echo h($wrestler->nickname);
@@ -106,7 +106,9 @@
     <div class="wrestlers view medium-4 columns content">
       <div class="panel panel-default">
           <div class="panel-heading" id="panel-comment">
-            <?=($wrestler->wrestler_name)?>
+            <? if ($wrestler->nickname)  {
+              echo h($wrestler->nickname);
+            } ?> <?=($wrestler->wrestler_name)?>
           </div>
         <table class="vertical-table">
             <tr>

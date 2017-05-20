@@ -16766,10 +16766,14 @@ fieldset legend {
   /* hide the cropped portion */
 }
 
+.wrestler-info {
+  padding-top: 45px;
+}
+
 .wrestler-lastname h3 {
   color: #fff;
   font-size: 40px;
-  line-height: 36px;
+  line-height: 35px;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -16779,7 +16783,6 @@ fieldset legend {
   float: none;
   display: block;
   font-size: 16px;
-  line-height: 24px;
   text-transform: uppercase;
 }
 
