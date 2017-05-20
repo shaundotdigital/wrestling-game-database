@@ -103,16 +103,9 @@
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
               <tr>
-                <!-- <td>
-                  <? if ($wrestlersPersonality->value > 0) {
-                    echo h($wrestlersPersonality->personality->name);
-                  } else {
-                    echo h($wrestlersPersonality->personality->negative_name);
-                  } ?>
-                </td> -->
                 <td><?= h($wrestlersPersonality->personality->name) ?></td>
-                <td class="personalityValue" style="text-align: center">
-                  <?= h($wrestlersPersonality->value) ?>
+                <td class="personalityValue">
+                  <input type='range' min='-100' max='100' value='<?= h($wrestlersPersonality->value) ?>' step='1'/>
                 </td>
                 <td class="float"><?= h($wrestlersPersonality->personality->negative_name) ?></td>
               </tr>
@@ -122,6 +115,7 @@
       </div>
     </div>
   </div>
+
 
 
 
