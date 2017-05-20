@@ -16831,7 +16831,7 @@ td.float {
 }
 
 .container {
-  width: 1380px;
+  max-width: 1380px;
   margin: 0 auto;
   box-sizing: border-box;
 }
