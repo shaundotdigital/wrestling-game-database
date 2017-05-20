@@ -19,7 +19,7 @@ class WrestlersController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games']
+            'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'AttributesPoints.Attributes']
         ];
         $wrestlers = $this->paginate($this->Wrestlers);
 

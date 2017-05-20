@@ -48,6 +48,7 @@ class Wrestler extends Entity
 
 
 protected function _getPacNumber() {
+
   return $this->_properties['pac'];
 }
 
@@ -58,4 +59,5 @@ protected function _getWrestlerFirstName() {
 protected function _getWrestlerName() {
       return $this->first_name . ' ' . $this->last_name;
 }
+
 }
