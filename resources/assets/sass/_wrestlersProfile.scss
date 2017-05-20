@@ -40,16 +40,39 @@
 
 .wrestler-header {
   background-color: #7db9e8;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, $colour-smackdowndb),color-stop(70%, $colour-wrestlerHead-dark));
+  background-image: -moz-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-wrestlerHead-dark 70%);
+  background-image: -webkit-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-wrestlerHead-dark 70%);
+  background-image: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-wrestlerHead-dark 70%);
 }
 
 .wrestler-header .wrestler-name {
     color: #fff;
 }
 
-.wrestler-render img {
-    max-height: 10%;
-    overflow: hidden;
+.wrestler-render {
+
 }
+
+
+.wrestler-render {
+  // display: inline-block;
+  padding-top: 10px;
+  width: 18%;
+}
+
+.wrestler-image{
+  height: 150px;
+  background-size: cover;
+  overflow: hidden;
+  /* hide the cropped portion */
+}
+
+// .wrestler-render img {
+//     max-width: 10%;
+//     overflow: hidden;
+// }
 
 .wrestler-header-right {
 display: inline-block;

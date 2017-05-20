@@ -16745,15 +16745,24 @@ fieldset legend {
 
 .wrestler-header {
   background-color: #7db9e8;
+  background-size: 100%;
+  background-image: linear-gradient(to right top, #467bfb 0%, #181818 70%);
 }
 
 .wrestler-header .wrestler-name {
   color: #fff;
 }
 
-.wrestler-render img {
-  max-height: 10%;
+.wrestler-render {
+  padding-top: 10px;
+  width: 18%;
+}
+
+.wrestler-image {
+  height: 150px;
+  background-size: cover;
   overflow: hidden;
+  /* hide the cropped portion */
 }
 
 .wrestler-header-right {
