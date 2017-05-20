@@ -89,6 +89,11 @@
         </tr>
       </table>
     </div>
+
+
+
+
+
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Personality') ?>
@@ -98,16 +103,18 @@
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
               <tr>
-                <td>
+                <!-- <td>
                   <? if ($wrestlersPersonality->value > 0) {
                     echo h($wrestlersPersonality->personality->name);
                   } else {
                     echo h($wrestlersPersonality->personality->negative_name);
                   } ?>
-                </td>
-                <td class="float personalityValue">
+                </td> -->
+                <td><?= h($wrestlersPersonality->personality->name) ?></td>
+                <td class="personalityValue" style="text-align: center">
                   <?= h($wrestlersPersonality->value) ?>
                 </td>
+                <td class="float"><?= h($wrestlersPersonality->personality->negative_name) ?></td>
               </tr>
             <?php endforeach; ?>
           </table>
@@ -115,6 +122,11 @@
       </div>
     </div>
   </div>
+
+
+
+
+
   <div class="wrestlers view large-12 columns content">
     <div class="related">
       <div class="panel panel-default">
