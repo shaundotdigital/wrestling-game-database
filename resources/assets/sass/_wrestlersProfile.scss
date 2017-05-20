@@ -41,10 +41,10 @@
 .wrestler-header {
   background-color: #7db9e8;
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, $colour-smackdowndb),color-stop(70%, $colour-wrestlerHead-dark));
-  background-image: -moz-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-wrestlerHead-dark 70%);
-  background-image: -webkit-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-wrestlerHead-dark 70%);
-  background-image: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-wrestlerHead-dark 70%);
+  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, $colour-smackdowndb),color-stop(70%, $colour-header-dark));
+  background-image: -moz-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background-image: -webkit-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background-image: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-header-dark 70%);
 }
 
 .push-left {
@@ -92,8 +92,6 @@
   line-height: 24px;
   text-transform: uppercase;
 }
-
-
 
 
 .wrestler-header-right {
