@@ -1958,7 +1958,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1390px;
   }
 }
 
@@ -16709,10 +16709,28 @@ fieldset legend {
   border: 1px solid transparent;
 }
 
+.navbar-inverse {
+  background-color: #32343f;
+}
+
 /* sub-bar */
 .sub-bar {
-  background-color: #1457fa;
+  background-color: #494b5b;
   height: 35px;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-brand > svg {
+  height: 100%;
+  padding: 8px;
+  width: auto;
+}
+
+#smackdown-db-logo {
+  fill: white;
 }
 
 .label {
@@ -16775,7 +16793,6 @@ fieldset legend {
 }
 
 .container {
-  width: 1380px;
   margin: 0 auto;
   box-sizing: border-box;
 }
