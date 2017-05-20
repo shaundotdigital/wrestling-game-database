@@ -1958,7 +1958,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1390px;
   }
 }
 
@@ -16545,7 +16545,7 @@ div.message.hidden {
 }
 
 .content {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /* Use 'one true layout' methods to get equal height columns */
@@ -16831,7 +16831,6 @@ td.float {
 }
 
 .container {
-  max-width: 1380px;
   margin: 0 auto;
   box-sizing: border-box;
 }
