@@ -17,13 +17,12 @@
         </div>
         <div class="wrestler-lastname">
           <h3><?= $wrestler->last_name ?></h3>
-        </div>
+        </div>        
         <div class="wrestler-nickname">
           <h3><? if ($wrestler->nickname)  {
             echo h($wrestler->nickname);
           } ?></h3>
         </div>
-
         <!-- <div class="wrestler-overall">
           <tr><?= __('Overall') ?>
             <h2><?= $this->Number->format($wrestler->overall) ?></h2>

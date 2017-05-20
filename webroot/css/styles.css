@@ -16783,6 +16783,15 @@ fieldset legend {
   text-transform: uppercase;
 }
 
+.wrestler-nickname h3 {
+  color: #fff;
+  float: none;
+  display: block;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
 .wrestler-header-right {
   display: inline-block;
 }
