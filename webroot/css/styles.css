@@ -1958,7 +1958,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1390px;
+    width: 1400px;
   }
 }
 
@@ -16642,9 +16642,14 @@ table {
   width: 100%;
 }
 
-tr.inlineblock {
+tr.inlineblock33 {
   display: inline-block;
   width: 33.33333%;
+}
+
+tr.inlineblock20 {
+  display: inline-block;
+  width: 20%;
 }
 
 table thead {
@@ -16825,8 +16830,12 @@ td.float {
   float: right;
 }
 
-.attributeValue, .abilityValue, .skillValue {
+.attributeValue, .skillValue {
   margin-top: -36px;
+}
+
+.abilities-image img {
+  min-width: 50%;
 }
 
 .panel {

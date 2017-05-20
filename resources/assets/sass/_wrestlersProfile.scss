@@ -106,9 +106,14 @@ td.float {
   float: right;
 }
 
-.attributeValue, .abilityValue, .skillValue {
+.attributeValue, .skillValue {
   margin-top: -36px;
 }
+
+.abilities-image img{
+  min-width:50%;
+}
+
 
 .panel {
   padding: 0;

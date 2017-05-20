@@ -48,7 +48,7 @@
       <div class="Attributes">
         <table cellpadding="0" cellspacing="0" class="panel-table">
           <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
-            <tr class="inlineblock">
+            <tr class="inlineblock33">
               <td>
                 <?= h($attributesPoints->attribute->attribute_name) ?>
               </td>
@@ -125,13 +125,13 @@
           <div class="Abilities">
             <table cellpadding="0" cellspacing="0" class="panel-table">
               <?php foreach ($wrestler->abilities as $abilities): ?>
-                <tr class="inlineblock">
-                  <td>
+                <tr class="inlineblock20">
+                  <td class="abilityValue">
+                    <div class="abilities-image">
+                      <!-- <?='Level' .' '. h($abilities->ability_level_id) ?> -->
+                      <?= $this->Html->image('assets/abilities/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . strtolower(str_replace(' ', '-',$abilities->ability_name)) . '-' . $abilities->ability_level_id . '.png') ?>
+                    </div>
                     <?= h($abilities->ability_name) ?>
-                  </td>
-                  <td class="float abilityValue">
-                    <?='Level' .' '. h($abilities->ability_level_id) ?>
-                    <?= $this->Html->image('assets/abilities/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . strtolower(str_replace(' ', '-',$abilities->ability_name)) . '-' . $abilities->ability_level_id . '.png') ?>
                   </td>
                 </tr>
               <?php endforeach; ?>
