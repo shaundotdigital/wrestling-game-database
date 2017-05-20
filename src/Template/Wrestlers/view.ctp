@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="wrestler-render">
-          <!-- <?= $this->Html->image('renders/' . $wrestler->pac . '-2014.png')?> -->
+          <?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . $wrestler->pac . '-' . $wrestler->game->release_year . '.png')?>
         </div>
       </div>
       <div class="content wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">
