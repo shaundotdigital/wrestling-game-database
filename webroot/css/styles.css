@@ -16749,13 +16749,14 @@ fieldset legend {
   background-image: linear-gradient(to right top, #467bfb 0%, #181818 70%);
 }
 
-.wrestler-header .wrestler-name {
-  color: #fff;
+.push-left {
+  float: left !important;
 }
 
 .wrestler-render {
   padding-top: 10px;
   width: 18%;
+  margin-right: 10px;
 }
 
 .wrestler-image {
@@ -16763,6 +16764,23 @@ fieldset legend {
   background-size: cover;
   overflow: hidden;
   /* hide the cropped portion */
+}
+
+.wrestler-lastname h3 {
+  color: #fff;
+  font-size: 40px;
+  line-height: 36px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.wrestler-firstname h3 {
+  color: #fff;
+  float: none;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
 }
 
 .wrestler-header-right {

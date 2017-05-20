@@ -6,23 +6,29 @@
 <div class="wrestler-header <?=($wrestler->game->game_name)?>">
   <div class="container">
     <div class="content-wrestler-header-left <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
+      <div class="wrestler-render push-left">
+          <div class="wrestler-image">
+        <?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . $wrestler->pac . '-' . $wrestler->game->release_year . '.png')?>
+          </div>
+      </div>
       <div class="wrestler-info">
-        <!-- <div class="wrestler-firstname">
+        <div class="wrestler-firstname">
           <h3><?= $wrestler->first_name ?></h3>
         </div>
         <div class="wrestler-lastname">
           <h3><?= $wrestler->last_name ?></h3>
         </div>
-        <div class="wrestler-overall">
+        <div class="wrestler-nickname">
+          <h3><? if ($wrestler->nickname)  {
+            echo h($wrestler->nickname);
+          } ?></h3>
+        </div>
+
+        <!-- <div class="wrestler-overall">
           <tr><?= __('Overall') ?>
             <h2><?= $this->Number->format($wrestler->overall) ?></h2>
           </tr>
         </div> -->
-      </div>
-      <div class="wrestler-render">
-          <div class="wrestler-image">
-        <?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . $wrestler->pac . '-' . $wrestler->game->release_year . '.png')?>
-          </div>
       </div>
     </div>
     <!-- <div class="content-wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">

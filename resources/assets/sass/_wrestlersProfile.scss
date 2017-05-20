@@ -1,13 +1,13 @@
-// wrestlersProfile
+//wrestlersProfile
 
 .label {
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: $regular;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 0;
-    border-radius: .2rem;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: $regular;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  border-radius: .2rem;
 }
 
 .overall {
@@ -47,64 +47,78 @@
   background-image: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-wrestlerHead-dark 70%);
 }
 
-.wrestler-header .wrestler-name {
-    color: #fff;
+.push-left {
+  float: left !important;
 }
 
 .wrestler-render {
-
-}
-
-
-.wrestler-render {
-  // display: inline-block;
   padding-top: 10px;
   width: 18%;
+  margin-right: 10px;
 }
 
-.wrestler-image{
+.wrestler-image {
   height: 150px;
   background-size: cover;
   overflow: hidden;
-  /* hide the cropped portion */
+/* hide the cropped portion */
 }
 
-// .wrestler-render img {
-//     max-width: 10%;
-//     overflow: hidden;
-// }
+.wrestler-info {
+}
+
+.wrestler-lastname h3 {
+  color: #fff;
+  font-size: 40px;
+  line-height: 36px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.wrestler-firstname h3 {
+  color: #fff;
+  float: none;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+
+
+
 
 .wrestler-header-right {
-display: inline-block;
+  display: inline-block;
 }
 
 .game-logo img {
-    max-width:  25%;
+  max-width: 25%;
 }
 
 td.float {
   float: right;
 }
 
-.attributeValue, .abilityValue, .skillValue  {
+.attributeValue, .abilityValue, .skillValue {
   margin-top: -36px;
 }
 
 .panel {
-    padding: 0;
+  padding: 0;
 }
 
 .panel-table {
-    background: #fff;
-    margin-bottom: 0;
-    border: none;
-    table-layout: fixed;
-    width: 100%;
+  background: #fff;
+  margin-bottom: 0;
+  border: none;
+  table-layout: fixed;
+  width: 100%;
 }
 
 #panel-comment {
-    background-color: $colour-default-dark;
-    border-bottom: 2px solid $colour-smackdowndb !important;
-    padding: 10px;
-    color: #FFF;
+  background-color: $colour-default-dark;
+  border-bottom: 2px solid $colour-smackdowndb !important;
+  padding: 10px;
+  color: #FFF;
 }
