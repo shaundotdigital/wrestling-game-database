@@ -16842,55 +16842,92 @@ fieldset legend {
   width: 5em;
 }
 
-input[type='range'], input[type='range']::-webkit-slider-runnable-track, input[type='range']::-webkit-slider-thumb {
+.range-slider {
+  border: 0;
+  margin: 0;
+}
+
+.range-slider__range {
   -webkit-appearance: none;
+  width: calc(100% - (73px));
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #467bfb 50%, #ff3333 50%);
+  outline: none;
+  padding: 0;
+  margin: 0;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+.range-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2c3e50;
+  cursor: pointer;
+  transition: background .15s ease-in-out;
+}
+
+.range-slider__range::-webkit-slider-thumb:hover {
+  background: #1abc9c;
+}
+
+.range-slider__range:active::-webkit-slider-thumb {
+  background: #1abc9c;
+}
+
+.range-slider__range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: #2c3e50;
+  cursor: pointer;
+  transition: background .15s ease-in-out;
+}
+
+.range-slider__range::-moz-range-thumb:hover {
+  background: #1abc9c;
+}
+
+.range-slider__range:active::-moz-range-thumb {
+  background: #1abc9c;
+}
+
+.range-slider__value {
+  display: inline-block;
   position: relative;
-  width: 32em;
-  height: 0.375em;
-  background: linear-gradient(90deg, #467bfb, #ff3333);
+  width: 60px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: #2c3e50;
+  padding: 5px 10px;
+  margin-left: 8px;
 }
 
-input[type='range']::-ms-fill-lower {
-  display: none;
-  /* Keyword values */
-  box-sizing: content-box;
-  box-sizing: border-box;
-  /* Global values */
-  box-sizing: inherit;
-  box-sizing: initial;
-  box-sizing: unset;
+.range-slider__value:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #2c3e50;
+  border-bottom: 7px solid transparent;
+  content: '';
 }
 
-input[type='range']::-webkit-slider-thumb {
-  margin-top: -0.5em;
-  box-sizing: border-box;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 2em;
-  background: #494b5b;
+::-moz-range-track {
+  background: #d7dcdf;
+  border: 0;
 }
 
-input[type='range']::-moz-range-thumb {
-  box-sizing: border-box;
-  border: solid 1px transparent;
-  width: 2em;
-  height: 2em;
-  border-radius: 0;
-  transform: translateY(75%) rotate(30deg) skewY(30deg) scaleX(0.86603);
-  background: linear-gradient(135deg, #a7a6a2 25%, transparent 25%) content-box, linear-gradient(135deg, #ffffff 25%, transparent 25%) border-box;
-}
-
-input[type='range']::-ms-thumb {
-  box-sizing: border-box;
-  border: solid 1px transparent;
-  width: 2em;
-  height: 2em;
-  border-radius: 0;
-  transform: translateY(75%) rotate(30deg) skewY(30deg) scaleX(0.86603);
-  background: linear-gradient(135deg, #a7a6a2 25%, transparent 25%) content-box, linear-gradient(135deg, #ffffff 25%, transparent 25%) border-box;
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
 }
 
 .attributeValue, .skillValue {

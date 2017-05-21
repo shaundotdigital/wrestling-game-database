@@ -114,7 +114,9 @@
                 </div>
                 </td>
                 <td class="personality-slider float-left">
-                  <input type='range' min='-100' max='100' value='<?= h($wrestlersPersonality->value) ?>' step='1'/>
+                  <div class="range-slider">
+                    <input class="range-slider__range" type="range" value='<?= h($wrestlersPersonality->value) ?>'min="-100" max="100">
+                  </div>
                 </td>
 
               </tr>
@@ -123,9 +125,8 @@
         <?php endif; ?>
       </div>
     </div>
+
   </div>
-
-
 
 
 
