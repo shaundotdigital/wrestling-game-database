@@ -16807,6 +16807,7 @@ fieldset legend {
   line-height: 35px;
   font-weight: normal;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .wrestler-firstname h3 {
