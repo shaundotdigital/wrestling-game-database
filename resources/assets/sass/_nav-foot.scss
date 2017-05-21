@@ -1,0 +1,103 @@
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+
+.navbar-inverse {
+  background-color: darken($colour-default-dark, 10%);
+}
+
+/* sub-bar */
+
+.sub-bar {
+  background-color: $colour-default-dark;
+  height: 35px;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>svg {
+  height: 100%;
+  padding: 8px;
+  width: auto;
+}
+
+
+footer {
+    margin-top: 25px;
+    background: $colour-default-dark;
+    padding: 20px 0;
+    color: #bbb;
+}
+
+footer .row {
+    margin-left: 60px;
+}
+
+footer, .footer-disclaimer {
+    text-align: center;
+    min-width: 960px;
+}
+
+.footer-disclaimer {
+    background: darken($colour-default-dark, 10%);
+    color: #aaa;
+    padding: 10px 0;
+}
+
+.footer-disclaimer a {
+    color: red;
+}
+
+.footer-disclaimer a:link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease .2s;
+  color: $colour-smackdowndb
+}
+
+.footer-disclaimer a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease .2s;
+  color: $colour-smackdowndb;
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+
+.footer-disclaimer a:hover {
+  cursor: pointer;
+  transition: all ease .2s;
+}
+
+.footer-disclaimer a:active {
+  cursor: pointer;
+  transition: all ease .2s;
+}
+
+
+.footer-disclaimer p {
+    color: #777;
+    margin: 10px 0 0;
+}
+
+.footer-brand>svg {
+  height: 5em;
+  padding: 8px;
+  width: auto;
+}
+
+.smackdown-db-logo {
+  fill: white;
+}
+
+.footer-brand>.smackdown-db-outline, .footer-brand>.smackdown-db-down {
+ fill: $colour-smackdowndb;
+}
+
+.footer-brand>.smackdown-db-smack, .footer-brand>.smackdown-db-database {
+  fill: #fff;
+}
