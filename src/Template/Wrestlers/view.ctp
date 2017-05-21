@@ -126,6 +126,41 @@
       </div>
     </div>
 
+    <div class="related">
+        <h4><?= __('Related Wrestlers Hp') ?></h4>
+        <?= var_dump($wrestler->wrestlers_hp) ?>
+        <?php if (!empty($wrestler->wrestlers_hp)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Wrestler Id') ?></th>
+                <th scope="col"><?= __('Head') ?></th>
+                <th scope="col"><?= __('Body') ?></th>
+                <th scope="col"><?= __('Arms') ?></th>
+                <th scope="col"><?= __('Legs') ?></th>
+                <th scope="col"><?= __('Total Hp') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($wrestler->wrestlers_hp as $wrestlersHp): ?>
+            <tr>
+                <td><?= h($wrestlersHp->id) ?></td>
+                <td><?= h($wrestlersHp->wrestler_id) ?></td>
+                <td><?= h($wrestlersHp->head) ?></td>
+                <td><?= h($wrestlersHp->body) ?></td>
+                <td><?= h($wrestlersHp->arms) ?></td>
+                <td><?= h($wrestlersHp->legs) ?></td>
+                <td><?= h($wrestlersHp->total_hp) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'WrestlersHp', 'action' => 'view', $wrestlersHp->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'WrestlersHp', 'action' => 'edit', $wrestlersHp->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'WrestlersHp', 'action' => 'delete', $wrestlersHp->id], ['confirm' => __('Are you sure you want to delete # {0}?', $wrestlersHp->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+
   </div>
 
 
