@@ -16840,7 +16840,7 @@ fieldset legend {
 }
 
 .positive-personality {
-  width: 5em;
+  width: 6em;
 }
 
 .personality-range-slider {
@@ -16919,6 +16919,10 @@ fieldset legend {
   text-align: center;
   border-radius: 3px;
   background: #494b5b;
+}
+
+tr.total-hp {
+  text-align: center;
 }
 
 .attributeValue {

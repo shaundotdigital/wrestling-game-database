@@ -109,7 +109,7 @@
 }
 
 .positive-personality {
-  width: 5em;
+  width: 6em;
 }
 
 .personality-range-slider {
@@ -196,8 +196,9 @@
   background: $range-label-color;
 }
 
-
-
+tr.total-hp {
+  text-align: center;
+}
 
 .attributeValue{
   margin-top: -35px;
