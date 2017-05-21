@@ -103,7 +103,7 @@
   max-width: 25%;
 }
 
-.personality-slider {
+.personality-slider, .hp-slider {
   width:50%;
   // padding-top: 15px;
 }
@@ -112,13 +112,13 @@
   width: 5em;
 }
 
-.range-slider {
+.personality-range-slider {
   margin: 60px 0 0 0%;
   border: 0;
   margin: 0;
 }
 
-.range-slider__range {
+.personality-range-slider__range {
   -webkit-appearance: none;
   height: $range-track-height;
   border-radius: .2em;
@@ -145,9 +145,48 @@
   }
 }
 
+// Range Label
+.personality-range-slider__value {
+  display: inline-block;
+  position: relative;
+  width: $range-label-width;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  background: $range-label-color;
+}
+
+
+.hp-range-slider__range {
+  -webkit-appearance: none;
+  height: $range-track-height;
+  border-radius: .2em;
+  background-color: $colour-smackdowndb;
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  // Range Handle
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: $range-handle-size;
+    height: $range-track-height;
+    // border-radius: .2em;
+    background: $range-handle-color;
+  }
+
+  &::-moz-range-thumb {
+    width: $range-handle-size;
+    height: $range-handle-size;
+    border: 0;
+    border-radius: 50%;
+    background: $range-handle-color;
+  }
+}
+
 
 // Range Label
-.range-slider__value {
+.hp-range-slider__value {
   display: inline-block;
   position: relative;
   width: $range-label-width;
