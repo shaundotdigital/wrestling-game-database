@@ -129,7 +129,6 @@ $cakeDescription = 'SmackDown DB';?>
     <div class="clearfix">
         <?= $this->fetch('content') ?>
     </div>
-<div class="footer-push" style="visibility: hidden"></div>
     <footer>
       <div class="container">
         <div class="row">
