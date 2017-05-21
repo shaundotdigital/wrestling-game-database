@@ -52,7 +52,7 @@
               <td>
                 <?= h($attributesPoints->attribute->attribute_name) ?>
               </td>
-              <td class="float attributeValue"><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
+              <td class="float-right attributeValue"><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
             </tr>
           <?php endforeach; ?>
         </table>
@@ -103,26 +103,30 @@
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
               <tr>
-                <!-- <td>
-                  <? if ($wrestlersPersonality->value > 0) {
-                    echo h($wrestlersPersonality->personality->name);
-                  } else {
-                    echo h($wrestlersPersonality->personality->negative_name);
-                  } ?>
-                </td> -->
-                <td><?= h($wrestlersPersonality->personality->name) ?></td>
-                <td class="personalityValue" style="text-align: center">
-                  <?= h($wrestlersPersonality->value) ?>
+                <td class="float-left">
+                  <div class="positive-personality">
+                    <?= h($wrestlersPersonality->personality->name) ?>
+                  </div>
                 </td>
-                <td class="float"><?= h($wrestlersPersonality->personality->negative_name) ?></td>
+                <td class="float-right">
+                <div class="negative-personality">
+                  <?= h($wrestlersPersonality->personality->negative_name) ?>
+                </div>
+                </td>
+                <td class="personality-slider float-left">
+                  <div class="range-slider">
+                    <input class="range-slider__range" type="range" value='<?= h($wrestlersPersonality->value) ?>'min="-100" max="100">
+                  </div>
+                </td>
+
               </tr>
             <?php endforeach; ?>
           </table>
         <?php endif; ?>
       </div>
     </div>
-  </div>
 
+  </div>
 
 
 
@@ -164,7 +168,7 @@
                 <td>
                   <?= h($skills->skill_name) ?>
                 </td>
-                <td class="float skillValue">
+                <td class="float-right skillValue">
                   <?= h($skills->skill_levels_id) ?>
                 </td>
               </tr>
