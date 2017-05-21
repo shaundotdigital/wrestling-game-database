@@ -70,7 +70,7 @@ class WrestlersTable extends Table
         $this->hasMany('AttributesPoints', [
             'foreignKey' => 'wrestler_id'
         ]);
-        $this->hasOne('WrestlersHp', [
+        $this->hasMany('WrestlersHp', [
             'foreignKey' => 'wrestler_id'
         ]);
         $this->hasMany('WrestlersPersonality', [
