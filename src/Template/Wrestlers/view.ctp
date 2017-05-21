@@ -52,7 +52,7 @@
               <td>
                 <?= h($attributesPoints->attribute->attribute_name) ?>
               </td>
-              <td class="float attributeValue"><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
+              <td class="float-right attributeValue"><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
             </tr>
           <?php endforeach; ?>
         </table>
@@ -103,11 +103,20 @@
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
               <tr>
-                <td><?= h($wrestlersPersonality->personality->name) ?></td>
-                <td class="personalityValue">
+                <td class="float-left">
+                  <div class="positive-personality">
+                    <?= h($wrestlersPersonality->personality->name) ?>
+                  </div>
+                </td>
+                <td class="float-right">
+                  <div class="negative-personality">
+                    <?= h($wrestlersPersonality->personality->negative_name) ?>
+                  </div>
+                </td>
+                <td class="personality-slider float-left">
                   <input type='range' min='-100' max='100' value='<?= h($wrestlersPersonality->value) ?>' step='1'/>
                 </td>
-                <td class="float"><?= h($wrestlersPersonality->personality->negative_name) ?></td>
+
               </tr>
             <?php endforeach; ?>
           </table>
@@ -158,7 +167,7 @@
                 <td>
                   <?= h($skills->skill_name) ?>
                 </td>
-                <td class="float skillValue">
+                <td class="float-right skillValue">
                   <?= h($skills->skill_levels_id) ?>
                 </td>
               </tr>

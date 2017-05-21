@@ -16652,6 +16652,14 @@ tr.inlineblock20 {
   width: 20%;
 }
 
+td.float-right {
+  float: right;
+}
+
+td.float-left {
+  float: left;
+}
+
 table thead {
   background: none;
 }
@@ -16826,18 +16834,16 @@ fieldset legend {
   max-width: 25%;
 }
 
-td.float {
-  float: right;
+.personality-slider {
+  width: 100%;
+}
+
+.positive-personality, .negative_name {
+  width: 5em;
 }
 
 input[type='range'] {
-  border: solid 0 transparent;
-  border-width: 0 1em;
-  padding: 1em 0 0;
-  height: 2em;
-  border-radius: .25em;
-  background: transparent;
-  font-size: 1em;
+  padding: 0.5em 0 0;
 }
 
 input[type='range'], input[type='range']::-webkit-slider-runnable-track, input[type='range']::-webkit-slider-thumb {
@@ -16851,22 +16857,15 @@ input[type='range']::-webkit-slider-runnable-track {
   background: linear-gradient(90deg, #ff3333, #467bfb);
 }
 
-input[type='range']::-moz-range-track {
-  width: 32em;
-  height: 0.375em;
-  background: linear-gradient(90deg, #ff3333, #467bfb);
-}
-
-input[type='range']::-ms-track {
-  border: none;
-  width: 32em;
-  height: 0.375em;
-  background: linear-gradient(90deg, #ff3333, #467bfb);
-  color: transparent;
-}
-
 input[type='range']::-ms-fill-lower {
   display: none;
+  /* Keyword values */
+  box-sizing: content-box;
+  box-sizing: border-box;
+  /* Global values */
+  box-sizing: inherit;
+  box-sizing: initial;
+  box-sizing: unset;
 }
 
 input[type='range']::-webkit-slider-thumb {
