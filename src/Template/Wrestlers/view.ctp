@@ -120,6 +120,8 @@
       </div>
     </div>
 
+
+
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Hit Points') ?>
@@ -146,7 +148,7 @@
               </div>
             </tr>
             <tr>
-              <div class="wrestler-hp head">
+              <div class="wrestler-hp body">
                 <td><?= __('Body') ?></td>
                 <td class="hp-slider">
                   <div class="hp-range-slider">
@@ -157,7 +159,7 @@
               </div>
             </tr>
             <tr>
-              <div class="wrestler-hp head">
+              <div class="wrestler-hp arms">
                 <td><?= __('Arms') ?></td>
                 <td class="hp-slider">
                   <div class="hp-range-slider">
@@ -168,7 +170,7 @@
               </div>
             </tr>
             <tr>
-              <div class="wrestler-hp head">
+              <div class="wrestler-hp legs">
                 <td><?= __('Legs') ?></td>
                 <td class="hp-slider">
                   <div class="hp-range-slider">
