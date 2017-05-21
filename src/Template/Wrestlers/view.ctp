@@ -104,13 +104,13 @@
             <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
               <tr>
                 <td class="float-left">
-                  <div class="positive-personality">
-                    <?= h($wrestlersPersonality->personality->name) ?>
+                  <div class="negative-personality">
+                    <?= h($wrestlersPersonality->personality->negative_name) ?>
                   </div>
                 </td>
                 <td class="float-right">
-                  <div class="negative-personality">
-                    <?= h($wrestlersPersonality->personality->negative_name) ?>
+                  <div class="positive-personality">
+                    <?= h($wrestlersPersonality->personality->name) ?>
                   </div>
                 </td>
                 <td class="personality-slider float-left">
