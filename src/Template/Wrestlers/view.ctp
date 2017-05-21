@@ -32,9 +32,9 @@
     </div>
     <div class="content-wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">
       <div class="game-info">
-        <div class="game-logo">
+        <!-- <div class="game-logo">
           <?= $this->Html->image('games/logos/'.$wrestler->game->game_img)?>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
