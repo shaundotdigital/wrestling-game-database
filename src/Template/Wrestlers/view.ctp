@@ -58,6 +58,33 @@
         </table>
       </div>
     </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" id="panel-comment">
+        <?= __('Hit Points') ?>
+      </div>
+    <div class="related">
+        <?php if (!empty($wrestler->wrestlers_hp)): ?>
+        <table cellpadding="0" cellspacing="0" class="panel-table">
+            <tr>
+                <th scope="col"><?= __('Head') ?></th>
+                <th scope="col"><?= __('Body') ?></th>
+                <th scope="col"><?= __('Arms') ?></th>
+                <th scope="col"><?= __('Legs') ?></th>
+                <th scope="col"><?= __('Total Hp') ?></th>
+            </tr>
+            <?php foreach ($wrestler->wrestlers_hp as $wrestlersHp): ?>
+            <tr>
+                <td><?= h($wrestlersHp->head) ?></td>
+                <td><?= h($wrestlersHp->body) ?></td>
+                <td><?= h($wrestlersHp->arms) ?></td>
+                <td><?= h($wrestlersHp->legs) ?></td>
+                <td><?= h($wrestlersHp->total_hp) ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+  </div>
   </div>
   <div class="wrestlers view medium-4 columns content">
     <div class="panel panel-default">
@@ -89,11 +116,6 @@
         </tr>
       </table>
     </div>
-
-
-
-
-
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Personality') ?>
@@ -125,32 +147,7 @@
         <?php endif; ?>
       </div>
     </div>
-
-    <div class="related">
-        <?php if (!empty($wrestler->wrestlers_hp)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Head') ?></th>
-                <th scope="col"><?= __('Body') ?></th>
-                <th scope="col"><?= __('Arms') ?></th>
-                <th scope="col"><?= __('Legs') ?></th>
-                <th scope="col"><?= __('Total Hp') ?></th>
-            </tr>
-            <?php foreach ($wrestler->wrestlers_hp as $wrestlersHp): ?>
-            <tr>
-                <td><?= h($wrestlersHp->head) ?></td>
-                <td><?= h($wrestlersHp->body) ?></td>
-                <td><?= h($wrestlersHp->arms) ?></td>
-                <td><?= h($wrestlersHp->legs) ?></td>
-                <td><?= h($wrestlersHp->total_hp) ?></td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
   </div>
-
-
 
 
   <div class="wrestlers view large-12 columns content">
