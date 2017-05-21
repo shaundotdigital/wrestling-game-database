@@ -1,6 +1,7 @@
 // Colours
-$colour-default-dark: #494b5b;
 $colour-smackdowndb: #467bfb;
+$colour-default-dark: #494b5b;
+$colour-default-grey: #dcdcdc;
 
 $excellentAttribute: #339900;
 $goodAttribute: #66cc33;
@@ -8,14 +9,8 @@ $averageAttribute: #ffcc33;
 $lowAttribute: #ff9900;
 $poorAttribute: #ff3333;
 
-$colour-red: #780206;
 $colour-header-dark: #181818;
 
-// Base Colors
-$shade-10: #2c3e50 !default;
-$shade-1: #d7dcdf !default;
-$shade-0: #fff !default;
-$teal: #1abc9c !default;
 
 // Font weights
 $light: 100;
@@ -35,3 +30,12 @@ $fixed-line-height: $base-line-height;
 
 // Headings
 $header-font-weight: $bold;
+
+// Slider
+$range-width: 100%;
+$range-handle-color: #323232;
+$range-handle-size: 6px;
+$range-track-color: #d7dcdf;
+$range-track-height: 12px;
+$range-label-color: $colour-default-dark;
+$range-label-width: 30px;

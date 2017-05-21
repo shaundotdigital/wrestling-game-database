@@ -125,22 +125,21 @@
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
               <tr>
-                <td class="float-left">
+                <td>
                   <div class="positive-personality">
                     <?= h($wrestlersPersonality->personality->name) ?>
                   </div>
                 </td>
-                <td class="float-right">
-                <div class="negative-personality">
-                  <?= h($wrestlersPersonality->personality->negative_name) ?>
-                </div>
-                </td>
-                <td class="personality-slider float-left">
+                <td class="personality-slider">
                   <div class="range-slider">
-                    <input class="range-slider__range" type="range" value='<?= h($wrestlersPersonality->value) ?>'min="-100" max="100">
+                    <input class="range-slider__range" placeholder="Username" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>
                   </div>
                 </td>
-
+                <td style=float:right;>
+                  <div class="negative-personality">
+                    <?= h($wrestlersPersonality->personality->negative_name) ?>
+                  </div>
+                </td>
               </tr>
             <?php endforeach; ?>
           </table>
@@ -148,7 +147,7 @@
       </div>
     </div>
   </div>
-
+<span class="range-slider__value"><?= h($wrestlersPersonality->value) ?></span>
 
   <div class="wrestlers view large-12 columns content">
     <div class="related">
