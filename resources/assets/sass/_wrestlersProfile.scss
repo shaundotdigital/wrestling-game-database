@@ -117,21 +117,8 @@ input[type='range']::-webkit-slider-runnable-track {
   position: relative;
   width: 32em;
   height: 0.375em;
-  background: linear-gradient(90deg, $poorAttribute, $colour-smackdowndb);
+  background: linear-gradient(90deg, $colour-smackdowndb, $poorAttribute);
 }
-// input[type='range']::-moz-range-track {
-//   width: 32em;
-//   height: 0.375em;
-//   background: linear-gradient(90deg, $poorAttribute, $colour-smackdowndb);
-// }
-// input[type='range']::-ms-track {
-//   border: none;
-//   width: 32em;
-//   height: 0.375em;
-//   background: linear-gradient(90deg, $poorAttribute, $colour-smackdowndb);
-//   color: transparent;
-// }
-
 
 input[type='range']::-ms-fill-lower {
   display: none;

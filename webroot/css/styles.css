@@ -16850,7 +16850,7 @@ input[type='range']::-webkit-slider-runnable-track {
   position: relative;
   width: 32em;
   height: 0.375em;
-  background: linear-gradient(90deg, #ff3333, #467bfb);
+  background: linear-gradient(90deg, #467bfb, #ff3333);
 }
 
 input[type='range']::-ms-fill-lower {

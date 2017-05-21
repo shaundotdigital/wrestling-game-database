@@ -104,14 +104,14 @@
             <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
               <tr>
                 <td class="float-left">
-                  <div class="negative-personality">
-                    <?= h($wrestlersPersonality->personality->negative_name) ?>
-                  </div>
-                </td>
-                <td class="float-right">
                   <div class="positive-personality">
                     <?= h($wrestlersPersonality->personality->name) ?>
                   </div>
+                </td>
+                <td class="float-right">
+                <div class="negative-personality">
+                  <?= h($wrestlersPersonality->personality->negative_name) ?>
+                </div>
                 </td>
                 <td class="personality-slider float-left">
                   <input type='range' min='-100' max='100' value='<?= h($wrestlersPersonality->value) ?>' step='1'/>
