@@ -16785,8 +16785,7 @@ fieldset legend {
 }
 
 .wrestler-render {
-  padding-top: 10px;
-  width: 18%;
+  width: 25%;
   margin-right: 10px;
 }
 
@@ -16794,6 +16793,7 @@ fieldset legend {
   height: 150px;
   background-size: cover;
   overflow: hidden;
+  margin-top: -20px;
   /* hide the cropped portion */
 }
 
