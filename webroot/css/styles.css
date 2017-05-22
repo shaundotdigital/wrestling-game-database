@@ -16735,11 +16735,7 @@ footer {
   margin-top: 25px;
   background: #494b5b;
   padding: 20px 0;
-  color: #bbb;
-}
-
-footer .row {
-  margin-left: 60px;
+  color: #777;
 }
 
 footer, .footer-disclaimer {
@@ -16747,14 +16743,20 @@ footer, .footer-disclaimer {
   min-width: 960px;
 }
 
-.footer-disclaimer {
-  background: #32343f;
-  color: #aaa;
-  padding: 10px 0;
+footer .fa {
+  color: #467bfb;
 }
 
-.footer-disclaimer a {
-  color: red;
+.btn.btn-social {
+  color: #fff;
+  background: #333;
+  border: none;
+}
+
+.footer-disclaimer {
+  background: #32343f;
+  color: #777;
+  padding: 10px 0;
 }
 
 .footer-disclaimer a:link {

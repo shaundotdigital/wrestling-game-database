@@ -134,11 +134,17 @@ $cakeDescription = 'SmackDown DB';?>
     <footer>
       <div class="container">
         <div class="row">
-            <a class="btn btn-social span2" href="#">
+          <a class="btn btn-social" href="#">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
               Send us an email
             </a>
-            <a class="btn btn-social span2" href="#">
-            Report an issues
+            <a class="btn btn-social" href="#">
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            Report an issue
+            </a>
+            <a class="btn btn-social" href="#">
+              <i class="fa fa-server" aria-hidden="true"></i>
+            Help keep it running
             </a>
           </div>
         </div>
@@ -199,7 +205,6 @@ $cakeDescription = 'SmackDown DB';?>
                 </svg>
               </div>
                   <div class="span6">&copy; <?php echo date("Y"); ?> SmackDown Database</div>
-                  <div class="span6">Created by <a href="http://shaunskeen.com">Shaun</a></div>
               </div>
               <p>This site is not affiliated with World Wrestling Entertainment, 2K Games, or any of their partners. All copyrights reserved to their respective owners.</p>
           </div>
