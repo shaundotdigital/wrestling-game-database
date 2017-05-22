@@ -40,7 +40,8 @@
   </div>
 </div>
 <div class="container">
-  <div class="wrestlers view large-8 columns content">
+  <div class="content">
+  <div class="wrestlers view large-8 columns">
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Attributes') ?>
@@ -59,7 +60,8 @@
       </div>
     </div>
   </div>
-  <div class="wrestlers view medium-4 columns content">
+
+  <div class="wrestlers view medium-4 columns">
     <!-- <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <? if ($wrestler->nickname) {
@@ -107,12 +109,16 @@
                   <div class="personality-range-slider">
                     <input class="personality-range-slider__range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>
                   </div>
+                  <div class="personality-range-value">
+                      <span class="personality-range-slider__value"><?= h($wrestlersPersonality->value) ?></span>
+                  </div>
                 </td>
                 <td style=float:right;>
                   <div class="negative-personality">
                     <?= h($wrestlersPersonality->personality->negative_name) ?>
                   </div>
                 </td>
+
               </tr>
             <?php endforeach; ?>
           </table>
@@ -176,9 +182,7 @@
     </div>
   </div>
   </div>
-<span class="personality-range-slider__value"><?= h($wrestlersPersonality->value) ?></span>
-
-  <div class="wrestlers view large-12 columns content">
+  <div class="wrestlers view large-12 columns">
     <div class="related">
       <div class="panel panel-default">
         <div class="panel-heading" id="panel-comment">
@@ -225,4 +229,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

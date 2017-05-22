@@ -16913,10 +16913,22 @@ footer, .footer-disclaimer {
   width: 6em;
 }
 
+.personality-range-value {
+  margin: 3px 0 0 0%;
+  text-align: center;
+}
+
+.personality-range-slider__value {
+  width: 30px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  background: #494b5b;
+}
+
 .personality-range-slider {
-  margin: 60px 0 0 0%;
-  border: 0;
   margin: 0;
+  border: 0;
 }
 
 .personality-range-slider__range {
@@ -16943,16 +16955,6 @@ footer, .footer-disclaimer {
   border: 0;
   border-radius: 50%;
   background: #323232;
-}
-
-.personality-range-slider__value {
-  display: inline-block;
-  position: relative;
-  width: 30px;
-  color: #fff;
-  text-align: center;
-  border-radius: 3px;
-  background: #494b5b;
 }
 
 .wrestler-total-hp {
