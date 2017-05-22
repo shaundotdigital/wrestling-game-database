@@ -168,12 +168,9 @@
             </tr>
             <?php endforeach; ?>
         </table>
-
         <div class="wrestler-total-hp">
-          <!-- <div class="wrestler-hp-title">
-            <small><?= __('Total Hp') ?></small>
-          </div> -->
-            <div class="wrestler-hp-total"><?= h($wrestlersHp->total_hp) ?>.0 pts</div>
+          <div class="wrestler-hp-title"><?= __('Total') ?></div>
+          <div class="wrestler-hp-total"><?= h($wrestlersHp->total_hp) ?>.0 pts</div>
         </div>
         <?php endif; ?>
     </div>

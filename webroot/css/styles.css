@@ -16959,6 +16959,13 @@ footer, .footer-disclaimer {
   background: #fff;
   text-align: center;
   padding: 0.5625rem 0.625rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
 }
 
 .wrestler-hp-title small {
@@ -16966,9 +16973,14 @@ footer, .footer-disclaimer {
   margin: 0;
 }
 
+.wrestler-hp-title {
+  border-right: 1px solid #d8d8d8;
+  padding: 0.5625rem 0.625rem;
+}
+
 .wrestler-hp-total {
   font-weight: bold;
-  font-size: x-large;
+  padding: 0.5625rem 0.625rem;
 }
 
 .hp-range-slider__range {
