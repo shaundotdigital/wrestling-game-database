@@ -60,7 +60,7 @@
     </div>
   </div>
   <div class="wrestlers view medium-4 columns content">
-    <div class="panel panel-default">
+    <!-- <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <? if ($wrestler->nickname) {
           echo h($wrestler->nickname);
@@ -88,7 +88,7 @@
           <td><?= $this->Number->format($wrestler->pac) ?></td>
         </tr>
       </table>
-    </div>
+    </div> -->
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Personality') ?>
@@ -166,14 +166,15 @@
                 </td>
                 <td class="float-right"><?= h($wrestlersHp->legs) ?>.0 pts</td>
             </tr>
-            <tr class="wrestler-hp total-hp-title">
-                <th><?= __('Total Hp') ?></th>
-            </tr>
-            <tr class="wrestler-hp total-hp">
-                <td><?= h($wrestlersHp->total_hp) ?></td>
-            </tr>
             <?php endforeach; ?>
         </table>
+
+        <div class="wrestler-total-hp">
+          <!-- <div class="wrestler-hp-title">
+            <small><?= __('Total Hp') ?></small>
+          </div> -->
+            <div class="wrestler-hp-total"><?= h($wrestlersHp->total_hp) ?>.0 pts</div>
+        </div>
         <?php endif; ?>
     </div>
   </div>
