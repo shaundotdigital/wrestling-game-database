@@ -101,7 +101,7 @@ $cakeDescription = 'SmackDown DB';?>
 </a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" class="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><?= $this->Html->link(__('Wrestlers'), ['action' => '../wrestlers'])?></li>
           <li><?= $this->Html->link(__('Games'), ['controller' => 'Games', 'action' => 'index'])?></li>
