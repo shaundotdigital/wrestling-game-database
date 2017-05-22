@@ -26,6 +26,8 @@ $cakeDescription = 'SmackDown DB';?>
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('styles.css') ?>
+    <?= $this->Html->css('font-awesome.min'); ?>
+    <?= $this->Html->css('font-awesome'); ?>
 
     <?= $this->Html->script('jQuery.js') ?>
     <?= $this->Html->script('scripts.js') ?>
