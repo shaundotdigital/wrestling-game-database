@@ -16955,6 +16955,22 @@ footer, .footer-disclaimer {
   background: #494b5b;
 }
 
+.wrestler-total-hp {
+  background: #fff;
+  text-align: center;
+  padding: 0.5625rem 0.625rem;
+}
+
+.wrestler-hp-title small {
+  font-size: 80%;
+  margin: 0;
+}
+
+.wrestler-hp-total {
+  font-weight: bold;
+  font-size: x-large;
+}
+
 .hp-range-slider__range {
   -webkit-appearance: none;
   height: 12px;
@@ -16989,22 +17005,6 @@ footer, .footer-disclaimer {
   text-align: center;
   border-radius: 3px;
   background: #494b5b;
-}
-
-.wrestler-total-hp {
-  background: #fff;
-  text-align: center;
-  padding: 0.5625rem 0.625rem;
-}
-
-.wrestler-hp-title small {
-  font-size: 80%;
-  margin: 0;
-}
-
-.wrestler-hp-total {
-  font-weight: bold;
-  font-size: x-large;
 }
 
 .attributeValue {

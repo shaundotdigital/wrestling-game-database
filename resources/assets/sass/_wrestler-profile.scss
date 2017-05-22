@@ -103,6 +103,9 @@
   max-width: 25%;
 }
 
+
+// Wrestler Personality
+
 .personality-slider, .hp-slider {
   width:50%;
   // padding-top: 15px;
@@ -145,7 +148,6 @@
   }
 }
 
-// Range Label
 .personality-range-slider__value {
   display: inline-block;
   position: relative;
@@ -156,6 +158,23 @@
   background: $range-label-color;
 }
 
+// Wrestler HP
+
+.wrestler-total-hp {
+    background: #fff;
+    text-align: center;
+    padding: 0.5625rem 0.625rem;
+}
+
+.wrestler-hp-title small {
+    font-size: 80%;
+    margin: 0;
+}
+
+.wrestler-hp-total {
+  font-weight: bold;
+  font-size: x-large;
+}
 
 .hp-range-slider__range {
   -webkit-appearance: none;
@@ -166,7 +185,6 @@
   padding: 0;
   margin: 0;
 
-  // Range Handle
   &::-webkit-slider-thumb {
     appearance: none;
     width: $range-handle-size;
@@ -185,7 +203,6 @@
 }
 
 
-// Range Label
 .hp-range-slider__value {
   display: inline-block;
   position: relative;
@@ -195,23 +212,6 @@
   border-radius: 3px;
   background: $range-label-color;
 }
-
-.wrestler-total-hp {
-    background: #fff;
-    text-align: center;
-    padding: 0.5625rem 0.625rem;
-}
-
-.wrestler-hp-title small {
-    font-size: 80%;
-    margin: 0;
-}
-
-.wrestler-hp-total {
-  font-weight: bold;
-  font-size: x-large;
-}
-
 
 .attributeValue{
   margin-top: -35px;
