@@ -50,10 +50,10 @@
         <table cellpadding="0" cellspacing="0" class="panel-table">
           <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
             <tr class="wrestler-attribute-<?= strtolower(str_replace(' ', '-', $attributesPoints->attribute->attribute_name)) ?> col-3">
-              <td class="attribute-name">
+              <td class="attribute-name left">
                 <?= h($attributesPoints->attribute->attribute_name) ?>
               </td>
-              <td class="attribute-value">
+              <td class="attribute-value right">
                 <span class="label attribute">
                   <?= h($attributesPoints->value) ?>
               </span></td>

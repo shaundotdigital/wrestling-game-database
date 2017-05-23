@@ -16902,11 +16902,7 @@ footer .fa {
 }
 
 .attribute-name {
-  width: 50%;
-}
-
-.attribute-value {
-  float: right;
+  padding: 1.071em;
 }
 
 .personality-slider, .hp-slider {
