@@ -107,6 +107,11 @@
 
 // attributesPoints
 
+.attribute-name {
+  width:50%;
+  // padding-top: 15px;
+}
+
 .attribute-value{
   float:right;
 }
@@ -240,23 +245,4 @@
 
 .abilities-image img{
   min-width:50%;
-}
-
-.panel {
-  padding: 0;
-}
-
-.panel-table {
-  background: #fff;
-  margin-bottom: 0;
-  border: none;
-  table-layout: fixed;
-  width: 100%;
-}
-
-#panel-comment {
-  background-color: $colour-default-dark;
-  border-bottom: 2px solid $colour-smackdowndb !important;
-  padding: 10px;
-  color: #FFF;
 }

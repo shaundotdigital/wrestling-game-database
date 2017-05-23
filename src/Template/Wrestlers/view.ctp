@@ -50,7 +50,7 @@
         <table cellpadding="0" cellspacing="0" class="panel-table">
           <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
             <tr class="wrestler-attribute-<?= strtolower(str_replace(' ', '-', $attributesPoints->attribute->attribute_name)) ?> col-3">
-              <td>
+              <td class="attribute-name">
                 <?= h($attributesPoints->attribute->attribute_name) ?>
               </td>
               <td class="attribute-value">
@@ -217,7 +217,7 @@
           <div class="wrestler-skills">
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->skills as $skills): ?>
-              <tr class="inlineblock">
+              <tr class="col-4">
                 <td>
                   <?= h($skills->skill_name) ?>
                 </td>
