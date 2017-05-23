@@ -40,9 +40,9 @@ $cakeDescription = 'SmackDown DB';?>
 <body>
 <div class="sub-bar" data-subbar role="sub-navigation">
   <div class="container">
-  <?php
-  // $this->Html->getCrumbs(' > ','Home');
-  ?>
+  <!-- <?=
+  $this->Html->getCrumbs(' > ','Home');
+  ?> -->
   </div>
 </div>
   <nav class="navbar navbar-inverse navbar-static-top">

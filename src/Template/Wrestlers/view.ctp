@@ -42,11 +42,11 @@
 
 <div class="sub-bar" data-subbar role="sub-navigation">
   <div class="container">
-  <?php
-  // $this->Html->addCrumb('Wrestler', '/wrestlers');
-  // $this->Html->addCrumb($wrestler->wrestler_name, '/view/' . strtolower(str_replace(' ', '-', $wrestler->wrestler_name )));
-  // $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(str_replace(' ', '-', $wrestler->id )));
-  ?>
+  <!-- <?php
+  $this->Html->addCrumb('Wrestler', '/wrestlers');
+  $this->Html->addCrumb($wrestler->game->game_name, '/games/view/' . strtolower(str_replace(' ', '-', $wrestler->game->id)));
+  $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(str_replace(' ', '-', $wrestler->id)));
+  ?> -->
   </div>
 </div>
 
