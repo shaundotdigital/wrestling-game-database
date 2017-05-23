@@ -130,7 +130,7 @@
 
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
-        <?= __('Hit Points') ?>
+        <?= __('Hit Points Ratio') ?>
       </div>
     <div class="related">
         <?php if (!empty($wrestler->wrestlers_hp)): ?>

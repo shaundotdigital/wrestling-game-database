@@ -16916,26 +16916,18 @@ footer .fa {
 }
 
 .personality-range-value {
-  margin: 3px 0 0 0%;
+  margin: 3px 0;
   text-align: center;
-}
-
-.personality-range-slider__value {
-  width: 30px;
-  color: #fff;
-  text-align: center;
-  border-radius: 3px;
-  background: #494b5b;
 }
 
 .personality-range-slider {
-  margin: 0;
+  margin: 5px 0 0;
   border: 0;
 }
 
 .personality-range-slider__range {
   -webkit-appearance: none;
-  height: 12px;
+  height: 8px;
   border-radius: .2em;
   background: linear-gradient(to right, #467bfb 50%, #ff3333 50%);
   outline: none;
@@ -16947,7 +16939,7 @@ footer .fa {
   -webkit-appearance: none;
   appearance: none;
   width: 6px;
-  height: 12px;
+  height: 8px;
   background: #323232;
 }
 
@@ -16962,7 +16954,7 @@ footer .fa {
 .wrestler-total-hp {
   background: #fff;
   text-align: center;
-  padding: 0.5625rem 0.625rem;
+  padding: 0.39rem 0;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -16979,17 +16971,22 @@ footer .fa {
 
 .wrestler-hp-title {
   border-right: 1px solid #d8d8d8;
-  padding: 0.5625rem 0.625rem;
+  padding: 0 0.625rem;
 }
 
 .wrestler-hp-total {
   font-weight: bold;
-  padding: 0.5625rem 0.625rem;
+  padding: 0 0.625rem;
+}
+
+.hp-range-slider {
+  margin: 5px 0;
+  text-align: center;
 }
 
 .hp-range-slider__range {
   -webkit-appearance: none;
-  height: 12px;
+  height: 8px;
   border-radius: .2em;
   background-color: #467bfb;
   outline: none;
@@ -17001,7 +16998,7 @@ footer .fa {
   -webkit-appearance: none;
   appearance: none;
   width: 6px;
-  height: 12px;
+  height: 8px;
   background: #323232;
 }
 
