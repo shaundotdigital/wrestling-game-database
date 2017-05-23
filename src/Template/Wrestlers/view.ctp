@@ -41,15 +41,15 @@
 </div>
 <div class="container">
   <div class="content">
-  <div class="wrestlers view large-8 columns">
+  <div class="wrestler large-8 columns">
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Attributes') ?>
       </div>
-      <div class="Attributes">
+      <div class="wrestler-attributes">
         <table cellpadding="0" cellspacing="0" class="panel-table">
           <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
-            <tr class="wrestler-attributes col-3">
+            <tr class="wrestler-attribute-<?= strtolower(str_replace(' ', '-', $attributesPoints->attribute->attribute_name)) ?> col-3">
               <td>
                 <?= h($attributesPoints->attribute->attribute_name) ?>
               </td>
@@ -64,7 +64,7 @@
     </div>
   </div>
 
-  <div class="wrestlers view medium-4 columns">
+  <div class="wrestler medium-4 columns">
     <!-- <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <? if ($wrestler->nickname) {
@@ -98,7 +98,7 @@
       <div class="panel-heading" id="panel-comment">
         <?= __('Personality') ?>
       </div>
-      <div class="related">
+      <div class="wrestler-personality">
         <?php if (!empty($wrestler->wrestlers_personality)): ?>
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
@@ -135,7 +135,7 @@
       <div class="panel-heading" id="panel-comment">
         <?= __('Hit Points Ratio') ?>
       </div>
-    <div class="related">
+    <div class="wrestler-hitpoints">
         <?php if (!empty($wrestler->wrestlers_hp)): ?>
         <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->wrestlers_hp as $wrestlersHp): ?>
@@ -185,14 +185,14 @@
     </div>
   </div>
   </div>
-  <div class="wrestlers view large-12 columns">
-    <div class="related">
+
+  <div class="wrestler large-12 columns">
       <div class="panel panel-default">
         <div class="panel-heading" id="panel-comment">
           <?= __('Abilities') ?>
         </div>
         <?php if (!empty($wrestler->abilities)): ?>
-          <div class="Abilities">
+          <div class="wrestler-abilities">
             <table cellpadding="0" cellspacing="0" class="panel-table">
               <?php foreach ($wrestler->abilities as $abilities): ?>
                 <tr class="row-2">
@@ -209,13 +209,12 @@
           </div>
         <?php endif; ?>
       </div>
-    </div>
-    <div class="related">
       <div class="panel panel-default">
         <div class="panel-heading" id="panel-comment">
           <?= __('Skills') ?>
         </div>
         <?php if (!empty($wrestler->skills)): ?>
+          <div class="wrestler-skills">
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->skills as $skills): ?>
               <tr class="inlineblock">
@@ -231,6 +230,6 @@
         <?php endif; ?>
       </div>
     </div>
-  </div>
+
 </div>
 </div>
