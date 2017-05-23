@@ -146,7 +146,7 @@
                     <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->head) ?>' min="0" max="2000" disabled>
                   </div>
                 </td>
-                <td class="float-right"><?= h($wrestlersHp->head) ?>.0 pts</td>
+                <td style="float:right;"><?= h($wrestlersHp->head) ?>.0 pts</td>
             </tr>
             <tr class="wrestler-hp body">
                 <td><?= __('Body') ?></td>
@@ -155,7 +155,7 @@
                     <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->body) ?>' min="0" max="2000" disabled>
                   </div>
                 </td>
-                <td class="float-right"><?= h($wrestlersHp->body) ?>.0 pts</td>
+                <td style="float:right;"><?= h($wrestlersHp->body) ?>.0 pts</td>
             </tr>
             <tr class="wrestler-hp arms">
                 <td><?= __('Arms') ?></td>
@@ -164,7 +164,7 @@
                     <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->arms) ?>' min="0" max="2000" disabled>
                   </div>
                 </td>
-                <td class="float-right"><?= h($wrestlersHp->arms) ?>.0 pts</td>
+                <td style="float:right;"><?= h($wrestlersHp->arms) ?>.0 pts</td>
             </tr>
             <tr class="wrestler-hp legs">
                 <td><?= __('Legs') ?></td>
@@ -173,7 +173,7 @@
                     <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->legs) ?>' min="0" max="2000" disabled>
                   </div>
                 </td>
-                <td class="float-right"><?= h($wrestlersHp->legs) ?>.0 pts</td>
+                <td style="float:right;"><?= h($wrestlersHp->legs) ?>.0 pts</td>
             </tr>
             <?php endforeach; ?>
         </table>
