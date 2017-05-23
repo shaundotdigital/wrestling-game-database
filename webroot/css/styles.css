@@ -16642,12 +16642,12 @@ table {
   width: 100%;
 }
 
-tr.inlineblock33 {
+tr.col-3 {
   display: inline-block;
-  width: 33.33333%;
+  width: 50%;
 }
 
-tr.inlineblock20 {
+tr.row-2 {
   display: inline-block;
   width: 20%;
 }
@@ -16816,6 +16816,7 @@ footer .fa {
   line-height: 1.5;
   margin-bottom: 0;
   border-radius: .2rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .overall {
@@ -16826,24 +16827,24 @@ footer .fa {
   background: #467bfb;
 }
 
-.excellentAttribute {
-  background: #339900;
+.excellent-attribute {
+  background: #3A9433;
 }
 
-.goodAttribute {
-  background: #66cc33;
+.good-attribute {
+  background: #20CD31;
 }
 
-.averageAttribute {
+.average-attribute {
   background: #ffcc33;
 }
 
-.lowAttribute {
-  background: #ff9900;
+.low-attribute {
+  background: #FF941F;
 }
 
-.poorAttribute {
-  background: #ff3333;
+.poor-attribute {
+  background: #DB433E;
 }
 
 .wrestler-header {
@@ -16907,6 +16908,10 @@ footer .fa {
   max-width: 25%;
 }
 
+.attribute-value {
+  float: right;
+}
+
 .personality-slider, .hp-slider {
   width: 50%;
 }
@@ -16929,7 +16934,7 @@ footer .fa {
   -webkit-appearance: none;
   height: 8px;
   border-radius: .2em;
-  background: linear-gradient(to right, #467bfb 50%, #ff3333 50%);
+  background: linear-gradient(to right, #16ADEC 50%, #df5853 50%);
   outline: none;
   padding: 0;
   margin: 0;
@@ -17018,10 +17023,6 @@ footer .fa {
   text-align: center;
   border-radius: 3px;
   background: #494b5b;
-}
-
-.attributeValue {
-  margin-top: -35px;
 }
 
 .abilities-image img {

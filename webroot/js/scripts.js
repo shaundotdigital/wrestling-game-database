@@ -17,18 +17,18 @@ $(document).ready(function() {
   $('.label.attribute').each(function(){
       var attributeValue = $(this).text();
 
-      var className = 'poorAttribute';
+      var className = 'poor-attribute';
       if (attributeValue > 59) {
-        className = 'lowAttribute';
+        className = 'low-attribute';
       }
       if (attributeValue > 69) {
-        className = 'averageAttribute'
+        className = 'average-attribute'
       }
       if (attributeValue > 79) {
-        className = 'goodAttribute'
+        className = 'good-attribute'
       }
       if (attributeValue > 89) {
-        className = 'excellentAttribute'
+        className = 'excellent-attribute'
       }
 
       $(this).addClass(className);

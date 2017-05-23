@@ -49,11 +49,14 @@
       <div class="Attributes">
         <table cellpadding="0" cellspacing="0" class="panel-table">
           <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
-            <tr class="inlineblock33">
+            <tr class="wrestler-attributes col-3">
               <td>
                 <?= h($attributesPoints->attribute->attribute_name) ?>
               </td>
-              <td class="float-right attributeValue"><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
+              <td class="attribute-value">
+                <span class="label attribute">
+                  <?= h($attributesPoints->value) ?>
+              </span></td>
             </tr>
           <?php endforeach; ?>
         </table>
@@ -192,7 +195,7 @@
           <div class="Abilities">
             <table cellpadding="0" cellspacing="0" class="panel-table">
               <?php foreach ($wrestler->abilities as $abilities): ?>
-                <tr class="inlineblock20">
+                <tr class="row-2">
                   <td class="abilityValue">
                     <div class="abilities-image">
                       <!-- <?='Level' .' '. h($abilities->ability_level_id) ?> -->

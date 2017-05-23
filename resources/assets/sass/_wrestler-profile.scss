@@ -8,6 +8,7 @@
   line-height: 1.5;
   margin-bottom: 0;
   border-radius: .2rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .overall {
@@ -18,24 +19,24 @@
   background: $colour-smackdowndb;
 }
 
-.excellentAttribute {
-  background: $excellentAttribute;
+.excellent-attribute {
+  background: $excellent-attribute;
 }
 
-.goodAttribute {
-  background: $goodAttribute;
+.good-attribute {
+  background: $good-attribute;
 }
 
-.averageAttribute {
-  background: $averageAttribute;
+.average-attribute {
+  background: $average-attribute;
 }
 
-.lowAttribute {
-  background: $lowAttribute;
+.low-attribute {
+  background: $low-attribute;
 }
 
-.poorAttribute {
-  background: $poorAttribute;
+.poor-attribute {
+  background: $poor-attribute;
 }
 
 .wrestler-header {
@@ -104,6 +105,13 @@
 }
 
 
+// attributesPoints
+
+.attribute-value{
+  float:right;
+}
+
+
 // Wrestler Personality
 
 .personality-slider, .hp-slider {
@@ -137,7 +145,7 @@
   -webkit-appearance: none;
   height: $range-track-height;
   border-radius: .2em;
-  background: linear-gradient(to right, #467bfb 50%, #ff3333 50%);
+  background: linear-gradient(to right, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
   outline: none;
   padding: 0;
   margin: 0;
@@ -228,10 +236,6 @@
   text-align: center;
   border-radius: 3px;
   background: $range-label-color;
-}
-
-.attributeValue{
-  margin-top: -35px;
 }
 
 .abilities-image img{
