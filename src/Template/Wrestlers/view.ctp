@@ -39,6 +39,17 @@
     </div>
   </div>
 </div>
+
+<div class="sub-bar" data-subbar role="sub-navigation">
+  <div class="container">
+  <?php
+  // $this->Html->addCrumb('Wrestler', '/wrestlers');
+  // $this->Html->addCrumb($wrestler->wrestler_name, '/view/' . strtolower(str_replace(' ', '-', $wrestler->wrestler_name )));
+  // $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(str_replace(' ', '-', $wrestler->id )));
+  ?>
+  </div>
+</div>
+
 <div class="container">
   <div class="content">
   <div class="wrestler large-8 columns">
