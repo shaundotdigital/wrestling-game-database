@@ -6,7 +6,7 @@
 <div class="wrestler-header <?=($wrestler->game->game_name)?>">
   <div class="container">
     <div class="content-wrestler-header-left <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
-      <div class="wrestler-render push-left">
+      <div class="wrestler-render left">
         <div class="wrestler-image">
           <?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . $wrestler->pac . '-' . $wrestler->game->release_year . '.png')?>
         </div>
