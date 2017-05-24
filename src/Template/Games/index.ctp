@@ -3,26 +3,25 @@
   * @var \App\View\AppView $this
   */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Game'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Wrestlers'), ['controller' => 'Wrestlers', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Wrestler'), ['controller' => 'Wrestlers', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Abilities'), ['controller' => 'Abilities', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Ability'), ['controller' => 'Abilities', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Attributes'), ['controller' => 'Attributes', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Attribute'), ['controller' => 'Attributes', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Platforms'), ['controller' => 'Platforms', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Platform'), ['controller' => 'Platforms', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="games index large-9 medium-8 columns content">
-    <h3><?= __('Games') ?></h3>
+<div class="container">
+  <div class="content">
+<div class="games index large-12 columns content">
+  <table cellpadding="0" cellspacing="0">
+      <tbody>
+          <?php foreach ($games as $game): ?>
+          <tr class="col-3">
+             <td><?= $this->Html->link(__(($game->game_name)), ['action' => 'view', $game->id]) ?> </td>
+              <td><?= h($game->release_year) ?></td>
+          </tr>
+          <?php endforeach; ?>
+      </tbody>
+  </table>
+
+
+    <!-- <h3><?= __('Games') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('game_name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('release_year') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -52,5 +51,8 @@
             <?= $this->Paginator->last(__('last') . ' >>') ?>
         </ul>
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
-    </div>
+    </div> -->
+</div>
+
+</div>
 </div>
