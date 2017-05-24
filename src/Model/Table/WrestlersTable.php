@@ -9,11 +9,13 @@ use Cake\Validation\Validator;
 /**
  * Wrestlers Model
  *
+ * @property \Cake\ORM\Association\BelongsTo $Brands
  * @property \Cake\ORM\Association\BelongsTo $Genders
  * @property \Cake\ORM\Association\BelongsTo $Heights
  * @property \Cake\ORM\Association\BelongsTo $WeightClasses
  * @property \Cake\ORM\Association\BelongsTo $Reactions
  * @property \Cake\ORM\Association\BelongsTo $Games
+ * @property \Cake\ORM\Association\BelongsTo $GameDlcs
  * @property \Cake\ORM\Association\HasMany $AttributesPoints
  * @property \Cake\ORM\Association\HasMany $WrestlersHp
  * @property \Cake\ORM\Association\HasMany $WrestlersPersonality
@@ -47,6 +49,10 @@ class WrestlersTable extends Table
         $this->setDisplayField('wrestler_name');
         $this->setPrimaryKey('id');
 
+        $this->belongsTo('Brands', [
+            'foreignKey' => 'brand_id'
+        ]);
+
         $this->belongsTo('Genders', [
             'foreignKey' => 'gender_id',
             'joinType' => 'INNER'
@@ -66,6 +72,9 @@ class WrestlersTable extends Table
         $this->belongsTo('Games', [
             'foreignKey' => 'game_id',
             'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('GameDlcs', [
+            'foreignKey' => 'game_dlc_id'
         ]);
         $this->hasMany('AttributesPoints', [
             'foreignKey' => 'wrestler_id'
@@ -139,11 +148,13 @@ class WrestlersTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
+        $rules->add($rules->existsIn(['brand_id'], 'Brands'));
         $rules->add($rules->existsIn(['gender_id'], 'Genders'));
         $rules->add($rules->existsIn(['height_id'], 'Heights'));
         $rules->add($rules->existsIn(['weight_class_id'], 'WeightClasses'));
         $rules->add($rules->existsIn(['reaction_id'], 'Reactions'));
         $rules->add($rules->existsIn(['game_id'], 'Games'));
+        $rules->add($rules->existsIn(['game_dlc_id'], 'GameDlcs'));
 
         return $rules;
     }

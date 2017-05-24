@@ -19,7 +19,7 @@ class WrestlersController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'AttributesPoints.Attributes']
+            'contain' => ['Brands', 'Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'GameDlcs', 'AttributesPoints.Attributes']
         ];
         $wrestlers = $this->paginate($this->Wrestlers);
 
@@ -29,7 +29,7 @@ class WrestlersController extends AppController
 
     public function addAttributes($id = null) {
       $wrestler = $this->Wrestlers->get($id, [
-          'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonality']
+          'contain' => ['Brands', 'Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'GameDlcs', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonality']
       ]);
 
       $attributes = $this->Wrestlers->AttributesPoints->Attributes->find();
@@ -39,7 +39,7 @@ class WrestlersController extends AppController
 
     public function editAttributes($id = null) {
       $wrestler = $this->Wrestlers->get($id, [
-          'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonality']
+          'contain' => ['Brands', 'Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'GameDlcs', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonality']
       ]);
 
       $attributes = $this->Wrestlers->AttributesPoints->Attributes->find();
@@ -57,7 +57,7 @@ class WrestlersController extends AppController
     public function view($id = null)
     {
         $wrestler = $this->Wrestlers->get($id, [
-            'contain' => ['Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonality.Personalities']
+            'contain' => ['Brands', 'Genders', 'Heights', 'WeightClasses', 'Reactions', 'Games', 'GameDlcs', 'Abilities', 'Skills', 'AttributesPoints.Attributes', 'WrestlersHp', 'WrestlersPersonality.Personalities']
         ]);
 
         $this->set('wrestler', $wrestler);
@@ -97,7 +97,7 @@ class WrestlersController extends AppController
         $games = $this->Wrestlers->Games->find('list', ['limit' => 200]);
         $abilities = $this->Wrestlers->Abilities->find('list', ['limit' => 200]);
         $skills = $this->Wrestlers->Skills->find('list', ['limit' => 200]);
-        $this->set(compact('wrestler', 'genders', 'heights', 'weightClasses', 'reactions', 'games', 'abilities', 'skills', 'hp'));
+        $this->set(compact('wrestler', 'brands', 'genders', 'heights', 'weightClasses', 'reactions', 'games', 'gameDlcs', 'abilities', 'skills', 'hp'));
         $this->set('_serialize', ['wrestler']);
     }
 
@@ -138,7 +138,7 @@ class WrestlersController extends AppController
        $games = $this->Wrestlers->Games->find('list', ['limit' => 200]);
        $abilities = $this->Wrestlers->Abilities->find('list', ['limit' => 200]);
        $skills = $this->Wrestlers->Skills->find('list', ['limit' => 200]);
-       $this->set(compact('wrestler', 'genders', 'heights', 'weightClasses', 'reactions', 'games', 'abilities', 'skills', 'hp'));
+       $this->set(compact('wrestler', 'brands', 'genders', 'heights', 'weightClasses', 'reactions', 'games', 'gameDlcs', 'abilities', 'skills', 'hp'));
        $this->set('_serialize', ['wrestler']);
     }
 
