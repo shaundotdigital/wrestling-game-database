@@ -6,17 +6,20 @@
 <div class="container">
   <div class="content">
 <div class="games index large-12 columns content">
+
   <table cellpadding="0" cellspacing="0">
       <tbody>
           <?php foreach ($games as $game): ?>
-          <tr class="col-3">
-             <td><?= $this->Html->link(__(($game->game_name)), ['action' => 'view', $game->id]) ?> </td>
-              <td><?= h($game->release_year) ?></td>
-          </tr>
+          <div class="game-item col-3 <?= strtolower(str_replace('!', '', str_replace(':', '', str_replace('.', '', (str_replace(' ', '-', $game->game_name))))))?>">
+          <?= $this->Html->image('games/boxart/' . strtolower(str_replace('!', '', str_replace(':', '', str_replace('.', '', (str_replace(' ', '-', $game->game_name)))))) . '-' . $game->release_year . '.jpg')?>
+          <div class="game-name">
+          <?= $this->Html->link(__(($game->game_name)), ['action' => 'view', $game->id]) ?>
+          </div>
+            <?= h($game->release_year) ?></td>
+          </div>
           <?php endforeach; ?>
       </tbody>
   </table>
-
 
     <!-- <h3><?= __('Games') ?></h3>
     <table cellpadding="0" cellspacing="0">
