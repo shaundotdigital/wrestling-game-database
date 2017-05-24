@@ -44,6 +44,10 @@
             <td><?= h($wrestler->nickname) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Brand') ?></th>
+            <td><?= $wrestler->has('brand') ? $this->Html->link($wrestler->brand->id, ['controller' => 'Brands', 'action' => 'view', $wrestler->brand->id]) : '' ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Gender') ?></th>
             <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
         </tr>
@@ -62,6 +66,10 @@
         <tr>
             <th scope="row"><?= __('Game') ?></th>
             <td><?= $wrestler->has('game') ? $this->Html->link($wrestler->game->game_name, ['controller' => 'Games', 'action' => 'view', $wrestler->game->id]) : '' ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Game Dlc') ?></th>
+            <td><?= $wrestler->has('game_dlc') ? $this->Html->link($wrestler->game_dlc->id, ['controller' => 'GameDlcs', 'action' => 'view', $wrestler->game_dlc->id]) : '' ?></td>
         </tr>
         <th scope="row"><?= __('Pac') ?></th>
             <td><?= $this->Number->format($wrestler->pac) ?></td>

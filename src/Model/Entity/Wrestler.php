@@ -12,17 +12,21 @@ use Cake\ORM\Entity;
  * @property string $nickname
  * @property string $last_name
  * @property int $overall
+ * @property int $brand_id
  * @property int $gender_id
  * @property int $height_id
  * @property int $weight_class_id
  * @property int $reaction_id
  * @property int $game_id
+ * @property int $game_dlc_id
  *
+ * @property \App\Model\Entity\Brand $brand
  * @property \App\Model\Entity\Gender $gender
  * @property \App\Model\Entity\Height $height
  * @property \App\Model\Entity\WeightClass $weight_class
  * @property \App\Model\Entity\Reaction $reaction
  * @property \App\Model\Entity\Game $game
+ * @property \App\Model\Entity\GameDlc $game_dlc
  * @property \App\Model\Entity\AttributesPoint[] $attributes_points
  * @property \App\Model\Entity\WrestlersHp[] $wrestlers_hp
  * @property \App\Model\Entity\WrestlersPersonality[] $wrestlers_personality

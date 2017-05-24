@@ -13,6 +13,8 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Wrestlers'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Brands'), ['controller' => 'Brands', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Brand'), ['controller' => 'Brands', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Genders'), ['controller' => 'Genders', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Gender'), ['controller' => 'Genders', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Heights'), ['controller' => 'Heights', 'action' => 'index']) ?></li>
@@ -45,11 +47,13 @@
             echo $this->Form->control('nickname');
             echo $this->Form->control('last_name');
             echo $this->Form->control('overall');
+            echo $this->Form->control('brand_id', ['options' => $brands, 'empty' => true]);
             echo $this->Form->control('gender_id', ['options' => $genders]);
             echo $this->Form->control('height_id', ['options' => $heights]);
             echo $this->Form->control('weight_class_id', ['options' => $weightClasses]);
             echo $this->Form->control('reaction_id', ['options' => $reactions]);
             echo $this->Form->control('game_id', ['options' => $games]);
+            echo $this->Form->control('game_dlc_id', ['options' => $gameDlcs, 'empty' => true]);
             echo $this->Form->control('abilities._ids', ['options' => $abilities]);
             echo $this->Form->input('skills._ids' ,array('multiple' => 'checkbox',));
         ?>
