@@ -10,13 +10,18 @@
   <table cellpadding="0" cellspacing="0">
       <tbody>
           <?php foreach ($games as $game): ?>
-          <div class="game-item col-3 <?= strtolower(str_replace('!', '', str_replace(':', '', str_replace('.', '', (str_replace(' ', '-', $game->game_name))))))?>">
-          <?= $this->Html->image('games/boxart/' . strtolower(str_replace('!', '', str_replace(':', '', str_replace('.', '', (str_replace(' ', '-', $game->game_name)))))) . '-' . $game->release_year . '.jpg')?>
+
+          <?  $titleSymbols = array( '!', ':', '.' ,'\'');?>
+          <div class="game-item col-3 <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name))))?>">
+            <?= $this->Html->image('games/boxart/' . strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name)))) . '-' . $game->release_year . '.jpg')?>
           <div class="game-name">
           <?= $this->Html->link(__(($game->game_name)), ['action' => 'view', $game->id]) ?>
           </div>
             <?= h($game->release_year) ?></td>
           </div>
+            <?php foreach ($game->platforms as $platform): ?>
+              <?= $platform->platform_name ?>
+            <?php endforeach; ?>
           <?php endforeach; ?>
       </tbody>
   </table>

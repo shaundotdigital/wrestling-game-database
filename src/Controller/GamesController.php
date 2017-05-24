@@ -10,7 +10,6 @@ use App\Controller\AppController;
  */
 class GamesController extends AppController
 {
-
     /**
      * Index method
      *
@@ -18,9 +17,10 @@ class GamesController extends AppController
      */
     public function index()
     {
-      // $this->paginate = [
-      //     'contain' => ['GamesPlatforms.Platform_id']
-      // ];
+
+      $this->paginate = [
+      'contain' => ['Platforms']
+      ];
 
         $games = $this->paginate($this->Games);
 
