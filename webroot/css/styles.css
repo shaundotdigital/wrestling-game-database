@@ -1958,7 +1958,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1400px;
+    width: 1410px;
   }
 }
 
@@ -17020,6 +17020,10 @@ footer .fa {
 
 .abilities-image img {
   min-width: 50%;
+}
+
+.game-item img {
+  width: 50%;
 }
 
 .container {
