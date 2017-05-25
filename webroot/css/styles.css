@@ -16871,12 +16871,8 @@ footer .fa {
   background-image: url("../img/games/headers/wwe2k16-header.jpg");
 }
 
-.content-wrestler-header {
-  width: 50%;
-}
-
 .wrestler-render {
-  width: 40%;
+  width: 20%;
 }
 
 .wrestler-overall {
