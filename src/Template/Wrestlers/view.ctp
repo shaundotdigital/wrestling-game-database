@@ -34,8 +34,8 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
         <?= $wrestler->height->height ?>
         -
         <?= $wrestler->weight_class->weight_class ?>
-        <? if ($wrestler->nickname) { ?>- <?
-          echo h($wrestler->nickname);
+        <? if ($wrestler->reaction->crowd_reaction) { ?>- <?
+          echo $wrestler->reaction->crowd_reaction;
         } ?>
       </small>
     </div>
@@ -78,29 +78,6 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
   </div>
 
   <div class="wrestler medium-4 columns">
-    <div class="panel panel-default">
-      <div class="panel-heading" id="panel-comment">
-        <? if ($wrestler->nickname) {
-          echo h($wrestler->nickname);
-        } ?>
-        <?=($wrestler->wrestler_name)?>
-      </div>
-      <table class="vertical-table">
-        <tr>
-          <th scope="row"><?= __('Gender') ?></th>
-          <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
-        </tr>
-
-        <tr>
-          <th scope="row"><?= __('Reaction') ?></th>
-          <td><?= $wrestler->has('reaction') ? $this->Html->link($wrestler->reaction->crowd_reaction, ['controller' => 'Reactions', 'action' => 'view', $wrestler->reaction->id]) : '' ?></td>
-        </tr>
-        <tr>
-          <th scope="row"><?= __('Pac') ?></th>
-          <td><?= $this->Number->format($wrestler->pac) ?></td>
-        </tr>
-      </table>
-    </div>
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Personality') ?>
