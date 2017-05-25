@@ -51,9 +51,6 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
   </div>
 </div>
 
-<div class="sub-bar" data-subbar role="sub-navigation">
-
-</div>
 
 <div class="container">
   <div class="content">
