@@ -19,24 +19,26 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           <?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . $wrestler->pac . '-' . $wrestler->game->release_year . '.png')?>
         </div>
       </div>
+      <div class="wrestler-overall left">
+        <span class="label main-overall">
+          <?= $this->Number->format($wrestler->overall) ?>
+        </span>
+      </div>
       <div class="wrestler-info left">
-        <div class="wrestler-overall">
-          <span class="label attribute">
-            <?= $this->Number->format($wrestler->overall) ?>
-          </span>
-        </div>
-        <div class="wrestler-firstname">
-          <h3><?= $wrestler->first_name ?></h3>
-        </div>
-        <div class="wrestler-lastname">
+      <div class="wrestler-name">
+          <small><?= $wrestler->first_name ?></small>
           <h3><?= $wrestler->last_name ?></h3>
-        </div>
-        <div class="wrestler-nickname">
-          <h3><? if ($wrestler->nickname) {
-            echo h($wrestler->nickname);
-          } ?></h3>
-        </div>
-
+      </div>
+      <div class="wrestler-more">
+        <small>
+        <?= $wrestler->height->height ?>
+        -
+        <?= $wrestler->weight_class->weight_class ?>
+        <? if ($wrestler->nickname) { ?>- <?
+          echo h($wrestler->nickname);
+        } ?>
+      </small>
+    </div>
       </div>
     </div>
     <div class="content-game-header">
@@ -91,13 +93,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           <th scope="row"><?= __('Gender') ?></th>
           <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
         </tr>
-        <tr><th scope="row"><?= __('Height') ?></th>
-          <td><?= $wrestler->has('height') ? $this->Html->link($wrestler->height->height, ['controller' => 'Heights', 'action' => 'view', $wrestler->height->id]) : '' ?></td>
-        </tr>
-        <tr>
-          <th scope="row"><?= __('Weight Class') ?></th>
-          <td><?= $wrestler->has('weight_class') ? $this->Html->link($wrestler->weight_class->weight_class, ['controller' => 'WeightClasses', 'action' => 'view', $wrestler->weight_class->id]) : '' ?></td>
-        </tr>
+
         <tr>
           <th scope="row"><?= __('Reaction') ?></th>
           <td><?= $wrestler->has('reaction') ? $this->Html->link($wrestler->reaction->crowd_reaction, ['controller' => 'Reactions', 'action' => 'view', $wrestler->reaction->id]) : '' ?></td>

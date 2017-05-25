@@ -16807,7 +16807,6 @@ footer .fa {
 
 .label {
   color: #ffffff;
-  cursor: pointer;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -16816,8 +16815,19 @@ footer .fa {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.overall {
+.overall, .main-overall {
   background: #467bfb;
+}
+
+.label.overall {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.label.main-overall {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 .attribute {
@@ -16869,20 +16879,28 @@ footer .fa {
   width: 40%;
 }
 
-.wrestler-info {
-  margin: 32px;
+.wrestler-overall {
+  margin: 3em 1em;
 }
 
-.wrestler-lastname h3 {
+.wrestler-info {
+  margin: 3em 0em;
+}
+
+.wrestler-name {
+  padding: 0 0 2.5px;
+  line-height: 1;
+}
+
+.wrestler-name h3 {
   color: #fff;
   font-size: 40px;
-  line-height: 35px;
-  font-weight: normal;
   text-transform: uppercase;
   font-weight: bold;
+  line-height: 1;
 }
 
-.wrestler-firstname h3 {
+.wrestler-name small {
   color: #fff;
   float: none;
   display: block;
@@ -16890,12 +16908,17 @@ footer .fa {
   text-transform: uppercase;
 }
 
-.wrestler-nickname h3 {
+.wrestler-more small {
   color: #fff;
   float: none;
   display: block;
   font-size: 12px;
-  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.wrestler-more > small a {
+  color: #fff;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
