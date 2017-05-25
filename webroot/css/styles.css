@@ -16642,6 +16642,11 @@ table {
   width: 100%;
 }
 
+.col-2 {
+  display: inline-block;
+  width: 50%;
+}
+
 .col-3 {
   display: inline-block;
   width: 33.3333333333%;
@@ -17045,7 +17050,11 @@ footer .fa {
 }
 
 .abilities-image img {
-  min-width: 50%;
+  max-width: 10%;
+}
+
+.abilities-image {
+  width: 25em;
 }
 
 .container {

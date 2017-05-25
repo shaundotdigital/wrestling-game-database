@@ -75,6 +75,27 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
         </table>
       </div>
     </div>
+    <?php if (!empty($wrestler->skills)): ?>
+      <div class="panel panel-default">
+        <div class="panel-heading" id="panel-comment">
+          <?= __('Skills') ?>
+        </div>
+          <div class="wrestler-skills">
+          <table cellpadding="0" cellspacing="0" class="panel-table">
+            <?php foreach ($wrestler->skills as $skills): ?>
+              <tr class="col-4">
+                <td>
+                  <?= h($skills->skill_name) ?>
+                </td>
+                <td class="float-right skillValue">
+                  <?= h($skills->skill_levels_id) ?>
+                </td>
+              </tr>
+            <?php endforeach; ?>
+          </table>
+      </div>
+    </div>
+  <?php endif; ?>
   </div>
   <?php endif; ?>
   <div class="wrestler medium-4 columns">
@@ -165,7 +186,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
     </div>
   <?php endif; ?>
   </div>
-  <div class="wrestler large-12 columns">
+  <div class="wrestler medium-4 columns">
   <?php if (!empty($wrestler->abilities)): ?>
       <div class="panel panel-default">
         <div class="panel-heading" id="panel-comment">
@@ -174,13 +195,12 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           <div class="wrestler-abilities">
             <table cellpadding="0" cellspacing="0" class="panel-table">
               <?php foreach ($wrestler->abilities as $abilities): ?>
-                <tr class="row-2">
-                  <td class="abilityValue">
-                    <div class="abilities-image">
-                      <!-- <?='Level' .' '. h($abilities->ability_level_id) ?> -->
+                <tr>
+                  <td class="ability-value col-2">
+                    <div class="abilities-image left">
                       <?= $this->Html->image('assets/abilities/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . strtolower(str_replace(' ', '-',$abilities->ability_name)) . '-' . $abilities->ability_level_id . '.png') ?>
+                      <?= h($abilities->ability_name) ?> (<?='Lvl' .' '. h($abilities->ability_level_id) ?>)
                     </div>
-                    <?= h($abilities->ability_name) ?>
                   </td>
                 </tr>
               <?php endforeach; ?>
@@ -188,27 +208,10 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           </div>
       </div>
     <?php endif; ?>
-    <?php if (!empty($wrestler->skills)): ?>
-      <div class="panel panel-default">
-        <div class="panel-heading" id="panel-comment">
-          <?= __('Skills') ?>
-        </div>
-          <div class="wrestler-skills">
-          <table cellpadding="0" cellspacing="0" class="panel-table">
-            <?php foreach ($wrestler->skills as $skills): ?>
-              <tr class="col-4">
-                <td>
-                  <?= h($skills->skill_name) ?>
-                </td>
-                <td class="float-right skillValue">
-                  <?= h($skills->skill_levels_id) ?>
-                </td>
-              </tr>
-            <?php endforeach; ?>
-          </table>
-      </div>
-    </div>
-  <?php endif; ?>
+  </div>
+    <div class="wrestler large-8 columns">
+
+</div>
 
 </div>
 </div>
