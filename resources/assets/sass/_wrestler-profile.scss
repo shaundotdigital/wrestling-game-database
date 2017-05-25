@@ -138,7 +138,6 @@
 
 .personality-slider, .hp-slider {
   width:50%;
-  // padding-top: 15px;
 }
 
 .positive-personality {
@@ -150,14 +149,6 @@
   text-align: center;
 }
 
-.personality-range-slider-value {
-  // width: $range-label-width;
-  // color: #fff;
-  // text-align: center;
-  // border-radius: 3px;
-  // background: $range-label-color;
-}
-
 .personality-range-slider {
   margin: 5px 0 0;
   border: 0;
@@ -166,28 +157,50 @@
 .personality-range-slider-range {
   -webkit-appearance: none;
   height: $range-track-height;
-  border-radius: .2em;
-  background: linear-gradient(to right, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
+  border-radius: 10px;
+  background: linear-gradient(90deg, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
+  background: -webkit-gradient(linear, left top, 0% 100%, 100% 0%, color-stop(50%, $colour-face-blue),color-stop(50%, lighten($poor-attribute, 5%)));
+  background: -moz-linear-gradient(0deg, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
+  background: -webkit-linear-gradient(0deg, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
   outline: none;
   padding: 0;
   margin: 0;
 
   // Range Handle
-  &::-webkit-slider-thumb {
-    appearance: none;
-    width: $range-handle-size;
-    height: $range-track-height;
-    // border-radius: .2em;
-    background: $range-handle-color;
-  }
+  // &::-webkit-slider-thumb {
+  //   width: 14px;
+  //   height: 14px;
+  //   border: 0;
+  //   background: #fff;
+  //   border-radius: 100%;
+  //   box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+  //   -webkit-appearance: none;
+  //   }
+  //
+  // &::-moz-range-thumb {
+  //   width: $range-handle-size;
+  //   height: $range-handle-size;
+  //   border: 0;
+  //   border-radius: 50%;
+  //   background: $range-handle-color;
+  // }
+}
 
-  &::-moz-range-thumb {
-    width: $range-handle-size;
-    height: $range-handle-size;
+input.personality-range-slider-range[type=range]::-webkit-slider-runnable-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+input.personality-range-slider-range[type=range]::-moz-range-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+input.personality-range-slider-range[type=range]::-moz-focus-outer {
     border: 0;
-    border-radius: 50%;
-    background: $range-handle-color;
-  }
 }
 
 // Wrestler HP
@@ -257,17 +270,17 @@ input.hp-range-slider-range[type=range]::-moz-focus-outer {
     border: 0;
 }
 
-// input[type=range]::-webkit-slider-thumb {
-//     width: 14px;
-//     height: 14px;
-//     border: 0;
-//     background: #fff;
-//     border-radius: 100%;
-//     box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
-//     -webkit-appearance: none;
+// input.hp-range-slider-range[type=range]::-webkit-slider-thumb {
+    // width: 14px;
+    // height: 14px;
+    // border: 0;
+    // background: #fff;
+    // border-radius: 100%;
+    // box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+    // -webkit-appearance: none;
 // }
 //
-// input[type=range]::-moz-range-thumb {
+// input.hp-range-slider-range[type=range]::-moz-range-thumb {
 //     width: 14px;
 //     height: 14px;
 //     border: 0;

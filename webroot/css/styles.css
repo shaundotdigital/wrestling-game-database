@@ -16957,27 +16957,29 @@ footer .fa {
 .personality-range-slider-range {
   -webkit-appearance: none;
   height: 8px;
-  border-radius: .2em;
-  background: linear-gradient(to right, #16ADEC 50%, #df5853 50%);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #16ADEC 50%, #df5853 50%);
+  background: -webkit-linear-gradient(0deg, #16ADEC 50%, #df5853 50%);
   outline: none;
   padding: 0;
   margin: 0;
 }
 
-.personality-range-slider-range::-webkit-slider-thumb {
+input.personality-range-slider-range[type=range]::-webkit-slider-runnable-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
   -webkit-appearance: none;
-  appearance: none;
-  width: 6px;
-  height: 8px;
-  background: #323232;
 }
 
-.personality-range-slider-range::-moz-range-thumb {
-  width: 6px;
-  height: 6px;
+input.personality-range-slider-range[type=range]::-moz-range-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input.personality-range-slider-range[type=range]::-moz-focus-outer {
   border: 0;
-  border-radius: 50%;
-  background: #323232;
 }
 
 .wrestler-total-hp {
