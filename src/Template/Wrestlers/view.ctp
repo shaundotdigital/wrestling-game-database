@@ -53,7 +53,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
 
 
 <div class="container">
-  <div class="content">
+  <div class="content">  <?php if (!empty($wrestler->attributes_points)): ?>
   <div class="wrestler large-8 columns">
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
@@ -76,13 +76,14 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
       </div>
     </div>
   </div>
+  <?php endif; ?>
   <div class="wrestler medium-4 columns">
+      <?php if (!empty($wrestler->wrestlers_hp)): ?>
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Hit Points Ratio') ?>
       </div>
     <div class="wrestler-hitpoints">
-        <?php if (!empty($wrestler->wrestlers_hp)): ?>
         <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->wrestlers_hp as $wrestlersHp): ?>
             <tr class="wrestler-hp head">
@@ -127,15 +128,15 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           <div class="wrestler-hp-title"><?= __('Total') ?></div>
           <div class="wrestler-hp-total"><?= h($wrestlersHp->total_hp) ?>.0 pts</div>
         </div>
-        <?php endif; ?>
     </div>
   </div>
+  <?php endif; ?>
+    <?php if (!empty($wrestler->wrestlers_personality)): ?>
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Personality') ?>
       </div>
       <div class="wrestler-personality">
-        <?php if (!empty($wrestler->wrestlers_personality)): ?>
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
               <tr>
@@ -157,20 +158,19 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
                     <?= h($wrestlersPersonality->personality->negative_name) ?>
                   </div>
                 </td>
-
               </tr>
             <?php endforeach; ?>
           </table>
-        <?php endif; ?>
       </div>
     </div>
+  <?php endif; ?>
   </div>
   <div class="wrestler large-12 columns">
+  <?php if (!empty($wrestler->abilities)): ?>
       <div class="panel panel-default">
         <div class="panel-heading" id="panel-comment">
           <?= __('Abilities') ?>
         </div>
-        <?php if (!empty($wrestler->abilities)): ?>
           <div class="wrestler-abilities">
             <table cellpadding="0" cellspacing="0" class="panel-table">
               <?php foreach ($wrestler->abilities as $abilities): ?>
@@ -186,13 +186,13 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
               <?php endforeach; ?>
             </table>
           </div>
-        <?php endif; ?>
       </div>
+    <?php endif; ?>
+    <?php if (!empty($wrestler->skills)): ?>
       <div class="panel panel-default">
         <div class="panel-heading" id="panel-comment">
           <?= __('Skills') ?>
         </div>
-        <?php if (!empty($wrestler->skills)): ?>
           <div class="wrestler-skills">
           <table cellpadding="0" cellspacing="0" class="panel-table">
             <?php foreach ($wrestler->skills as $skills): ?>
@@ -206,9 +206,9 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
               </tr>
             <?php endforeach; ?>
           </table>
-        <?php endif; ?>
       </div>
     </div>
+  <?php endif; ?>
 
 </div>
 </div>
