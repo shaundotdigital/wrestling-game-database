@@ -40,13 +40,23 @@
 }
 
 .wrestler-header {
-  background-color: #7db9e8;
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, $colour-smackdowndb),color-stop(70%, $colour-header-dark));
-  background-image: -moz-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
-  background-image: -webkit-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
-  background-image: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, $colour-smackdowndb),color-stop(70%, $colour-header-dark));
+  background: -moz-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background: -webkit-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-header-dark 70%);
 }
+
+.wrestler-header.wwe-2k17{
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k17-header.jpg");
+}
+
+.wrestler-header.wwe-2k16{
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k16-header.jpg");
+}
+
 
 .wrestler-render {
   width: 25%;

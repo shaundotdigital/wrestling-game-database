@@ -3,7 +3,15 @@
 * @var \App\View\AppView $this
 */
 ?>
-<div class="wrestler-header <?=($wrestler->game->game_name)?>">
+<div class="container">
+<!-- <?php
+$this->Html->addCrumb('Wrestler', '/wrestlers');
+$this->Html->addCrumb($wrestler->game->game_name, '/games/view/' . strtolower(str_replace(' ', '-', $wrestler->game->id)));
+$this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(str_replace(' ', '-', $wrestler->id)));
+?> -->
+</div>
+
+<div class="wrestler-header <?=strtolower(str_replace(' ', '-', $wrestler->game->game_name)) ?>">
   <div class="container">
     <div class="content-wrestler-header-left <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
       <div class="wrestler-render left">
@@ -41,13 +49,7 @@
 </div>
 
 <div class="sub-bar" data-subbar role="sub-navigation">
-  <div class="container">
-  <!-- <?php
-  $this->Html->addCrumb('Wrestler', '/wrestlers');
-  $this->Html->addCrumb($wrestler->game->game_name, '/games/view/' . strtolower(str_replace(' ', '-', $wrestler->game->id)));
-  $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(str_replace(' ', '-', $wrestler->id)));
-  ?> -->
-  </div>
+
 </div>
 
 <div class="container">
@@ -76,7 +78,7 @@
   </div>
 
   <div class="wrestler medium-4 columns">
-    <!-- <div class="panel panel-default">
+    <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <? if ($wrestler->nickname) {
           echo h($wrestler->nickname);
@@ -104,7 +106,7 @@
           <td><?= $this->Number->format($wrestler->pac) ?></td>
         </tr>
       </table>
-    </div> -->
+    </div>
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Personality') ?>

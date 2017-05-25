@@ -16845,9 +16845,18 @@ footer .fa {
 }
 
 .wrestler-header {
-  background-color: #7db9e8;
   background-size: 100%;
-  background-image: linear-gradient(to right top, #467bfb 0%, #181818 70%);
+  background: linear-gradient(to right top, #467bfb 0%, #181818 70%);
+}
+
+.wrestler-header.wwe-2k17 {
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k17-header.jpg");
+}
+
+.wrestler-header.wwe-2k16 {
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k16-header.jpg");
 }
 
 .wrestler-render {
