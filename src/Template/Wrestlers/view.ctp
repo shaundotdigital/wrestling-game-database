@@ -98,6 +98,9 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
   <?php endif; ?>
   </div>
   <?php endif; ?>
+
+
+
   <div class="wrestler medium-4 columns">
       <?php if (!empty($wrestler->wrestlers_hp)): ?>
     <div class="panel panel-default">
@@ -111,7 +114,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
                 <td><?= __('Head') ?></td>
                 <td class="hp-slider">
                   <div class="hp-range-slider">
-                    <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->head) ?>' min="0" max="2000" disabled>
+                    <input class="hp-range-slider-range" type="range" value='<?= h($wrestlersHp->head) ?>' min="0" max="2000" disabled>
                   </div>
                 </td>
                 <td style="float:right;"><?= h($wrestlersHp->head) ?>.0 pts</td>
@@ -120,7 +123,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
                 <td><?= __('Body') ?></td>
                 <td class="hp-slider">
                   <div class="hp-range-slider">
-                    <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->body) ?>' min="0" max="2000" disabled>
+                    <input class="hp-range-slider-range" type="range" value='<?= h($wrestlersHp->body) ?>' min="0" max="2000" disabled>
                   </div>
                 </td>
                 <td style="float:right;"><?= h($wrestlersHp->body) ?>.0 pts</td>
@@ -129,7 +132,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
                 <td><?= __('Arms') ?></td>
                 <td class="hp-slider">
                   <div class="hp-range-slider">
-                    <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->arms) ?>' min="0" max="2000" disabled>
+                    <input class="hp-range-slider-range" type="range" value='<?= h($wrestlersHp->arms) ?>' min="0" max="2000" disabled>
                   </div>
                 </td>
                 <td style="float:right;"><?= h($wrestlersHp->arms) ?>.0 pts</td>
@@ -138,7 +141,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
                 <td><?= __('Legs') ?></td>
                 <td class="hp-slider">
                   <div class="hp-range-slider">
-                    <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->legs) ?>' min="0" max="2000" disabled>
+                    <input class="hp-range-slider-range" type="range" value='<?= h($wrestlersHp->legs) ?>' min="0" max="2000" disabled>
                   </div>
                 </td>
                 <td style="float:right;"><?= h($wrestlersHp->legs) ?>.0 pts</td>
@@ -168,10 +171,9 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
                 </td>
                 <td class="personality-slider">
                   <div class="personality-range-slider">
-                    <input class="personality-range-slider__range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>
-                  </div>
+                    <input class="personality-range-slider-range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>                  </div>
                   <div class="personality-range-value">
-                      <span class="personality-range-slider__value"><?= h($wrestlersPersonality->value) ?></span>
+                      <span class="personality-range-slider-value"><?= h($wrestlersPersonality->value) ?></span>
                   </div>
                 </td>
                 <td style=float:right;>

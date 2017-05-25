@@ -150,7 +150,7 @@
   text-align: center;
 }
 
-.personality-range-slider__value {
+.personality-range-slider-value {
   // width: $range-label-width;
   // color: #fff;
   // text-align: center;
@@ -163,7 +163,7 @@
   border: 0;
 }
 
-.personality-range-slider__range {
+.personality-range-slider-range {
   -webkit-appearance: none;
   height: $range-track-height;
   border-radius: .2em;
@@ -223,42 +223,61 @@
   text-align: center;
 }
 
-.hp-range-slider__range {
-  -webkit-appearance: none;
-  height: $range-track-height;
-  border-radius: .2em;
-  background-color: $colour-smackdowndb;
-  outline: none;
-  padding: 0;
-  margin: 0;
+input.hp-range-slider-range[type=range] {
+    margin: auto;
+    outline: none;
+    padding: 0;
+    height: 8px;
+    background-color: $colour-default-grey;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $colour-smackdowndb), color-stop(100%, $colour-smackdowndb));
+    background-image: -webkit-linear-gradient($colour-smackdowndb, $colour-smackdowndb);
+    background-image: -moz-linear-gradient($colour-smackdowndb, $colour-smackdowndb);
+    background-image: -o-linear-gradient($colour-smackdowndb, $colour-smackdowndb);
+    background-image: linear-gradient($colour-smackdowndb,$colour-smackdowndb);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    -webkit-appearance: none;
+}
 
-  &::-webkit-slider-thumb {
-    appearance: none;
-    width: $range-handle-size;
-    height: $range-track-height;
-    // border-radius: .2em;
-    background: $range-handle-color;
-  }
+input.hp-range-slider-range[type=range]::-webkit-slider-runnable-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+}
 
-  &::-moz-range-thumb {
-    width: $range-handle-size;
-    height: $range-handle-size;
+input.hp-range-slider-range[type=range]::-moz-range-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+input.hp-range-slider-range[type=range]::-moz-focus-outer {
     border: 0;
-    border-radius: 50%;
-    background: $range-handle-color;
-  }
 }
 
+// input[type=range]::-webkit-slider-thumb {
+//     width: 14px;
+//     height: 14px;
+//     border: 0;
+//     background: #fff;
+//     border-radius: 100%;
+//     box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+//     -webkit-appearance: none;
+// }
+//
+// input[type=range]::-moz-range-thumb {
+//     width: 14px;
+//     height: 14px;
+//     border: 0;
+//     background: #fff;
+//     border-radius: 100%;
+//     box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+// }
 
-.hp-range-slider__value {
-  display: inline-block;
-  position: relative;
-  width: $range-label-width;
-  color: #fff;
-  text-align: center;
-  border-radius: 3px;
-  background: $range-label-color;
-}
+
+// abilities
 
 .abilities-image img{
   max-width: 10%;
