@@ -76,45 +76,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
       </div>
     </div>
   </div>
-
   <div class="wrestler medium-4 columns">
-    <div class="panel panel-default">
-      <div class="panel-heading" id="panel-comment">
-        <?= __('Personality') ?>
-      </div>
-      <div class="wrestler-personality">
-        <?php if (!empty($wrestler->wrestlers_personality)): ?>
-          <table cellpadding="0" cellspacing="0" class="panel-table">
-            <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
-              <tr>
-                <td>
-                  <div class="positive-personality">
-                    <?= h($wrestlersPersonality->personality->name) ?>
-                  </div>
-                </td>
-                <td class="personality-slider">
-                  <div class="personality-range-slider">
-                    <input class="personality-range-slider__range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>
-                  </div>
-                  <div class="personality-range-value">
-                      <span class="personality-range-slider__value"><?= h($wrestlersPersonality->value) ?></span>
-                  </div>
-                </td>
-                <td style=float:right;>
-                  <div class="negative-personality">
-                    <?= h($wrestlersPersonality->personality->negative_name) ?>
-                  </div>
-                </td>
-
-              </tr>
-            <?php endforeach; ?>
-          </table>
-        <?php endif; ?>
-      </div>
-    </div>
-
-
-
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-comment">
         <?= __('Hit Points Ratio') ?>
@@ -168,8 +130,41 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
         <?php endif; ?>
     </div>
   </div>
-  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" id="panel-comment">
+        <?= __('Personality') ?>
+      </div>
+      <div class="wrestler-personality">
+        <?php if (!empty($wrestler->wrestlers_personality)): ?>
+          <table cellpadding="0" cellspacing="0" class="panel-table">
+            <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
+              <tr>
+                <td>
+                  <div class="positive-personality">
+                    <?= h($wrestlersPersonality->personality->name) ?>
+                  </div>
+                </td>
+                <td class="personality-slider">
+                  <div class="personality-range-slider">
+                    <input class="personality-range-slider__range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>
+                  </div>
+                  <div class="personality-range-value">
+                      <span class="personality-range-slider__value"><?= h($wrestlersPersonality->value) ?></span>
+                  </div>
+                </td>
+                <td style=float:right;>
+                  <div class="negative-personality">
+                    <?= h($wrestlersPersonality->personality->negative_name) ?>
+                  </div>
+                </td>
 
+              </tr>
+            <?php endforeach; ?>
+          </table>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
   <div class="wrestler large-12 columns">
       <div class="panel panel-default">
         <div class="panel-heading" id="panel-comment">
