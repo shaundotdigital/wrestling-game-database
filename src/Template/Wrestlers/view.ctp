@@ -3,23 +3,28 @@
 * @var \App\View\AppView $this
 */
 ?>
-<div class="container">
-<!-- <?php
+<!-- <div class="container">
+<?php
 $this->Html->addCrumb('Wrestler', '/wrestlers');
 $this->Html->addCrumb($wrestler->game->game_name, '/games/view/' . strtolower(str_replace(' ', '-', $wrestler->game->id)));
 $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(str_replace(' ', '-', $wrestler->id)));
-?> -->
-</div>
+?>
+</div> -->
 
 <div class="wrestler-header <?=strtolower(str_replace(' ', '-', $wrestler->game->game_name)) ?>">
   <div class="container">
-    <div class="content-wrestler-header-left <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
+    <div class="content-wrestler-header <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
       <div class="wrestler-render left">
         <div class="wrestler-image">
           <?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . $wrestler->pac . '-' . $wrestler->game->release_year . '.png')?>
         </div>
       </div>
-      <div class="wrestler-info">
+      <div class="wrestler-info left">
+        <div class="wrestler-overall">
+          <span class="label attribute">
+            <?= $this->Number->format($wrestler->overall) ?>
+          </span>
+        </div>
         <div class="wrestler-firstname">
           <h3><?= $wrestler->first_name ?></h3>
         </div>
@@ -31,18 +36,14 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
             echo h($wrestler->nickname);
           } ?></h3>
         </div>
-        <!-- <div class="wrestler-overall">
-          <tr><?= __('Overall') ?>
-            <h2><?= $this->Number->format($wrestler->overall) ?></h2>
-          </tr>
-        </div> -->
+
       </div>
     </div>
-    <div class="content-wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">
+    <div class="content-game-header">
       <div class="game-info">
-        <!-- <div class="game-logo">
+        <div class="game-logo">
           <?= $this->Html->image('games/logos/'.$wrestler->game->game_img)?>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>

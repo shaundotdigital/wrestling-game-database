@@ -16847,6 +16847,8 @@ footer .fa {
 .wrestler-header {
   background-size: 100%;
   background: linear-gradient(to right top, #467bfb 0%, #181818 70%);
+  height: 150px;
+  overflow: hidden;
 }
 
 .wrestler-header.wwe-2k17 {
@@ -16859,21 +16861,16 @@ footer .fa {
   background-image: url("../img/games/headers/wwe2k16-header.jpg");
 }
 
-.wrestler-render {
-  width: 25%;
-  margin-right: 10px;
+.content-wrestler-header {
+  width: 50%;
 }
 
-.wrestler-image {
-  height: 150px;
-  background-size: cover;
-  overflow: hidden;
-  margin-top: -20px;
-  /* hide the cropped portion */
+.wrestler-render {
+  width: 40%;
 }
 
 .wrestler-info {
-  padding-top: 45px;
+  margin: 32px;
 }
 
 .wrestler-lastname h3 {
@@ -16902,12 +16899,13 @@ footer .fa {
   text-transform: uppercase;
 }
 
-.wrestler-header-right {
-  display: inline-block;
+.content-game-header {
+  margin: 20px;
 }
 
 .game-logo img {
-  max-width: 25%;
+  max-width: 15%;
+  float: right;
 }
 
 .attribute-name {
