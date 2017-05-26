@@ -55,7 +55,8 @@ $cakeDescription = 'SmackDown DB';?>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="http://smackdowndb.com"><svg class="smackdown-db-logo" version="1.1" x="0px" y="0px" viewBox="0 0 1766.4 799.8">
+        <a class="navbar-brand" href="http://smackdowndb.com">
+          <svg class="smackdown-db-logo" version="1.1" x="0px" y="0px" viewBox="0 0 1766.4 799.8">
           <g class="smackdown-db-outline">
             <path d="M1687.1,9.1H79.3C42,9.1,11.8,39.3,11.8,76.6v646.6c0,37.3,30.2,67.5,67.5,67.5h1298.3
             c0.9,0,1.3-1.1,0.7-1.7l-32.1-32.1c-0.8-0.8-1.8-1.2-2.8-1.2H79.3c-17.9,0-32.5-14.6-32.5-32.5V76.6c0-17.9,14.6-32.5,32.5-32.5
@@ -104,24 +105,32 @@ $cakeDescription = 'SmackDown DB';?>
             c3.7-2.9,5.5-7.4,5.5-13.4c0-6.5-1.6-11.4-4.8-14.7c-3.2-3.3-8.3-5-15.5-5H1517.1z"/></g>
             </g>
           </g>
-        </svg>
-</a>
+          </svg>
+        </a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><?= $this->Html->link(__('Wrestlers'), ['action' => '../wrestlers'])?></li>
-          <li><?= $this->Html->link(__('Games'), ['controller' => 'Games', 'action' => 'index'])?></li>
+          <li></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wrestlers<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><?= $this->Html->link(__('List Games'), ['action' => 'index']) ?> </li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><?= $this->Html->link(__('WWE 2K17 Wrestlers'), ['action' => '../wrestlers'])?></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><?= $this->Html->link(__('All Wrestlers'), ['action' => '../wrestlers'])?></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><?= $this->Html->link(__('WWE 2K17 Overview'), ['action' => 'index']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K17 Overview'), ['action' => 'index']) ?></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><?= $this->Html->link(__('WWE 2K16'), ['action' => 'index']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K15'), ['action' => 'index']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K14'), ['action' => 'index']) ?></li>
+              <li role="separator" class="divider"></li>
+              <li><?= $this->Html->link(__('All Games'), ['action' => 'index']) ?></li>
             </ul>
           </li>
         </ul>
