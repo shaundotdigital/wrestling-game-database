@@ -16730,6 +16730,10 @@ fieldset legend {
   [class*="col-"], .medium-4 {
     width: 100%;
   }
+  .columns {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
 }
 
 .navbar {
