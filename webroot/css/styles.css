@@ -16932,12 +16932,17 @@ footer .fa {
   float: right;
 }
 
+.wrestler-attribute {
+  border-bottom: 1px solid #ebebec;
+}
+
 .attribute-name {
-  padding: 1.071em;
+  line-height: 2;
 }
 
 .personality-slider, .hp-slider {
   width: 50%;
+  margin: 0 auto;
 }
 
 .positive-personality {
@@ -17045,6 +17050,15 @@ input.hp-range-slider-range[type=range]::-moz-focus-outer {
   border: 0;
 }
 
+input.hp-range-slider-range[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input.hp-range-slider-range[type=range]::-moz-range-thumb {
+  background: transparent;
+  border: none;
+}
+
 .abilities-image img {
   max-width: 10%;
 }
@@ -17123,14 +17137,22 @@ h3 {
   background: #fff;
   margin-bottom: 0;
   border: none;
-  table-layout: fixed;
   width: 100%;
+  color: #222;
+  font-size: 0;
 }
 
 #panel-comment {
   background-color: #494b5b;
   padding: 10px;
   color: #FFF;
+}
+
+.item {
+  color: #222;
+  font-size: 0.875rem;
+  padding: 0.5625rem 0.625rem;
+  text-align: left;
 }
 
 /*# sourceMappingURL=styles.css.map */

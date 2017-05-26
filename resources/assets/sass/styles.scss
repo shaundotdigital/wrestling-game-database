@@ -84,12 +84,21 @@ h3 {
   background: #fff;
   margin-bottom: 0;
   border: none;
-  table-layout: fixed;
   width: 100%;
+  color: #222;
+  font-size: 0;
+  // padding: 0.5625rem 0.625rem;
 }
 
 #panel-comment {
   background-color: $colour-default-dark;
   padding: 10px;
   color: #FFF;
+}
+
+.item {
+  color: #222;
+  font-size: 0.875rem;
+  padding: 0.5625rem 0.625rem;
+  text-align: left;
 }

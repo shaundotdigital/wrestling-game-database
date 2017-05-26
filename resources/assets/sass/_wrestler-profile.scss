@@ -77,10 +77,10 @@
   margin: 3em 1em;
 }
 
-
 .wrestler-info {
   margin: 3em 0em;
 }
+
 .wrestler-name {
   padding: 0 0 2.5px;
   line-height: 1;
@@ -130,14 +130,19 @@
 
 // attributesPoints
 
+.wrestler-attribute {
+    border-bottom: 1px solid #ebebec;
+}
+
 .attribute-name {
-  padding: 1.071em;
+  line-height: 2;
 }
 
 // Wrestler Personality
 
 .personality-slider, .hp-slider {
-  width:50%;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .positive-personality {
@@ -270,24 +275,14 @@ input.hp-range-slider-range[type=range]::-moz-focus-outer {
     border: 0;
 }
 
-// input.hp-range-slider-range[type=range]::-webkit-slider-thumb {
-    // width: 14px;
-    // height: 14px;
-    // border: 0;
-    // background: #fff;
-    // border-radius: 100%;
-    // box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
-    // -webkit-appearance: none;
-// }
-//
-// input.hp-range-slider-range[type=range]::-moz-range-thumb {
-//     width: 14px;
-//     height: 14px;
-//     border: 0;
-//     background: #fff;
-//     border-radius: 100%;
-//     box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
-// }
+input.hp-range-slider-range[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input.hp-range-slider-range[type=range]::-moz-range-thumb {
+    background: transparent;
+    border: none;
+}
 
 
 // abilities
