@@ -90,10 +90,17 @@ h3 {
   // padding: 0.5625rem 0.625rem;
 }
 
-#panel-comment {
+.panel-title {
   background-color: $colour-default-dark;
   padding: 10px;
   color: #FFF;
+}
+
+
+.panel-title.minor {
+  background-color: transparent;
+  padding: 0;
+  color: $colour-smackdowndb;
 }
 
 .item {
@@ -101,6 +108,13 @@ h3 {
   font-size: 0.875rem;
   padding: 0.5625rem 0.625rem;
   text-align: left;
-  line-height: 1.3;
+}
+
+.item.wrestler-attribute, .item.wrestler-hp, .item.wrestler-personality {
   border-bottom: 1px solid #ebebec;
+  line-height: 1.3;
+}
+
+.item.wrestler-skills {
+  vertical-align: top;
 }

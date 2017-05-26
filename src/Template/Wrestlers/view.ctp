@@ -55,7 +55,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
     <?php if (!empty($wrestler->attributes_points)): ?>
       <div class="wrestler large-8 columns">
         <div class="panel attributes">
-          <div class="panel-heading" id="panel-comment">
+          <div class="panel-heading panel-title">
             <?= __('Attributes') ?>
           </div>
           <div class="panel-table">
@@ -96,55 +96,51 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           }
         } ?>
         <div class="panel skills">
-          <div class="panel-heading" id="panel-comment">
+          <div class="panel-heading panel-title">
             <?= __('Skills') ?>
           </div>
           <div class="panel-table">
             <div class="wrestler-skills item col-4">
+              <div class="panel-heading panel-title minor">
+                <?= __('Basic Action') ?>
+              </div>
               <?php foreach ($skill_levels_id_1 as $skill): ?>
                 <div class="skill">
-                  <span>
-                    <?= h($skill->skill_name) ?>
-                  </span>
-                  <span class="float-right skillValue">
-                    <?= h($skill->skill_levels_id) ?>
-                  </span>
+                  <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                  <?= h($skill->skill_name) ?>
                 </div>
               <?php endforeach; ?>
             </div>
             <div class="wrestler-skills item col-4">
+              <div class="panel-heading panel-title minor">
+                <?= __('Special Match Action') ?>
+              </div>
               <?php foreach ($skill_levels_id_2 as $skill): ?>
                 <div class="skill">
-                  <span>
-                    <?= h($skill->skill_name) ?>
-                  </span>
-                  <span class="float-right skillValue">
-                    <?= h($skill->skill_levels_id) ?>
-                  </span>
+                  <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                  <?= h($skill->skill_name) ?>
                 </div>
               <?php endforeach; ?>
             </div>
             <div class="wrestler-skills item col-4">
+              <div class="panel-heading panel-title minor">
+                <?= __('Special Action') ?>
+              </div>
               <?php foreach ($skill_levels_id_3 as $skill): ?>
                 <div class="skill">
-                  <span>
-                    <?= h($skill->skill_name) ?>
-                  </span>
-                  <span class="float-right skillValue">
-                    <?= h($skill->skill_levels_id) ?>
-                  </span>
+                  <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                  <?= h($skill->skill_name) ?>
                 </div>
               <?php endforeach; ?>
             </div>
             <div class="wrestler-skills item col-4">
+              <div class="panel-heading panel-title minor">
+                <?= __('OMG!') ?>
+              </div>
               <?php foreach ($skill_levels_id_4 as $skill): ?>
                 <div class="skill">
-                  <span>
-                    <?= h($skill->skill_name) ?>
-                  </span>
-                  <span class="float-right skillValue">
-                    <?= h($skill->skill_levels_id) ?>
-                  </span>
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <?= h($skill->skill_name) ?>
                 </div>
               <?php endforeach; ?>
             </div>
@@ -154,8 +150,8 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
     </div>
     <div class="wrestler medium-4 columns">
       <?php if (!empty($wrestler->wrestlers_hp)): ?>
-        <div class="panel panel-default">
-          <div class="panel-heading" id="panel-comment">
+        <div class="panel hit-point-ratio">
+          <div class="panel-heading panel-title">
             <?= __('Hit Points Ratio') ?>
           </div>
           <div class="panel-table">
@@ -221,8 +217,8 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           </div>
         <?php endif; ?>
           <?php if (!empty($wrestler->wrestlers_personality)): ?>
-            <div class="panel panel-default">
-              <div class="panel-heading" id="panel-comment">
+            <div class="panel personality">
+              <div class="panel-heading panel-title">
                 <?= __('Personality') ?>
               </div>
                 <div class="panel-table">
@@ -250,8 +246,8 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
             </div>
             <div class="wrestler medium-4 columns">
             <?php if (!empty($wrestler->abilities)): ?>
-                <div class="panel panel-default">
-                  <div class="panel-heading" id="panel-comment">
+                <div class="panel abilities">
+                  <div class="panel-heading panel-title">
                     <?= __('Abilities') ?>
                   </div>
                     <div class="wrestler-abilities">
@@ -271,9 +267,5 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
                 </div>
               <?php endif; ?>
             </div>
-              <div class="wrestler large-8 columns">
-
-      </div>
-
       </div>
       </div>
