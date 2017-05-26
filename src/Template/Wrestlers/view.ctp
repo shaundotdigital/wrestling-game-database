@@ -244,28 +244,29 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
               </div>
             <?php endif; ?>
             </div>
-            <div class="wrestler medium-4 columns">
             <?php if (!empty($wrestler->abilities)): ?>
+            <div class="wrestler medium-4 columns">
                 <div class="panel abilities">
                   <div class="panel-heading panel-title">
                     <?= __('Abilities') ?>
                   </div>
-                    <div class="wrestler-abilities">
-                      <table cellpadding="0" cellspacing="0" class="panel-table">
+                      <div class="panel-table">
                         <?php foreach ($wrestler->abilities as $abilities): ?>
-                          <tr>
-                            <td class="ability-value col-2">
+                        <div class="wrestler-abilities item col-1">
+                            <div class="ability-value">
                               <div class="abilities-image left">
                                 <?= $this->Html->image('assets/abilities/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . strtolower(str_replace(' ', '-',$abilities->ability_name)) . '-' . $abilities->ability_level_id . '.png') ?>
-                                <?= h($abilities->ability_name) ?> (<?='Lvl' .' '. h($abilities->ability_level_id) ?>)
+                                <?= h($abilities->ability_name) ?>
                               </div>
-                            </td>
-                          </tr>
+                              <div class="ability-level right">
+                                 (<?='Lvl' .' '. h($abilities->ability_level_id) ?>)
+                              </div>
+                            </div>
+                          </div>
                         <?php endforeach; ?>
-                      </table>
-                    </div>
+                      </div>
                 </div>
-              <?php endif; ?>
             </div>
+          <?php endif; ?>
       </div>
       </div>
