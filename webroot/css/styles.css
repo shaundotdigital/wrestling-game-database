@@ -16642,26 +16642,6 @@ table {
   width: 100%;
 }
 
-.col-2 {
-  display: inline-block;
-  width: 50%;
-}
-
-.col-3 {
-  display: inline-block;
-  width: 33.3333333333%;
-}
-
-.col-4 {
-  display: inline-block;
-  width: 25%;
-}
-
-.row-2 {
-  display: inline-block;
-  width: 20%;
-}
-
 table thead {
   background: none;
 }
@@ -16963,7 +16943,7 @@ footer .fa {
 }
 
 .personality-range-value {
-  margin: 3px 0;
+  margin: 2.2px 0;
   text-align: center;
 }
 
@@ -17084,6 +17064,14 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
   color: #467bfb;
 }
 
+.wrestler-skills {
+  border-left: 1px solid #d8d8d8;
+}
+
+.wrestler-skills:first-child {
+  border-left: none;
+}
+
 .container {
   margin: 0 auto;
   box-sizing: border-box;
@@ -17168,7 +17156,7 @@ h3 {
 .panel-title.minor {
   background-color: transparent;
   padding: 0;
-  color: #467bfb;
+  color: #494b5b;
 }
 
 .item {
@@ -17183,8 +17171,33 @@ h3 {
   line-height: 1.3;
 }
 
+.item.wrestler-attribute:last-child, .item.wrestler-hp:last-child, .item.wrestler-personality:last-child {
+  border-bottom: none;
+  line-height: 1.3;
+}
+
 .item.wrestler-skills {
   vertical-align: top;
+}
+
+.col-2 {
+  display: inline-block;
+  width: 50%;
+}
+
+.col-3 {
+  display: inline-block;
+  width: 33.3333333333%;
+}
+
+.col-4 {
+  display: inline-block;
+  width: 25%;
+}
+
+.row-2 {
+  display: inline-block;
+  width: 20%;
 }
 
 /*# sourceMappingURL=styles.css.map */

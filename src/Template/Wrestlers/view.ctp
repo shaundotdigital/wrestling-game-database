@@ -106,7 +106,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
               </div>
               <?php foreach ($skill_levels_id_1 as $skill): ?>
                 <div class="skill">
-                  <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
                   <?= h($skill->skill_name) ?>
                 </div>
               <?php endforeach; ?>
@@ -117,7 +117,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
               </div>
               <?php foreach ($skill_levels_id_2 as $skill): ?>
                 <div class="skill">
-                  <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
                   <?= h($skill->skill_name) ?>
                 </div>
               <?php endforeach; ?>
@@ -128,7 +128,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
               </div>
               <?php foreach ($skill_levels_id_3 as $skill): ?>
                 <div class="skill">
-                  <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
                   <?= h($skill->skill_name) ?>
                 </div>
               <?php endforeach; ?>
@@ -234,9 +234,9 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
                         <div class="personality-range-slider">
                           <input class="personality-range-slider-range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>
                         </div>
-                        <!-- <div class="personality-range-value">
+                        <div class="personality-range-value">
                             <span class="personality-range-slider-value"><?= h($wrestlersPersonality->value) ?></span>
-                        </div> -->
+                        </div>
                       </div>
                     </div>
                   <?php endforeach; ?>

@@ -145,7 +145,7 @@
 }
 
 .personality-range-value {
-  margin: 3px 0 ;
+  margin: 2.2px 0 ;
   text-align: center;
 }
 
@@ -294,4 +294,12 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
 
 .skills .fa {
   color: $colour-smackdowndb;
+}
+
+.wrestler-skills {
+  border-left: 1px solid #d8d8d8;
+}
+
+.wrestler-skills:first-child {
+  border-left: none;
 }
