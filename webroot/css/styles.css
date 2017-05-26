@@ -16686,6 +16686,31 @@ fieldset legend {
   text-align: left;
 }
 
+.col-1 {
+  display: inline-block;
+  width: 100%;
+}
+
+.col-2 {
+  display: inline-block;
+  width: 50%;
+}
+
+.col-3 {
+  display: inline-block;
+  width: 33.3333333333%;
+}
+
+.col-4 {
+  display: inline-block;
+  width: 25%;
+}
+
+.row-2 {
+  display: inline-block;
+  width: 20%;
+}
+
 @media only screen and (max-width: 1200px) {
   .large-8 {
     width: 100%;
@@ -17182,31 +17207,6 @@ h3 {
 
 .item.wrestler-skills {
   vertical-align: top;
-}
-
-.col-1 {
-  display: inline-block;
-  width: 100%;
-}
-
-.col-2 {
-  display: inline-block;
-  width: 50%;
-}
-
-.col-3 {
-  display: inline-block;
-  width: 33.3333333333%;
-}
-
-.col-4 {
-  display: inline-block;
-  width: 25%;
-}
-
-.row-2 {
-  display: inline-block;
-  width: 20%;
 }
 
 /*# sourceMappingURL=styles.css.map */

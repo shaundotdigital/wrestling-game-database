@@ -6,6 +6,7 @@
 @import "base";
 @import "cake";
 @import "my-cake";
+@import "col-row";
 @import "mobile";
 @import "nav-foot";
 @import "wrestler-profile";
@@ -123,31 +124,4 @@ h3 {
 
 .item.wrestler-skills {
   vertical-align: top;
-}
-
-////
-
-.col-1{
-    display: inline-block;
-    width: 100%;
-}
-
-.col-2{
-    display: inline-block;
-    width: 50%;
-}
-
-.col-3{
-    display: inline-block;
-    width: 33.3333333333%;
-}
-
-.col-4{
-    display: inline-block;
-    width: 25%;
-}
-
-.row-2{
-    display: inline-block;
-    width: 20%;
 }
