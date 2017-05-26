@@ -11,6 +11,34 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
 ?>
 </div> -->
 
+<?php
+
+$skill_levels_id_1 = array();
+$skill_levels_id_2 = array();
+$skill_levels_id_3 = array();
+$skill_levels_id_4 = array();
+
+foreach ($wrestler->skills as $skill) {
+  switch ($skill->skill_levels_id) {
+    case 1:
+      array_push($skill_levels_id_1, $skill);
+      break;
+    case 2:
+      array_push($skill_levels_id_2, $skill);
+      break;
+    case 3:
+      array_push($skill_levels_id_3, $skill);
+      break;
+    case 4:
+      array_push($skill_levels_id_4, $skill);
+      break;
+    default:
+      break;
+  }
+}
+
+?>
+
 <div class="wrestler-header <?=strtolower(str_replace(' ', '-', $wrestler->game->game_name)) ?>">
   <div class="container">      <div class="wrestler-render left">
           <div class="wrestler-image">
@@ -81,18 +109,32 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           <?= __('Skills') ?>
         </div>
           <div class="wrestler-skills">
-          <table cellpadding="0" cellspacing="0" class="panel-table">
-            <?php foreach ($wrestler->skills as $skills): ?>
-              <tr class="col-4">
-                <td>
-                  <?= h($skills->skill_name) ?>
-                </td>
-                <td class="float-right skillValue">
-                  <?= h($skills->skill_levels_id) ?>
-                </td>
-              </tr>
+          <div class="panel-table">
+            <div class="col-4">
+            <?php foreach ($skill_levels_id_1 as $skill): ?>
+              <div class="skill">
+                <span>
+                  <?= h($skill->skill_name) ?>
+                </span>
+                <span class="float-right skillValue">
+                  <?= h($skill->skill_levels_id) ?>
+                </span>
+              </div>
             <?php endforeach; ?>
-          </table>
+            </div>
+            <div class="col-4">
+            <?php foreach ($skill_levels_id_2 as $skill): ?>
+              <div class="skill">
+                <span>
+                  <?= h($skill->skill_name) ?>
+                </span>
+                <span class="float-right skillValue">
+                  <?= h($skill->skill_levels_id) ?>
+                </span>
+              </div>
+            <?php endforeach; ?>
+            </div>
+          </div>
       </div>
     </div>
   <?php endif; ?>
