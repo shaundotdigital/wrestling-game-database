@@ -225,60 +225,55 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
               <div class="panel-heading" id="panel-comment">
                 <?= __('Personality') ?>
               </div>
-              <div class="wrestler-personality">
-                <table cellpadding="0" cellspacing="0" class="panel-table">
+                <div class="panel-table">
                   <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
-                    <tr>
-                      <td>
-                        <div class="positive-personality">
-                          <?= h($wrestlersPersonality->personality->name) ?>
-                        </div>
-                      </td>
-                      <td class="personality-slider">
+                    <div class="wrestler-personality item">
+                      <div class="positive-personality left">
+                        <?= h($wrestlersPersonality->personality->name) ?>
+                      </div>
+                      <div class="negative-personality right">
+                        <?= h($wrestlersPersonality->personality->negative_name) ?>
+                      </div>
+                      <div class="personality-slider">
                         <div class="personality-range-slider">
-                          <input class="personality-range-slider-range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>                  </div>
-                        <div class="personality-range-value">
+                          <input class="personality-range-slider-range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>
+                        </div>
+                        <!-- <div class="personality-range-value">
                             <span class="personality-range-slider-value"><?= h($wrestlersPersonality->value) ?></span>
-                        </div>
-                      </td>
-                      <td style=float:right;>
-                        <div class="negative-personality">
-                          <?= h($wrestlersPersonality->personality->negative_name) ?>
-                        </div>
-                      </td>
-                    </tr>
+                        </div> -->
+                      </div>
+                    </div>
                   <?php endforeach; ?>
-                </table>
-            </div>
-          </div>
-        <?php endif; ?>
-        </div>
-        <div class="wrestler medium-4 columns">
-        <?php if (!empty($wrestler->abilities)): ?>
-            <div class="panel panel-default">
-              <div class="panel-heading" id="panel-comment">
-                <?= __('Abilities') ?>
-              </div>
-                <div class="wrestler-abilities">
-                  <table cellpadding="0" cellspacing="0" class="panel-table">
-                    <?php foreach ($wrestler->abilities as $abilities): ?>
-                      <tr>
-                        <td class="ability-value col-2">
-                          <div class="abilities-image left">
-                            <?= $this->Html->image('assets/abilities/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . strtolower(str_replace(' ', '-',$abilities->ability_name)) . '-' . $abilities->ability_level_id . '.png') ?>
-                            <?= h($abilities->ability_name) ?> (<?='Lvl' .' '. h($abilities->ability_level_id) ?>)
-                          </div>
-                        </td>
-                      </tr>
-                    <?php endforeach; ?>
-                  </table>
                 </div>
+              </div>
+            <?php endif; ?>
             </div>
-          <?php endif; ?>
-        </div>
-          <div class="wrestler large-8 columns">
+            <div class="wrestler medium-4 columns">
+            <?php if (!empty($wrestler->abilities)): ?>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="panel-comment">
+                    <?= __('Abilities') ?>
+                  </div>
+                    <div class="wrestler-abilities">
+                      <table cellpadding="0" cellspacing="0" class="panel-table">
+                        <?php foreach ($wrestler->abilities as $abilities): ?>
+                          <tr>
+                            <td class="ability-value col-2">
+                              <div class="abilities-image left">
+                                <?= $this->Html->image('assets/abilities/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . strtolower(str_replace(' ', '-',$abilities->ability_name)) . '-' . $abilities->ability_level_id . '.png') ?>
+                                <?= h($abilities->ability_name) ?> (<?='Lvl' .' '. h($abilities->ability_level_id) ?>)
+                              </div>
+                            </td>
+                          </tr>
+                        <?php endforeach; ?>
+                      </table>
+                    </div>
+                </div>
+              <?php endif; ?>
+            </div>
+              <div class="wrestler large-8 columns">
 
-  </div>
+      </div>
 
-  </div>
-  </div>
+      </div>
+      </div>

@@ -16706,6 +16706,27 @@ fieldset legend {
   text-align: left;
 }
 
+@media only screen and (max-width: 1200px) {
+  .large-8 {
+    width: 100%;
+  }
+  .medium-4 {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .medium-4 {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="col-"], .medium-4 {
+    width: 100%;
+  }
+}
+
 .navbar {
   position: relative;
   min-height: 50px;
@@ -16932,10 +16953,6 @@ footer .fa {
   float: right;
 }
 
-.wrestler-attribute {
-  border-bottom: 1px solid #ebebec;
-}
-
 .attribute-name {
   line-height: 2;
 }
@@ -16943,10 +16960,6 @@ footer .fa {
 .personality-slider, .hp-slider {
   width: 50%;
   margin: 0 auto;
-}
-
-.positive-personality {
-  width: 6em;
 }
 
 .personality-range-value {
@@ -17153,6 +17166,8 @@ h3 {
   font-size: 0.875rem;
   padding: 0.5625rem 0.625rem;
   text-align: left;
+  line-height: 1.3;
+  border-bottom: 1px solid #ebebec;
 }
 
 /*# sourceMappingURL=styles.css.map */
