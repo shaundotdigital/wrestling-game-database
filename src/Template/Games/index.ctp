@@ -7,13 +7,13 @@
   <div class="content">
 <div class="games index large-12 columns content">
 
-  <table cellpadding="0" cellspacing="0">
-      <tbody>
-          <?php foreach ($games as $game): ?>
+  <div class="games">
+          <?php
+          foreach ($games as $game): ?>
           <?  $titleSymbols = array( '!', ':', '.' ,'\'');?>
           <div class="game-item col-3 <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name))))?>">
             <div class="content-game">
-            <?= $this->Html->image('games/boxart/' . strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name)))) . '-' . $game->release_year . '.jpg')?>
+            <?= $this->Html->image('games/poster-art/' . strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name)))) . '-' . $game->release_year . '.jpg')?>
 
           <div class="game-name">
           <?= $this->Html->link(__(($game->game_name)), ['action' => 'view', $game->id]) ?>
@@ -27,9 +27,7 @@
           </div>
         </div>
           <?php endforeach; ?>
-
-      </tbody>
-  </table>
+  </div>
 
     <!-- <h3><?= __('Games') ?></h3>
     <table cellpadding="0" cellspacing="0">
