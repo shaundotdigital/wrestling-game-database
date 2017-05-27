@@ -17118,16 +17118,12 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.btn.btn-platform.playstation {
+.btn.btn-platform.playstation, .btn.btn-platform.playstation-3, .btn.btn-platform.playstation-portable {
   background: #252525;
 }
 
 .btn.btn-platform.playstation-2 {
   background: #205992;
-}
-
-.btn.btn-platform.playstation-3 {
-  background: #252525;
 }
 
 .btn.btn-platform.playstation-4 {

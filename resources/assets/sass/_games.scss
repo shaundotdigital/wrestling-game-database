@@ -12,16 +12,12 @@
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.btn.btn-platform.playstation {
+.btn.btn-platform.playstation, .btn.btn-platform.playstation-3, .btn.btn-platform.playstation-portable {
     background: $colour-ps;
 }
 
 .btn.btn-platform.playstation-2 {
     background: $colour-ps2;
-}
-
-.btn.btn-platform.playstation-3 {
-    background: $colour-ps3;
 }
 
 .btn.btn-platform.playstation-4 {
