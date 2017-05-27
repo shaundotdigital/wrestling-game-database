@@ -17105,8 +17105,53 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
   border-left: none;
 }
 
-.game-item img {
+.game img {
   width: 50%;
+  text-align: center;
+}
+
+.btn.btn-platform {
+  color: #fff;
+  background: #32343f;
+  border: none;
+  margin: 2px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn.btn-platform.playstation {
+  background: #252525;
+}
+
+.btn.btn-platform.playstation-2 {
+  background: #205992;
+}
+
+.btn.btn-platform.playstation-3 {
+  background: #252525;
+}
+
+.btn.btn-platform.playstation-4 {
+  background: #003484;
+}
+
+.btn.btn-platform.xbox {
+  background: #238922;
+}
+
+.btn.btn-platform.xbox-360, .btn.btn-platform.xbox-one {
+  background: #42D041;
+}
+
+.btn.btn-platform.wii {
+  background: #8E8E8E;
+  color: #fff;
+}
+
+.btn.btn-platform.pc {
+  background-color: #F3C300;
+  background-image: linear-gradient(left, #E8D100 0%, #DDA600 65%, #F3C300 30%, #FDBC00 100%);
+  background-image: -ms-linear-gradient(left, #E8D100 0%, #DDA600 65%, #F3C300 30%, #FDBC00 100%);
+  background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, #E8D100), color-stop(65%, #DDA600), color-stop(30%, #F3C300), color-stop(100%, #FDBC00));
 }
 
 .container {

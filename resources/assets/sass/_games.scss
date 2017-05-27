@@ -1,3 +1,52 @@
-.game-item img {
+.game img {
  width: 50%;
+ text-align: center;
+}
+
+
+.btn.btn-platform {
+    color: #fff;
+    background: darken($colour-default-dark, 10%);
+    border: none;
+    margin: 2px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn.btn-platform.playstation {
+    background: $colour-ps;
+}
+
+.btn.btn-platform.playstation-2 {
+    background: $colour-ps2;
+}
+
+.btn.btn-platform.playstation-3 {
+    background: $colour-ps3;
+}
+
+.btn.btn-platform.playstation-4 {
+    background: $colour-ps4;
+}
+
+.btn.btn-platform.xbox {
+    background: darken($colour-xbox, 20%);
+}
+
+.btn.btn-platform.xbox-360, .btn.btn-platform.xbox-one {
+    background: $colour-xbox;
+}
+
+.btn.btn-platform.wii {
+    background: $colour-wii;
+    color: #fff;
+}
+
+.btn.btn-platform.pc {
+    background-color: $colour-pc-3;
+    background-image:-moz-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+    background-image:linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+    background-image:-webkit-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+    background-image:-o-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+    background-image:-ms-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+    background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(0%,$colour-pc-1),color-stop(65%,$colour-pc-2),color-stop(30%,$colour-pc-3),color-stop(100%,$colour-pc-4));
 }

@@ -5,29 +5,33 @@
 ?>
 <div class="container">
   <div class="content">
-<div class="games index large-12 columns content">
-
-  <div class="games">
-          <?php
-          foreach ($games as $game): ?>
-          <?  $titleSymbols = array( '!', ':', '.' ,'\'');?>
-          <div class="game-item col-3 <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name))))?>">
-            <div class="content-game">
-            <?= $this->Html->image('games/poster-art/' . strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name)))) . '-' . $game->release_year . '.jpg')?>
-
-          <div class="game-name">
-          <?= $this->Html->link(__(($game->game_name)), ['action' => 'view', $game->id]) ?>
-          </div>
-            <?= h($game->release_year) ?></td>
-            <div class="game-platforms">
-              <?php foreach ($game->platforms as $platform): ?>
-                <?= $platform->platform_name ?>
-              <?php endforeach; ?>
-            </div>
-          </div>
+    <div class="games index large-12 columns content">
+      <div class="panel games">
+        <div class="panel-heading panel-title">
+          <?= __('Skills') ?>
         </div>
+        <div class="panel-table">
+        <?php foreach ($games as $game): ?>
+          <? $titleSymbols = array( '!', ':', '.' ,'\'');?>
+            <div class="game item col-3 <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name))))?>">
+              <div class="content-game">
+                <?= $this->Html->image('games/poster-art/' . strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name)))) . '-' . $game->release_year . '.jpg')?>
+                <div class="game-name">
+                  <?= $this->Html->link(__(($game->game_name)), ['action' => 'view', $game->id]) ?>
+                </div>
+                <?= h($game->release_year) ?></td>
+                <div class="game-platforms">
+                  <?php foreach ($game->platforms as $platform): ?>
+                  <a class="btn btn-platform <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $platform->platform_name))))?>" href="#">
+                    <?= $platform->platform_name ?>
+                  </a>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+            </div>
           <?php endforeach; ?>
-  </div>
+        </div>
+      </div>
 
     <!-- <h3><?= __('Games') ?></h3>
     <table cellpadding="0" cellspacing="0">
