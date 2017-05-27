@@ -12,6 +12,9 @@ $poor-attribute: #DB433E;
 $colour-heel-red: #B30F13;
 $colour-face-blue: #16ADEC;
 
+$wwe2k17-purple:#4c064f;
+$wwe2k17-red: #be0a0d;
+$wwe2k17-orange: #f14310;
 
 $colour-header-dark: #181818;
 
@@ -35,11 +38,11 @@ $fixed-line-height: $base-line-height;
 // Headings
 $header-font-weight: $bold;
 
-// Slider
+// Range
 $range-width: 100%;
 $range-handle-color: #323232;
 $range-handle-size: 6px;
-$range-track-color: #d7dcdf;
 $range-track-height: 8px;
+$range-track-color: #d7dcdf;
 $range-label-color: $colour-default-dark;
 $range-label-width: 30px;

@@ -16642,21 +16642,6 @@ table {
   width: 100%;
 }
 
-.col-3 {
-  display: inline-block;
-  width: 33.3333333333%;
-}
-
-.col-4 {
-  display: inline-block;
-  width: 25%;
-}
-
-.row-2 {
-  display: inline-block;
-  width: 20%;
-}
-
 table thead {
   background: none;
 }
@@ -16701,6 +16686,56 @@ fieldset legend {
   text-align: left;
 }
 
+.col-1 {
+  display: inline-block;
+  width: 100%;
+}
+
+.col-2 {
+  display: inline-block;
+  width: 50%;
+}
+
+.col-3 {
+  display: inline-block;
+  width: 33.3333333333%;
+}
+
+.col-4 {
+  display: inline-block;
+  width: 25%;
+}
+
+.row-2 {
+  display: inline-block;
+  width: 20%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .large-8 {
+    width: 100%;
+  }
+  .medium-4 {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .medium-4 {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="col-"], .medium-4 {
+    width: 100%;
+  }
+  .columns {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+
 .navbar {
   position: relative;
   min-height: 50px;
@@ -16737,7 +16772,6 @@ footer {
 
 footer, .footer-disclaimer {
   text-align: center;
-  min-width: 960px;
 }
 
 footer .fa {
@@ -16748,6 +16782,7 @@ footer .fa {
   color: #fff;
   background: #32343f;
   border: none;
+  margin: 2px;
 }
 
 .footer-disclaimer {
@@ -16807,7 +16842,6 @@ footer .fa {
 
 .label {
   color: #ffffff;
-  cursor: pointer;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -16816,8 +16850,19 @@ footer .fa {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.overall {
+.overall, .main-overall {
   background: #467bfb;
+}
+
+.label.overall {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.label.main-overall {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 .attribute {
@@ -16845,38 +16890,48 @@ footer .fa {
 }
 
 .wrestler-header {
-  background-color: #7db9e8;
   background-size: 100%;
-  background-image: linear-gradient(to right top, #467bfb 0%, #181818 70%);
+  background: linear-gradient(to right top, #467bfb 0%, #181818 70%);
+  height: 150px;
+  overflow: hidden;
+}
+
+.wrestler-header.wwe-2k17 {
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k17-header.jpg");
+}
+
+.wrestler-header.wwe-2k16 {
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k16-header.jpg");
 }
 
 .wrestler-render {
-  width: 25%;
-  margin-right: 10px;
+  width: 20%;
 }
 
-.wrestler-image {
-  height: 150px;
-  background-size: cover;
-  overflow: hidden;
-  margin-top: -20px;
-  /* hide the cropped portion */
+.wrestler-overall {
+  margin: 3em 1em;
 }
 
 .wrestler-info {
-  padding-top: 45px;
+  margin: 3em 0em;
 }
 
-.wrestler-lastname h3 {
+.wrestler-name {
+  padding: 0 0 2.5px;
+  line-height: 1;
+}
+
+.wrestler-name h3 {
   color: #fff;
   font-size: 40px;
-  line-height: 35px;
-  font-weight: normal;
   text-transform: uppercase;
   font-weight: bold;
+  line-height: 1;
 }
 
-.wrestler-firstname h3 {
+.wrestler-name small {
   color: #fff;
   float: none;
   display: block;
@@ -16884,37 +16939,40 @@ footer .fa {
   text-transform: uppercase;
 }
 
-.wrestler-nickname h3 {
+.wrestler-more small {
   color: #fff;
   float: none;
   display: block;
   font-size: 12px;
-  line-height: 24px;
   text-transform: uppercase;
 }
 
-.wrestler-header-right {
-  display: inline-block;
+.wrestler-more > small a {
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.content-game-header {
+  margin: 20px;
 }
 
 .game-logo img {
-  max-width: 25%;
+  max-width: 15%;
+  float: right;
 }
 
 .attribute-name {
-  padding: 1.071em;
+  line-height: 2;
 }
 
 .personality-slider, .hp-slider {
   width: 50%;
-}
-
-.positive-personality {
-  width: 6em;
+  margin: 0 auto;
 }
 
 .personality-range-value {
-  margin: 3px 0;
+  margin: 2.2px 0;
   text-align: center;
 }
 
@@ -16923,30 +16981,32 @@ footer .fa {
   border: 0;
 }
 
-.personality-range-slider__range {
+.personality-range-slider-range {
   -webkit-appearance: none;
   height: 8px;
-  border-radius: .2em;
-  background: linear-gradient(to right, #16ADEC 50%, #df5853 50%);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #16ADEC 50%, #df5853 50%);
+  background: -webkit-linear-gradient(0deg, #16ADEC 50%, #df5853 50%);
   outline: none;
   padding: 0;
   margin: 0;
 }
 
-.personality-range-slider__range::-webkit-slider-thumb {
+input.personality-range-slider-range[type=range]::-webkit-slider-runnable-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
   -webkit-appearance: none;
-  appearance: none;
-  width: 6px;
-  height: 8px;
-  background: #323232;
 }
 
-.personality-range-slider__range::-moz-range-thumb {
-  width: 6px;
-  height: 6px;
+input.personality-range-slider-range[type=range]::-moz-range-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input.personality-range-slider-range[type=range]::-moz-focus-outer {
   border: 0;
-  border-radius: 50%;
-  background: #323232;
 }
 
 .wrestler-total-hp {
@@ -16982,44 +17042,67 @@ footer .fa {
   text-align: center;
 }
 
-.hp-range-slider__range {
-  -webkit-appearance: none;
-  height: 8px;
-  border-radius: .2em;
-  background-color: #467bfb;
+input.hp-range-slider-range[type=range] {
+  margin: auto;
   outline: none;
   padding: 0;
-  margin: 0;
-}
-
-.hp-range-slider__range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 6px;
   height: 8px;
-  background: #323232;
+  background-color: #dcdcdc;
+  background-image: linear-gradient(#467bfb, #467bfb);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  -webkit-appearance: none;
 }
 
-.hp-range-slider__range::-moz-range-thumb {
-  width: 6px;
-  height: 6px;
+input.hp-range-slider-range[type=range]::-webkit-slider-runnable-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+input.hp-range-slider-range[type=range]::-moz-range-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input.hp-range-slider-range[type=range]::-moz-focus-outer {
   border: 0;
-  border-radius: 50%;
-  background: #323232;
 }
 
-.hp-range-slider__value {
-  display: inline-block;
-  position: relative;
-  width: 30px;
-  color: #fff;
-  text-align: center;
-  border-radius: 3px;
-  background: #494b5b;
+input.hp-range-slider-range[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input.hp-range-slider-range[type=range]::-moz-range-thumb {
+  background: transparent;
+  border: none;
 }
 
 .abilities-image img {
-  min-width: 50%;
+  max-width: 10%;
+}
+
+.abilities-image {
+  width: 25em;
+}
+
+.ability-level {
+  margin: 8px 0;
+}
+
+.skills .fa {
+  color: #467bfb;
+}
+
+.wrestler-skills {
+  border-left: 1px solid #d8d8d8;
+}
+
+.wrestler-skills:first-child {
+  border-left: none;
 }
 
 .game-item img {
@@ -17096,14 +17179,42 @@ h3 {
   background: #fff;
   margin-bottom: 0;
   border: none;
-  table-layout: fixed;
   width: 100%;
+  color: #222;
+  font-size: 0;
 }
 
-#panel-comment {
+.panel-title {
   background-color: #494b5b;
   padding: 10px;
   color: #FFF;
+}
+
+.panel-title.minor {
+  background-color: transparent;
+  padding: 0;
+  color: #494b5b;
+}
+
+.item {
+  color: #222;
+  font-size: 0.875rem;
+  padding: 0.5625rem 0.625rem;
+  text-align: left;
+}
+
+.item.wrestler-attribute, .item.wrestler-hp, .item.wrestler-personality, .item.wrestler-abilities {
+  border-bottom: 1px solid #ebebec;
+  line-height: 1.3;
+}
+
+.item.wrestler-attribute:last-child, .item.wrestler-hp:last-child, .item.wrestler-personality:last-child {
+  border-bottom: none;
+  line-height: 1.3;
+}
+
+.item.wrestler-skills {
+  vertical-align: top;
 }
 
 /*# sourceMappingURL=styles.css.map */

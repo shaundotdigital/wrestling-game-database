@@ -39,7 +39,6 @@ footer {
 
 footer, .footer-disclaimer {
     text-align: center;
-    min-width: 960px;
 }
 
 footer .fa {
@@ -50,6 +49,7 @@ footer .fa {
     color: #fff;
     background: darken($colour-default-dark, 10%);
     border: none;
+    margin: 2px;
   }
 
 .footer-disclaimer {

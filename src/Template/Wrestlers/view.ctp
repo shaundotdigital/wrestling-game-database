@@ -3,244 +3,270 @@
 * @var \App\View\AppView $this
 */
 ?>
-<div class="wrestler-header <?=($wrestler->game->game_name)?>">
+<!-- <div class="container">
+<?php
+$this->Html->addCrumb('Wrestler', '/wrestlers');
+$this->Html->addCrumb($wrestler->game->game_name, '/games/view/' . strtolower(str_replace(' ', '-', $wrestler->game->id)));
+$this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(str_replace(' ', '-', $wrestler->id)));
+?>
+</div> -->
+
+<div class="wrestler-header <?=strtolower(str_replace(' ', '-', $wrestler->game->game_name)) ?>">
   <div class="container">
-    <div class="content-wrestler-header-left <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
-      <div class="wrestler-render left">
-        <div class="wrestler-image">
-          <?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . $wrestler->pac . '-' . $wrestler->game->release_year . '.png')?>
-        </div>
+    <div class="wrestler-render left">
+      <div class="wrestler-image">
+        <?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . $wrestler->pac . '-' . $wrestler->game->release_year . '.png')?>
       </div>
-      <div class="wrestler-info">
-        <div class="wrestler-firstname">
-          <h3><?= $wrestler->first_name ?></h3>
-        </div>
-        <div class="wrestler-lastname">
+    </div>
+    <div class="content-wrestler-header <?= strtolower($wrestler->first_name). '-' . strtolower($wrestler->last_name) ?>">
+      <div class="wrestler-overall left">
+        <span class="label main-overall">
+          <?= $this->Number->format($wrestler->overall) ?>
+        </span>
+      </div>
+      <div class="wrestler-info left">
+        <div class="wrestler-name">
+          <small><?= $wrestler->first_name ?></small>
           <h3><?= $wrestler->last_name ?></h3>
         </div>
-        <div class="wrestler-nickname">
-          <h3><? if ($wrestler->nickname) {
-            echo h($wrestler->nickname);
-          } ?></h3>
+        <div class="wrestler-more">
+          <small>
+            <?= $wrestler->height->height ?>
+            -
+            <?= $wrestler->weight_class->weight_class ?>
+            <? if ($wrestler->reaction->crowd_reaction) { ?>- <?
+              echo $wrestler->reaction->crowd_reaction;
+            } ?>
+          </small>
         </div>
-        <!-- <div class="wrestler-overall">
-          <tr><?= __('Overall') ?>
-            <h2><?= $this->Number->format($wrestler->overall) ?></h2>
-          </tr>
-        </div> -->
       </div>
     </div>
-    <div class="content-wrestler-header-right <?= strtolower(str_replace(' ', '', $wrestler->game->game_name))?>" align="right">
+    <div class="content-game-header">
       <div class="game-info">
-        <!-- <div class="game-logo">
+        <div class="game-logo">
           <?= $this->Html->image('games/logos/'.$wrestler->game->game_img)?>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="sub-bar" data-subbar role="sub-navigation">
-  <div class="container">
-  <!-- <?php
-  $this->Html->addCrumb('Wrestler', '/wrestlers');
-  $this->Html->addCrumb($wrestler->game->game_name, '/games/view/' . strtolower(str_replace(' ', '-', $wrestler->game->id)));
-  $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(str_replace(' ', '-', $wrestler->id)));
-  ?> -->
-  </div>
-</div>
-
 <div class="container">
   <div class="content">
-  <div class="wrestler large-8 columns">
-    <div class="panel panel-default">
-      <div class="panel-heading" id="panel-comment">
-        <?= __('Attributes') ?>
-      </div>
-      <div class="wrestler-attributes">
-        <table cellpadding="0" cellspacing="0" class="panel-table">
-          <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
-            <tr class="wrestler-attribute-<?= strtolower(str_replace(' ', '-', $attributesPoints->attribute->attribute_name)) ?> col-3">
-              <td class="attribute-name left">
-                <?= h($attributesPoints->attribute->attribute_name) ?>
-              </td>
-              <td class="attribute-value right">
-                <span class="label attribute">
-                  <?= h($attributesPoints->value) ?>
-              </span></td>
-            </tr>
-          <?php endforeach; ?>
-        </table>
-      </div>
-    </div>
-  </div>
+    <?php if (!empty($wrestler->attributes_points)): ?>
+      <div class="wrestler large-8 columns">
+        <div class="panel attributes">
+          <div class="panel-heading panel-title">
+            <?= __('Attributes') ?>
+          </div>
+          <div class="panel-table">
+            <?php foreach ($wrestler->attributes_points as $attributesPoints): ?>
+              <div class="wrestler-attribute item col-3 <?= strtolower(str_replace(' ', '-', $attributesPoints->attribute->attribute_name)) ?>">
+                <span class="attribute-name left "><?= h($attributesPoints->attribute->attribute_name) ?></span>
+                <div class="attribute-value">
+                  <span class="label attribute right"><?= h($attributesPoints->value) ?></span>
+                </div>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+        <?php endif; ?>
+        <?php if (!empty($wrestler->skills)):
 
-  <div class="wrestler medium-4 columns">
-    <!-- <div class="panel panel-default">
-      <div class="panel-heading" id="panel-comment">
-        <? if ($wrestler->nickname) {
-          echo h($wrestler->nickname);
+        $skill_levels_id_1 = array();
+        $skill_levels_id_2 = array();
+        $skill_levels_id_3 = array();
+        $skill_levels_id_4 = array();
+
+        foreach ($wrestler->skills as $skill) {
+          switch ($skill->skill_levels_id) {
+            case 1:
+              array_push($skill_levels_id_1, $skill);
+              break;
+            case 2:
+              array_push($skill_levels_id_2, $skill);
+              break;
+            case 3:
+              array_push($skill_levels_id_3, $skill);
+              break;
+            case 4:
+              array_push($skill_levels_id_4, $skill);
+              break;
+            default:
+              break;
+          }
         } ?>
-        <?=($wrestler->wrestler_name)?>
-      </div>
-      <table class="vertical-table">
-        <tr>
-          <th scope="row"><?= __('Gender') ?></th>
-          <td><?= $wrestler->has('gender') ? $this->Html->link($wrestler->gender->gender, ['controller' => 'Genders', 'action' => 'view', $wrestler->gender->id]) : '' ?></td>
-        </tr>
-        <tr><th scope="row"><?= __('Height') ?></th>
-          <td><?= $wrestler->has('height') ? $this->Html->link($wrestler->height->height, ['controller' => 'Heights', 'action' => 'view', $wrestler->height->id]) : '' ?></td>
-        </tr>
-        <tr>
-          <th scope="row"><?= __('Weight Class') ?></th>
-          <td><?= $wrestler->has('weight_class') ? $this->Html->link($wrestler->weight_class->weight_class, ['controller' => 'WeightClasses', 'action' => 'view', $wrestler->weight_class->id]) : '' ?></td>
-        </tr>
-        <tr>
-          <th scope="row"><?= __('Reaction') ?></th>
-          <td><?= $wrestler->has('reaction') ? $this->Html->link($wrestler->reaction->crowd_reaction, ['controller' => 'Reactions', 'action' => 'view', $wrestler->reaction->id]) : '' ?></td>
-        </tr>
-        <tr>
-          <th scope="row"><?= __('Pac') ?></th>
-          <td><?= $this->Number->format($wrestler->pac) ?></td>
-        </tr>
-      </table>
-    </div> -->
-    <div class="panel panel-default">
-      <div class="panel-heading" id="panel-comment">
-        <?= __('Personality') ?>
-      </div>
-      <div class="wrestler-personality">
-        <?php if (!empty($wrestler->wrestlers_personality)): ?>
-          <table cellpadding="0" cellspacing="0" class="panel-table">
-            <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
-              <tr>
-                <td>
-                  <div class="positive-personality">
-                    <?= h($wrestlersPersonality->personality->name) ?>
-                  </div>
-                </td>
-                <td class="personality-slider">
-                  <div class="personality-range-slider">
-                    <input class="personality-range-slider__range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>
-                  </div>
-                  <div class="personality-range-value">
-                      <span class="personality-range-slider__value"><?= h($wrestlersPersonality->value) ?></span>
-                  </div>
-                </td>
-                <td style=float:right;>
-                  <div class="negative-personality">
-                    <?= h($wrestlersPersonality->personality->negative_name) ?>
-                  </div>
-                </td>
-
-              </tr>
-            <?php endforeach; ?>
-          </table>
-        <?php endif; ?>
-      </div>
-    </div>
-
-
-
-    <div class="panel panel-default">
-      <div class="panel-heading" id="panel-comment">
-        <?= __('Hit Points Ratio') ?>
-      </div>
-    <div class="wrestler-hitpoints">
-        <?php if (!empty($wrestler->wrestlers_hp)): ?>
-        <table cellpadding="0" cellspacing="0" class="panel-table">
-            <?php foreach ($wrestler->wrestlers_hp as $wrestlersHp): ?>
-            <tr class="wrestler-hp head">
-                <td><?= __('Head') ?></td>
-                <td class="hp-slider">
-                  <div class="hp-range-slider">
-                    <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->head) ?>' min="0" max="2000" disabled>
-                  </div>
-                </td>
-                <td style="float:right;"><?= h($wrestlersHp->head) ?>.0 pts</td>
-            </tr>
-            <tr class="wrestler-hp body">
-                <td><?= __('Body') ?></td>
-                <td class="hp-slider">
-                  <div class="hp-range-slider">
-                    <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->body) ?>' min="0" max="2000" disabled>
-                  </div>
-                </td>
-                <td style="float:right;"><?= h($wrestlersHp->body) ?>.0 pts</td>
-            </tr>
-            <tr class="wrestler-hp arms">
-                <td><?= __('Arms') ?></td>
-                <td class="hp-slider">
-                  <div class="hp-range-slider">
-                    <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->arms) ?>' min="0" max="2000" disabled>
-                  </div>
-                </td>
-                <td style="float:right;"><?= h($wrestlersHp->arms) ?>.0 pts</td>
-            </tr>
-            <tr class="wrestler-hp legs">
-                <td><?= __('Legs') ?></td>
-                <td class="hp-slider">
-                  <div class="hp-range-slider">
-                    <input class="hp-range-slider__range" type="range" value='<?= h($wrestlersHp->legs) ?>' min="0" max="2000" disabled>
-                  </div>
-                </td>
-                <td style="float:right;"><?= h($wrestlersHp->legs) ?>.0 pts</td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <div class="wrestler-total-hp">
-          <div class="wrestler-hp-title"><?= __('Total') ?></div>
-          <div class="wrestler-hp-total"><?= h($wrestlersHp->total_hp) ?>.0 pts</div>
-        </div>
-        <?php endif; ?>
-    </div>
-  </div>
-  </div>
-
-  <div class="wrestler large-12 columns">
-      <div class="panel panel-default">
-        <div class="panel-heading" id="panel-comment">
-          <?= __('Abilities') ?>
-        </div>
-        <?php if (!empty($wrestler->abilities)): ?>
-          <div class="wrestler-abilities">
-            <table cellpadding="0" cellspacing="0" class="panel-table">
-              <?php foreach ($wrestler->abilities as $abilities): ?>
-                <tr class="row-2">
-                  <td class="abilityValue">
-                    <div class="abilities-image">
-                      <!-- <?='Level' .' '. h($abilities->ability_level_id) ?> -->
-                      <?= $this->Html->image('assets/abilities/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . strtolower(str_replace(' ', '-',$abilities->ability_name)) . '-' . $abilities->ability_level_id . '.png') ?>
-                    </div>
-                    <?= h($abilities->ability_name) ?>
-                  </td>
-                </tr>
+        <div class="panel skills">
+          <div class="panel-heading panel-title">
+            <?= __('Skills') ?>
+          </div>
+          <div class="panel-table">
+            <div class="wrestler-skills item col-4">
+              <div class="panel-heading panel-title minor">
+                <?= __('Basic Action') ?>
+              </div>
+              <?php foreach ($skill_levels_id_1 as $skill): ?>
+                <div class="skill">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <?= h($skill->skill_name) ?>
+                </div>
               <?php endforeach; ?>
-            </table>
+            </div>
+            <div class="wrestler-skills item col-4">
+              <div class="panel-heading panel-title minor">
+                <?= __('Special Match Action') ?>
+              </div>
+              <?php foreach ($skill_levels_id_2 as $skill): ?>
+                <div class="skill">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <?= h($skill->skill_name) ?>
+                </div>
+              <?php endforeach; ?>
+            </div>
+            <div class="wrestler-skills item col-4">
+              <div class="panel-heading panel-title minor">
+                <?= __('Special Action') ?>
+              </div>
+              <?php foreach ($skill_levels_id_3 as $skill): ?>
+                <div class="skill">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <?= h($skill->skill_name) ?>
+                </div>
+              <?php endforeach; ?>
+            </div>
+            <div class="wrestler-skills item col-4">
+              <div class="panel-heading panel-title minor">
+                <?= __('OMG!') ?>
+              </div>
+              <?php foreach ($skill_levels_id_4 as $skill): ?>
+                <div class="skill">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <?= h($skill->skill_name) ?>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
+    </div>
+    <div class="wrestler medium-4 columns">
+      <?php if (!empty($wrestler->wrestlers_hp)): ?>
+        <div class="panel hit-point-ratio">
+          <div class="panel-heading panel-title">
+            <?= __('Hit Points Ratio') ?>
+          </div>
+          <div class="panel-table">
+            <?php foreach ($wrestler->wrestlers_hp as $wrestlersHp): ?>
+              <div class="wrestler-hp head item">
+                <div class="hp-name left">
+                  <?= __('Head') ?>
+                </div>
+                <div class="hp-pts right">
+                  <?= h($wrestlersHp->head) ?>.0 pts
+                </div>
+                <div class="hp-slider">
+                  <div class="hp-range-slider">
+                    <input class="hp-range-slider-range" type="range" value='<?= h($wrestlersHp->head) ?>' min="0" max="2000" disabled>
+                  </div>
+                </div>
+              </div>
+              <div class="wrestler-hp body item">
+                <div class="hp-name left">
+                  <?= __('Body') ?>
+                </div>
+                <div class="hp-pts right">
+                  <?= h($wrestlersHp->body) ?>.0 pts
+                </div>
+                <div class="hp-slider">
+                  <div class="hp-range-slider">
+                    <input class="hp-range-slider-range" type="range" value='<?= h($wrestlersHp->body) ?>' min="0" max="2000" disabled>
+                  </div>
+                </div>
+              </div>
+              <div class="wrestler-hp arms item">
+                <div class="hp-name left">
+                  <?= __('Arms') ?>
+                </div>
+                <div class="hp-pts right">
+                  <?= h($wrestlersHp->arms) ?>.0 pts
+                </div>
+                <div class="hp-slider">
+                  <div class="hp-range-slider">
+                    <input class="hp-range-slider-range" type="range" value='<?= h($wrestlersHp->arms) ?>' min="0" max="2000" disabled>
+                  </div>
+                </div>
+              </div>
+              <div class="wrestler-hp legs item">
+                <div class="hp-name left">
+                  <?= __('Legs') ?>
+                </div>
+                <div class="hp-pts right">
+                  <?= h($wrestlersHp->legs) ?>.0 pts
+                </div>
+                <div class="hp-slider">
+                  <div class="hp-range-slider">
+                    <input class="hp-range-slider-range" type="range" value='<?= h($wrestlersHp->legs) ?>' min="0" max="2000" disabled>
+                  </div>
+                </div>
+              </div>
+              <?php endforeach; ?>
+            </div>
+            <div class="wrestler-total-hp">
+              <div class="wrestler-hp-title"><?= __('Total') ?></div>
+              <div class="wrestler-hp-total"><?= h($wrestlersHp->total_hp) ?>.0 pts</div>
+            </div>
           </div>
         <?php endif; ?>
+          <?php if (!empty($wrestler->wrestlers_personality)): ?>
+            <div class="panel personality">
+              <div class="panel-heading panel-title">
+                <?= __('Personality') ?>
+              </div>
+                <div class="panel-table">
+                  <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
+                    <div class="wrestler-personality item">
+                      <div class="positive-personality left">
+                        <?= h($wrestlersPersonality->personality->name) ?>
+                      </div>
+                      <div class="negative-personality right">
+                        <?= h($wrestlersPersonality->personality->negative_name) ?>
+                      </div>
+                      <div class="personality-slider">
+                        <div class="personality-range-slider">
+                          <input class="personality-range-slider-range" type="range" value='<?= h($wrestlersPersonality->value) ?>' min="-100" max="100" disabled>
+                        </div>
+                        <div class="personality-range-value">
+                            <span class="personality-range-slider-value"><?= h($wrestlersPersonality->value) ?></span>
+                        </div>
+                      </div>
+                    </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+            <?php endif; ?>
+            </div>
+            <?php if (!empty($wrestler->abilities)): ?>
+            <div class="wrestler medium-4 columns">
+                <div class="panel abilities">
+                  <div class="panel-heading panel-title">
+                    <?= __('Abilities') ?>
+                  </div>
+                      <div class="panel-table">
+                        <?php foreach ($wrestler->abilities as $abilities): ?>
+                        <div class="wrestler-abilities item col-1">
+                            <div class="ability-value">
+                              <div class="abilities-image left">
+                                <?= $this->Html->image('assets/abilities/' . strtolower(str_replace(' ', '', $wrestler->game->game_name)) . '/' . strtolower(str_replace(' ', '-',$abilities->ability_name)) . '-' . $abilities->ability_level_id . '.png') ?>
+                                <?= h($abilities->ability_name) ?>
+                              </div>
+                              <div class="ability-level right">
+                                 (<?='Lvl' .' '. h($abilities->ability_level_id) ?>)
+                              </div>
+                            </div>
+                          </div>
+                        <?php endforeach; ?>
+                      </div>
+                </div>
+            </div>
+          <?php endif; ?>
       </div>
-      <div class="panel panel-default">
-        <div class="panel-heading" id="panel-comment">
-          <?= __('Skills') ?>
-        </div>
-        <?php if (!empty($wrestler->skills)): ?>
-          <div class="wrestler-skills">
-          <table cellpadding="0" cellspacing="0" class="panel-table">
-            <?php foreach ($wrestler->skills as $skills): ?>
-              <tr class="col-4">
-                <td>
-                  <?= h($skills->skill_name) ?>
-                </td>
-                <td class="float-right skillValue">
-                  <?= h($skills->skill_levels_id) ?>
-                </td>
-              </tr>
-            <?php endforeach; ?>
-          </table>
-        <?php endif; ?>
       </div>
-    </div>
-
-</div>
-</div>

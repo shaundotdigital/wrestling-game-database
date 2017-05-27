@@ -2,7 +2,6 @@
 
 .label {
   color: #ffffff;
-  cursor: pointer;
   font-weight: $regular;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -11,8 +10,19 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.overall {
+.overall, .main-overall {
   background: $colour-smackdowndb;
+}
+
+.label.overall {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.label.main-overall {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 .attribute {
@@ -40,41 +50,52 @@
 }
 
 .wrestler-header {
-  background-color: #7db9e8;
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, $colour-smackdowndb),color-stop(70%, $colour-header-dark));
-  background-image: -moz-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
-  background-image: -webkit-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
-  background-image: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, $colour-smackdowndb),color-stop(70%, $colour-header-dark));
+  background: -moz-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background: -webkit-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  height: 150px;
+  overflow: hidden;
+}
+
+.wrestler-header.wwe-2k17{
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k17-header.jpg");
+}
+
+.wrestler-header.wwe-2k16{
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k16-header.jpg");
 }
 
 .wrestler-render {
-  width: 25%;
-  margin-right: 10px;
+  width: 20%;
 }
 
-.wrestler-image {
-  height: 150px;
-  background-size: cover;
-  overflow: hidden;
-  margin-top: -20px;
-/* hide the cropped portion */
+.wrestler-overall {
+  margin: 3em 1em;
 }
 
 .wrestler-info {
-  padding-top: 45px;
+  margin: 3em 0em;
 }
 
-.wrestler-lastname h3 {
+.wrestler-name {
+  padding: 0 0 2.5px;
+  line-height: 1;
+}
+
+
+.wrestler-name h3 {
   color: #fff;
   font-size: 40px;
-  line-height: 35px;
-  font-weight: normal;
   text-transform: uppercase;
   font-weight: bold;
+    line-height: 1;
 }
 
-.wrestler-firstname h3 {
+.wrestler-name small {
   color: #fff;
   float: none;
   display: block;
@@ -82,57 +103,50 @@
   text-transform: uppercase;
 }
 
-.wrestler-nickname h3 {
+.wrestler-more small {
   color: #fff;
   float: none;
   display: block;
   font-size: 12px;
-  line-height: 24px;
+  // line-height: 0px;
   text-transform: uppercase;
 }
 
+.wrestler-more > small a {
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
 
-.wrestler-header-right {
-  display: inline-block;
+.content-game-header {
+  margin: 20px;
 }
 
 .game-logo img {
-  max-width: 25%;
+  max-width: 15%;
+  float: right;
 }
 
 
 // attributesPoints
 
+.wrestler-attribute {
+}
+
 .attribute-name {
-  padding: 1.071em;
+  line-height: 2;
 }
-
-.attribute-value{
-}
-
 
 // Wrestler Personality
 
 .personality-slider, .hp-slider {
-  width:50%;
-  // padding-top: 15px;
-}
-
-.positive-personality {
-  width: 6em;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .personality-range-value {
-  margin: 3px 0 ;
+  margin: 2.2px 0 ;
   text-align: center;
-}
-
-.personality-range-slider__value {
-  // width: $range-label-width;
-  // color: #fff;
-  // text-align: center;
-  // border-radius: 3px;
-  // background: $range-label-color;
 }
 
 .personality-range-slider {
@@ -140,31 +154,53 @@
   border: 0;
 }
 
-.personality-range-slider__range {
+.personality-range-slider-range {
   -webkit-appearance: none;
   height: $range-track-height;
-  border-radius: .2em;
-  background: linear-gradient(to right, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
+  border-radius: 10px;
+  background: linear-gradient(90deg, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
+  background: -webkit-gradient(linear, left top, 0% 100%, 100% 0%, color-stop(50%, $colour-face-blue),color-stop(50%, lighten($poor-attribute, 5%)));
+  background: -moz-linear-gradient(0deg, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
+  background: -webkit-linear-gradient(0deg, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
   outline: none;
   padding: 0;
   margin: 0;
 
   // Range Handle
-  &::-webkit-slider-thumb {
-    appearance: none;
-    width: $range-handle-size;
-    height: $range-track-height;
-    // border-radius: .2em;
-    background: $range-handle-color;
-  }
+  // &::-webkit-slider-thumb {
+  //   width: 14px;
+  //   height: 14px;
+  //   border: 0;
+  //   background: #fff;
+  //   border-radius: 100%;
+  //   box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+  //   -webkit-appearance: none;
+  //   }
+  //
+  // &::-moz-range-thumb {
+  //   width: $range-handle-size;
+  //   height: $range-handle-size;
+  //   border: 0;
+  //   border-radius: 50%;
+  //   background: $range-handle-color;
+  // }
+}
 
-  &::-moz-range-thumb {
-    width: $range-handle-size;
-    height: $range-handle-size;
+input.personality-range-slider-range[type=range]::-webkit-slider-runnable-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+input.personality-range-slider-range[type=range]::-moz-range-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+input.personality-range-slider-range[type=range]::-moz-focus-outer {
     border: 0;
-    border-radius: 50%;
-    background: $range-handle-color;
-  }
 }
 
 // Wrestler HP
@@ -200,43 +236,73 @@
   text-align: center;
 }
 
-.hp-range-slider__range {
-  -webkit-appearance: none;
-  height: $range-track-height;
-  border-radius: .2em;
-  background-color: $colour-smackdowndb;
-  outline: none;
-  padding: 0;
-  margin: 0;
+input.hp-range-slider-range[type=range] {
+    margin: auto;
+    outline: none;
+    padding: 0;
+    height: 8px;
+    background-color: $colour-default-grey;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $colour-smackdowndb), color-stop(100%, $colour-smackdowndb));
+    background-image: -webkit-linear-gradient($colour-smackdowndb, $colour-smackdowndb);
+    background-image: -moz-linear-gradient($colour-smackdowndb, $colour-smackdowndb);
+    background-image: -o-linear-gradient($colour-smackdowndb, $colour-smackdowndb);
+    background-image: linear-gradient($colour-smackdowndb,$colour-smackdowndb);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    -webkit-appearance: none;
+}
 
-  &::-webkit-slider-thumb {
-    appearance: none;
-    width: $range-handle-size;
-    height: $range-track-height;
-    // border-radius: .2em;
-    background: $range-handle-color;
-  }
+input.hp-range-slider-range[type=range]::-webkit-slider-runnable-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+}
 
-  &::-moz-range-thumb {
-    width: $range-handle-size;
-    height: $range-handle-size;
+input.hp-range-slider-range[type=range]::-moz-range-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+input.hp-range-slider-range[type=range]::-moz-focus-outer {
     border: 0;
-    border-radius: 50%;
-    background: $range-handle-color;
-  }
+}
+
+input.hp-range-slider-range[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input.hp-range-slider-range[type=range]::-moz-range-thumb {
+    background: transparent;
+    border: none;
 }
 
 
-.hp-range-slider__value {
-  display: inline-block;
-  position: relative;
-  width: $range-label-width;
-  color: #fff;
-  text-align: center;
-  border-radius: 3px;
-  background: $range-label-color;
-}
+// abilities
 
 .abilities-image img{
-  min-width:50%;
+  max-width: 10%;
+}
+
+.abilities-image {
+  width: 25em;
+}
+.ability-level {
+  margin: 8px 0;
+}
+
+// skills
+
+.skills .fa {
+  color: $colour-smackdowndb;
+}
+
+.wrestler-skills {
+  border-left: 1px solid #d8d8d8;
+}
+
+.wrestler-skills:first-child {
+  border-left: none;
 }
