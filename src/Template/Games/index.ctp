@@ -12,7 +12,7 @@
         </div>
         <div class="panel-table">
         <?php foreach ($games as $game): ?>
-          <? $titleSymbols = array( '!', ':', '.' ,'\'');?>
+        <? $titleSymbols = array( '!', ':', '.' ,'\'');?>
             <div class="game item col-3 <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name))))?>">
               <div class="content-game">
                 <?= $this->Html->image('games/poster-art/' . strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name)))) . '-' . $game->release_year . '.jpg')?>
@@ -23,7 +23,7 @@
                 <div class="game-platforms">
                   <?php foreach ($game->platforms as $platform): ?>
                   <a class="btn btn-platform <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $platform->platform_name))))?>" href="#">
-                    <?= $platform->platform_name ?>
+                    <?= str_replace('Portable', 'P', (str_replace('PlayStation', 'PS1', (str_replace('PlayStation ', 'PS', $platform->platform_name))))) ?>
                   </a>
                   <?php endforeach; ?>
                 </div>
