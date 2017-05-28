@@ -6,10 +6,6 @@
 <div class="container">
   <div class="content">
     <div class="games index large-12 columns content">
-      <div class="panel games">
-        <div class="panel-heading panel-title">
-          <?= __('Skills') ?>
-        </div>
         <div class="panel-table">
         <?php foreach ($games as $game): ?>
         <? $titleSymbols = array( '!', ':', '.' ,'\'');?>
@@ -31,8 +27,6 @@
             </div>
           <?php endforeach; ?>
         </div>
-      </div>
-
     <!-- <h3><?= __('Games') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
