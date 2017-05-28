@@ -13,7 +13,14 @@
 @import "wrestler-profile";
 
 // Housekeeping
-@import url('https://fonts.googleapis.com/css?family=Roboto:$regular,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700');
+
+::selection {
+  background: $colour-smackdowndb; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $colour-smackdowndb; /* Gecko Browsers */
+}
 
 .container {
   margin: 0 auto;
@@ -107,7 +114,7 @@ h3 {
 
 .item {
   color: #222;
-  font-size: 0.875rem;
+  font-size: $base-sub-title-font-size;
   padding: 0.5625rem 0.625rem;
   text-align: left;
 }
