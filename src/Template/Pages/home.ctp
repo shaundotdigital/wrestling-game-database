@@ -19,19 +19,13 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Network\Exception\NotFoundException;
 
-$cakeDescription = 'CakePHP: the rapid development PHP framework';
+// $this->layout = false;
 ?>
 
-<head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>
-    </title>
-</head>
-
-
-<header class="row">
+<header class="section-header smackdowndb-hero course-catalog" data-layout-element="hero">
+  <div class="container">
+    <div class="hero-title">
+      Welcome
+    </div>
+  </div>
 </header>
-
-</div>
