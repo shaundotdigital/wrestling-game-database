@@ -23,7 +23,7 @@
                 <div class="game-platforms">
                   <?php foreach ($game->platforms as $platform): ?>
                   <a class="btn btn-platform <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $platform->platform_name))))?>" href="#">
-                    <?= str_replace('Portable', 'P', (str_replace('PlayStation', 'PS1', (str_replace('PlayStation ', 'PS', $platform->platform_name))))) ?>
+                    <?= str_replace('Nintendo ', '', (str_replace('Portable', 'P', (str_replace('PlayStation', 'PS1', (str_replace('PlayStation ', 'PS', $platform->platform_name))))))) ?>
                   </a>
                   <?php endforeach; ?>
                 </div>
