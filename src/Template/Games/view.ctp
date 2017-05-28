@@ -30,10 +30,23 @@
     <div class="related">
         <h4><?= __($game->game_name) ?> Roster</h4>
         <?php if (!empty($game->wrestlers)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
+
+            <?php foreach ($game->wrestlers as $wrestlers): ?>
+
+            <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endif; ?>
+    </div>
+  </div>
+</div>
+
+
+
+           <!-- <tr>
+              <th></th>
                 <th scope="col"><?= __('Wrestler Name') ?></th>
-                <th scope="col"><?= __('Overall') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('overall') ?></th>
                 <th scope="col"><?= __('Gender Id') ?></th>
                 <th scope="col"><?= __('Height Id') ?></th>
                 <th scope="col"><?= __('Weight Class Id') ?></th>
@@ -42,6 +55,7 @@
             </tr>
             <?php foreach ($game->wrestlers as $wrestlers): ?>
             <tr>
+                <td><?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $game->game_name)) . '/' . $wrestlers->pac . '-' . $game->release_year . '.png')?>
                 <td><?= $this->Html->link(__($wrestlers->wrestler_name), ['action' => '../wrestlers/view', $wrestlers->id]) ?> </td>
                 <td><?= h($wrestlers->overall) ?></td>
                 <td><?= h($wrestlers->gender_id) ?></td>
@@ -50,9 +64,4 @@
                 <td><?= h($wrestlers->reaction_id) ?></td>
                 <td><?= h($wrestlers->game_id) ?></td>
             </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
-  </div>
-</div>
+            <?php endforeach; ?> -->
