@@ -54,8 +54,8 @@
             c0-6.4-2-11-6-13.9c-4-2.9-10.1-4.4-18.3-4.4h-16.5V561.1z M1517.1,584.1v37.5h23.9c7.4,0,12.9-1.5,16.6-4.4
             c3.7-2.9,5.5-7.4,5.5-13.4c0-6.5-1.6-11.4-4.8-14.7c-3.2-3.3-8.3-5-15.5-5H1517.1z"/></g>
         </svg>
-        <h1>Home</h1>
-        <p>The SmackDown Database aims to assist the Wrestling Video game community by documenting information and building an ever growing source of data.</p>
+        <!-- <h1>Home</h1>
+        <p>The SmackDown Database aims to assist the Wrestling Video game community by documenting information and building an ever growing source of data.</p> -->
       </div>
     </div>
   </div>
