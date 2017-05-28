@@ -17149,6 +17149,23 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
   background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, #E8D100), color-stop(65%, #DDA600), color-stop(30%, #F3C300), color-stop(100%, #FDBC00));
 }
 
+.game-header {
+  background-size: 100%;
+  background: linear-gradient(to right top, #467bfb 0%, #181818 70%);
+  height: 150px;
+  overflow: hidden;
+}
+
+.game-header.wwe-2k17 {
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k17-header.jpg");
+}
+
+.game-header.wwe-2k16 {
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k16-header.jpg");
+}
+
 .container {
   margin: 0 auto;
   box-sizing: border-box;

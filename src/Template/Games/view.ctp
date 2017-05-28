@@ -3,7 +3,25 @@
   * @var \App\View\AppView $this
   */
 ?>
-<div class="games view large-9 medium-8 columns content">
+<? $titleSymbols = array( '!', ':', '.' ,'\'');?>
+<div class="game-header <?=strtolower(str_replace(' ', '-', $game->game_name)) ?>">
+  <div class="container">
+    <div class="game-boxart left">
+      <div class="boxart-image">
+        <?= $this->Html->image('games/boxart/' . strtolower(str_replace(' ', '-', (str_replace($titleSymbols, '', $game->game_name)))) . '-' . $game->release_year . '.jpg')?>
+      </div>
+    </div>
+    <div class="content-game-header">
+      <div class="game-info">
+        <div class="game-logo">
+          <?= $this->Html->image('games/logos/'.$game->game_img)?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="games view large-9 medium-8 columns content">
     <h3><?= h($game->game_name) ?></h3>
     <table class="vertical-table">
         <tr>
@@ -125,4 +143,4 @@
         </table>
         <?php endif; ?>
     </div>
-</div>
+</div> -->

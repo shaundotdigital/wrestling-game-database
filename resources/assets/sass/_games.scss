@@ -3,7 +3,6 @@
  text-align: center;
 }
 
-
 .btn.btn-platform {
     color: #fff;
     background: darken($colour-default-dark, 10%);
@@ -45,4 +44,25 @@
     background-image:-o-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
     background-image:-ms-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
     background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(0%,$colour-pc-1),color-stop(65%,$colour-pc-2),color-stop(30%,$colour-pc-3),color-stop(100%,$colour-pc-4));
+}
+
+
+.game-header {
+  background-size: 100%;
+  background: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, $colour-smackdowndb),color-stop(70%, $colour-header-dark));
+  background: -moz-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background: -webkit-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  background: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-header-dark 70%);
+  height: 150px;
+  overflow: hidden;
+}
+
+.game-header.wwe-2k17{
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k17-header.jpg");
+}
+
+.game-header.wwe-2k16{
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k16-header.jpg");
 }
