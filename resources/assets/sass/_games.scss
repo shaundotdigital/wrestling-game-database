@@ -47,13 +47,16 @@
 }
 
 
+.container.game-view{
+    margin: 10px auto;
+}
+
 .game-header {
   background-size: 100%;
   background: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, $colour-smackdowndb),color-stop(70%, $colour-header-dark));
   background: -moz-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
   background: -webkit-linear-gradient(left bottom, $colour-smackdowndb 0%,$colour-header-dark 70%);
   background: linear-gradient(to right top, $colour-smackdowndb 0%,$colour-header-dark 70%);
-  height: 150px;
   overflow: hidden;
 }
 
@@ -65,4 +68,18 @@
 .game-header.wwe-2k16{
   background-size: cover;
   background-image: url("../img/games/headers/wwe2k16-header.jpg");
+}
+
+.boxart-image {
+margin-right: 30px;
+width: 150px;
+}
+
+.game-title {
+  font-size: 2em;
+  color: white;
+}
+
+.game-release {
+  font-size: 0.5em;
 }

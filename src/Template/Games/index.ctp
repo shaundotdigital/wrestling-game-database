@@ -15,7 +15,7 @@
                 <div class="game-name">
                   <?= $this->Html->link(__(($game->game_name)), ['action' => 'view', $game->id]) ?>
                 </div>
-                <?= h($game->release_year) ?></td>
+                <?= h($game->release_year) ?>
                 <div class="game-platforms">
                   <?php foreach ($game->platforms as $platform): ?>
                   <a class="btn btn-platform <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $platform->platform_name))))?>" href="#">

@@ -5,16 +5,21 @@
 ?>
 <? $titleSymbols = array( '!', ':', '.' ,'\'');?>
 <div class="game-header <?=strtolower(str_replace(' ', '-', $game->game_name)) ?>">
-  <div class="container">
+  <div class="container game-view">
     <div class="game-boxart left">
       <div class="boxart-image">
         <?= $this->Html->image('games/boxart/' . strtolower(str_replace(' ', '-', (str_replace($titleSymbols, '', $game->game_name)))) . '-' . $game->release_year . '.jpg')?>
       </div>
     </div>
-    <div class="content-game-header">
+    <div class="content-game-view-header">
       <div class="game-info">
-        <div class="game-logo">
-          <?= $this->Html->image('games/logos/'.$game->game_img)?>
+        <span class="game-title"><?= $game->game_name ?> <span class="game-release">(<?= $game->release_year ?>)</span></span>
+        <div class="game-platforms">
+          <?php foreach ($game->platforms as $platform): ?>
+          <a class="btn btn-platform <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $platform->platform_name))))?>" href="#">
+            <?= str_replace('Nintendo ', '', (str_replace('Portable', 'P', (str_replace('PlayStation', 'PS1', (str_replace('PlayStation ', 'PS', $platform->platform_name))))))) ?>
+          </a>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
