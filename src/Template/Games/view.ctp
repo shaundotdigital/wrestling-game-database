@@ -40,15 +40,15 @@
                 <th scope="col"><?= __('Reaction Id') ?></th>
                 <th scope="col"><?= __('Game Id') ?></th>
             </tr>
-            <?php foreach ($game->wrestlers as $wrestler): ?>
+            <?php foreach ($game->wrestlers as $wrestlers): ?>
             <tr>
-                <td><?= $this->Html->link(__($wrestler->wrestler_name), ['action' => '../wrestlers/view', $wrestlers->id]) ?> </td>
-                <td><?= h($wrestler->overall) ?></td>
-                <td><?= h($wrestler->gender_id) ?></td>
-                <td><?= h($wrestler->height_id) ?></td>
-                <td><?= h($wrestler->weight_class_id) ?></td>
-                <td><?= h($wrestler->reaction_id) ?></td>
-                <td><?= h($wrestler->game_id) ?></td>
+                <td><?= $this->Html->link(__($wrestlers->wrestler_name), ['action' => '../wrestlers/view', $wrestlers->id]) ?> </td>
+                <td><?= h($wrestlers->overall) ?></td>
+                <td><?= h($wrestlers->gender_id) ?></td>
+                <td><?= h($wrestlers->height_id) ?></td>
+                <td><?= h($wrestlers->weight_class_id) ?></td>
+                <td><?= h($wrestlers->reaction_id) ?></td>
+                <td><?= h($wrestlers->game_id) ?></td>
             </tr>
             <?php endforeach; ?>
         </table>
