@@ -260,7 +260,13 @@
   background: url(../img/sddb/sddb-head.jpg) right $colour-default-dark;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 400px; //temp
+    margin-bottom: -1px;
+}
+
+.section-header-mask {
+  margin-bottom: -7px;
+  fill: white;
+  width: 100%;
 }
 
 .section-header .wrapper {
@@ -290,7 +296,7 @@ section.explore {
 
 
 .explore  .wrapper {
-    padding: 5.35em 0;
+    padding: 1.35em 0;
 }
 
 .explore h1 {
