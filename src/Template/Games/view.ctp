@@ -30,12 +30,26 @@
     <div class="related">
         <h4><?= __($game->game_name) ?> Roster</h4>
         <?php if (!empty($game->wrestlers)): ?>
-
+          <div class="table-responsive">
+            <table class="table">
+            <tr>
+                  <th scope="col"><?= $this->Paginator->sort('overall') ?></th>
+                  <!-- <th></th> -->
+                  <th scope="col"><?= __('Wrestler Name') ?></th>
+                  <th scope="col"><?= __('Weight Class') ?></th>
+                  <th scope="col"><?= __('Reaction') ?></th>
+             </tr>
             <?php foreach ($game->wrestlers as $wrestlers): ?>
-
+              <tr>
+                  <td><span class="label overall"><?= h($wrestlers->overall) ?></span></td>
+                  <!-- <td><?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $game->game_name)) . '/' . $wrestlers->pac . '-' . $game->release_year . '.png')?> -->
+                  <td><?= $this->Html->link(__($wrestlers->wrestler_name), ['action' => '../wrestlers/view', $wrestlers->id]) ?> </td>
+                  <td><?= h($wrestlers->weight_class->weight_class) ?></td>
+                  <td><?= h($wrestlers->reaction->crowd_reaction) ?></td>
+              </tr>
             <?php endforeach; ?>
-            </div>
-          </div>
+          </table>
+        </div>
         <?php endif; ?>
     </div>
   </div>
