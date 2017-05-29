@@ -83,3 +83,28 @@ width: 150px;
 .game-release {
   font-size: 0.5em;
 }
+
+.rTable {
+  	display: table;
+  	width: 100%;
+}
+.rTableRow {
+  	display: table-row;
+}
+
+.rTableHead {
+    display: table-cell;
+    font-size: 0.875rem;
+    color: #282936;
+    text-align: left;
+    border-bottom: 2px solid #467bfb;
+    font-weight: $bold;
+    padding: 0.5625rem 0.625rem;
+}
+
+.rTableCell {
+  	display: table-cell;
+  	padding: 3px 10px;
+  	border-bottom: 1px solid #ebebec;
+    padding: 0.5625rem 0.625rem;
+}

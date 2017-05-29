@@ -31,31 +31,44 @@
         <h4><?= __($game->game_name) ?> Roster</h4>
         <?php if (!empty($game->wrestlers)): ?>
           <div class="table-responsive">
-            <table class="table">
-            <tr>
-                  <th scope="col"><?= $this->Paginator->sort('overall') ?></th>
-                  <!-- <th></th> -->
-                  <th scope="col"><?= __('Wrestler Name') ?></th>
-                  <th scope="col"><?= __('Weight Class') ?></th>
-                  <th scope="col"><?= __('Reaction') ?></th>
-             </tr>
+            <div class="rTable">
+              <div class="rTableRow">
+                <div class="col rTableHead"><?= $this->Paginator->sort('overall') ?></div>
+                <div class="col rTableHead"><?= $this->Paginator->sort('Wrestler Name') ?></div>
+                <div class="col rTableHead"><?= $this->Paginator->sort('Weight Class') ?></div>
+                <div class="col rTableHead"><?= $this->Paginator->sort('Reaction') ?></div>
+              </div>
             <?php foreach ($game->wrestlers as $wrestlers): ?>
-              <tr>
-                  <td><span class="label overall"><?= h($wrestlers->overall) ?></span></td>
-                  <!-- <td><?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $game->game_name)) . '/' . $wrestlers->pac . '-' . $game->release_year . '.png')?> -->
-                  <td><?= $this->Html->link(__($wrestlers->wrestler_name), ['action' => '../wrestlers/view', $wrestlers->id]) ?> </td>
-                  <td><?= h($wrestlers->weight_class->weight_class) ?></td>
-                  <td><?= h($wrestlers->reaction->crowd_reaction) ?></td>
-              </tr>
+              <div class="rTableRow">
+                <div class="rTableCell"><span class="label overall"><?= h($wrestlers->overall) ?></span></div>
+                <div class="rTableCell"><?= $this->Html->link(__($wrestlers->wrestler_name), ['action' => '../wrestlers/view', $wrestlers->id]) ?></div>
+                <div class="rTableCell"><?= h($wrestlers->weight_class->weight_class) ?></div>
+                <div class="rTableCell"><?= h($wrestlers->reaction->crowd_reaction) ?></div>
+              </div>
             <?php endforeach; ?>
+            </div>
           </table>
         </div>
         <?php endif; ?>
     </div>
   </div>
+    <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->first('<< ' . __('first')) ?>
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+            <?= $this->Paginator->last(__('last') . ' >>') ?>
+        </ul>
+        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+    </div>
+
+
+
+
+
+
 </div>
-
-
 
            <!-- <tr>
               <th></th>
