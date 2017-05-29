@@ -36,7 +36,14 @@ class Game extends Entity
       return $this->_properties['release_year'];
     }
 
+    // protected function _getGameImg() {
+    //   return str_replace(' ', '', $this->game_name)  . '-' . $this->release_year . '.png';
+    // }
+
     protected function _getGameImg() {
-      return str_replace(' ', '', $this->game_name)  . '-' . $this->release_year . '.png';
+      $titleSymbols = array( '!', ':', '.' ,'\'');
+      return strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $this->game_name)))) . '-' . $this->release_year . '.png';
+
     }
+
 }
