@@ -2,6 +2,7 @@
 /**
 * @var \App\View\AppView $this
 */
+$titleSymbols = array( '!', ':', '.' ,'\'');
 ?>
 <!-- <div class="container">
 <?php
@@ -11,7 +12,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
 ?>
 </div> -->
 
-<div class="wrestler-header <?=strtolower(str_replace(' ', '-', $wrestler->game->game_name)) ?>">
+<div class="wrestler-header <?=strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $wrestler->game->game_name)))) ?>">
   <div class="container">
     <div class="wrestler-render left">
       <div class="wrestler-image">
