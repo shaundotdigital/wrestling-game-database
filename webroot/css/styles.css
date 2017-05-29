@@ -16773,6 +16773,23 @@ fieldset legend {
   text-align: left;
 }
 
+.input-group {
+  padding-top: 50px;
+}
+
+input.form-control {
+  height: 100%;
+}
+
+.autocomplete-item {
+  background: red;
+  width: 50%;
+}
+
+.autocomplete-overall {
+  font-size: 2rem;
+}
+
 .col-1 {
   display: inline-block;
   width: 100%;

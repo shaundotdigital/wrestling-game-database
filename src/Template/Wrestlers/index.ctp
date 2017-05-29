@@ -4,6 +4,17 @@
   */
 ?>
 <div class="container">
+
+      <div class="input-group">
+        <input type="text" class="form-control" name="wrestler-search" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+
 <div class="wrestlers index large-12 medium-8 columns content">
     <table cellpadding="0" cellspacing="0">
         <thead>
