@@ -10,14 +10,23 @@ use App\Controller\AppController;
  */
 class GamesController extends AppController
 {
-
     /**
      * Index method
      *
      * @return \Cake\Network\Response|null
      */
+
     public function index()
     {
+
+      $this->paginate = [
+      'contain' => ['Platforms'],
+      'limit' => 3,
+      'order' => [
+          'release_year' => 'desc'
+        ]
+      ];
+
         $games = $this->paginate($this->Games);
 
         $this->set(compact('games'));
@@ -52,8 +61,18 @@ class GamesController extends AppController
     public function view($id = null)
     {
         $game = $this->Games->get($id, [
-            'contain' => ['Abilities', 'Attributes', 'Platforms', 'Wrestlers']
+            'contain' => ['Abilities', 'Attributes', 'Platforms', 'Wrestlers', 'Wrestlers.WeightClasses', 'Wrestlers.Reactions']
         ]);
+
+        $this->paginate = [
+        'limit' => 3,
+        'order' => [
+            'overall' => 'desc'
+          ]
+        ];
+
+        $games = $this->paginate($this->Games);
+
 
         $this->set('game', $game);
         $this->set('_serialize', ['game']);

@@ -17160,6 +17160,110 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
   border-left: none;
 }
 
+.game img {
+  text-align: center;
+}
+
+.btn.btn-platform {
+  color: #fff;
+  background: #32343f;
+  border: none;
+  margin: 2px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn.btn-platform.playstation, .btn.btn-platform.playstation-3, .btn.btn-platform.playstation-portable {
+  background: #252525;
+}
+
+.btn.btn-platform.playstation-2 {
+  background: #205992;
+}
+
+.btn.btn-platform.playstation-4 {
+  background: #003484;
+}
+
+.btn.btn-platform.xbox {
+  background: #238922;
+}
+
+.btn.btn-platform.xbox-360, .btn.btn-platform.xbox-one {
+  background: #42D041;
+}
+
+.btn.btn-platform.wii {
+  background: #8E8E8E;
+  color: #fff;
+}
+
+.btn.btn-platform.pc {
+  background-color: #F3C300;
+  background-image: linear-gradient(left, #E8D100 0%, #DDA600 65%, #F3C300 30%, #FDBC00 100%);
+  background-image: -ms-linear-gradient(left, #E8D100 0%, #DDA600 65%, #F3C300 30%, #FDBC00 100%);
+  background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, #E8D100), color-stop(65%, #DDA600), color-stop(30%, #F3C300), color-stop(100%, #FDBC00));
+}
+
+.container.game-view {
+  margin: 10px auto;
+}
+
+.game-header {
+  background-size: 100%;
+  background: linear-gradient(to right top, #467bfb 0%, #181818 70%);
+  overflow: hidden;
+}
+
+.game-header.wwe-2k17 {
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k17-header.jpg");
+}
+
+.game-header.wwe-2k16 {
+  background-size: cover;
+  background-image: url("../img/games/headers/wwe2k16-header.jpg");
+}
+
+.boxart-image {
+  margin-right: 30px;
+  width: 150px;
+}
+
+.game-title {
+  font-size: 2em;
+  color: white;
+}
+
+.game-release {
+  font-size: 0.5em;
+}
+
+.rTable {
+  display: table;
+  width: 100%;
+}
+
+.rTableRow {
+  display: table-row;
+}
+
+.rTableHead {
+  display: table-cell;
+  font-size: 0.875rem;
+  color: #282936;
+  text-align: left;
+  border-bottom: 2px solid #467bfb;
+  font-weight: 600;
+  padding: 0.5625rem 0.625rem;
+}
+
+.rTableCell {
+  display: table-cell;
+  padding: 3px 10px;
+  border-bottom: 1px solid #ebebec;
+  padding: 0.5625rem 0.625rem;
+}
+
 .container {
   margin: 0 auto;
   box-sizing: border-box;

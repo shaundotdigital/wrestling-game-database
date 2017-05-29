@@ -130,7 +130,7 @@ $cakeDescription = 'SmackDown DB';?>
               <li><?= $this->Html->link(__('WWE 2K15'), ['action' => 'index']) ?></li>
               <li><?= $this->Html->link(__('WWE 2K14'), ['action' => 'index']) ?></li>
               <li role="separator" class="divider"></li>
-              <li><?= $this->Html->link(__('All Games'), ['action' => 'index']) ?></li>
+              <li><?= $this->Html->link(__('List All Games'), ['controller' => 'Games', 'action' => 'index']) ?> </li>
             </ul>
           </li>
         </ul>

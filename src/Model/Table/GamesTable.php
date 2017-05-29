@@ -57,6 +57,16 @@ class GamesTable extends Table
             'targetForeignKey' => 'platform_id',
             'joinTable' => 'games_platforms'
         ]);
+        $this->belongsTo('WeightClasses', [
+            'foreignKey' => 'game_id',
+            'targetForeignKey' => 'weight_class_id',
+            'joinType' => 'weight_classes'
+        ]);
+        $this->belongsTo('Reactions', [
+            'foreignKey' => 'game_id',
+            'targetForeignKey' => 'reaction_id',
+            'joinType' => 'reactions'
+        ]);
     }
 
     /**
