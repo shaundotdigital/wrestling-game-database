@@ -12,7 +12,7 @@ $(document).ready(function() {
   $("input[name=wrestler-search]").autocomplete({
     source: autoCompleteData
   }).data("ui-autocomplete")._renderItem = function(ul, item) {
-      return $("<li class='autocomplete-item'>").data("item.autocomplete", item).append("<a href='/wgdb/wrestlers/view/"  + item.id + "' >" + item.overall + ' <span class="autocomplete-wrestler">' + item.label  + '</span><span class="autocomplete-game right">' +  item.game_name + "</span></a>").appendTo(ul);
+      return $("<li class='autocomplete-item'>").data("item.autocomplete", item).append("<a href='/wgdb/wrestlers/view/"  + item.id + "' ><span class='label overall'>" + item.overall + "</span> <span class='autocomplete-wrestler'>" + item.label  + '</span><span class="autocomplete-game right">' +  item.game_name + "</span></a>").appendTo(ul);
   };
 
   console.log(autoCompleteData);

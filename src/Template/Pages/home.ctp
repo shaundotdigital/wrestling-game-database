@@ -56,8 +56,14 @@
         </svg>
 
 
-
-          <input type="text" name="wrestler-search" value="">
+        <div class="input-group">
+          <input type="text" class="form-control" name="wrestler-search" placeholder="Search">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
         <!-- <h1>Home</h1>
         <p>The SmackDown Database aims to assist the Wrestling Video game community by documenting information and building an ever growing source of data.</p> -->
       </div>
