@@ -1,9 +1,9 @@
 .side-nav li.heading {
     color: $colour-smackdowndb;
-    font-size: 0.875rem;
+    font-size: $base-font-size;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 0.4375rem 0.875rem;
+    padding: 0.4375rem $base-font-size;
 }
 
 #actions-sidebar {
@@ -70,7 +70,7 @@ table thead tr {
 
 table tr th {
     padding: 0.5625rem 0.625rem;
-    font-size: 0.875rem;
+    font-size: $base-font-size;
     color: #282936;
     text-align: left;
     border-bottom: 2px solid $colour-smackdowndb;
@@ -95,7 +95,7 @@ fieldset legend {
 
 .vertical-table th {
     padding: 0.5625rem 0.625rem;
-    font-size: 0.875rem;
+    font-size: $base-font-size;
     color: $colour-smackdowndb;
     border: none;
     text-align: left;
