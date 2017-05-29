@@ -33,7 +33,7 @@
           <div class="table-responsive">
             <div class="rTable">
               <div class="rTableRow">
-                <div class="col rTableHead"><?= $this->Paginator->sort('overall') ?></div>
+                <div class="col rTableHead"><?= $this->Paginator->sort('OVR') ?></div>
                 <div class="col rTableHead"><?= $this->Paginator->sort('Wrestler Name') ?></div>
                 <div class="col rTableHead"><?= $this->Paginator->sort('Weight Class') ?></div>
                 <div class="col rTableHead"><?= $this->Paginator->sort('Reaction') ?></div>
@@ -60,35 +60,6 @@
             <?= $this->Paginator->next(__('next') . ' >') ?>
             <?= $this->Paginator->last(__('last') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} of {{count}} total')]) ?></p>
     </div>
-
-
-
-
-
-
-</div>
-
-           <!-- <tr>
-              <th></th>
-                <th scope="col"><?= __('Wrestler Name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('overall') ?></th>
-                <th scope="col"><?= __('Gender Id') ?></th>
-                <th scope="col"><?= __('Height Id') ?></th>
-                <th scope="col"><?= __('Weight Class Id') ?></th>
-                <th scope="col"><?= __('Reaction Id') ?></th>
-                <th scope="col"><?= __('Game Id') ?></th>
-            </tr>
-            <?php foreach ($game->wrestlers as $wrestlers): ?>
-            <tr>
-                <td><?= $this->Html->image('renders/' . strtolower(str_replace(' ', '', $game->game_name)) . '/' . $wrestlers->pac . '-' . $game->release_year . '.png')?>
-                <td><?= $this->Html->link(__($wrestlers->wrestler_name), ['action' => '../wrestlers/view', $wrestlers->id]) ?> </td>
-                <td><?= h($wrestlers->overall) ?></td>
-                <td><?= h($wrestlers->gender_id) ?></td>
-                <td><?= h($wrestlers->height_id) ?></td>
-                <td><?= h($wrestlers->weight_class_id) ?></td>
-                <td><?= h($wrestlers->reaction_id) ?></td>
-                <td><?= h($wrestlers->game_id) ?></td>
-            </tr>
-            <?php endforeach; ?> -->
+  </div>
