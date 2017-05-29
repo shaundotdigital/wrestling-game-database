@@ -24,7 +24,7 @@ class GamesController extends AppController
       'limit' => 3,
       'order' => [
           'release_year' => 'desc'
-]
+        ]
       ];
 
         $games = $this->paginate($this->Games);
@@ -63,6 +63,13 @@ class GamesController extends AppController
         $game = $this->Games->get($id, [
             'contain' => ['Abilities', 'Attributes', 'Platforms', 'Wrestlers', 'Wrestlers.WeightClasses', 'Wrestlers.Reactions']
         ]);
+
+        $this->paginate = [
+        'limit' => 3,
+        'order' => [
+            'overall' => 'desc'
+          ]
+        ];
 
         $games = $this->paginate($this->Games);
 
