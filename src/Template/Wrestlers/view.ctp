@@ -52,6 +52,15 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
   </div>
 </div>
 <div class="container">
+
+  <div class="input-group">
+    <input type="text" class="form-control" name="wrestler-search" placeholder="Search">
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
   <div class="content">
     <?php if (!empty($wrestler->attributes_points)): ?>
       <div class="wrestler large-8 columns">

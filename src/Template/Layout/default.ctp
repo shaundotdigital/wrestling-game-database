@@ -42,7 +42,7 @@ $cakeDescription = 'SmackDown DB';?>
 
 <script type="text/javascript">
   var data = <?php echo json_encode($wrestlers);?>;
-  console.log(data);
+  // console.log(data);
 </script>
 
 <body>
