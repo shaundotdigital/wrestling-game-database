@@ -33,10 +33,10 @@
           <div class="table-responsive">
             <div class="table">
               <div class="table-row">
-                <div class="col table-head"><?= $this->Paginator->sort('OVR') ?></div>
-                <div class="col table-head"><?= $this->Paginator->sort('Wrestler Name') ?></div>
-                <div class="col table-head"><?= $this->Paginator->sort('Weight Class') ?></div>
-                <div class="col table-head"><?= $this->Paginator->sort('Reaction') ?></div>
+                <div class="table-head"><?= $this->Paginator->sort('OVR') ?></div>
+                <div class="table-head"><?= $this->Paginator->sort('Wrestler Name') ?></div>
+                <div class="table-head"><?= $this->Paginator->sort('Weight Class') ?></div>
+                <div class="table-head"><?= $this->Paginator->sort('Reaction') ?></div>
               </div>
             <?php foreach ($game->wrestlers as $wrestlers): ?>
               <div class="table-row">
