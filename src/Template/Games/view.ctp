@@ -26,17 +26,17 @@
   </div>
 </div>
 <div class="container">
-  <div class="games view large-12 columns content">
+  <div class="games view large-8 columns content">
     <div class="related">
         <h4><?= __($game->game_name) ?> Roster</h4>
         <?php if (!empty($game->wrestlers)): ?>
           <div class="table-responsive">
             <div class="table">
               <div class="table-row">
-                <div class="table-head"><?= $this->Paginator->sort('OVR') ?></div>
-                <div class="table-head"><?= $this->Paginator->sort('Wrestler Name') ?></div>
-                <div class="table-head"><?= $this->Paginator->sort('Weight Class') ?></div>
-                <div class="table-head"><?= $this->Paginator->sort('Reaction') ?></div>
+                <div class="table-head">OVR</div>
+                <div class="table-head">Wrestler Name</div>
+                <div class="table-head">Weight Class</div>
+                <div class="table-head">Reaction</div>
               </div>
             <?php foreach ($game->wrestlers as $wrestlers): ?>
               <div class="table-row">
@@ -52,22 +52,25 @@
         <?php endif; ?>
     </div>
   </div>
-
-<?php foreach ($top as $wrestler): ?>
-  <div>
-    <?= $wrestler->wrestler_name ?>
-  </div>
-<?php endforeach; ?>
-
-
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} of {{count}} total')]) ?></p>
+  <div class="games view small-4 columns content">
+    <div class="related">
+        <h4><?= __($game->game_name) ?> Top Five</h4>
+        <?php if (!empty($game->wrestlers)): ?>
+    <div class="table-responsive">
+      <div class="table">
+        <div class="table-row">
+          <div class="table-head">OVR</div>
+          <div class="table-head">Wrestler Name</div>
+        </div>
+    <?php foreach ($top as $wrestler): ?>
+        <div class="table-row">
+          <div class="table-cell"><span class="label overall"><?= h($wrestler->overall) ?></span></div>
+          <div class="table-cell"><?= $this->Html->link(__($wrestler->wrestler_name), ['action' => '../wrestlers/view/', $wrestler->id]) ?></div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </table>
+</div>
+<?php endif; ?>
     </div>
   </div>

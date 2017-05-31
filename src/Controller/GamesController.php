@@ -64,7 +64,7 @@ class GamesController extends AppController
             'contain' => ['Abilities', 'Attributes', 'Platforms', 'Wrestlers', 'Wrestlers.WeightClasses', 'Wrestlers.Reactions']
         ]);
 
-        $top = $this->Games->Wrestlers->find('all')->order(['Wrestlers.overall' => 'DESC'])->limit(3);
+        $top = $this->Games->Wrestlers->find('all')->order(['Wrestlers.overall' => 'DESC'])->limit(5);
 
 
         $this->set(['game' => $game, 'top' => $top]);
