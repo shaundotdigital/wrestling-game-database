@@ -12,10 +12,12 @@ $(document).ready(function() {
         url: "/wgdb/wrestlers/search.json",
         data: { query: query },
         success: function(data) {
+          console.log(data);
           $('#search-results').empty();
           $.each(data.wrestlers, function(index, wrestler) {
-            // console.log(wrestler.first_name);
-            $('#search-results').append("<p>" +wrestler.first_name+ ' ' +wrestler.last_name+ ' ' +wrestler.game_id+ ' ' +wrestler.overall+ "</p>");
+
+             $('#search-results').append("<p>" +wrestler.wrestler_name+ ' ' +wrestler.game.game_name+ "</p>");
+            // $('#search-results').append("<p>" +wrestler.first_name+ ' ' +wrestler.last_name+ ' ' +wrestler.game_id+ ' ' +wrestler.overall+ "</p>");
           });
         }
       });

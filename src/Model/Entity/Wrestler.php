@@ -50,6 +50,8 @@ class Wrestler extends Entity
         'id' => false
     ];
 
+    protected $_virtual = ['wrestler_name'];
+
 
 protected function _getPacNumber() {
 

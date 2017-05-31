@@ -64,18 +64,11 @@ class GamesController extends AppController
             'contain' => ['Abilities', 'Attributes', 'Platforms', 'Wrestlers', 'Wrestlers.WeightClasses', 'Wrestlers.Reactions']
         ]);
 
-        $this->paginate = [
-        'limit' => 3,
-        'order' => [
-            'overall' => 'desc'
-          ]
-        ];
-
-        $games = $this->paginate($this->Games);
+        $top = $this->Games->Wrestlers->find('all')->order(['Wrestlers.overall' => 'DESC'])->limit(3);
 
 
-        $this->set('game', $game);
-        $this->set('_serialize', ['game']);
+        $this->set(['game' => $game, 'top' => $top]);
+        // $this->set('_serialize', ['game']);
     }
 
     /**

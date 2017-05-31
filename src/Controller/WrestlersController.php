@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Log\Log;
 
 /**
  * Wrestlers Controller
@@ -165,8 +166,20 @@ class WrestlersController extends AppController
 
 
     public function search() {
-      $query = $this->request->getQuery('query');
-      $wrestlers = $this->Wrestlers->find('all')->where(['last_name LIKE' => '%'.$query.'%']);
+      $search_term = $this->request->getQuery('query');
+
+      $query = $this->Wrestlers->find()->where(function ($exp, $query) use ($search_term) {
+         $conc = $query->func()->concat([
+            'first_name' => 'identifier', ' ',
+            'last_name' => 'identifier'
+         ]);
+
+         return $exp->like($conc, "%$search_term%");
+       });
+       $wrestlers = $query->contain('Games')->all();
+
+// ->where(['wrestler_name LIKE' => '%'.$query.'%'])->orWhere(['first_name LIKE' => '%'.$query.'%']);
+
       $this->set('wrestlers', $wrestlers);
     }
 

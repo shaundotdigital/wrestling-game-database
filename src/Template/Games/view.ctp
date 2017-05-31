@@ -52,6 +52,14 @@
         <?php endif; ?>
     </div>
   </div>
+
+<?php foreach ($top as $wrestler): ?>
+  <div>
+    <?= $wrestler->wrestler_name ?>
+  </div>
+<?php endforeach; ?>
+
+
     <div class="paginator">
         <ul class="pagination">
             <?= $this->Paginator->first('<< ' . __('first')) ?>
