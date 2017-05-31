@@ -16675,6 +16675,10 @@ section.explore {
   fill: #467bfb;
 }
 
+section.history {
+  background: red;
+}
+
 .side-nav li.heading {
   color: #467bfb;
   font-size: 0.875rem;
