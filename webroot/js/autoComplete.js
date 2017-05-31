@@ -1,20 +1,25 @@
 $(document).ready(function() {
 
-  var autoCompleteData = data.map(function(wrestler){
-    return {
-      label: wrestler.first_name ? wrestler.first_name + ' ' + wrestler.last_name : wrestler.last_name,
-      game_name: wrestler.game.game_name,
-      overall: wrestler.overall,
-      id: wrestler.id
+  $("#search").on('keyup', function(){
+    var query = $(this).val();
+    $('#search-results').empty();
+
+    if(query.length == 0) {
+      return;
     }
-  });
 
-  $("input[name=wrestler-search]").autocomplete({
-    source: autoCompleteData
-  }).data("ui-autocomplete")._renderItem = function(ul, item) {
-      return $("<li class='autocomplete-item'>").data("item.autocomplete", item).append("<a href='/wgdb/wrestlers/view/"  + item.id + "' ><span class='label overall'>" + item.overall + "</span> <span class='autocomplete-wrestler'>" + item.label  + '</span><span class="autocomplete-game right">' +  item.game_name + "</span></a>").appendTo(ul);
-  };
+    $.get({
+        url: "/wgdb/wrestlers/search.json",
+        data: { query: query },
+        success: function(data) {
+          $('#search-results').empty();
+          $.each(data.wrestlers, function(index, wrestler) {
+            console.log(wrestler.first_name);
+            $('#search-results').append('<p>'+wrestler.first_name+'<p>');
+          });
 
-  console.log(autoCompleteData);
 
+          }
+        });
+    });
   });

@@ -40,11 +40,6 @@ $cakeDescription = 'SmackDown DB';?>
     <?= $this->fetch('script') ?>
 </head>
 
-<script type="text/javascript">
-  var data = <?php echo json_encode($wrestlers);?>;
-  // console.log(data);
-</script>
-
 <body>
 <div class="sub-bar" data-subbar role="sub-navigation">
   <div class="container">

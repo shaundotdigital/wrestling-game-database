@@ -55,15 +55,8 @@
             c3.7-2.9,5.5-7.4,5.5-13.4c0-6.5-1.6-11.4-4.8-14.7c-3.2-3.3-8.3-5-15.5-5H1517.1z"/></g>
         </svg>
 
+  <?= $this->element('Search/wrestlers') ?>
 
-        <div class="input-group">
-          <input type="text" class="form-control" name="wrestler-search" placeholder="Search">
-          <div class="input-group-btn">
-            <button class="btn btn-default" type="submit">
-              <i class="fa fa-search"></i>
-            </button>
-          </div>
-        </div>
         <!-- <h1>Home</h1>
         <p>The SmackDown Database aims to assist the Wrestling Video game community by documenting information and building an ever growing source of data.</p> -->
       </div>
