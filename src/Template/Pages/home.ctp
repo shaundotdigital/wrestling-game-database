@@ -77,14 +77,14 @@
         <h1>Explore Games</h1>
         <p>The SmackDown Database gives you access to view a range of data associated to a selected game.</p>
         <div class="explore-games-images">
-          <?= $this->Html->image('games/poster-art/wwe-2k17-2016.jpg')?>
+          <?= $this->Html->image('web/explore-content-games.png')?>
         </div>
       </div>
       <div class="explore-content col-2 right" itemprop="explore wrestlers">
         <h1>Search Wrestlers</h1>
         <p>Easily search &amp; view wrestler profiles from across a wide range of games.</p>
         <div class="explore-wrestlers-images">
-          <?= $this->Html->image('games/poster-art/wwe-2k17-2016.jpg')?>
+          <?= $this->Html->image('web/explore-content-wrestlers.png')?>
         </div>
       </div>
     </div>

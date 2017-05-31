@@ -1958,7 +1958,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1410px;
+    width: 1400px;
   }
 }
 
@@ -16778,8 +16778,8 @@ fieldset legend {
 }
 
 .input-group {
-  padding-top: 50px;
   text-transform: none;
+  width: 30rem;
 }
 
 input.form-control {
@@ -16788,7 +16788,10 @@ input.form-control {
 
 #search-results {
   background: white;
-  width: 50%;
+  width: 30rem;
+  height: 10rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
   list-style-type: none;
   border-bottom: 1px solid #d8d8d8;
   border-left: 1px solid #d8d8d8;
