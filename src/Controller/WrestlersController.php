@@ -162,4 +162,13 @@ class WrestlersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+
+    public function search() {
+      $query = $this->request->getQuery('query');
+      $wrestlers = $this->Wrestlers->find('all')->where(['first_name LIKE' => '%'.$query.'%']);
+      $this->set('wrestlers', $wrestlers);
+    }
+
+
 }

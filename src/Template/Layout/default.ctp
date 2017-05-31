@@ -30,13 +30,16 @@ $cakeDescription = 'SmackDown DB';?>
     <?= $this->Html->css('font-awesome'); ?>
 
     <?= $this->Html->script('jQuery.js') ?>
-    <?= $this->Html->script('scripts.js') ?>
     <?= $this->Html->script('bootstrap.min.js') ?>
+    <?= $this->Html->script('scripts.js') ?>
+    <?= $this->Html->script('autoComplete.js') ?>
+    <?= $this->Html->script('https://code.jquery.com/ui/1.12.1/jquery-ui.min.js') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
+
 <body>
 <div class="sub-bar" data-subbar role="sub-navigation">
   <div class="container">
@@ -131,9 +134,6 @@ $cakeDescription = 'SmackDown DB';?>
               <li><?= $this->Html->link(__('List All Games'), ['controller' => 'Games', 'action' => 'index']) ?> </li>
             </ul>
           </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
         </ul>
       </div>
     </div>

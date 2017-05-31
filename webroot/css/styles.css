@@ -1958,7 +1958,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1400px;
+    width: 1410px;
   }
 }
 
@@ -16771,6 +16771,28 @@ fieldset legend {
   color: #467bfb;
   border: none;
   text-align: left;
+}
+
+.input-group {
+  padding-top: 50px;
+}
+
+input.form-control {
+  height: 100%;
+}
+
+.autocomplete-item {
+  background: white;
+  width: 50%;
+  list-style-type: none;
+  border-bottom: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  padding: 0.5625rem 0.625rem;
+}
+
+.autocomplete-overall {
+  font-size: 2rem;
 }
 
 .col-1 {

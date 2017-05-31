@@ -4,6 +4,9 @@
   */
 ?>
 <div class="container">
+
+<?= $this->element('Search/wrestlers') ?>
+
 <div class="wrestlers index large-12 medium-8 columns content">
     <table cellpadding="0" cellspacing="0">
         <thead>
