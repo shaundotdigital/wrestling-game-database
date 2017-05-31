@@ -16640,7 +16640,6 @@ table td {
 
 section.explore {
   justify-content: space-around;
-  margin-left: 5.3030303%;
 }
 
 .explore .wrapper {
@@ -16677,6 +16676,10 @@ section.explore {
 
 section.history {
   background: red;
+}
+
+.history-content img {
+  width: 100%;
 }
 
 .side-nav li.heading {

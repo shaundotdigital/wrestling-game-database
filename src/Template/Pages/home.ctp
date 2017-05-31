@@ -67,11 +67,9 @@
     	<path class="st0" d="M960.7,58H1920V0.2C1414,48,1372.7,58,960.7,58z"/>
     </g>
   </svg>
-
-
 </section>
-<div class="container">
-  <section class="explore">
+<section class="explore">
+  <div class="container">
     <div class="wrapper">
       <div class="explore-content col-2 left" itemprop="explore games">
         <h1>Explore Games</h1>
@@ -88,7 +86,16 @@
         </div>
       </div>
     </div>
-  </section>
-  <section class="history">
-  </section>
-</div>
+  </div>
+</section>
+<section class="history">
+  <div class="container-fluid">
+      <div class="history-content col-2 left">
+        <h1>Explore Games</h1>
+        <p>The SmackDown Database gives you access to view a range of data associated to a selected game.</p>
+      </div>
+      <div class="history-content col-2 right">
+          <?= $this->Html->image('web/history.jpg')?>
+      </div>
+  </div>
+</section>
