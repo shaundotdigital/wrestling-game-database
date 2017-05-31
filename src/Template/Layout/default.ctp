@@ -57,7 +57,7 @@ $cakeDescription = 'SmackDown DB';?>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="http://smackdowndb.com">
+        <a class="navbar-brand" href="/wgdb">
           <svg class="smackdown-db-logo" version="1.1" x="0px" y="0px" viewBox="0 0 1766.4 799.8">
           <g class="smackdown-db-outline">
             <path d="M1687.1,9.1H79.3C42,9.1,11.8,39.3,11.8,76.6v646.6c0,37.3,30.2,67.5,67.5,67.5h1298.3
