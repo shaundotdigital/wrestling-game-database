@@ -166,7 +166,7 @@ class WrestlersController extends AppController
 
     public function search() {
       $query = $this->request->getQuery('query');
-      $wrestlers = $this->Wrestlers->find('all')->where(['first_name LIKE' => '%'.$query.'%']);
+      $wrestlers = $this->Wrestlers->find('all')->where(['last_name LIKE' => '%'.$query.'%']);
       $this->set('wrestlers', $wrestlers);
     }
 

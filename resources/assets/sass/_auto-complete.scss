@@ -1,20 +1,23 @@
 .input-group {
 
   padding-top: 50px;
+  text-transform: none;
 }
 
 input.form-control {
   height:100%;
 }
 
-.autocomplete-item {
+#search-results {
   background: white;
   width:50%;
   list-style-type: none;
   border-bottom: 1px solid #d8d8d8;
   border-left: 1px solid #d8d8d8;
   border-right: 1px solid #d8d8d8;
-    padding: 0.5625rem 0.625rem;
+  // padding: 0.5625rem 0.625rem;
+  color: black;
+  position: absolute;
 }
 
 .autocomplete-overall {
@@ -23,4 +26,11 @@ input.form-control {
 
 .autocomplete-game {
 
+}
+
+.section-masthead #search-results p {
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    margin: 0.5rem 0;
+    font-weight: 300;
 }
