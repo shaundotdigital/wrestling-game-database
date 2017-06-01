@@ -16,12 +16,8 @@ $(document).ready(function() {
           $('#search-results').empty();
           $.each(data.wrestlers, function(index, wrestler) {
              $('#search-results').append("<li><a href='/wgdb/wrestlers/view/" +wrestler.id+"'><span class='label attribute'>"+wrestler.overall+"</span> <span class='wrestler-name'>"+wrestler.wrestler_name+"</span><span class='game-name right'>"+wrestler.game.game_name+ "</span></a></li>");
-            // $('#search-results').append("<p>" +wrestler.first_name+ ' ' +wrestler.last_name+ ' ' +wrestler.game_id+ ' ' +wrestler.overall+ "</p>");
           });
         }
       });
     });
   });
-
-
-//("<a href='/wgdb/wrestlers/view/" +wrestler.id+"'></a>");
