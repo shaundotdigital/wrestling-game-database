@@ -17,7 +17,7 @@ input.form-control {
 
 #search-results {
   width: 30rem;
-  height: 10rem;
+  height: 25rem;
   color: black;
   position: absolute;
   margin: 0;
@@ -41,4 +41,17 @@ input.form-control {
     font-size: 0.875rem;
     line-height: 1.75rem;
     font-weight: $regular;
+}
+
+
+#search-results a :hover {
+}
+
+
+#search-results li :hover {
+
+    font-weight: $bold;    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
 }

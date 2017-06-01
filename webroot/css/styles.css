@@ -16790,7 +16790,7 @@ input.form-control {
 
 #search-results {
   width: 30rem;
-  height: 10rem;
+  height: 25rem;
   color: black;
   position: absolute;
   margin: 0;
@@ -16808,6 +16808,11 @@ input.form-control {
   font-size: 0.875rem;
   line-height: 1.75rem;
   font-weight: 400;
+}
+
+#search-results li :hover {
+  font-weight: 700;
+  transition: none;
 }
 
 .col-1 {
