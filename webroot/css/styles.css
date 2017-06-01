@@ -1958,7 +1958,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1400px;
+    width: 1410px;
   }
 }
 
@@ -16782,11 +16782,18 @@ fieldset legend {
 
 .input-group {
   text-transform: none;
-  width: 30rem;
+  width: 100%;
 }
 
 input.form-control {
   height: 100%;
+  text-align: center;
+  font-size: 1em;
+}
+
+.search-wrapper {
+  max-width: 30rem;
+  margin: 0 auto;
 }
 
 #search-results {

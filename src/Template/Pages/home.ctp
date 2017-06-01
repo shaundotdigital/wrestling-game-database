@@ -57,7 +57,11 @@
         <!-- <h1>Home</h1>
         <p>The SmackDown Database aims to assist the Wrestling Video game community by documenting information and building an ever growing source of data.</p> -->
       </div>
+
+
+        <div class="search-wrapper">
       <?= $this->element('Search/wrestlers') ?>
+      </div>
     </div>
   </div>
   <svg class="section-header-mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

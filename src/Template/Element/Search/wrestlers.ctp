@@ -1,10 +1,4 @@
 <div class="input-group ">
-  <input id="search" type="text" class="wrestler-search form-control" placeholder="Search for a Wrestler" autocomplete="off">
-  <div class="input-group-btn">
-    <button class="btn btn-default" type="submit">
-      <i class="fa fa-search"></i>
-    </button>
-  </div>
-
-  </div>
+  <input id="search" class="wrestler-search form-control icon" type="text" placeholder="Search for a wrestler">
+</div>
 <div id="search-results"></div>
