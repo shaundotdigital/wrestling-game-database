@@ -1958,7 +1958,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1410px;
+    width: 1400px;
   }
 }
 
@@ -16672,14 +16672,6 @@ section.explore {
 
 .section-masthead .smackdown-db-outline, .section-masthead .smackdown-db-down {
   fill: #467bfb;
-}
-
-section.history {
-  background: red;
-}
-
-.history-content img {
-  width: 100%;
 }
 
 .side-nav li.heading {
