@@ -126,16 +126,11 @@ $cakeDescription = 'SmackDown DB';?>
             </ul>
           </li>
         </ul>
-        <div class="col-lg-4 right">
+        <div class="navbar-search right">
           <div class="search-wrapper">
-          <div class="input-group ">
-            <input class="search wrestler-search form-control icon" type="text" placeholder="Search for a wrestler">
-          </div>
-          <div class="wrestler-results">
-            <ul class="search-results">
-            </ul>
-          </div>
-        </div></div>
+        <?= $this->element('Search/wrestlers') ?>
+        </div>
+      </div>
       </div>
     </div>
   </nav>

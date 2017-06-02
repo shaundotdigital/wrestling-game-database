@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     $results.empty();
 
-    if(query.length < 2) {
+    if(query.length < 1) {
       return;
     }
 

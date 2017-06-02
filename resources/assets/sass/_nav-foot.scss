@@ -6,9 +6,9 @@
 }
 
 .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 24px;
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
@@ -28,12 +28,16 @@
 }
 
 .navbar-brand {
-  padding: 0px;
+  padding:5px;
 }
 .navbar-brand>svg {
   height: 100%;
-  margin: 10px;
+  margin: 7px;
   width: auto;
+}
+
+.navbar-search {
+  width: 30rem;
 }
 
 
