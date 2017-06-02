@@ -1,5 +1,76 @@
 //wrestlersProfile
 
+
+.smackdowndb-head {
+    margin-top: 0;
+    padding-bottom: 0;
+    background-image: none;
+    background-color: $colour-default-dark;
+    color: white;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.section-header.smackdowndb-head  {
+  background: url(../img/sddb/sddb-head.jpg) right $colour-default-dark;
+  background-size: cover;
+  background-repeat: no-repeat;
+    margin-bottom: -1px;
+}
+
+.section-header-mask {
+  margin-bottom: -7px;
+  fill: white;
+  width: 100%;
+}
+
+.section-header .wrapper {
+    padding: 5.35em 0;
+}
+
+.section-masthead {
+    margin: 0 auto 3.5rem;
+    text-align: center;
+}
+
+.section-masthead h1 {
+    margin-top: 2rem;
+    font-weight: $bold;
+    color: $colour-smackdowndb;
+}
+.section-masthead p {
+    font-size: $base-font-size;
+    line-height: 1.75rem;
+    margin: 1.5rem 0;
+    font-weight: $light;
+}
+
+
+.wrestler-profile-image img {
+  height: 150%;
+  object-fit: cover;
+}
+
+.wrestler-profile {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.wrestler-profile-image {
+  height: 30px;
+  background-size: cover;
+  background: #232828;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: $colour-default-grey;
+}
+
+
+.wrestlers .table-head, .wrestlers .table-head a{
+  color: white;
+}
+
+
 .label {
   color: #ffffff;
   font-weight: $regular;
