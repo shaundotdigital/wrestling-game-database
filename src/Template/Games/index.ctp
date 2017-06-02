@@ -3,11 +3,11 @@
   * @var \App\View\AppView $this
   */
 ?>
-<section class="section-header smackdowndb-head">
+<section class="section-header games-head">
   <div class="container">
     <div class="wrapper">
       <div class="section-masthead" itemprop="description">
-        <h1>Home</h1>
+        <h1>Game Library</h1>
         <p>The SmackDown Database aims to assist the Wrestling Video game community by documenting information and building an ever growing source of data.</p>
       </div>
 
@@ -31,9 +31,11 @@
               <div class="content-game panel">
                 <?= $this->Html->image('games/poster-art/' . strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name)))) . '-' . $game->release_year . '.jpg', ['url' => ['controller' => 'Games', 'action' => 'view', $game->id]])?>
                 <div class="game-name">
-                  <?= $this->Html->link(__(($game->game_name)), ['controller' => 'Games', 'action' => 'view', $game->id]) ?>
+                  <h3><?= $this->Html->link(__(($game->game_name)), ['controller' => 'Games', 'action' => 'view', $game->id]) ?></h3>
                 </div>
+                <div class="game-year">
                 Release Year: <?= h($game->release_year) ?>
+                </div>
                 <div class="game-platforms">
                   <?php foreach ($game->platforms as $platform): ?>
                   <div class="btn btn-platform <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $platform->platform_name))))?>" href="#">

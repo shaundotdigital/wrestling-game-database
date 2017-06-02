@@ -1,7 +1,7 @@
 //wrestlersProfile
 
 
-.smackdowndb-head {
+.wrestlers-head {
     margin-top: 0;
     padding-bottom: 0;
     background-image: none;
@@ -11,7 +11,7 @@
     text-align: left;
 }
 
-.section-header.smackdowndb-head  {
+.section-header.wrestlers-head   {
   background: url(../img/sddb/sddb-head.jpg) right $colour-default-dark;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,12 +25,7 @@
 }
 
 .section-header .wrapper {
-    padding: 5.35em 0;
-}
-
-.section-masthead {
-    margin: 0 auto 3.5rem;
-    text-align: center;
+    padding: 0;
 }
 
 .section-masthead h1 {
@@ -66,7 +61,8 @@
 }
 
 
-.wrestlers .table-head, .wrestlers .table-head a{
+.wrestlers .table-head, .wrestlers .table-head a,
+.games .table-head, .games .table-head a{
   color: white;
 }
 

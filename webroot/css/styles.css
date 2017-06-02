@@ -16621,7 +16621,7 @@ table td {
 }
 
 .section-masthead {
-  margin: 0 auto 3.5rem;
+  margin: 3.5rem auto;
   text-align: center;
 }
 
@@ -17029,7 +17029,7 @@ footer .fa {
   fill: #fff;
 }
 
-.smackdowndb-head {
+.wrestlers-head {
   margin-top: 0;
   padding-bottom: 0;
   background-image: none;
@@ -17039,7 +17039,7 @@ footer .fa {
   text-align: left;
 }
 
-.section-header.smackdowndb-head {
+.section-header.wrestlers-head {
   background: url(../img/sddb/sddb-head.jpg) right #494b5b;
   background-size: cover;
   background-repeat: no-repeat;
@@ -17053,12 +17053,7 @@ footer .fa {
 }
 
 .section-header .wrapper {
-  padding: 5.35em 0;
-}
-
-.section-masthead {
-  margin: 0 auto 3.5rem;
-  text-align: center;
+  padding: 0;
 }
 
 .section-masthead h1 {
@@ -17094,7 +17089,8 @@ footer .fa {
   background-color: #dcdcdc;
 }
 
-.wrestlers .table-head, .wrestlers .table-head a {
+.wrestlers .table-head, .wrestlers .table-head a,
+.games .table-head, .games .table-head a {
   color: white;
 }
 
@@ -17418,14 +17414,60 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
   border-left: none;
 }
 
+.games-head {
+  margin-top: 0;
+  padding-bottom: 0;
+  background-image: none;
+  background-color: #494b5b;
+  color: white;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.section-header.games-head {
+  background: url(../img/sddb/sddb-head.jpg) right #494b5b;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: -1px;
+}
+
+.section-header-mask {
+  margin-bottom: -7px;
+  fill: white;
+  width: 100%;
+}
+
+.section-header .wrapper {
+  padding: 0;
+}
+
+.section-masthead h1 {
+  margin-top: 2rem;
+  font-weight: 700;
+  color: #467bfb;
+}
+
+.section-masthead p {
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  margin: 1.5rem 0;
+  font-weight: 300;
+}
+
 .game img {
   text-align: center;
+  border-radius: 0.3em;
 }
 
 .game-name h3 {
-  color: #a2a2a2;
   padding-bottom: 0;
   margin-bottom: 0;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.game-year {
+  color: #9c9c9c;
 }
 
 .btn.btn-platform {
@@ -17611,6 +17653,17 @@ h3 {
   background-color: transparent;
   padding: 0;
   color: #494b5b;
+}
+
+.empty-content {
+  text-align: center;
+  vertical-align: middle;
+  margin: 20px !important;
+}
+
+.empty-content h3 {
+  color: #bfbfbf;
+  font-weight: 300;
 }
 
 .item {

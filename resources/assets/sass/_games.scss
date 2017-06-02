@@ -1,12 +1,59 @@
+
+.games-head {
+    margin-top: 0;
+    padding-bottom: 0;
+    background-image: none;
+    background-color: $colour-default-dark;
+    color: white;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.section-header.games-head   {
+  background: url(../img/sddb/sddb-head.jpg) right $colour-default-dark;
+  background-size: cover;
+  background-repeat: no-repeat;
+    margin-bottom: -1px;
+}
+
+.section-header-mask {
+  margin-bottom: -7px;
+  fill: white;
+  width: 100%;
+}
+
+.section-header .wrapper {
+    padding: 0;
+}
+
+.section-masthead h1 {
+    margin-top: 2rem;
+    font-weight: $bold;
+    color: $colour-smackdowndb;
+}
+.section-masthead p {
+    font-size: $base-font-size;
+    line-height: 1.75rem;
+    margin: 1.5rem 0;
+    font-weight: $light;
+}
+
+
 .game img {
  // width: 50%;
  text-align: center;
+ border-radius: 0.3em;
 }
 
 .game-name h3 {
-    color: #a2a2a2;
     padding-bottom: 0;
     margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+.game-year {
+  color: darken($colour-default-grey, 25%);
 }
 
 

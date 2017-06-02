@@ -27,15 +27,23 @@
   </div>
 </div>
 <div class="container">
+<?php if (empty($game->wrestlers)): ?>
+  <div class="games view large-12 columns content">
+    <div class="panel">
+      <div class="empty-content">
+        <h3>Sorry, there is no content associated with this item.</h3>
+      </div>
+    </div>
+  </div>
+  <?php else: ?>
   <div class="games view large-8 columns content">
     <div class="related">
         <h4><?= __($game->game_name) ?> Roster</h4>
-        <?php if (!empty($game->wrestlers)): ?>
           <div class="table-responsive">
-            <div class="table">
-              <div class="table-row">
+            <div class="table panel">
+              <div class="table-row panel-heading panel-title">
                 <div class="table-head">OVR</div>
-                <div class="table-head">Wrestler Name</div>
+                <div class="table-head">Name</div>
                 <div class="table-head">Weight Class</div>
                 <div class="table-head">Reaction</div>
               </div>
@@ -50,16 +58,14 @@
             </div>
           </table>
         </div>
-        <?php endif; ?>
     </div>
   </div>
   <div class="games view small-4 columns content">
     <div class="related">
         <h4><?= __($game->game_name) ?> Top Five</h4>
-        <?php if (!empty($game->wrestlers)): ?>
     <div class="table-responsive">
-      <div class="table">
-        <div class="table-row">
+      <div class="table panel">
+        <div class="table-row panel-heading panel-title">
           <div class="table-head">OVR</div>
           <div class="table-head">Wrestler Name</div>
         </div>
@@ -72,7 +78,7 @@
     </div>
   </table>
 </div>
-<?php endif; ?>
     </div>
   </div>
+  <?php endif; ?>
 </div>
