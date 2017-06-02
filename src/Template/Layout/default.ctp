@@ -123,12 +123,11 @@ $cakeDescription = 'SmackDown DB';?>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><?= $this->Html->link(__('WWE 2K17 Overview'), ['action' => 'index']) ?></li>
-              <li><?= $this->Html->link(__('WWE 2K17 Overview'), ['action' => 'index']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K17'), ['action' => 'view/18']) ?></li>
               <li role="separator" class="divider"></li>
-              <li><?= $this->Html->link(__('WWE 2K16'), ['action' => 'index']) ?></li>
-              <li><?= $this->Html->link(__('WWE 2K15'), ['action' => 'index']) ?></li>
-              <li><?= $this->Html->link(__('WWE 2K14'), ['action' => 'index']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K16'), ['action' => 'view/17']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K15'), ['action' => 'view/16']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K14'), ['action' => 'view/15']) ?></li>
               <li role="separator" class="divider"></li>
               <li><?= $this->Html->link(__('List All Games'), ['controller' => 'Games', 'action' => 'index']) ?> </li>
             </ul>
