@@ -16801,7 +16801,7 @@ input.form-control {
 
 #search-results li {
   background: white;
-  padding: 0.5625rem 0.625rem;
+  padding: 0.2rem 0.625rem;
 }
 
 #search-results a {
@@ -16813,6 +16813,17 @@ input.form-control {
 #search-results li :hover {
   font-weight: 700;
   transition: none;
+}
+
+.label-search {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  border-radius: .2rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  padding: 0.25rem 0.5rem 0.25rem;
 }
 
 .col-1 {
