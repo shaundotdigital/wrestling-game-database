@@ -5,6 +5,17 @@
     border: 1px solid transparent;
 }
 
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 50px;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: darken($colour-default-dark, 5%);
+    color: #fff;
+}
+
 .navbar-inverse {
   background-color: darken($colour-default-dark, 10%);
 }
@@ -21,7 +32,7 @@
 }
 .navbar-brand>svg {
   height: 100%;
-  padding: 8px;
+  margin: 10px;
   width: auto;
 }
 

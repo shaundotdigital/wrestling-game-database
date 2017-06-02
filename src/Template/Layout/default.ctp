@@ -112,7 +112,6 @@ $cakeDescription = 'SmackDown DB';?>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wrestlers<span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -135,6 +134,16 @@ $cakeDescription = 'SmackDown DB';?>
             </ul>
           </li>
         </ul>
+        <div class="col-lg-4 right">
+          <div class="search-wrapper">
+          <div class="input-group ">
+            <input class="search wrestler-search form-control icon" type="text" placeholder="Search for a wrestler">
+          </div>
+          <div class="wrestler-results">
+            <ul class="search-results">
+            </ul>
+          </div>
+        </div></div>
       </div>
     </div>
   </nav>

@@ -1,21 +1,34 @@
 .input-group {
 text-transform: none;
 width: 100%;
+margin: 0;
+padding-top: 15px;
+// padding-bottom: 15px;
 }
 
 input.form-control {
   height:100%;
   text-align: center;
   font-size: 1em;
+  background: $colour-default-dark;
+  border:  none !important;
+  outline: none !important;
+  color: #FFF;
 }
 
+input.form-control:focus{
+  background: $colour-default-dark;
+  border:  none !important;
+  outline: none !important;
+  color: #FFF;
+}
 
 .search-wrapper {
     max-width: 30rem;
     margin: 0 auto;
 }
 
-#search-results {
+.search-results {
   width: 30rem;
   height: 25rem;
   color: black;
@@ -26,28 +39,19 @@ input.form-control {
   overflow-y: auto;
 }
 
-#search-results ul {
-}
-
-#search-results li {
+.search-results li {
   background: white;
   padding: 0.2rem 0.625rem;
   // padding: 0.5625rem 0.625rem;
 }
 
-
-#search-results a {
+.search-results a {
     font-size: 0.875rem;
     line-height: 1.75rem;
     font-weight: $regular;
 }
 
-
-#search-results a :hover {
-}
-
-
-#search-results li :hover {
+.search-results li :hover {
 
     font-weight: $bold;    -moz-transition: none;
     -webkit-transition: none;
