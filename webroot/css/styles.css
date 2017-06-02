@@ -17328,6 +17328,12 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
   text-align: center;
 }
 
+.game-name h3 {
+  color: #a2a2a2;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .btn.btn-platform {
   color: #fff;
   background: #32343f;
@@ -17492,6 +17498,13 @@ h3 {
   padding: 10px;
   margin-bottom: 0;
   border: 1px solid #d8d8d8;
+  box-shadow: none;
+}
+
+.content-game.panel:hover {
+  padding: 10px;
+  margin-bottom: 0;
+  border: 1px solid #467bfb;
   box-shadow: none;
 }
 

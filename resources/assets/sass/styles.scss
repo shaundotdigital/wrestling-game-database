@@ -103,6 +103,12 @@ h3 {
   box-shadow: none;
 }
 
+.content-game.panel:hover {
+  padding: 10px;
+  margin-bottom: 0;
+  border: 1px solid $colour-smackdowndb;
+  box-shadow: none;
+}
 
 .panel-table {
   background: #fff;
