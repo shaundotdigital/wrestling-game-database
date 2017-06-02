@@ -112,22 +112,15 @@ $cakeDescription = 'SmackDown DB';?>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wrestlers<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><?= $this->Html->link(__('WWE 2K17 Wrestlers'), ['action' => '../wrestlers'])?></li>
-              <li role="separator" class="divider"></li>
-              <li><?= $this->Html->link(__('All Wrestlers'), ['action' => '../wrestlers'])?></li>
-            </ul>
-          </li>
+        <li><?= $this->Html->link(__('All Wrestlers'), ['controller' => 'Wrestlers', 'action' => 'index'])?></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><?= $this->Html->link(__('WWE 2K17'), ['action' => 'view/18']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K17'), ['controller' => 'Games', 'action' => 'view/18']) ?></li>
               <li role="separator" class="divider"></li>
-              <li><?= $this->Html->link(__('WWE 2K16'), ['action' => 'view/17']) ?></li>
-              <li><?= $this->Html->link(__('WWE 2K15'), ['action' => 'view/16']) ?></li>
-              <li><?= $this->Html->link(__('WWE 2K14'), ['action' => 'view/15']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K16'), ['controller' => 'Games', 'action' => 'view/17']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K15'), ['controller' => 'Games', 'action' => 'view/16']) ?></li>
+              <li><?= $this->Html->link(__('WWE 2K14'), ['controller' => 'Games', 'action' => 'view/15']) ?></li>
               <li role="separator" class="divider"></li>
               <li><?= $this->Html->link(__('List All Games'), ['controller' => 'Games', 'action' => 'index']) ?> </li>
             </ul>
