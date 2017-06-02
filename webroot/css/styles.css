@@ -17334,6 +17334,7 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
   border: none;
   margin: 2px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  cursor: default;
 }
 
 .btn.btn-platform.playstation, .btn.btn-platform.playstation-3, .btn.btn-platform.playstation-portable {
@@ -17483,6 +17484,13 @@ h3 {
 .panel {
   padding: 0;
   margin-bottom: 20px;
+  border: 1px solid #d8d8d8;
+  box-shadow: none;
+}
+
+.content-game.panel {
+  padding: 10px;
+  margin-bottom: 0;
   border: 1px solid #d8d8d8;
   box-shadow: none;
 }
