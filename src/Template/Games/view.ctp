@@ -4,6 +4,7 @@
   */
 ?>
 <? $titleSymbols = array( '!', ':', '.' ,'\'');?>
+<div class="push-footer">
 <div class="game-header <?=strtolower(str_replace(' ', '-', $game->game_name)) ?>">
   <div class="container game-view">
     <div class="game-boxart left">
@@ -74,3 +75,4 @@
 <?php endif; ?>
     </div>
   </div>
+</div>

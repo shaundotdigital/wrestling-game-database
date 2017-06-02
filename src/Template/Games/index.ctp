@@ -4,7 +4,7 @@
   */
 ?>
 <div class="container">
-  <div class="content">
+  <div class="content push-footer">
     <div class="games index large-12 columns content">
         <div class="panel-table">
         <?php foreach ($games as $game): ?>

@@ -11,7 +11,7 @@ $this->Html->addCrumb($wrestler->game->game_name, '/games/view/' . strtolower(st
 $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(str_replace(' ', '-', $wrestler->id)));
 ?>
 </div> -->
-
+<div class="push-footer">
 <div class="wrestler-header <?=strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $wrestler->game->game_name)))) ?>">
   <div class="container">
     <div class="wrestler-render left">
@@ -271,3 +271,4 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           <?php endif; ?>
       </div>
       </div>
+</div>

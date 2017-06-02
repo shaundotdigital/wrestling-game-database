@@ -30,6 +30,10 @@
   box-sizing: border-box
 }
 
+.push-footer {
+  min-height: calc(100vh - 351px);
+}
+
 a:link {
   cursor: pointer;
   text-decoration: none;

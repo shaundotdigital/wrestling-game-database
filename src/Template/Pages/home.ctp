@@ -1,7 +1,7 @@
 <?php
 // $this->layout = false;
 ?>
-
+<div class="push-footer">
 <section class="section-header smackdowndb-head">
   <div class="container">
     <div class="wrapper">
@@ -72,6 +72,7 @@
     </g>
   </svg>
 </section>
+
 <section class="explore">
   <div class="container">
     <div class="wrapper">
@@ -92,3 +93,4 @@
     </div>
   </div>
 </section>
+</div>
