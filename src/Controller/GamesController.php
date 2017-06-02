@@ -21,7 +21,7 @@ class GamesController extends AppController
 
       $this->paginate = [
       'contain' => ['Platforms'],
-      'limit' => 3,
+      'limit' => 6,
       'order' => [
           'release_year' => 'desc'
         ]
