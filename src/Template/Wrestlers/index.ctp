@@ -5,47 +5,31 @@
 ?>
 <div class="container">
   <div class="wrestlers index large-12 medium-8 columns content">
-      <table cellpadding="0" cellspacing="0">
-          <thead>
-              <tr>
-                  <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('overall') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('Arm Power') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('Leg Power') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('height_id') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('weight_class_id') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('game_id') ?></th>
-              </tr>
-          </thead>
-          <tbody>
-              <?php foreach ($wrestlers as $wrestler): ?>
-              <tr>
-                  <td><?= $this->Html->link(__($wrestler->wrestler_name), ['action' => 'view', $wrestler->id]) ?> </td>
-                  <td><span class="label overall"><?= $this->Number->format($wrestler->overall) ?></span></td>
-                  <?php if (isset($wrestler->attributes_points[1])) { ?>
-                    <td><span class="label attribute"><?= h($wrestler->attributes_points[1]->value) ?></span></td>
-                  <?php } else { ?>
-                    <td><span class="label attribute">NA</span></td>
-                  <?php } ?>
-
-                  <?php if (isset($wrestler->attributes_points[3])) { ?>
-                    <td><span class="label attribute"><?= h($wrestler->attributes_points[3]->value) ?></span></td>
-                  <?php } else { ?>
-                    <td><span class="label attribute">NA</span></td>
-                  <?php } ?>
-                  <?php /* foreach ($wrestler->attributes_points[1] as $attributesPoints):
-                    if ($attributesPoints->attribute_id == "1" || $attributesPoints->attribute_id == "3"): ?>
-                      <?= h($attributesPoints->attribute->attribute_name) ?>
-                      <td><span class="label attribute"><?= h($attributesPoints->value) ?></span></td>
-                  <?php endif; ?>
-                  <?php endforeach; */ ?>
-                  <td><?= $wrestler->has('height') ? $this->Html->link($wrestler->height->height, ['controller' => 'Heights', 'action' => 'view', $wrestler->height->id]) : '' ?></td>
-                  <td><?= $wrestler->has('weight_class') ? $this->Html->link($wrestler->weight_class->weight_class, ['controller' => 'WeightClasses', 'action' => 'view', $wrestler->weight_class->id]) : '' ?></td>
-                  <td><?= $wrestler->has('game') ? $this->Html->link($wrestler->game->game_name, ['controller' => 'Games', 'action' => 'view', $wrestler->game->id]) : '' ?></td>
-              </tr>
-              <?php endforeach; ?>
-          </tbody>
+    <?php if (!empty($wrestlers)): ?>
+      <div class="table-responsive">
+        <div class="table panel">
+          <div class="table-row panel-heading panel-title">
+            <div class="table-head"><?= $this->Paginator->sort('overall')?></div>
+            <div class="table-head">Name</div>
+            <div class="table-head">Reaction</div>
+            <div class="table-head"><?= $this->Paginator->sort('height_id')?></div>
+            <div class="table-head"><?= $this->Paginator->sort('weight_class_id')?></div>
+            <div class="table-head"><?= $this->Paginator->sort('game_id')?></div>
+          </div>
+          <?php foreach ($wrestlers as $wrestler): ?>
+          <div class="table-row">
+            <div class="table-cell"><span class="label overall"><?= $this->Number->format($wrestler->overall) ?></span></div>
+            <div class="table-cell"><?= $this->Html->link(__($wrestler->wrestler_name), ['action' => 'view', $wrestler->id]) ?> </div>
+            <div class="table-cell"><?= h ($wrestler->reaction->crowd_reaction) ?></div>
+            <div class="table-cell"><?= h ($wrestler->height->height) ?></div>
+            <div class="table-cell"><?= h ($wrestler->weight_class->weight_class) ?></div>
+            <div class="table-cell"><?= $wrestler->has('game') ? $this->Html->link($wrestler->game->game_name, ['controller' => 'Games', 'action' => 'view', $wrestler->game->id]) : '' ?></div>
+          </div>
+        <?php endforeach; ?>
+        </div>
       </table>
+    </div>
+    <?php endif; ?>
   </div>
   <div class="paginator">
       <ul class="pagination">
