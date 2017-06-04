@@ -188,7 +188,7 @@ h3 {
   font-size: 0.875rem;
   color: #282936;
   text-align: left;
-  border-bottom: 2px solid #467bfb;
+  border-bottom: 2px solid $colour-smackdowndb;
   font-weight: $bold;
   padding: 0.5625rem 0.625rem;
 }
@@ -198,4 +198,38 @@ h3 {
   padding: 3px 10px;
   border-bottom: 1px solid #ebebec;
   padding: 0.5625rem 0.625rem;
+}
+
+
+.section-masthead{
+    margin: 2.5rem auto;
+    text-align: center;
+}
+
+.section-masthead h1 {
+  margin-top: 2rem;
+  font-weight: $bold;
+  color: $colour-smackdowndb;
+}
+.section-masthead p {
+  font-size: $base-font-size;
+  line-height: 1.75rem;
+  margin: 0;
+  font-weight: $light;
+}
+
+
+ul.pagination li.active a {
+    background-color: $colour-smackdowndb;
+    color: #FFF;
+    font-weight: bold;
+    cursor: default;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    background-color: darken($colour-smackdowndb, 20%);
+    border-color: lighten($colour-smackdowndb, 5%);
+    cursor: default;
 }

@@ -16620,22 +16620,9 @@ table td {
   padding: 5.35em 0;
 }
 
-.section-masthead {
+.home-masthead {
   margin: 3.5rem auto;
   text-align: center;
-}
-
-.section-masthead h1 {
-  margin-top: 2rem;
-  font-weight: 700;
-  color: #467bfb;
-}
-
-.section-masthead p {
-  font-size: 0.875rem;
-  line-height: 1.75rem;
-  margin: 1.5rem 0;
-  font-weight: 300;
 }
 
 section.explore {
@@ -17044,29 +17031,6 @@ footer .fa {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: -1px;
-}
-
-.section-header-mask {
-  margin-bottom: -7px;
-  fill: white;
-  width: 100%;
-}
-
-.section-header .wrapper {
-  padding: 0;
-}
-
-.section-masthead h1 {
-  margin-top: 2rem;
-  font-weight: 700;
-  color: #467bfb;
-}
-
-.section-masthead p {
-  font-size: 0.875rem;
-  line-height: 1.75rem;
-  margin: 1.5rem 0;
-  font-weight: 300;
 }
 
 .wrestler-profile-image img {
@@ -17721,6 +17685,39 @@ h3 {
   padding: 3px 10px;
   border-bottom: 1px solid #ebebec;
   padding: 0.5625rem 0.625rem;
+}
+
+.section-masthead {
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.section-masthead h1 {
+  margin-top: 2rem;
+  font-weight: 700;
+  color: #467bfb;
+}
+
+.section-masthead p {
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  margin: 0;
+  font-weight: 300;
+}
+
+ul.pagination li.active a {
+  background-color: #467bfb;
+  color: #FFF;
+  font-weight: bold;
+  cursor: default;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+  z-index: 3;
+  color: #fff;
+  background-color: #0542d6;
+  border-color: #5f8dfc;
+  cursor: default;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,18 +8,11 @@
     <div class="wrapper">
       <div class="section-masthead" itemprop="description">
         <h1>Game Library</h1>
-        <p>The SmackDown Database aims to assist the Wrestling Video game community by documenting information and building an ever growing source of data.</p>
+        <p>Browese your favourite Wrestling video game.</p>
       </div>
 
     </div>
   </div>
-  <svg class="section-header-mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-  viewBox="0 0 1920 58" style="enable-background:new 0 0 1920 58;" xml:space="preserve">
-  <g>
-    <path class="st0" d="M0,58h959.3C547.3,58,506,48,0,0.2V58z"/>
-    <path class="st0" d="M960.7,58H1920V0.2C1414,48,1372.7,58,960.7,58z"/>
-  </g>
-</svg>
 </section>
 <div class="container">
   <div class="content push-footer">
