@@ -14,7 +14,7 @@
       </div>
       <div class="content-game-view-header">
         <div class="game-info">
-          <span class="game-title"><?= $game->game_name ?> <span class="game-release">(<?= $game->release_year ?>)</span></span>
+          <span class="game-title <?=strtolower(str_replace(' ', '-', (str_replace($titleSymbols, '', $game->game_name)))) ?>"><?= $game->game_name ?> <span class="game-release">(<?= $game->release_year ?>)</span></span>
           <div class="game-platforms">
             <?php foreach ($game->platforms as $platform): ?>
               <a class="btn btn-platform <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $platform->platform_name))))?>" href="#">
@@ -41,15 +41,17 @@
                 <div class="table-row panel-heading panel-title">
                   <div class="table-head">OVR</div>
                   <div class="table-head">Name</div>
-                  <div class="table-head">Weight Class</div>
                   <div class="table-head">Reaction</div>
+                  <div class="table-head">Height</div>
+                  <div class="table-head">Weight Class</div>
                 </div>
                 <?php foreach ($game->wrestlers as $wrestlers): ?>
                   <div class="table-row panel-table item">
                     <div class="table-cell"><span class="label overall"><?= h($wrestlers->overall) ?></span></div>
                     <div class="table-cell"><?= $this->Html->link(__($wrestlers->wrestler_name), ['action' => '../wrestlers/view', $wrestlers->id]) ?></div>
-                    <div class="table-cell"><?= h($wrestlers->weight_class->weight_class) ?></div>
-                    <div class="table-cell"><?= h($wrestlers->reaction->crowd_reaction) ?></div>
+                    <div class="table-cell"><?= h ($wrestlers->reaction->crowd_reaction) ?></div>
+                    <div class="table-cell"><?= h ($wrestlers->height->height) ?></div>
+                    <div class="table-cell"><?= h ($wrestlers->weight_class->weight_class) ?></div>
                   </div>
                 <?php endforeach; ?>
               </div>
@@ -67,11 +69,13 @@
               <div class="table-row panel-heading panel-title">
                 <div class="table-head">OVR</div>
                 <div class="table-head">Wrestler Name</div>
+                <div class="table-head">Reaction</div>
               </div>
               <?php foreach ($top as $wrestler): ?>
                 <div class="table-row panel-table item">
                   <div class="table-cell"><span class="label overall"><?= h($wrestler->overall) ?></span></div>
                   <div class="table-cell"><?= $this->Html->link(__($wrestler->wrestler_name), ['action' => '../wrestlers/view/', $wrestler->id]) ?></div>
+                  <div class="table-cell"><?= h ($wrestlers->reaction->crowd_reaction) ?></div>
                 </div>
               <?php endforeach; ?>
             </div>

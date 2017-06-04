@@ -30,10 +30,10 @@ $cakeDescription = 'SmackDown DB';?>
     <?= $this->Html->css('font-awesome'); ?>
 
     <?= $this->Html->script('jQuery.js') ?>
+    <?= $this->Html->script('https://code.jquery.com/ui/1.12.1/jquery-ui.min.js') ?>
     <?= $this->Html->script('bootstrap.min.js') ?>
     <?= $this->Html->script('scripts.js') ?>
     <?= $this->Html->script('autoComplete.js') ?>
-    <?= $this->Html->script('https://code.jquery.com/ui/1.12.1/jquery-ui.min.js') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>

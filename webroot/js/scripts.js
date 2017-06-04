@@ -46,22 +46,3 @@ $(document).ready(function() {
   }).trigger('input.hp-range-slider-range');
 
 });
-
-
-function demo() {
-
-  $.ajax({
-    url: '/wgdb/games/test',
-    type: 'post',
-    data : {
-      id : 5
-    },
-    beforeSend: function() {
-
-    },
-    success: function(data) {
-      $('#next').html(data);
-    }
-  });
-
-}

@@ -33,24 +33,6 @@ class GamesController extends AppController
         $this->set('_serialize', ['games']);
     }
 
-
-    public function demo() {
-      $games = $this->paginate($this->Games);
-      $this->set(compact('games'));
-    }
-
-    public function test() {
-      if($this->request->is('ajax')) {
-        $game_id = $this->request->getData('id');
-        $this->viewBuilder()->layout('ajax');
-
-        $platform = $this->Games->Platforms->get($game_id);
-
-        $this->set(compact('platform'));
-      }
-    }
-
-
     /**
      * View method
      *
@@ -61,7 +43,7 @@ class GamesController extends AppController
     public function view($id = null)
     {
         $game = $this->Games->get($id, [
-            'contain' => ['Abilities', 'Attributes', 'Platforms', 'Wrestlers', 'Wrestlers.WeightClasses', 'Wrestlers.Reactions']
+            'contain' => ['Abilities', 'Attributes', 'Platforms', 'Wrestlers', 'Wrestlers.WeightClasses', 'Wrestlers.Reactions', 'Wrestlers.Heights', 'Wrestlers.GameDlcs']
         ]);
 
         $top = $this->Games->Wrestlers->find('all')->order(['Wrestlers.overall' => 'DESC'])->limit(5);
