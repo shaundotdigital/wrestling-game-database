@@ -17033,26 +17033,6 @@ footer .fa {
   margin-bottom: -1px;
 }
 
-.wrestler-profile-image img {
-  height: 150%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.wrestler-profile {
-  width: 30px;
-  margin-right: 5px;
-}
-
-.wrestler-profile-image {
-  height: 30px;
-  background-size: cover;
-  background: #232828;
-  overflow: hidden;
-  border-radius: 50%;
-  background-color: #dcdcdc;
-}
-
 .wrestlers .table-head, .wrestlers .table-head a,
 .games .table-head, .games .table-head a {
   color: white;

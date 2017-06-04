@@ -31,11 +31,6 @@
             <div class="table-row">
               <div class="table-cell"><span class="label overall"><?= $this->Number->format($wrestler->overall) ?></span></div>
               <div class="table-cell">
-                <div class="wrestler-profile left">
-                  <div class="wrestler-profile-image">
-                    <?= $this->Html->image('renders/' . strtolower(str_replace(' ', '-', $wrestler->game->game_name)) . '/' . $wrestler->pac . '-' . $wrestler->game->release_year . '.png')?>
-                  </div>
-                </div>
                 <?= $this->Html->link(__($wrestler->wrestler_name), ['action' => 'view', $wrestler->id]) ?>
               </div>
               <div class="table-cell"><?= h ($wrestler->reaction->crowd_reaction) ?></div>
