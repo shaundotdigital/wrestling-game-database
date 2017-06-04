@@ -226,32 +226,31 @@
   -webkit-appearance: none;
   height: $range-track-height;
   border-radius: 10px;
-  background: linear-gradient(90deg, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
-  background: -webkit-gradient(linear, left top, 0% 100%, 100% 0%, color-stop(50%, $colour-face-blue),color-stop(50%, lighten($poor-attribute, 5%)));
-  background: -moz-linear-gradient(0deg, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
-  background: -webkit-linear-gradient(0deg, $colour-face-blue 50%, lighten($poor-attribute, 5%) 50%);
+  background: linear-gradient(90deg, lighten($poor-attribute, 5%) 50%, $colour-face-blue 50%);
+  background: -webkit-gradient(linear, left top, 0% 100%, 100% 0%, color-stop(50%, lighten($poor-attribute, 5%) ),color-stop(50%, $colour-face-blue));
+  background: -moz-linear-gradient(0deg, lighten($poor-attribute, 5%)  50%, $colour-face-blue 50%);
+  background: -webkit-linear-gradient(0deg, lighten($poor-attribute, 5%)  50%, $colour-face-blue 50%);
   outline: none;
   padding: 0;
   margin: 0;
 
-  // Range Handle
-  // &::-webkit-slider-thumb {
-  //   width: 14px;
-  //   height: 14px;
-  //   border: 0;
-  //   background: #fff;
-  //   border-radius: 100%;
-  //   box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
-  //   -webkit-appearance: none;
-  //   }
-  //
-  // &::-moz-range-thumb {
-  //   width: $range-handle-size;
-  //   height: $range-handle-size;
-  //   border: 0;
-  //   border-radius: 50%;
-  //   background: $range-handle-color;
-  // }
+  //Range Handle
+  &::-webkit-slider-thumb {
+    width: $range-handle-size;
+    height: $range-track-height;
+    border: 0;
+    background: $colour-ps;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+    -webkit-appearance: none;
+  }
+
+  &::-moz-range-thumb {
+    width: $range-handle-size;
+    height: $range-track-height;
+    border: 0;
+    background: $colour-default-dark;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+  }
 }
 
 input.personality-range-slider-range[type=range]::-webkit-slider-runnable-track {
@@ -365,12 +364,4 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
 
 .skills .fa {
   color: $colour-smackdowndb;
-}
-
-.wrestler-skills {
-  border-left: 1px solid #d8d8d8;
-}
-
-.wrestler-skills:first-child {
-  border-left: none;
 }

@@ -230,11 +230,11 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
             <div class="panel-table">
               <?php foreach ($wrestler->wrestlers_personality as $wrestlersPersonality): ?>
                 <div class="wrestler-personality item">
-                  <div class="positive-personality left">
-                    <?= h($wrestlersPersonality->personality->name) ?>
-                  </div>
-                  <div class="negative-personality right">
+                  <div class="negative-personality left">
                     <?= h($wrestlersPersonality->personality->negative_name) ?>
+                  </div>
+                  <div class="positive-personality right">
+                    <?= h($wrestlersPersonality->personality->name) ?>
                   </div>
                   <div class="personality-slider">
                     <div class="personality-range-slider">
@@ -249,9 +249,7 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
             </div>
           </div>
         <?php endif; ?>
-      </div>
       <?php if (!empty($wrestler->abilities)): ?>
-        <div class="wrestler medium-4 columns content">
           <div class="panel abilities">
             <div class="panel-heading panel-title">
               <?= __('Abilities') ?>

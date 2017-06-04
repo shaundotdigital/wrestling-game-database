@@ -17203,11 +17203,28 @@ footer .fa {
   -webkit-appearance: none;
   height: 8px;
   border-radius: 10px;
-  background: linear-gradient(90deg, #16ADEC 50%, #df5853 50%);
-  background: -webkit-linear-gradient(0deg, #16ADEC 50%, #df5853 50%);
+  background: linear-gradient(90deg, #df5853 50%, #16ADEC 50%);
+  background: -webkit-linear-gradient(0deg, #df5853 50%, #16ADEC 50%);
   outline: none;
   padding: 0;
   margin: 0;
+}
+
+.personality-range-slider-range::-webkit-slider-thumb {
+  width: 5px;
+  height: 8px;
+  border: 0;
+  background: #252525;
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none;
+}
+
+.personality-range-slider-range::-moz-range-thumb {
+  width: 5px;
+  height: 8px;
+  border: 0;
+  background: #494b5b;
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 input.personality-range-slider-range[type=range]::-webkit-slider-runnable-track {
@@ -17313,14 +17330,6 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
 
 .skills .fa {
   color: #467bfb;
-}
-
-.wrestler-skills {
-  border-left: 1px solid #d8d8d8;
-}
-
-.wrestler-skills:first-child {
-  border-left: none;
 }
 
 .games-head {
