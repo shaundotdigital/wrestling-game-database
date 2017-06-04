@@ -17559,6 +17559,14 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
   min-height: calc(100vh - 351px);
 }
 
+.content {
+  padding: 1rem 0 0 1rem;
+}
+
+.content:first-child {
+  padding: 1rem 0 0 0 !important;
+}
+
 a:link {
   cursor: pointer;
   text-decoration: none;

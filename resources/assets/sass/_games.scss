@@ -1,19 +1,19 @@
 
 .games-head {
-    margin-top: 0;
-    padding-bottom: 0;
-    background-image: none;
-    background-color: $colour-default-dark;
-    color: white;
-    margin-bottom: 0;
-    text-align: left;
+  margin-top: 0;
+  padding-bottom: 0;
+  background-image: none;
+  background-color: $colour-default-dark;
+  color: white;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 .section-header.games-head   {
   background: url(../img/sddb/sddb-head.jpg) right $colour-default-dark;
   background-size: cover;
   background-repeat: no-repeat;
-    margin-bottom: -1px;
+  margin-bottom: -1px;
 }
 
 .section-header-mask {
@@ -23,33 +23,33 @@
 }
 
 .section-header .wrapper {
-    padding: 0;
+  padding: 0;
 }
 
 .section-masthead h1 {
-    margin-top: 2rem;
-    font-weight: $bold;
-    color: $colour-smackdowndb;
+  margin-top: 2rem;
+  font-weight: $bold;
+  color: $colour-smackdowndb;
 }
 .section-masthead p {
-    font-size: $base-font-size;
-    line-height: 1.75rem;
-    margin: 1.5rem 0;
-    font-weight: $light;
+  font-size: $base-font-size;
+  line-height: 1.75rem;
+  margin: 1.5rem 0;
+  font-weight: $light;
 }
 
 
 .game img {
- // width: 50%;
- text-align: center;
- border-radius: 0.3em;
+  // width: 50%;
+  text-align: center;
+  border-radius: 0.3em;
 }
 
 .game-name h3 {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    margin-top: 5px;
-    font-size: 1.2rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-size: 1.2rem;
 }
 
 .game-year {
@@ -58,52 +58,52 @@
 
 
 .btn.btn-platform {
-    color: #fff;
-    background: darken($colour-default-dark, 10%);
-    border: none;
-    margin: 2px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    cursor: default;
+  color: #fff;
+  background: darken($colour-default-dark, 10%);
+  border: none;
+  margin: 2px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  cursor: default;
 }
 
 .btn.btn-platform.playstation, .btn.btn-platform.playstation-3, .btn.btn-platform.playstation-portable {
-    background: $colour-ps;
+  background: $colour-ps;
 }
 
 .btn.btn-platform.playstation-2 {
-    background: $colour-ps2;
+  background: $colour-ps2;
 }
 
 .btn.btn-platform.playstation-4 {
-    background: $colour-ps4;
+  background: $colour-ps4;
 }
 
 .btn.btn-platform.xbox {
-    background: darken($colour-xbox, 20%);
+  background: darken($colour-xbox, 20%);
 }
 
 .btn.btn-platform.xbox-360, .btn.btn-platform.xbox-one {
-    background: $colour-xbox;
+  background: $colour-xbox;
 }
 
 .btn.btn-platform.wii {
-    background: $colour-wii;
-    color: #fff;
+  background: $colour-wii;
+  color: #fff;
 }
 
 .btn.btn-platform.pc {
-    background-color: $colour-pc-3;
-    background-image:-moz-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
-    background-image:linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
-    background-image:-webkit-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
-    background-image:-o-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
-    background-image:-ms-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
-    background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(0%,$colour-pc-1),color-stop(65%,$colour-pc-2),color-stop(30%,$colour-pc-3),color-stop(100%,$colour-pc-4));
+  background-color: $colour-pc-3;
+  background-image:-moz-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+  background-image:linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+  background-image:-webkit-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+  background-image:-o-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+  background-image:-ms-linear-gradient(left, $colour-pc-1 0%, $colour-pc-2 65%,$colour-pc-3 30%,$colour-pc-4 100%);
+  background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(0%,$colour-pc-1),color-stop(65%,$colour-pc-2),color-stop(30%,$colour-pc-3),color-stop(100%,$colour-pc-4));
 }
 
 
 .container.game-view{
-    margin: 10px auto;
+  margin: 10px auto;
 }
 
 .game-header {
@@ -116,8 +116,8 @@
 }
 
 .boxart-image {
-margin-right: 30px;
-width: 150px;
+  margin-right: 30px;
+  width: 150px;
 }
 
 .game-title {

@@ -34,6 +34,14 @@
   min-height: calc(100vh - 351px);
 }
 
+.content {
+  padding: 1rem 0 0 1rem;
+}
+
+.content:first-child {
+  padding: 1rem 0 0 0 !important;
+}
+
 a:link {
   cursor: pointer;
   text-decoration: none;
@@ -168,26 +176,26 @@ h3 {
 }
 
 .table {
-  	display: table;
-  	width: 100%;
+  display: table;
+  width: 100%;
 }
 .table-row {
-  	display: table-row;
+  display: table-row;
 }
 
 .table-head {
-    display: table-cell;
-    font-size: 0.875rem;
-    color: #282936;
-    text-align: left;
-    border-bottom: 2px solid #467bfb;
-    font-weight: $bold;
-    padding: 0.5625rem 0.625rem;
+  display: table-cell;
+  font-size: 0.875rem;
+  color: #282936;
+  text-align: left;
+  border-bottom: 2px solid #467bfb;
+  font-weight: $bold;
+  padding: 0.5625rem 0.625rem;
 }
 
 .table-cell {
-  	display: table-cell;
-  	padding: 3px 10px;
-  	border-bottom: 1px solid #ebebec;
-    padding: 0.5625rem 0.625rem;
+  display: table-cell;
+  padding: 3px 10px;
+  border-bottom: 1px solid #ebebec;
+  padding: 0.5625rem 0.625rem;
 }
