@@ -52,12 +52,13 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
     </div>
   </div>
   <div class="container">
+    <?php if (empty($wrestler->attributes_points)): ?>
+      <div class="games view large-12 columns content">
+        <?= $this->element('NoContent/nocontent') ?>
+      </div>
+    <?php else: ?>
     <div class="content">
-      <?php if (empty($wrestler->attributes_points)): ?>
-        <div class="games view large-12 columns content">
-          <?= $this->element('NoContent/nocontent') ?>
-        </div>
-      <?php else: ?>
+      <?php if (!empty($wrestler->attributes_points)): ?>
         <div class="wrestler large-8 columns content">
           <div class="panel attributes">
             <div class="panel-heading panel-title">
@@ -272,8 +273,9 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
             </div>
           </div>
         </div>
-        <?= $this->element('Disqus/disqus') ?>
       <?php endif; ?>
+      <?= $this->element('Disqus/disqus') ?>
     </div>
+  <?php endif; ?>
   </div>
 </div>
