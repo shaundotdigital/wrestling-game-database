@@ -1,8 +1,8 @@
 .navbar {
-    position: relative;
-    min-height: 50px;
-    margin-bottom: 0px;
-    border: 1px solid transparent;
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
 }
 
 .navbar-nav > li > a {
@@ -12,8 +12,8 @@
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: darken($colour-default-dark, 5%);
-    color: #fff;
+  background-color: darken($colour-default-dark, 5%);
+  color: #fff;
 }
 
 .navbar-inverse {
@@ -42,10 +42,10 @@
 
 
 footer {
-    margin-top: 25px;
-    background: $colour-default-dark;
-    padding: 20px 0;
-    color: #777;
+  margin-top: 25px;
+  background: $colour-default-dark;
+  padding: 20px 0;
+  color: #777;
 }
 
 // footer .row {
@@ -53,7 +53,7 @@ footer {
 // }
 
 footer, .footer-disclaimer {
-    text-align: center;
+  text-align: center;
 }
 
 footer .fa {
@@ -61,16 +61,16 @@ footer .fa {
 }
 
 .btn.btn-social {
-    color: #fff;
-    background: darken($colour-default-dark, 10%);
-    border: none;
-    margin: 2px;
-  }
+  color: #fff;
+  background: darken($colour-default-dark, 10%);
+  border: none;
+  margin: 2px;
+}
 
 .footer-disclaimer {
-    background: darken($colour-default-dark, 10%);
-    color: #777;
-    padding: 10px 0;
+  background: darken($colour-default-dark, 10%);
+  color: #777;
+  padding: 10px 0;
 }
 
 
@@ -102,8 +102,8 @@ footer .fa {
 
 
 .footer-disclaimer p {
-    color: #777;
-    margin: 10px 0 0;
+  color: #777;
+  margin: 10px 0 0;
 }
 
 .footer-brand>svg {
@@ -117,7 +117,7 @@ footer .fa {
 }
 
 .footer-brand>.smackdown-db-outline, .footer-brand>.smackdown-db-down {
- fill: $colour-smackdowndb;
+  fill: $colour-smackdowndb;
 }
 
 .footer-brand>.smackdown-db-smack, .footer-brand>.smackdown-db-database {

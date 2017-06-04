@@ -20,14 +20,14 @@ $(document).ready(function() {
     }
 
     $.get({
-        url: "/wgdb/wrestlers/search.json",
-        data: { query: query },
-        success: function(data) {
-          $results.empty();
-          $.each(data.wrestlers, function(index, wrestler) {
-             $results.append("<li><a href='/wgdb/wrestlers/view/" +wrestler.id+"'><span class='label-search attribute'>"+wrestler.overall+"</span> <span class='wrestler-name'>"+wrestler.wrestler_name+"</span><span class='game-name right'>"+wrestler.game.game_name+ "</span></a></li>");
-          });
-        }
-      });
+      url: "/wgdb/wrestlers/search.json",
+      data: { query: query },
+      success: function(data) {
+        $results.empty();
+        $.each(data.wrestlers, function(index, wrestler) {
+          $results.append("<li><a href='/wgdb/wrestlers/view/" +wrestler.id+"'><span class='label-search attribute'>"+wrestler.overall+"</span> <span class='wrestler-name'>"+wrestler.wrestler_name+"</span><span class='game-name right'>"+wrestler.game.game_name+ "</span></a></li>");
+        });
+      }
     });
   });
+});

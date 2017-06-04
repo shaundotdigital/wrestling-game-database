@@ -1,102 +1,102 @@
 .side-nav li.heading {
-    color: $colour-smackdowndb;
-    font-size: $base-font-size;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 0.4375rem $base-font-size;
+  color: $colour-smackdowndb;
+  font-size: $base-font-size;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.4375rem $base-font-size;
 }
 
 #actions-sidebar {
-    background: #fafafa;
+  background: #fafafa;
 }
 
 
 .side-nav li a:not(.button) {
-    color: #323341;
+  color: #323341;
 }
 
 .side-nav li a:not(.button):hover {
-    color: #303141;
+  color: #303141;
 }
 
 
 .content h3 {
-    color: #a2a2a2;
-    padding-bottom: 0.5rem;
-    margin-bottom: 20px;
+  color: #a2a2a2;
+  padding-bottom: 0.5rem;
+  margin-bottom: 20px;
 }
 
 .content h4 {
-    color: #a2a2a2;
-    padding-bottom: 0.5rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #a2a2a2;
+  color: #a2a2a2;
+  padding-bottom: 0.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #a2a2a2;
 }
 
 .content .related h4 {
-    color: $colour-smackdowndb;
-    padding-bottom: 0.5rem;
-    /*margin-top: 20px;*/
-    margin-top: 0px;
-    margin-bottom: 10px;
-    border-bottom: 0px;
+  color: $colour-smackdowndb;
+  padding-bottom: 0.5rem;
+  /*margin-top: 20px;*/
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border-bottom: 0px;
 }
 
 
 legend {
-    color:$colour-smackdowndb
+  color:$colour-smackdowndb
 }
 
 
 table {
-    background: #fff;
-    margin-bottom: 1.25rem;
-    border: none;
-    table-layout: fixed;
-    width: 100%;
+  background: #fff;
+  margin-bottom: 1.25rem;
+  border: none;
+  table-layout: fixed;
+  width: 100%;
 }
 
 table thead {
-    background: none;
+  background: none;
 }
 
 table tr {
-    border-bottom: 1px solid #ebebec;
+  border-bottom: 1px solid #ebebec;
 }
 
 table thead tr {
-    border-bottom: 1px solid $colour-smackdowndb;
+  border-bottom: 1px solid $colour-smackdowndb;
 }
 
 table tr th {
-    padding: 0.5625rem 0.625rem;
-    font-size: $base-font-size;
-    color: #282936;
-    text-align: left;
-    border-bottom: 2px solid $colour-smackdowndb;
+  padding: 0.5625rem 0.625rem;
+  font-size: $base-font-size;
+  color: #282936;
+  text-align: left;
+  border-bottom: 2px solid $colour-smackdowndb;
 }
 
 table tr:nth-of-type(even) {
-    background: none;
+  background: none;
 }
 
 fieldset {
-    border: none;
-    padding: 1.25rem;
-    margin: 1.125rem 0;
+  border: none;
+  padding: 1.25rem;
+  margin: 1.125rem 0;
 }
 
 fieldset legend {
-    border-bottom: 2px solid $colour-smackdowndb;
-    width: 100%;
-    line-height: 2rem;
+  border-bottom: 2px solid $colour-smackdowndb;
+  width: 100%;
+  line-height: 2rem;
 }
 
 
 .vertical-table th {
-    padding: 0.5625rem 0.625rem;
-    font-size: $base-font-size;
-    color: $colour-smackdowndb;
-    border: none;
-    text-align: left;
+  padding: 0.5625rem 0.625rem;
+  font-size: $base-font-size;
+  color: $colour-smackdowndb;
+  border: none;
+  text-align: left;
 }

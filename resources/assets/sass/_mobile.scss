@@ -1,10 +1,10 @@
 @media only screen and (max-width: 1200px) {
   .large-8 {
-      width: 100%;
+    width: 100%;
   }
 
   .medium-4 {
-      width: 50%;
+    width: 50%;
   }
 }
 
@@ -16,11 +16,11 @@
 
 @media only screen and (max-width: 768px) {
   [class*="col-"], .medium-4{
-      width: 100%;
+    width: 100%;
   }
 
   .columns {
     padding-left: 0rem;
     padding-right: 0rem;
-}
+  }
 }
