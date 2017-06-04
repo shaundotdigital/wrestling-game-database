@@ -17318,6 +17318,7 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
 
 .abilities-image img {
   max-width: 10%;
+  border: 1px solid #494b5b;
 }
 
 .abilities-image {
