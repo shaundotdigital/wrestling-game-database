@@ -17149,6 +17149,10 @@ footer .fa {
   line-height: 1;
 }
 
+.wrestler-name.wwe-2k15 h3 {
+  color: #000;
+}
+
 .wrestler-name small {
   color: #fff;
   float: none;
@@ -17157,12 +17161,20 @@ footer .fa {
   text-transform: uppercase;
 }
 
+.wrestler-name.wwe-2k15 small {
+  color: #000;
+}
+
 .wrestler-more small {
   color: #fff;
   float: none;
   display: block;
   font-size: 12px;
   text-transform: uppercase;
+}
+
+.wrestler-more.wwe-2k15 small {
+  color: #000;
 }
 
 .wrestler-more > small a {

@@ -26,11 +26,11 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           </span>
         </div>
         <div class="wrestler-info left">
-          <div class="wrestler-name">
+          <div class="wrestler-name <?=strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $wrestler->game->game_name)))) ?>">
             <small><?= $wrestler->first_name ?></small>
             <h3><?= $wrestler->last_name ?></h3>
           </div>
-          <div class="wrestler-more">
+          <div class="wrestler-more <?=strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $wrestler->game->game_name)))) ?>">
             <small>
               <?= $wrestler->height->height ?>
               -

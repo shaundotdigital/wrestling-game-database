@@ -32,7 +32,7 @@
         <?= $this->element('NoContent/nocontent') ?>
       </div>
     <?php else: ?>
-      <div class="games view large-8 columns content">
+      <div class="games view large-12 columns content">
         <div class="related">
           <h4><?= __($game->game_name) ?> Roster</h4>
           <div class="panel game-overall">
@@ -59,30 +59,6 @@
           </div>
         </div>
       </div>
-      <div class="games view small-4 columns content">
-        <div class="related">
-          <h4><?= __($game->game_name) ?> Top Five</h4>
-          <div class="panel game-overall">
-            <div class="table-responsive">
-              <div class="table">
-                <div class="table-row panel-heading panel-title">
-                  <div class="table-head">OVR</div>
-                  <div class="table-head">Wrestler Name</div>
-                  <div class="table-head">Reaction</div>
-                </div>
-                <?php foreach ($top as $wrestler): ?>
-                  <div class="table-row panel-table item">
-                    <div class="table-cell"><span class="label overall"><?= h($wrestler->overall) ?></span></div>
-                    <div class="table-cell"><?= $this->Html->link(__($wrestler->wrestler_name), ['action' => '../wrestlers/view/', $wrestler->id]) ?></div>
-                    <div class="table-cell"><?= h ($wrestlers->reaction->crowd_reaction) ?></div>
-                  </div>
-                <?php endforeach; ?>
-              </div>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
     <?= $this->element('Disqus/disqus') ?>
   <?php endif; ?>
 </div>
