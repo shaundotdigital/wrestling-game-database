@@ -272,8 +272,8 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
           </div>
         </div>
       <?php endif; ?>
-      <?= $this->element('Disqus/disqus') ?>
     </div>
+    <?= $this->element('Disqus/disqus') ?>
   <?php endif; ?>
   </div>
 </div>

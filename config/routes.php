@@ -75,9 +75,12 @@ Router::scope('/', function (RouteBuilder $routes) {
      * You can remove these routes once you've connected the
      * routes you want in your application.
      */
+
+     $routes->connect('/games', array('controller' => 'Games', 'action' => 'index'));
+     $routes->connect('/games/*', array('controller' => 'Games', 'action' => 'view'));
+
     $routes->fallbacks(DashedRoute::class);
 });
-
 /**
  * Load all plugin routes.  See the Plugin documentation on
  * how to customize the loading of plugin routes.
