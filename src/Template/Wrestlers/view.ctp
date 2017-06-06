@@ -35,9 +35,8 @@ $this->Html->addCrumb($wrestler->wrestler_name, '/wrestlers/view/' . strtolower(
               <?= $wrestler->height->height ?>
               -
               <?= $wrestler->weight_class->weight_class ?>
-              <? if ($wrestler->reaction->crowd_reaction) { ?>- <?
-                echo $wrestler->reaction->crowd_reaction;
-              } ?>
+              -
+              <?= $wrestler->reaction->crowd_reaction ?>
             </small>
           </div>
         </div>

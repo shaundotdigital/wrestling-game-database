@@ -2,7 +2,9 @@
 /**
 * @var \App\View\AppView $this
 */
+$titleSymbols = array( '!', ':', '.' ,'\'');
 ?>
+
 <section class="section-header games-head">
   <div class="container">
     <div class="wrapper">
@@ -19,7 +21,6 @@
     <div class="games-library index large-12 columns content">
       <div class="panel-table">
         <?php foreach ($games as $game): ?>
-          <? $titleSymbols = array( '!', ':', '.' ,'\'');?>
           <div class="game item col-3 <?= strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name))))?>">
             <div class="games-library panel">
               <?= $this->Html->image('games/poster-art/' . strtolower(str_replace($titleSymbols, '', (str_replace(' ', '-', $game->game_name)))) . '-' . $game->release_year . '.jpg', ['url' => ['controller' => 'Games', 'action' => 'view', $game->id]])?>

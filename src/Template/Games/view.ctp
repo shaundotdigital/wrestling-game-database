@@ -2,8 +2,8 @@
 /**
 * @var \App\View\AppView $this
 */
+$titleSymbols = array( '!', ':', '.' ,'\'');
 ?>
-<? $titleSymbols = array( '!', ':', '.' ,'\'');?>
 <div class="push-footer">
   <div class="game-header <?=strtolower(str_replace(' ', '-', (str_replace($titleSymbols, '', $game->game_name)))) ?>">
     <div class="container game-view">
