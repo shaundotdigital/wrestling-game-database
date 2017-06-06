@@ -125,15 +125,15 @@
     <footer>
       <div class="container">
         <div class="row">
-          <a class="btn btn-social" href="#">
+          <a class="btn btn-social" href="mailto:admin@smackdowndb.com">
             <i class="fa fa-envelope" aria-hidden="true"></i>
               Send us an email
             </a>
-            <a class="btn btn-social" href="#">
+            <a class="btn btn-social" href="https://twitter.com/smackdowndb">
               <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
             Report an issue
             </a>
-            <a class="btn btn-social" href="#">
+            <a class="btn btn-social" href="https://www.paypal.me/shaunskeen">
               <i class="fa fa-server" aria-hidden="true"></i>
             Help keep it running
             </a>
