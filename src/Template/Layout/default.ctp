@@ -25,13 +25,6 @@
 </head>
 
 <body>
-<div class="sub-bar" data-subbar role="sub-navigation">
-  <div class="container">
-  <!-- <?=
-  $this->Html->getCrumbs(' > ','Home');
-  ?> -->
-  </div>
-</div>
   <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container">
       <div class="navbar-header">

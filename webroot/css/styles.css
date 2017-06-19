@@ -16805,7 +16805,7 @@ input.form-control:focus {
 }
 
 .search-wrapper {
-  max-width: 45rem;
+  max-width: 30rem;
   margin: 0 auto;
 }
 
@@ -16947,6 +16947,14 @@ input.form-control:focus {
     width: 0 !important;
     display: none;
   }
+  .table-head.height, .table-cell.height {
+    width: 0 !important;
+    display: none;
+  }
+  .table-head.reaction, .table-cell.reaction {
+    width: 0 !important;
+    display: none;
+  }
 }
 
 .navbar {
@@ -16967,14 +16975,12 @@ input.form-control:focus {
   color: #fff;
 }
 
-.navbar-inverse {
-  background-color: #32343f;
+.divider {
+  background-color: #3e3f4d !important;
 }
 
-/* sub-bar */
-.sub-bar {
-  background-color: #494b5b;
-  height: 35px;
+.navbar-inverse {
+  background-color: #32343f;
 }
 
 .navbar-brand {

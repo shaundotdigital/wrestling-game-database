@@ -16,15 +16,12 @@
   color: #fff;
 }
 
-.navbar-inverse {
-  background-color: darken($colour-default-dark, 10%);
+.divider {
+    background-color: #3e3f4d !important;
 }
 
-/* sub-bar */
-
-.sub-bar {
-  background-color: $colour-default-dark;
-  height: 35px;
+.navbar-inverse {
+  background-color: darken($colour-default-dark, 10%);
 }
 
 .navbar-brand {

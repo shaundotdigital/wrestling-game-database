@@ -9,7 +9,7 @@
 
   .content {
     padding: 1rem 0 0 0rem!important;
-}
+  }
 }
 
 
@@ -92,4 +92,13 @@
     display: none;
   }
 
+  .table-head.height, .table-cell.height {
+    width: 0 !important;
+    display: none;
+  }
+
+  .table-head.reaction, .table-cell.reaction {
+    width: 0 !important;
+    display: none;
+  }
 }
