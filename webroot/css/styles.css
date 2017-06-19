@@ -1958,7 +1958,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1400px;
+    width: 1150px;
   }
 }
 
@@ -16805,7 +16805,7 @@ input.form-control:focus {
 }
 
 .search-wrapper {
-  max-width: 30rem;
+  max-width: 45rem;
   margin: 0 auto;
 }
 
@@ -16877,13 +16877,32 @@ input.form-control:focus {
     width: 100%;
   }
   .medium-4 {
-    width: 50%;
+    width: 100% !important;
+  }
+  .content {
+    padding: 1rem 0 0 0rem !important;
   }
 }
 
 @media only screen and (max-width: 992px) {
-  .medium-4 {
-    width: 50%;
+  .navbar-search {
+    width: 25rem !important;
+  }
+  .input-group {
+    text-transform: none;
+    width: 100%;
+    margin: 0;
+    padding-top: 15px;
+  }
+  .search-results {
+    width: 22rem !important;
+  }
+  .wrestler-render {
+    width: 25% !important;
+  }
+  .game-logo img {
+    max-width: 25% !important;
+    float: right;
   }
 }
 
@@ -16894,6 +16913,39 @@ input.form-control:focus {
   .columns {
     padding-left: 0rem;
     padding-right: 0rem;
+  }
+  .navbar-brand > svg {
+    padding: 0.2em 0 !important;
+    margin: 0 !important;
+  }
+  .input-group {
+    text-transform: none;
+    width: 100%;
+    margin: 0;
+    padding-top: 0;
+  }
+  .navbar-search {
+    width: 100% !important;
+    margin-bottom: 1em;
+  }
+  .search-results {
+    width: 22rem !important;
+  }
+  .wrestler-render {
+    width: 0 !important;
+    display: none;
+  }
+  .game-logo img {
+    max-width: 25% !important;
+    float: right;
+  }
+  .ability-level {
+    margin: 0 !important;
+    float: none !important;
+  }
+  .table-head.weight, .table-cell.weight {
+    width: 0 !important;
+    display: none;
   }
 }
 
@@ -17334,7 +17386,7 @@ input.hp-range-slider-range[type=range]::-moz-range-thumb {
 }
 
 .abilities-image {
-  width: 25em;
+  width: 20em;
 }
 
 .ability-level {
