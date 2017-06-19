@@ -2,5 +2,5 @@ tmp/cache
 tmp/debug_kit.sqlite
 logs/
 config/app.php
-node_modules/**
-!/node_modules/bootstrap-sass/assets/stylesheets
+/node_modules/*
+!/node_modules/bootstrap-sass
